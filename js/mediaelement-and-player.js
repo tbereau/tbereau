@@ -1133,7 +1133,7 @@ mejs.HtmlMediaElementShim = {
 					specialIEContainer = document.createElement('div');
 					container.appendChild(specialIEContainer);
 					specialIEContainer.outerHTML =
-'<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" ' +
+'<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" ' +
 'id="' + pluginid + '" width="' + width + '" height="' + height + '">' +
 '<param name="movie" value="' + options.pluginPath + options.flashName + '?x=' + (new Date()) + '" />' +
 '<param name="flashvars" value="' + initVars.join('&amp;') + '" />' +
@@ -1155,7 +1155,7 @@ mejs.HtmlMediaElementShim = {
 'wmode="transparent" ' +
 'allowScriptAccess="always" ' +
 'allowFullScreen="true" ' +
-'type="application/x-shockwave-flash" pluginspage="/www.macromedia.com/go/getflashplayer" ' +
+'type="application/x-shockwave-flash" pluginspage="//www.macromedia.com/go/getflashplayer" ' +
 'src="' + options.pluginPath + options.flashName + '" ' +
 'flashvars="' + initVars.join('&') + '" ' +
 'width="' + width + '" ' +
@@ -1198,7 +1198,7 @@ mejs.HtmlMediaElementShim = {
 						'<param name="allowscriptaccess" value="always" />' +
 						'<param name="flashvars" value="api=1" />' + 
 						'<param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=' + pluginMediaElement.vimeoid  + '&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" />' +
-						'<embed src="/vimeo.com/moogaloop.swf?api=1&amp;clip_id=' + pluginMediaElement.vimeoid + '&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="' + width + '" height="' + height + '"></embed>' +
+						'<embed src="//vimeo.com/moogaloop.swf?api=1&amp;clip_id=' + pluginMediaElement.vimeoid + '&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=00adef&amp;fullscreen=1&amp;autoplay=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="' + width + '" height="' + height + '"></embed>' +
 					'</object>';
 					
 				break;			
@@ -1379,7 +1379,7 @@ mejs.YouTubeApi = {
 		
 		/*
 		settings.container.innerHTML =
-			'<object type="application/x-shockwave-flash" id="' + settings.pluginId + '" data="/www.youtube.com/apiplayer?enablejsapi=1&amp;playerapiid=' + settings.pluginId  + '&amp;version=3&amp;autoplay=0&amp;controls=0&amp;modestbranding=1&loop=0" ' +
+			'<object type="application/x-shockwave-flash" id="' + settings.pluginId + '" data="//www.youtube.com/apiplayer?enablejsapi=1&amp;playerapiid=' + settings.pluginId  + '&amp;version=3&amp;autoplay=0&amp;controls=0&amp;modestbranding=1&loop=0" ' +
 				'width="' + settings.width + '" height="' + settings.height + '" style="visibility: visible; ">' +
 				'<param name="allowScriptAccess" value="always">' +
 				'<param name="wmode" value="transparent">' +
@@ -1393,7 +1393,7 @@ mejs.YouTubeApi = {
 			
 			specialIEContainer = document.createElement('div');
 			settings.container.appendChild(specialIEContainer);
-			specialIEContainer.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="/download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" ' +
+			specialIEContainer.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab" ' +
 'id="' + settings.pluginId + '" width="' + settings.width + '" height="' + settings.height + '">' +
 	'<param name="movie" value="' + youtubeUrl + '" />' +
 	'<param name="wmode" value="transparent" />' +
