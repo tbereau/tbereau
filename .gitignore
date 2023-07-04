@@ -116,7 +116,6 @@ notebooks/test_pymupdf/
 node_modules/
 
 .quarto
-public
 /.luarc.json
 
 /.quarto/*
