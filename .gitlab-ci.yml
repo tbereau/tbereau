@@ -1,15 +1,14 @@
 # The Docker image that will be used to build your app
-#image: registry.gitlab.com/quarto-forge/docker/python
-image: python:latest
+image: registry.gitlab.com/quarto-forge/docker/python
 # Functions that should be executed before the build script is run
-before_script:
-  - python --version ; pip --version  # For debugging
-  - pip install virtualenv
-  - virtualenv venv
-  - source venv/bin/activate
-  - pip install poetry
-  - poetry install --no-root
-  - poetry shell
+before_script: []
+#  - python --version ; pip --version  # For debugging
+#  - pip install virtualenv
+#  - virtualenv venv
+#  - source venv/bin/activate
+#  - pip install poetry
+#  - poetry install --no-root
+#  - poetry shell
 
 pages:
   tags:
