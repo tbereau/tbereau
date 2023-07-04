@@ -4,6 +4,9 @@ image: python:latest
 # Functions that should be executed before the build script is run
 before_script:
   - python --version ; pip --version  # For debugging
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
   - pip install poetry
   - poetry install
   - poetry shell
