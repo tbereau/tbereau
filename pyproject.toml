@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Tristan Bereau <bereau@thphys.uni-heidelberg.de>"]
 readme = "README.rst"
-packages = [{include = "tristanbereau_website"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -32,6 +31,7 @@ scikit-learn = "1.2.2"
 setuptools = "^68.0.0"
 nbformat = "^5.9.0"
 typing-extensions = "4.6.3"
+quarto = "^0.1.0"
 
 
 [build-system]
