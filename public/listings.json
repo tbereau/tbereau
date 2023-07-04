@@ -1,17 +1,25 @@
 [
   {
-    "listing": "/notes.html",
+    "listing": "/group_members.html",
     "items": [
-      "/notes/kernel_lennard_jones.html",
-      "/notes/symmetries-in-kernel-ml.html",
-      "/notes/nonequilibrium-reweighting.html"
-    ]
-  },
-  {
-    "listing": "/positions.html",
-    "items": [
-      "/positions/st_diffusion.html",
-      "/positions/ht_protein.html"
+      "/group/alessia_centi.html",
+      "/group/arghya_dutta.html",
+      "/group/atreyee_banerjee.html",
+      "/group/bernadette_mohr.html",
+      "/group/chan_liu.html",
+      "/group/christian_hoffmann.html",
+      "/group/clemens_rauer.html",
+      "/group/joseph_rudzinski.html",
+      "/group/kiran_kanekal.html",
+      "/group/marc_stieffenhofer.html",
+      "/group/marius_bause.html",
+      "/group/martin_girard.html",
+      "/group/rene_scheid.html",
+      "/group/roberto_menichetti.html",
+      "/group/svenja_worner.html",
+      "/group/timon_wittenstein.html",
+      "/group/tristan_bereau.html",
+      "/group/yasemin_bozkurt_varolgunes.html"
     ]
   },
   {
@@ -92,26 +100,18 @@
     ]
   },
   {
-    "listing": "/group_members.html",
+    "listing": "/notes.html",
     "items": [
-      "/group/alessia_centi.html",
-      "/group/arghya_dutta.html",
-      "/group/atreyee_banerjee.html",
-      "/group/bernadette_mohr.html",
-      "/group/chan_liu.html",
-      "/group/christian_hoffmann.html",
-      "/group/clemens_rauer.html",
-      "/group/joseph_rudzinski.html",
-      "/group/kiran_kanekal.html",
-      "/group/marc_stieffenhofer.html",
-      "/group/marius_bause.html",
-      "/group/martin_girard.html",
-      "/group/rene_scheid.html",
-      "/group/roberto_menichetti.html",
-      "/group/svenja_worner.html",
-      "/group/timon_wittenstein.html",
-      "/group/tristan_bereau.html",
-      "/group/yasemin_bozkurt_varolgunes.html"
+      "/notes/kernel_lennard_jones.html",
+      "/notes/symmetries-in-kernel-ml.html",
+      "/notes/nonequilibrium-reweighting.html"
+    ]
+  },
+  {
+    "listing": "/positions.html",
+    "items": [
+      "/positions/st_diffusion.html",
+      "/positions/ht_protein.html"
     ]
   }
 ]

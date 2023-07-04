@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.361">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -285,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div id="fig-lj-plot" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="kernel_lennard_jones_files/figure-html/fig-lj-plot-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="kernel_lennard_jones_files/figure-html/fig-lj-plot-output-1.png" width="587" height="434" class="figure-img"></p>
 <figcaption class="figure-caption">Figure&nbsp;1: Lennard-Jones potential as a function of distance</figcaption>
 </figure>
 </div>
@@ -337,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="kernel_lennard_jones_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+<p><img src="kernel_lennard_jones_files/figure-html/cell-7-output-1.png" width="587" height="429"></p>
 </div>
 </div>
 <p>The predictions do well overall, except in the repulsive region, where they severely underestimate. We’ll improve upon this later by adding some prior information.</p>
@@ -345,7 +345,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gpr.mean_absolute_error(X_test, y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>0.18668264361038645</code></pre>
+<pre><code>0.17720286396547613</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="kernel_lennard_jones_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<p><img src="kernel_lennard_jones_files/figure-html/cell-11-output-1.png" width="632" height="431"></p>
 </div>
 </div>
 <section id="adding-a-prior-to-the-potential" class="level2">
@@ -432,7 +432,7 @@ U_{\rm prior} = -\gamma(r-r_0)\theta(r_0-r),
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>gpr_w_prior.fit(X_train, y_train)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>gpr_w_prior.mean_absolute_error(X_test, y_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>0.23125846874605688</code></pre>
+<pre><code>0.22177868902300013</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="14">
@@ -471,7 +471,7 @@ U_{\rm prior} = -\gamma(r-r_0)\theta(r_0-r),
 <span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>plt.grid()</span>
 <span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="kernel_lennard_jones_files/figure-html/cell-16-output-1.png" class="img-fluid"></p>
+<p><img src="kernel_lennard_jones_files/figure-html/cell-16-output-1.png" width="632" height="431"></p>
 </div>
 </div>
 <p>Learning with this simple repulsive prior leads to improved learning performance: while the slope (i.e., learning rate) is roughly the same, the offset is significantly reduced. Note that this is a log-log plot.</p>
