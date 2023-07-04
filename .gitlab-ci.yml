@@ -3,11 +3,9 @@ image: registry.gitlab.com/quarto-forge/docker/polyglot
 # Functions that should be executed before the build script is run
 before_script: []
 
-build:
-	tags:
-		- puzl-runner
-
 pages:
+  tags:
+    - puzl-runner
   script:
     - quarto render --execute --to html --output-dir public
   artifacts:
