@@ -120,6 +120,5 @@ node_modules/
 
 /.quarto/*
 site_libs/*
-_freeze/*
 
 /.quarto/
