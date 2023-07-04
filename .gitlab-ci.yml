@@ -6,11 +6,9 @@ before_script:
   - poetry install
   - poetry shell
 
-build:
-	tags:
-		- puzl-runner
-
 pages:
+  tags:
+    - puzl-runner
   script:
     - quarto render --execute --to html --output-dir public
   artifacts:
