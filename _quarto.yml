@@ -43,6 +43,7 @@ website:
                     -   text: Positions
                         icon: person-plus
                         href: positions.qmd
+            - teaching.qmd
             - about.qmd
             - contact.qmd
         right:

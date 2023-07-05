@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tristanbereau.com/group_members.html</loc>
-    <lastmod>2023-07-05T16:24:58.736Z</lastmod>
+    <lastmod>2023-07-05T21:14:01.809Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/positions/ht_protein.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://tristanbereau.com/about.html</loc>
-    <lastmod>2023-07-05T16:24:55.537Z</lastmod>
+    <lastmod>2023-07-05T21:06:37.192Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/research_landscape.html</loc>
@@ -218,7 +218,7 @@
   </url>
   <url>
     <loc>https://tristanbereau.com/contact.html</loc>
-    <lastmod>2023-07-05T16:23:47.213Z</lastmod>
+    <lastmod>2023-07-05T21:14:04.379Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/papers/paper_006.html</loc>
@@ -406,7 +406,7 @@
   </url>
   <url>
     <loc>https://tristanbereau.com/index.html</loc>
-    <lastmod>2023-07-05T16:24:55.278Z</lastmod>
+    <lastmod>2023-07-05T21:13:58.879Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/notes/nonequilibrium-reweighting.html</loc>
@@ -419,5 +419,9 @@
   <url>
     <loc>https://tristanbereau.com/positions/st_diffusion.html</loc>
     <lastmod>2023-07-05T16:24:57.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tristanbereau.com/teaching.html</loc>
+    <lastmod>2023-07-05T21:16:54.026Z</lastmod>
   </url>
 </urlset>

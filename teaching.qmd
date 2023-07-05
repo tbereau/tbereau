@@ -1,0 +1,13 @@
+---
+title: "Teaching"
+---
+
+| Course | Level | Semester |
+|--------|-------|---------:|
+| Theoretical Biophysics | Master | S2024 |
+| Computational Statistics and Data Analysis (MVComp2) | Master | W2023/2024|
+| [Generative Learning for Molecular Systems](https://gen-learn-mol-sys23.tristanbereau.com/) | GradDays | W2023 |
+
+: Teaching schedule
+
+- GradDays: [Heidelberg Physics Graduate Days](https://www.physik.uni-heidelberg.de/graddays/?lang=en)
