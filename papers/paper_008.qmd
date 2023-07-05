@@ -57,7 +57,6 @@ The results show that the cross-parametrization can reproduce a number of struct
 	publisher = {{AIP} Publishing},
 	volume = {140},
 	number = {11},
-	pages = {115101},
 	author = {Tristan Bereau and Zun-Jing Wang and Markus Deserno},
 	title = {More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization},
 	journal = {The Journal of Chemical Physics}

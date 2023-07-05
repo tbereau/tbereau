@@ -1,12 +1,12 @@
 
 ---
-title: "Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane"
-doi: "10.1016/j.bbrc.2017.08.095"
-date: "2017-09-07 22:16:07"
+title: "Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics"
+doi: "10.1021/acs.jctc.3c00201"
+date: "2023-07-03 12:50:55"
 date-format: iso
-authors: "Menichetti, Kremer, Bereau"
-description: "_Biochemical and Biophysical Research Communications_ **498** (2017)"
-year: 2017
+authors: "Mohr, Van Der Mast, Bereau"
+description: "_J. Chem. Theory Comput._ **None** (2023)"
+year: 2023
 format:
   html:
     toc: false
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.bbrc.2017.08.095"></div>
+    data-badge-popover='left' data-doi="10.1021/acs.jctc.3c00201"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The determination of potentials of mean force for solute insertion in a lipid membrane by means of all-atom molecular dynamics simulations is often hampered by sampling issues. Recently, a multiscale method has been proposed to leverage the conformational ensemble of a lower-resolution model as starting point for higher resolution simulations. In this work, we analyze the efficiency of this method by comparing its predictions for propanol insertion into a lipid membrane against conventional atomistic umbrella sampling simulation results. The multiscale approach is confirmed to provide accurate results with a gain of one order of magnitude in computational time. We then investigate the role of the coarse-grained representation. We find that the accuracy of the results is tightly connected to the presence of a good configurational overlap between the coarse-grained and atomistic models—a general requirement when developing multiscale simulation methods.
+Molecular design requires systematic and broadly applicable methods to extract structure-property relationships. The focus of this study is on learning thermodynamic properties from molecular-liquid simulations. The methodology relies on an atomic representation originally developed for electronic properties: the Spectrum of London and Axilrod-Teller-Muto representation (SLATM). SLATM's expansion in one-, two-, and three-body interactions makes it amenable to probing structural ordering in molecular liquids. We show that such representation encodes enough critical information to permit the learning of thermodynamic properties via linear methods. We demonstrate our approach on the preferential insertion of small solute molecules toward cardiolipin membranes and monitor selectivity against a similar lipid. Our analysis reveals simple, interpretable relationships between two- and three-body interactions and selectivity, identifies key interactions to build optimal prototypical solutes, and charts a two-dimensional projection that displays clearly separated basins. The methodology is generally applicable to a variety of thermodynamic properties.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ The determination of potentials of mean force for solute insertion in a lipid me
 
 ## TL;DR
 
-The efficiency of this multiscale method is analyzed by comparing its predictions for propanol insertion into a lipid membrane against conventional atomistic umbrella sampling simulation results, and the accuracy of the results is tightly connected to the presence of a good configuration overlap between the coarse-grained and atomistic models.
+None
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,15 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
 ## BibTeX
 
 ```{bibtex}
-@article{Menichetti_2018,
-	doi = {10.1016/j.bbrc.2017.08.095},
-	url = {https://doi.org/10.1016%2Fj.bbrc.2017.08.095},
-	year = 2018,
-	month = {mar},
-	publisher = {Elsevier {BV}},
-	volume = {498},
-	number = {2},
-	pages = {282--287},
-	author = {Roberto Menichetti and Kurt Kremer and Tristan Bereau},
-	title = {Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane},
-	journal = {Biochemical and Biophysical Research Communications}
+@article{Mohr_2023,
+	doi = {10.1021/acs.jctc.3c00201},
+	url = {https://doi.org/10.1021%2Facs.jctc.3c00201},
+	year = 2023,
+	month = {jul},
+	publisher = {American Chemical Society ({ACS})},
+	author = {Bernadette Mohr and Diego van der Mast and Tristan Bereau},
+	title = {Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics},
+	journal = {Journal of Chemical Theory and Computation}
 }
 ```
 ```{=html}
@@ -76,7 +73,7 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1710.02291" role="button">
+        href="https://doi.org/10.1021/acs.jctc.3c00201" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +89,8 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://arxiv.org/pdf/1710.02291" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -1,12 +1,31 @@
+import logging
 
+from my_scientific_profile.papers.papers import Paper
+
+logger = logging.getLogger(__name__)
+
+
+def save_quarto_paper_page_to_file(paper: Paper, filename: str) -> None:
+    logger.info(f"saving quarto author page for {paper.title} to {filename}")
+    with open(filename, "w") as stream:
+        stream.write(generate_quarto_paper_page(paper))
+
+
+def generate_quarto_paper_page(paper: Paper) -> str:
+    authors_list = [a.family for a in paper.authors]
+    authors = ""
+    for author in authors_list[:-1]:
+        authors += author + ", "
+    authors += authors_list[-1]
+    header = f"""
 ---
-title: "Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane"
-doi: "10.1016/j.bbrc.2017.08.095"
-date: "2017-09-07 22:16:07"
+title: "{paper.title}"
+doi: "{paper.doi}"
+date: "{paper.publication_date}"
 date-format: iso
-authors: "Menichetti, Kremer, Bereau"
-description: "_Biochemical and Biophysical Research Communications_ **498** (2017)"
-year: 2017
+authors: "{authors}"
+description: "_{paper.journal.abbreviation}_ **{paper.journal.volume}** ({paper.year})"
+year: {paper.year}
 format:
   html:
     toc: false
@@ -14,23 +33,24 @@ format:
     keep-hidden: true
     code-tools: false
 ---
-
-```{=html}
+"""
+    body = f"""
+```{{=html}}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.bbrc.2017.08.095"></div>
+    data-badge-popover='left' data-doi="{paper.doi}"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <br><br><br>
 ```
 
-::: {.panel-tabset}
+::: {{.panel-tabset}}
 
 ## Abstract
 
-The determination of potentials of mean force for solute insertion in a lipid membrane by means of all-atom molecular dynamics simulations is often hampered by sampling issues. Recently, a multiscale method has been proposed to leverage the conformational ensemble of a lower-resolution model as starting point for higher resolution simulations. In this work, we analyze the efficiency of this method by comparing its predictions for propanol insertion into a lipid membrane against conventional atomistic umbrella sampling simulation results. The multiscale approach is confirmed to provide accurate results with a gain of one order of magnitude in computational time. We then investigate the role of the coarse-grained representation. We find that the accuracy of the results is tightly connected to the presence of a good configurational overlap between the coarse-grained and atomistic models—a general requirement when developing multiscale simulation methods.
-```{=html}
+{paper.abstract}
+```{{=html}}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
 <cite title="Source title">CrossRef</cite>
@@ -39,8 +59,8 @@ The determination of potentials of mean force for solute insertion in a lipid me
 
 ## TL;DR
 
-The efficiency of this multiscale method is analyzed by comparing its predictions for propanol insertion into a lipid membrane against conventional atomistic umbrella sampling simulation results, and the accuracy of the results is tightly connected to the presence of a good configuration overlap between the coarse-grained and atomistic models.
-```{=html}
+{paper.tldr}
+```{{=html}}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
 </footer>
@@ -48,35 +68,23 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
 
 ## BibTeX
 
-```{bibtex}
-@article{Menichetti_2018,
-	doi = {10.1016/j.bbrc.2017.08.095},
-	url = {https://doi.org/10.1016%2Fj.bbrc.2017.08.095},
-	year = 2018,
-	month = {mar},
-	publisher = {Elsevier {BV}},
-	volume = {498},
-	number = {2},
-	pages = {282--287},
-	author = {Roberto Menichetti and Kurt Kremer and Tristan Bereau},
-	title = {Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane},
-	journal = {Biochemical and Biophysical Research Communications}
-}
+```{{bibtex}}
+{paper.bib_entry}
 ```
-```{=html}
+```{{=html}}
 <footer class="blockquote-footer">from
 <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
 ## Open Access
-```{=html}
+```{{=html}}
 <div class="float-end">
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="http://arxiv.org/abs/1710.02291" role="button">
+  {'disabled' if not paper.open_access.landing_page_url else ''}"
+        href="{paper.open_access.landing_page_url}" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +100,8 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://arxiv.org/pdf/1710.02291" role="button">
+      {'disabled' if not paper.open_access.pdf_url else ''}"
+        href="{paper.open_access.pdf_url}" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
@@ -133,3 +141,5 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
 ```
 
 :::
+"""
+    return header + body
