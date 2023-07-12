@@ -1,0 +1,28 @@
+---
+title: "Software"
+format:
+  html:
+    toc: true
+    echo: false
+    keep-hidden: true
+---
+
+## My Scientific Profile
+
+Fetch the metadata of your scientific publications.
+
+[{{< fa code-branch >}} Github](https://github.com/tbereau/my_scientific_profile){.btn-primary .btn .btn-action .btn-lg role="button"}
+
+## Auto Martini
+
+A toolkit that enables automatic generation of Martini forcefields for small organic molecules.
+
+[{{< fa code-branch >}} Github](https://github.com/tbereau/auto_martini){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa file-pdf >}} Publication](https://doi.org/10.1021/acs.jctc.5b00056){.btn-light .btn .btn-action .btn-lg role="button"}
+
+## peptideB
+
+ESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.
+
+[{{< fa code-branch >}} Github](https://github.com/tbereau/peptideB/tree/master){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa file-pdf >}} Publication](https://doi.org/10.1063/1.3152842){.btn-light .btn .btn-action .btn-lg role="button"}

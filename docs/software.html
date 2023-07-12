@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tristan Bereau - About</title>
+<title>Tristan Bereau - Software</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,7 +65,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Tristan Bereau - About">
+<meta name="twitter:title" content="Tristan Bereau - Software">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -139,11 +142,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html" rel="" target="">
+    <a class="nav-link active" href="./software.html" rel="" target="" aria-current="page">
  <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -179,14 +182,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#my-scientific-profile" id="toc-my-scientific-profile" class="nav-link active" data-scroll-target="#my-scientific-profile">My Scientific Profile</a></li>
+  <li><a href="#auto-martini" id="toc-auto-martini" class="nav-link" data-scroll-target="#auto-martini">Auto Martini</a></li>
+  <li><a href="#peptideb" id="toc-peptideb" class="nav-link" data-scroll-target="#peptideb">peptideB</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Software</h1>
 </div>
 
 
@@ -201,20 +212,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="content-block">
-<p>Publication information is fetched using various APIs:</p>
-<ul>
-<li>General info: <a href="https://orcid.org">Orcid</a></li>
-<li>General info: <a href="https://www.crossref.org">CrossRef</a></li>
-<li>General info, TL;DR: <a href="https://www.semanticscholar.org">Semantic Scholar</a></li>
-<li>Attention metrics: <a href="https://www.altmetric.com">Altmetrics</a></li>
-<li>Open-access info: <a href="https://unpaywall.org">Unpaywall</a></li>
-<li>BibTeX references: <a href="https://www.doi2bib.org">doi2bib</a></li>
-</ul>
-<p>The backend was written in Python with the <a href="https://github.com/tbereau/my_scientific_profile">my-scientific-profile</a> library. The frontend uses <a href="https://quarto.org">Quarto</a>.</p>
-</div>
+<section id="my-scientific-profile" class="level2">
+<h2 class="anchored" data-anchor-id="my-scientific-profile">My Scientific Profile</h2>
+<p>Fetch the metadata of your scientific publications.</p>
+<p><a href="https://github.com/tbereau/my_scientific_profile" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a></p>
+</section>
+<section id="auto-martini" class="level2">
+<h2 class="anchored" data-anchor-id="auto-martini">Auto Martini</h2>
+<p>A toolkit that enables automatic generation of Martini forcefields for small organic molecules.</p>
+<p><a href="https://github.com/tbereau/auto_martini" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a> <a href="https://doi.org/10.1021/acs.jctc.5b00056" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Publication</a></p>
+</section>
+<section id="peptideb" class="level2">
+<h2 class="anchored" data-anchor-id="peptideb">peptideB</h2>
+<p>ESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.</p>
+<p><a href="https://github.com/tbereau/peptideB/tree/master" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a> <a href="https://doi.org/10.1063/1.3152842" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Publication</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

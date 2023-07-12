@@ -44,6 +44,7 @@ website:
                         icon: person-plus
                         href: positions.qmd
             - teaching.qmd
+            - software.qmd
             - about.qmd
             - contact.qmd
         right:
