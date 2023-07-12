@@ -32,7 +32,7 @@ numpy = "1.24.0"
 setuptools = "^68.0.0"
 nbformat = "^5.9.0"
 typing-extensions = "4.6.3"
-my_scientific_profile = {git = "git@lin0.thphys.uni-heidelberg.de:bereau/my_scientific_profile.git", rev="master"}
+my_scientific_profile = {git = "git@github.com:tbereau/my_scientific_profile.git", rev="master"}
 
 
 [build-system]
