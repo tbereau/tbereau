@@ -13,6 +13,13 @@ Fetch the metadata of your scientific publications.
 
 [{{< fa code-branch >}} Github](https://github.com/tbereau/my_scientific_profile){.btn-primary .btn .btn-action .btn-lg role="button"}
 
+## IPML
+
+Intermolecular potentials from a combination of physics- and machine learning-based models applicable across chemical space
+
+[{{< fa code-branch >}} Gitlab](https://gitlab.mpcdf.mpg.de/trisb/ipml){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa file-pdf >}} Publication](https://doi.org/10.1063/1.5009502){.btn-light .btn .btn-action .btn-lg role="button"}
+
 ## Auto Martini
 
 A toolkit that enables automatic generation of Martini forcefields for small organic molecules.

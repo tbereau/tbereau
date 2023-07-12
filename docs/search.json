@@ -980,6 +980,13 @@
     "text": "Fetch the metadata of your scientific publications.\n Github"
   },
   {
+    "objectID": "software.html#ipml",
+    "href": "software.html#ipml",
+    "title": "Software",
+    "section": "IPML",
+    "text": "IPML\nIntermolecular potentials from a combination of physics- and machine learning-based models applicable across chemical space\n Gitlab  Publication"
+  },
+  {
     "objectID": "software.html#auto-martini",
     "href": "software.html#auto-martini",
     "title": "Software",
