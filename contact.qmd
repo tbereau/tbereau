@@ -6,13 +6,14 @@ format:
             -   file: header_email.html
         keep-hidden: true
         echo: false
+jupyter: tristanbereau-website
 ---
 
 {{< fa phone >}} +49-6221-54-9448
 
 {{< fa at >}} <span id="email-placeholder"></span>
 
-{{< fa door-open >}} Philo 19; Room: 206
+{{< fa door-open >}} Philosophenweg 19; 2nd floor; Room: 206
 
 {{< fa envelope >}}
 ```
