@@ -6,7 +6,7 @@ format:
             -   file: header_email.html
         keep-hidden: true
         echo: false
-jupyter: tristanbereau-website
+jupyter: python3
 ---
 
 {{< fa phone >}} +49-6221-54-9448

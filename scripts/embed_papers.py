@@ -3,6 +3,11 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 
+import os
+from decouple import config as environ
+
+os.environ["ORCID_CODE"] = environ("ORCID_CODE")
+
 nltk.download("stopwords")
 nltk.download("omw-1.4")
 nltk.download("wordnet")
