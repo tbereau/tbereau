@@ -2,12 +2,14 @@
 title: "Teaching"
 ---
 
-| Course | Level | Semester |
-|--------|-------|---------:|
-| Theoretical Biophysics | Master | S2024 |
-| Computational Statistics and Data Analysis (MVComp2) | Master | W2023/2024|
-| [Generative Learning for Molecular Systems](https://gen-learn-mol-sys23.tristanbereau.com/) | GradDays | W2023 |
+| Course | Level | Type | LSF | Semester |
+|--------|-------|-------|-------|---------:|
+| Theoretical Biophysics | Master | course | | S2024 |
+| Computational Statistics and Data Analysis (MVComp2) | Master | course | [LSF](https://lsf.uni-heidelberg.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&veranstaltung.veranstid=392643) | W2023/2024 |
+| Multiscale modeling of soft matter and biological systems | Master | seminar | [LSF](https://lsf.uni-heidelberg.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&veranstaltung.veranstid=393154) | W2023/2024 |
+| [Generative Learning for Molecular Systems](https://gen-learn-mol-sys23.tristanbereau.com/) | GradDays | course | | W2023 |
 
 : Teaching schedule
 
+- LSF: [Lehre, Studium und Forschung](https://lsf.uni-heidelberg.de/qisserver/rds?state=user&type=0)
 - GradDays: [Heidelberg Physics Graduate Days](https://www.physik.uni-heidelberg.de/graddays/?lang=en)
