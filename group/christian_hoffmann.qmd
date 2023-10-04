@@ -8,12 +8,16 @@ format:
 categories:
   - alumnus
   - diplom student
-image: ../static/cgmol.jpg
+image: ../static/christian.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/cgmol.jpg
+  image: ../static/christian.jpg
+  links:
 
+    - icon: house
+      text: Website
+      href: https://chrishoffmann.dev
 ---
 
 
