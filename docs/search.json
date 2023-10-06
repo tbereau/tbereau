@@ -119,6 +119,13 @@
     "text": "Collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Martin Girard\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
+    "objectID": "group/christian_hoffmann.html",
+    "href": "group/christian_hoffmann.html",
+    "title": "Christian Hoffmann",
+    "section": "",
+    "text": "Website"
+  },
+  {
     "objectID": "group/christian_hoffmann.html#publications",
     "href": "group/christian_hoffmann.html#publications",
     "title": "Christian Hoffmann",
@@ -1006,12 +1013,5 @@
     "title": "Software",
     "section": "peptideB",
     "text": "peptideB\nESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.\n Github  Publication"
-  },
-  {
-    "objectID": "group/christian_hoffmann.html",
-    "href": "group/christian_hoffmann.html",
-    "title": "Christian Hoffmann",
-    "section": "",
-    "text": "Website"
   }
 ]
