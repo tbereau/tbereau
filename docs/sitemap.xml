@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tristanbereau.com/group_members.html</loc>
-    <lastmod>2023-10-06T08:18:03.225Z</lastmod>
+    <lastmod>2023-10-26T10:13:24.895Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/notes/kernel_lennard_jones.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://tristanbereau.com/index.html</loc>
-    <lastmod>2023-10-06T08:18:00.139Z</lastmod>
+    <lastmod>2023-10-26T10:13:28.118Z</lastmod>
   </url>
   <url>
     <loc>https://tristanbereau.com/group/alessia_centi.html</loc>
@@ -427,5 +427,9 @@
   <url>
     <loc>https://tristanbereau.com/software.html</loc>
     <lastmod>2023-10-06T08:18:02.586Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tristanbereau.com/group/daniel_nagel.html</loc>
+    <lastmod>2023-10-26T10:13:24.217Z</lastmod>
   </url>
 </urlset>
