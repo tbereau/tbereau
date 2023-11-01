@@ -1,0 +1,113 @@
+---
+title: "Postdoctoral position - Data Mining / Machine Learning"
+format:
+  html:
+    echo: false
+    keep-hidden: true
+    include-in-header:
+            -   file: ../header_email.html
+categories:
+  - postdoc
+  - active
+about:
+  id: hero-heading
+  template: solana
+---
+
+
+:::{#hero-heading}
+
+
+:::
+
+See <https://www.mpip-mainz.mpg.de/883311/Data-Mining_postdoc?c=84782> for original announcement.
+
+The group of Dr. Christopher Synatschke (Department for Synthesis of Macromolecules, Max Planck Institute for Polymer Research, Mainz) is looking for a Postdoctoral Research Fellow (TVöD E13 100%) with a strong background in Machine Learning and Data Mining. The preferred starting date is 1st of March 2024.
+
+**Topic**
+
+The Max Planck Institute for Polymer Research in Mainz, Germany is seeking a motivated Postdoctoral Research Fellow to join a cutting-edge research project entitled "Correlating Peptide Sequence to Structure and Biological Activity through Machine Learning and Data Mining." This exciting project aims at utilizing data-mining and machine-learning techniques to the identification and prediction of peptide sequences that significantly influence cellular responses. The project will take advantage of in-house high-throughput biological data, and will consist of guiding and accelerating experiments. The successful candidate will work within the group of Dr. Christopher Synatschke (Max Planck Institute for Polymer Research, Synthesis of Macromolecules group headed by Prof. Tanja Weil) and in collaboration with Prof. Tristan Bereau (Institute for Theoretical Physics, University of Heidelberg).
+
+Recent publications of the collaboration around the topic include:
+
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+import {map} from "@martien/ramda"
+
+papers_r = FileAttachment("../data/all_papers.json").json()
+n_columns = Object.entries(papers_r["doi"]).length
+index_array = Array.from({length: n_columns}, (_, i) => i)
+papers = map(i => map(x => x[i], papers_r), index_array)
+
+function displayTable(papers_) {
+    return Inputs.table(papers_, {
+        columns: [
+        "doi",
+        "title",
+        "journal.name",
+        "journal.volume",
+        "year",
+      ],
+      header: {
+        "journal.name": "journal",
+        "journal.volume": "volume",
+      },
+      format: {
+        doi: doi => htl.html`<a href=https://doi.org/${doi} target=_blank>${doi}</a>`,
+        title: title => htl.html`${title}`,
+        "journal.volume": volume => htl.html`<b>${volume}</b>`,
+        year: year => htl.html`${year}`,
+      },
+      width: {
+        "title": 10
+      },
+      layout: "auto",
+    })
+}
+
+displayTable(
+    papers.filter(function(p) {
+        return (
+            p.authors.map(a => a.full_name).includes("Christopher Synatschke")
+        )
+    })
+)
+```
+
+ 
+
+**Application**
+
+The ideal candidate will possess:
+
+- A Ph.D. in Physics, Computer Science, Applied Mathematics, or a related field.
+
+- Proficiency in machine learning, including experience with deep learning frameworks such as TensorFlow or PyTorch.
+
+- Experience with biological data
+
+- Excellent programming skills in Python or a similar high-level language.
+
+- Evidence of high-quality scientific publications.
+
+- Excellent collaborative and communication skills, with an interdisciplinary mindset.
+
+ 
+
+We welcome applications from all individuals, regardless of their gender, ethnicity, disability, or any other protected characteristic. We encourage diversity and foster a culture of inclusion where everyone feels welcome.
+
+Interested candidates should submit the following via email as a single PDF:
+
+- Curriculum Vitae;
+
+- List of publications;
+
+- Contact information of two supervisors/collaborators to request recommendation letters;
+
+- Brief summary of previous research projects (one or two pages).
+
+ 
+
+Review of applications will start on 15th November 2023 and will continue until the position has been filled. We regret that only shortlisted candidates will be contacted for interviews.
+
+For more information or to apply, please contact Dr. Christopher Synatschke (synatschke@mpip-mainz.mpg.de)

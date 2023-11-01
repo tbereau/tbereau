@@ -33,11 +33,15 @@
   },
   {
     "listing": "/positions.html",
-    "items": []
+    "items": [
+      "/positions/data_mining.html"
+    ]
   },
   {
     "listing": "/papers.html",
     "items": [
+      "/papers/paper_074.html",
+      "/papers/paper_073.html",
       "/papers/paper_072.html",
       "/papers/paper_071.html",
       "/papers/paper_064.html",
