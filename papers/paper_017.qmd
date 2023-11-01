@@ -1,11 +1,11 @@
 
 ---
-title: "Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity"
-doi: "10.1016/j.bpj.2015.07.012"
-date: "2015-08-18 16:31:03"
+title: "Multi-timestep Integrator for the Modified Andersen Barostat"
+doi: "10.1016/j.phpro.2015.07.101"
+date: "2015-08-28 01:16:57"
 date-format: iso
 authors: "Bereau"
-description: "_Biophysical Journal_ **109** (2015)"
+description: "_Physics Procedia_ **68** (2015)"
 year: 2015
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.bpj.2015.07.012"></div>
+    data-badge-popover='left' data-doi="10.1016/j.phpro.2015.07.101"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-
+An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described. Proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model. Measurements of the configurational temperature indicate proper canonical sampling, while folding simu- lations of unstructured peptides into transmembrane helices provide a realistic application and suggest the maximum set of time steps usable for that model.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ format:
 
 ## TL;DR
 
-Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gained increasing interest, because they combine two attractive features: their mode of action is very generic and thus evolutionarily conserved; but unlike antimicrobial peptides, they involve much smaller molecular-weight peptides and are thus more in line with both practical and economical considerations of drug development.
+An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described, and proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -50,17 +50,15 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
 
 ```{bibtex}
 @article{Bereau_2015,
-	doi = {10.1016/j.bpj.2015.07.012},
-	url = {https://doi.org/10.1016%2Fj.bpj.2015.07.012},
+	doi = {10.1016/j.phpro.2015.07.101},
+	url = {https://doi.org/10.1016%2Fj.phpro.2015.07.101},
 	year = 2015,
-	month = {aug},
 	publisher = {Elsevier {BV}},
-	volume = {109},
-	number = {4},
-	pages = {668--669},
+	volume = {68},
+	pages = {7--15},
 	author = {Tristan Bereau},
-	title = {Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity},
-	journal = {Biophysical Journal}
+	title = {Multi-timestep Integrator for the Modified Andersen Barostat},
+	journal = {Physics Procedia}
 }
 ```
 ```{=html}
@@ -76,7 +74,7 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2015.07.012" role="button">
+        href="https://doi.org/10.1016/j.phpro.2015.07.101" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +90,8 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://www.cell.com/article/S0006349515007183/pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

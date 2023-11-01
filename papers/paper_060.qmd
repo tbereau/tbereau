@@ -1,11 +1,11 @@
 
 ---
-title: "Dynamical properties across different coarse-grained models for ionic liquids"
-doi: "10.1088/1361-648X/abe6e1"
-date: "2021-02-16 22:36:13"
+title: "Finite-size transitions in complex membranes"
+doi: "10.1016/j.bpj.2021.03.043"
+date: "2021-05-04 15:17:44"
 date-format: iso
-authors: "Rudzinski, Kloth, Wörner, Pal, Kremer, Bereau, Vogel"
-description: "_J. Phys.: Condens. Matter_ **33** (2021)"
+authors: "Girard, Bereau"
+description: "_Biophysical Journal_ **120** (2021)"
 year: 2021
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1088/1361-648X/abe6e1"></div>
+    data-badge-popover='left' data-doi="10.1016/j.bpj.2021.03.043"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Room-temperature ionic liquids (RTILs) stand out among molecular liquids for their rich physicochemical characteristics, including structural and dynamic heterogeneity. The significance of electrostatic interactions in RTILs results in long characteristic length- and timescales, and has motivated the development of a number of coarse-grained (CG) simulation models. In this study, we aim to better understand the connection between certain CG parameterization strategies and the dynamical properties and transferability of the resulting models. We systematically compare five CG models: a model largely parameterized from experimental thermodynamic observables; a refinement of this model to increase its structural accuracy; and three models that reproduce a given set of structural distribution functions by construction, with varying intramolecular parameterizations and reference temperatures. All five CG models display limited structural transferability over temperature, and also result in various effective dynamical speedup factors, relative to a reference atomistic model. On the other hand, the structure-based CG models tend to result in more consistent cation–anion relative diffusion than the thermodynamic-based models, for a single thermodynamic state point. By linking short- and long-timescale dynamical behaviors, we demonstrate that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
+The lipid-raft hypothesis postulates that cell membranes possess some degree of lateral organization. The hypothesis has attracted much attention while remaining controversial, with an underlying mechanism that remains elusive. One idea that supports rafts relies on the membrane lying near a critical point. Although supported by experimental evidence, holding a many-component membrane at criticality requires a delicate tuning of all components—a daunting task. Here, we propose a coherent framework to reconcile critical behavior and lipid regulation. Using a lattice model, we show that lipid regulation of a complex membrane, i.e., allowing composition to fluctuate based on relative chemical potentials, can lead to critical behavior. The results are robust against specific values of the chemical potentials. Instead of a conventional transition point, criticality is observed over a large temperature range. This surprising behavior arises from finite-size effects, causing nonequivalent time and space averages. The instantaneous lipid distribution effectively develops a translational symmetry, which we relate to long-wavelength Goldstone modes. The framework is robust and reproduces important experimental trends; membrane-demixing temperature closely follows cell-growth temperature. It also ensures criticality of fixed-composition extracts, such as giant plasma membrane vesicles. Our clear picture provides a strong argument in favor of the critical-membrane hypothesis, without the need for specific sensing mechanisms.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Room-temperature ionic liquids (RTILs) stand out among molecular liquids for the
 
 ## TL;DR
 
-It is demonstrated that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
+A coherent framework to reconcile critical behavior and lipid regulation is proposed and it is shown that lipid regulation of a complex membrane, i.e., allowing composition to fluctuate based on relative chemical potentials, can lead to critical behavior.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ It is demonstrated that the varying dynamical properties of the different CG mod
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2021,
-	doi = {10.1088/1361-648x/abe6e1},
-	url = {https://doi.org/10.1088%2F1361-648x%2Fabe6e1},
+@article{Girard_2021,
+	doi = {10.1016/j.bpj.2021.03.043},
+	url = {https://doi.org/10.1016%2Fj.bpj.2021.03.043},
 	year = 2021,
-	month = {may},
-	publisher = {{IOP} Publishing},
-	volume = {33},
-	number = {22},
-	pages = {224001},
-	author = {Joseph F Rudzinski and Sebastian Kloth and Svenja Wörner and Tamisra Pal and Kurt Kremer and Tristan Bereau and Michael Vogel},
-	title = {Dynamical properties across different coarse-grained models for ionic liquids},
-	journal = {Journal of Physics: Condensed Matter}
+	month = {jun},
+	publisher = {Elsevier {BV}},
+	volume = {120},
+	number = {12},
+	pages = {2436--2443},
+	author = {Martin Girard and Tristan Bereau},
+	title = {Finite-size transitions in complex membranes},
+	journal = {Biophysical Journal}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ It is demonstrated that the varying dynamical properties of the different CG mod
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1088/1361-648x/abe6e1" role="button">
+        href="https://doi.org/10.1016/j.bpj.2021.03.043" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ It is demonstrated that the varying dynamical properties of the different CG mod
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://iopscience.iop.org/article/10.1088/1361-648X/abe6e1/pdf" role="button">
+        href="http://www.cell.com/article/S0006349521003672/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

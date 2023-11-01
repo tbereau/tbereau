@@ -1,11 +1,11 @@
 
 ---
-title: "Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields"
-doi: "10.1140/epjst/e2016-60114-5"
-date: "2016-07-15 07:35:24"
+title: "An in-silico walker"
+doi: "10.1016/j.cplett.2016.06.019"
+date: "2016-06-11 11:58:41"
 date-format: iso
-authors: "Rudzinski, Bereau"
-description: "_Eur. Phys. J. Spec. Top._ **225** (2016)"
+authors: "Xiao, Chen, Bereau, Shi"
+description: "_Chemical Physics Letters_ **659** (2016)"
 year: 2016
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1140/epjst/e2016-60114-5"></div>
+    data-badge-popover='left' data-doi="10.1016/j.cplett.2016.06.019"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The parametrization of coarse-grained (CG) simulation models for molecular systems often aims at reproducing static properties alone. The reduced molecular friction of the CG representation usually results in faster, albeit inconsistent, dynamics. In this work, we rely on Markov state models to simultaneously characterize the static and kinetic properties of two CG peptide force fields—one top-down and one bottom-up. Instead of a rigorous evolution of CG dynamics (e.g., using a generalized Langevin equation), we attempt to improve the description of kinetics by simply altering the existing CG models, which employ standard Langevin dynamics. By varying masses and relevant force-field parameters, we can improve the timescale separation of the slow kinetic processes, achieve a more consistent ratio of mean-first-passage times between metastable states, and refine the relative free-energies between these states. Importantly, we show that the incorporation of kinetic information into a structure-based parametrization improves the description of the helix-coil transition sampled by a minimal CG model. While structure-based models understabilize the helical state, kinetic constraints help identify CG models that improve the ratio of forward/backward timescales by effectively hindering the sampling of spurious conformational intermediate states.
+The paradox of biomimetic research is to perform bio-functionality, usually associated with sophisticated structures optimized by nature, with minimal structural complexity for the ease of fabrication. Here we show that a three-particle trimer can exhibit kinesin-like autonomous walk on a track via reactive molecular dynamics simulations. The autonomous motion is due to imbalanced transitions resulting from exothermic catalytic reactions, and the spatial asymmetry from the track. This molecular design can be realized by reproducing the particle–particle interactions in functionalized nano- or colloidal particles. Our results open up the possibility of fabricating bio-mimetic nano-systems in a minimalist approach.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ The parametrization of coarse-grained (CG) simulation models for molecular syste
 
 ## TL;DR
 
-This work relies on Markov state models to simultaneously characterize the static and kinetic properties of two CG peptide force fields—one top-down and one bottom-up—in order to improve the description of kinetics.
+None
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,17 @@ This work relies on Markov state models to simultaneously characterize the stati
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2016,
-	doi = {10.1140/epjst/e2016-60114-5},
-	url = {https://doi.org/10.1140%2Fepjst%2Fe2016-60114-5},
+@article{Xiao_2016,
+	doi = {10.1016/j.cplett.2016.06.019},
+	url = {https://doi.org/10.1016%2Fj.cplett.2016.06.019},
 	year = 2016,
-	month = {jul},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {225},
-	number = {8-9},
-	pages = {1373--1389},
-	author = {J.F. Rudzinski and T. Bereau},
-	title = {Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields},
-	journal = {The European Physical Journal Special Topics}
+	month = {aug},
+	publisher = {Elsevier {BV}},
+	volume = {659},
+	pages = {6--9},
+	author = {Qiran Xiao and Yanping Chen and Tristan Bereau and Yunfeng Shi},
+	title = {An in-silico walker},
+	journal = {Chemical Physics Letters}
 }
 ```
 ```{=html}
@@ -76,7 +75,7 @@ This work relies on Markov state models to simultaneously characterize the stati
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1607.05492" role="button">
+        href="https://doi.org/10.1016/j.cplett.2016.06.019" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +92,7 @@ This work relies on Markov state models to simultaneously characterize the stati
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1607.05492" role="button">
+        href="http://manuscript.elsevier.com/S0009261416304146/pdf/S0009261416304146.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

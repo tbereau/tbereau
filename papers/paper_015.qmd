@@ -1,10 +1,10 @@
 
 ---
-title: "Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules"
-doi: "10.1021/acs.jctc.5b00056"
-date: "2015-04-28 16:06:36"
+title: "Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules"
+doi: "10.1021/acs.jctc.5b00301"
+date: "2015-05-21 16:00:51"
 date-format: iso
-authors: "Bereau, Kremer"
+authors: "Bereau, Andrienko, Von Lilienfeld"
 description: "_J. Chem. Theory Comput._ **11** (2015)"
 year: 2015
 format:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1021/acs.jctc.5b00056"></div>
+    data-badge-popover='left' data-doi="10.1021/acs.jctc.5b00301"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The systematic exploration of chemical compound space holds many promises toward structure-function relationships and material design. In the context of computer simulations, progress is hampered by both the sheer number of compounds and the efforts associated with parametrizing a force field for every new molecule. A coarse-grained (CG) representation provides not only a reduced phase space but also a smaller number of compounds, due to the redundancy of CG representations mapping to the same structure. Though many CG models require the explicit force-field parametrization of a molecule with all others, others assume transferability by means of mixing rules, such as the Martini force field. To alleviate the burden associated with tedious parametrizations for each new compound, the present work aims at automating the mapping and parametrization of common small organic molecules for Martini. We test the method by analyzing the water/octanol partitioning of more than 650 neutral molecules, the hydration free energy of 354 others, and the free energies of hydration and solvation in octanol of another 69 compounds. Last, we compare with all-atom simulations the thermodynamics of insertion of four individual solute molecules in a phospholipid membrane. The protocol demonstrates the feasibility of an automated parametrization scheme for Martini and provides prospects for high-throughput simulation methodologies.
+Accurate representation of the molecular electrostatic potential, which is often expanded in distributed multipole moments, is crucial for an efficient evaluation of intermolecular interactions. Here we introduce a machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation. The model is trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules. Multipoles in systems with neutral, cationic, and anionic molecular charge states are treated with individual models. The models' predictive accuracy and applicability are illustrated by evaluating intermolecular interaction energies of nearly 1,000 dimers and the cohesive energy of the benzene crystal.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ The systematic exploration of chemical compound space holds many promises toward
 
 ## TL;DR
 
-The present work aims at automating the mapping and parametrization of common small organic molecules for Martini, and demonstrates the feasibility of an automated parammetrization scheme forMartini and provides prospects for high-throughput simulation methodologies.
+A machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation is introduced, trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -50,16 +50,16 @@ The present work aims at automating the mapping and parametrization of common sm
 
 ```{bibtex}
 @article{Bereau_2015,
-	doi = {10.1021/acs.jctc.5b00056},
-	url = {https://doi.org/10.1021%2Facs.jctc.5b00056},
+	doi = {10.1021/acs.jctc.5b00301},
+	url = {https://doi.org/10.1021%2Facs.jctc.5b00301},
 	year = 2015,
-	month = {may},
+	month = {jun},
 	publisher = {American Chemical Society ({ACS})},
 	volume = {11},
-	number = {6},
-	pages = {2783--2791},
-	author = {Tristan Bereau and Kurt Kremer},
-	title = {Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules},
+	number = {7},
+	pages = {3225--3233},
+	author = {Tristan Bereau and Denis Andrienko and O. Anatole von Lilienfeld},
+	title = {Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules},
 	journal = {Journal of Chemical Theory and Computation}
 }
 ```
@@ -75,8 +75,8 @@ The present work aims at automating the mapping and parametrization of common sm
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://edoc.unibas.ch/43347/1/ct-2015-003013.R1_Proof_hi.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +92,8 @@ The present work aims at automating the mapping and parametrization of common sm
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://edoc.unibas.ch/43347/1/ct-2015-003013.R1_Proof_hi.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

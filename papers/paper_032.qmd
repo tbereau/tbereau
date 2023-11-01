@@ -1,11 +1,11 @@
 
 ---
-title: "Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations"
-doi: "10.1002/adts.201800024"
-date: "2018-05-16 09:20:59"
+title: "Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models"
+doi: "10.1063/1.5025125"
+date: "2018-05-30 14:39:25"
 date-format: iso
-authors: "Liu, Kremer, Bereau"
-description: "_Adv. Theory Simul._ **1** (2018)"
+authors: "Rudzinski, Bereau"
+description: "_The Journal of Chemical Physics_ **148** (2018)"
 year: 2018
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1002/adts.201800024"></div>
+    data-badge-popover='left' data-doi="10.1063/1.5025125"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Syndiotactic polystyrene (sPS) exhibits complex polymorphic behavior upon crystallization. Computational modeling of polymer crystallization has remained a challenging task because the relevant processes are slow on the molecular time scale. A detailed characterization of sPS‐crystal polymorphism by means of coarse‐grained (CG) and atomistic (AA) modeling is reported herein. The CG model, parametrized in the melt, shows remarkable transferability properties in the crystalline phase. Not only is the transition temperature in good agreement with atomistic simulations, it stabilizes the main α and β polymorphs, observed experimentally. The propensities of polymorphs at the CG and AA levels are compared in detail, as well as finite‐size and box‐geometry effects. All in all, CG modeling stands as an efficient approach to characterize polymer‐crystal poymorphism at large scale.
+Coarse-grained molecular simulation models have provided immense, often general, insight into the complex behavior of condensed-phase systems but suffer from a lost connection to the true dynamical properties of the underlying system. In general, the physics that is built into a model shapes the free-energy landscape, restricting the attainable static and kinetic properties. In this work, we perform a detailed investigation into the property interrelationships resulting from these restrictions, for a representative system of the helix-coil transition. Inspired by high-throughput studies, we systematically vary force-field parameters and monitor their structural, kinetic, and thermodynamic properties. The focus of our investigation is a simple coarse-grained model, which accurately represents the underlying structural ensemble, i.e., effectively avoids sterically-forbidden configurations. As a result of this built-in physics, we observe a rather large restriction in the topology of the networks characterizing the simulation kinetics. When screening across force-field parameters, we find that structurally accurate models also best reproduce the kinetics, suggesting structural-kinetic relationships for these models. Additionally, an investigation into thermodynamic properties reveals a link between the cooperativity of the transition and the network topology at a single reference temperature.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Syndiotactic polystyrene (sPS) exhibits complex polymorphic behavior upon crysta
 
 ## TL;DR
 
-None
+This work systematically vary force-field parameters and monitor their structural, kinetic, and thermodynamic properties, and finds that structurally accurate models also best reproduce the kinetics, suggesting structural-kinetic relationships for these models.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,17 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Liu_2018,
-	doi = {10.1002/adts.201800024},
-	url = {https://doi.org/10.1002%2Fadts.201800024},
+@article{Rudzinski_2018,
+	doi = {10.1063/1.5025125},
+	url = {https://doi.org/10.1063%2F1.5025125},
 	year = 2018,
 	month = {may},
-	publisher = {Wiley},
-	volume = {1},
-	number = {7},
-	pages = {1800024},
-	author = {Chan Liu and Kurt Kremer and Tristan Bereau},
-	title = {Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations},
-	journal = {Advanced Theory and Simulations}
+	publisher = {{AIP} Publishing},
+	volume = {148},
+	number = {20},
+	author = {Joseph F. Rudzinski and Tristan Bereau},
+	title = {Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models},
+	journal = {The Journal of Chemical Physics}
 }
 ```
 ```{=html}
@@ -76,7 +75,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1805.10147" role="button">
+        href="https://doi.org/10.1101/183053" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +92,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1805.10147" role="button">
+        href="https://www.biorxiv.org/content/biorxiv/early/2018/02/07/183053.full.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

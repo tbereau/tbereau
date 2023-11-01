@@ -5,6 +5,9 @@ from pathlib import Path
 
 import os
 from decouple import config as environ
+from dotenv import load_dotenv
+
+load_dotenv()
 
 os.environ["ORCID_CODE"] = environ("ORCID_CODE")
 

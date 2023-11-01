@@ -1,11 +1,11 @@
 
 ---
-title: "Hoobas: A highly object-oriented builder for molecular dynamics"
-doi: "10.1016/j.commatsci.2019.05.003"
-date: "2019-05-20 10:45:06"
+title: "Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons"
+doi: "10.1002/adfm.201809112"
+date: "2019-04-15 10:14:43"
 date-format: iso
-authors: "Girard, Ehlen, Shakya, Bereau, De La Cruz"
-description: "_Computational Materials Science_ **167** (2019)"
+authors: "Schilling, Mack, Lickfett, Sieste, Ruggeri, Sneideris, Dutta, Bereau, Naraghi, Sinske, Knowles, Synatschke, Weil, Knöll"
+description: "_Adv. Funct. Mater._ **29** (2019)"
 year: 2019
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.commatsci.2019.05.003"></div>
+    data-badge-popover='left' data-doi="10.1002/adfm.201809112"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Polydispersity and random sequences are ubiquitous features of polymers, and molecular dynamics simulations can help elucidate the impact of disorder in polymer systems. However, currently available packages for building polymer topologies do not enable the user to include randomness in a straightforward fashion. Here, we introduce Hoobas, a molecular builder package that easily handles polydispersity using a prototype-builder design pattern. This enables fast and easy building of systems comprised of thousands of distinct objects. It is written in the Python programming language, which ensures compatibility with a wide range of molecular dynamics packages and tools, as well as easy integration into most workflows.
+There is an urgent need for biomaterials that support tissue healing, particularly neuronal regeneration. In a medium throughput screen novel self‐assembling peptide (SAP) sequences that form fibrils and stimulated nerve fiber growth of peripheral nervous system (PNS)‐derived neurons are identified. Based on the peptide sequences and fibril morphologies and by applying rational data‐mining, important structural parameters stimulating neuronal activity are elucidated. Three SAPs (SAP1e, SAP2e, and SAP5c) enhance adhesion and growth of PNS neurons. These SAPs form 2D and 3D matrices that serve as bioactive scaffolds stimulating cell adhesion and growth. The newly discovered SAPs also support the growth of CNS neurons and glia cells. Subsequently, the potential of SAPs to enhance PNS regeneration in vivo is analyzed. For this, the facial nerve driving whisker movement in mice is injured. Notably, SAPs persist for up to 3 weeks in the injury site indicating highly adhesive properties and stability. After SAP administration, more motor neurons incorporating markers for successive regeneration are observed. Recovery of whisker movement is elevated in SAP‐injected mice. In summary, short peptides that form fibrils are identified and the adhesion, growth, and regeneration of neurons have been efficiently enhanced without the necessity to attach hormones or growth factors.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Polydispersity and random sequences are ubiquitous features of polymers, and mol
 
 ## TL;DR
 
-Hoobas is introduced, a molecular builder package that easily handles polydispersity using a prototype-builder design pattern, which enables fast and easy building of systems comprised of thousands of distinct objects.
+Self‐assembling peptide sequences that form fibrils are identified and the adhesion, growth, and regeneration of neurons have been efficiently enhanced without the necessity to attach hormones or growth factors.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,17 +49,18 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2019,
-	doi = {10.1016/j.commatsci.2019.05.003},
-	url = {https://doi.org/10.1016%2Fj.commatsci.2019.05.003},
+@article{Schilling_2019,
+	doi = {10.1002/adfm.201809112},
+	url = {https://doi.org/10.1002%2Fadfm.201809112},
 	year = 2019,
-	month = {sep},
-	publisher = {Elsevier {BV}},
-	volume = {167},
-	pages = {25--33},
-	author = {Martin Girard and Ali Ehlen and Anisha Shakya and Tristan Bereau and Monica Olvera de la Cruz},
-	title = {Hoobas: A highly object-oriented builder for molecular dynamics},
-	journal = {Computational Materials Science}
+	month = {apr},
+	publisher = {Wiley},
+	volume = {29},
+	number = {24},
+	pages = {1809112},
+	author = {Corinna Schilling and Thomas Mack and Selene Lickfett and Stefanie Sieste and Francesco S. Ruggeri and Tomas Sneideris and Arghya Dutta and Tristan Bereau and Ramin Naraghi and Daniela Sinske and Tuomas P. J. Knowles and Christopher V. Synatschke and Tanja Weil and Bernd Knöll},
+	title = {Sequence-Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons},
+	journal = {Advanced Functional Materials}
 }
 ```
 ```{=html}
@@ -75,7 +76,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.commatsci.2019.05.003" role="button">
+        href="http://hdl.handle.net/21.11116/0000-0003-8512-2" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +93,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://manuscript.elsevier.com/S0927025619302745/pdf/S0927025619302745.pdf" role="button">
+        href="https://pure.mpg.de/pubman/item/item_3052909_4/component/file_3221133/SchillingandMacketalAdFunctMat.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -1,5 +1,8 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from my_scientific_profile.authors.authors import search_author_from_config_info
 from my_scientific_profile.config.config import get_authors_with_categories

@@ -1,12 +1,12 @@
 
 ---
-title: "Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics"
-doi: "10.1103/physrevlett.121.256002"
-date: "2018-12-21 13:31:46"
+title: "<i>In silico</i> screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force"
+doi: "10.1063/1.4987012"
+date: "2017-09-25 14:33:31"
 date-format: iso
-authors: "Bereau, Rudzinski"
-description: "_Phys. Rev. Lett._ **121** (2018)"
-year: 2018
+authors: "Menichetti, Kanekal, Kremer, Bereau"
+description: "_The Journal of Chemical Physics_ **147** (2017)"
+year: 2017
 format:
   html:
     toc: false
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1103/physrevlett.121.256002"></div>
+    data-badge-popover='left' data-doi="10.1063/1.4987012"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Classical molecular dynamics strategies are inherently limited by the molecular-mechanics basis set employed. Here we extend the concept of multisurface dynamics, initially developed to describe electronic transitions in chemical reactions, to sample the conformational ensemble of a classical system in equilibrium. In analogy to describing different electronic configurations, a surface-hopping scheme couples distinct conformational basins. A structural criterion for the surface selection effectively introduces coupling beyond the additivity of the Hamiltonian. We illustrate the method through a systematic coarse-graining of two molecular systems that give rise to notoriously challenging many-body potentials of mean force. Incorporating more surfaces leads systematically towards unimodal distributions within each basin, resulting in structural improvements that also yield kinetic consistency.
+The partitioning of small molecules in cell membranes-a key parameter for pharmaceutical applications-typically relies on experimentally available bulk partitioning coefficients. Computer simulations provide a structural resolution of the insertion thermodynamics via the potential of mean force but require significant sampling at the atomistic level. Here, we introduce high-throughput coarse-grained molecular dynamics simulations to screen thermodynamic properties. This application of physics-based models in a large-scale study of small molecules establishes linear relationships between partitioning coefficients and key features of the potential of mean force. This allows us to predict the structure of the insertion from bulk experimental measurements for more than 400 000 compounds. The potential of mean force hereby becomes an easily accessible quantity-already recognized for its high predictability of certain properties, e.g., passive permeation. Further, we demonstrate how coarse graining helps reduce the size of chemical space, enabling a hierarchical approach to screening small molecules.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Classical molecular dynamics strategies are inherently limited by the molecular-
 
 ## TL;DR
 
-None
+High-throughput coarse-grained molecular dynamics simulations are introduced to screen thermodynamic properties and it is demonstrated how coarse graining helps reduce the size of chemical space, enabling a hierarchical approach to screening small molecules.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,17 +49,18 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2018,
-	doi = {10.1103/physrevlett.121.256002},
-	url = {https://doi.org/10.1103%2Fphysrevlett.121.256002},
-	year = 2018,
-	month = {dec},
-	publisher = {American Physical Society ({APS})},
-	volume = {121},
-	number = {25},
-	author = {Tristan Bereau and Joseph F. Rudzinski},
-	title = {Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics},
-	journal = {Physical Review Letters}
+@article{Menichetti_2017,
+	doi = {10.1063/1.4987012},
+	url = {https://doi.org/10.1063%2F1.4987012},
+	year = 2017,
+	month = {sep},
+	publisher = {{AIP} Publishing},
+	volume = {147},
+	number = {12},
+	pages = {125101},
+	author = {Roberto Menichetti and Kiran H. Kanekal and Kurt Kremer and Tristan Bereau},
+	title = {$\less$i$\greater$In silico$\less$/i$\greater$ screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force},
+	journal = {The Journal of Chemical Physics}
 }
 ```
 ```{=html}
@@ -75,7 +76,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1808.05644" role="button">
+        href="http://arxiv.org/abs/1706.02616" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +93,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1808.05644" role="button">
+        href="http://arxiv.org/pdf/1706.02616" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -1,11 +1,11 @@
 
 ---
-title: "Identifying Sequential Residue Patterns in Bitter and Umami Peptides"
-doi: "10.1021/acsfoodscitech.2c00251"
-date: "2022-11-09 14:00:22"
+title: "Induced asymmetries in membranes"
+doi: "10.1016/j.bpj.2022.12.004"
+date: "2022-12-06 17:25:35"
 date-format: iso
-authors: "Dutta, Bereau, Vilgis"
-description: "_ACS Food Sci. Technol._ **2** (2022)"
+authors: "Girard, Bereau"
+description: "_Biophysical Journal_ **122** (2022)"
 year: 2022
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1021/acsfoodscitech.2c00251"></div>
+    data-badge-popover='left' data-doi="10.1016/j.bpj.2022.12.004"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The primary structures of peptides, originating from food proteins, aﬀect their taste. Connecting primary structure to taste, however, is diﬃcult because the size of the peptide sequence space increases exponentially with increasing peptide length, while experimentally-labeled data on peptides’ tastes remain scarce. We propose a method that coarse-grains the sequence space to reduce its size and systematically identiﬁes the most common coarse-grained residue patterns found in known bitter and umami peptides. We select the optimal patterns by performing extensive out-of-sample tests. The optimal patterns better represent the bitter and umami peptides when compared against baseline peptides, bitter peptides with all hydrophobic residues and umami peptides with all negatively charged residues, and peptides with randomly-chosen residues. Our method complements quantitative structure–activity relationship methods by oﬀering generic, coarse-grained bitter and umami residue patterns that can aid in locating short bitter or umami segments in a protein and in designing new umami peptides.
+Lipid asymmetry in plasma membrane of eukaryotes is ubiquitous. The first measurements reported compositional asymmetry: phosphatidylethanolamine and phosphatidylserine are mostly on the cytoplasmic leafet, while phosphatidylcholine and sphingomyelin are mostly on the exoplasmic leaflet. More recent experiments using lipidomics have evidenced the presence of saturation asymmetry between the two leaflets. A question that naturally arises is why such an asymmetry? To complicate matters, it is still largely unknown in which leaflet cholesterol lies. Here, we use chemical potentials to mimic flippase proteins responsible for maintenance of compositional asymmetry in silico. We show that saturation asymmetry naturally arises as a byproduct of phospholipid number asymmetry and sphingomyelin contents, thereby showing that some reported asymmetries may naturally result from others and do not necessarily require being externally driven. We also show that plasmalogen lipids’ tendency to be highly unsaturated is also natural. Additionally, we tackle the problem of cholesterol and show that, while it is influenced by all asymmetries, the resulting cholesterol asymmetry tends to be fairly mild.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ The primary structures of peptides, originating from food proteins, aﬀect thei
 
 ## TL;DR
 
-This work proposes a method that coarse-grains the sequence space to reduce its size and systematically identifies the most common coarse- grained residue patterns found in known bitter and umami peptides, and selects the optimal patterns by performing extensive out-of-sample tests.
+It is shown that saturation asymmetry naturally arises as a byproduct of phospholipid number asymmetry and sphingomyelin contents, thereby showing that some reported asymmetries may naturally result from others and do not necessarily require being externally driven.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ This work proposes a method that coarse-grains the sequence space to reduce its 
 ## BibTeX
 
 ```{bibtex}
-@article{Dutta_2022,
-	doi = {10.1021/acsfoodscitech.2c00251},
-	url = {https://doi.org/10.1021%2Facsfoodscitech.2c00251},
-	year = 2022,
-	month = {nov},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {2},
+@article{Girard_2023,
+	doi = {10.1016/j.bpj.2022.12.004},
+	url = {https://doi.org/10.1016%2Fj.bpj.2022.12.004},
+	year = 2023,
+	month = {jun},
+	publisher = {Elsevier {BV}},
+	volume = {122},
 	number = {11},
-	pages = {1773--1780},
-	author = {Arghya Dutta and Tristan Bereau and Thomas A. Vilgis},
-	title = {Identifying Sequential Residue Patterns in Bitter and Umami Peptides},
-	journal = {{ACS} Food Science {\&}amp$\mathsemicolon$ Technology}
+	pages = {2092--2098},
+	author = {Martin Girard and Tristan Bereau},
+	title = {Induced asymmetries in membranes},
+	journal = {Biophysical Journal}
 }
 ```
 ```{=html}
@@ -75,8 +75,8 @@ This work proposes a method that coarse-grains the sequence space to reduce its 
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://doi.org/10.1021/acsfoodscitech.2c00251" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +92,8 @@ This work proposes a method that coarse-grains the sequence space to reduce its 
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://pubs.acs.org/doi/pdf/10.1021/acsfoodscitech.2c00251" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

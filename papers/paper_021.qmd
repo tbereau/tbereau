@@ -1,11 +1,11 @@
 
 ---
-title: "Research Update: Computational materials discovery in soft matter"
-doi: "10.1063/1.4943287"
-date: "2016-03-15 17:00:21"
+title: "Protein-Backbone Thermodynamics across the Membrane Interface"
+doi: "10.1021/acs.jpcb.6b03682"
+date: "2016-05-03 19:54:22"
 date-format: iso
-authors: "Bereau, Andrienko, Kremer"
-description: "_APL Materials_ **4** (2016)"
+authors: "Bereau, Kremer"
+description: "_J. Phys. Chem. B_ **120** (2016)"
 year: 2016
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1063/1.4943287"></div>
+    data-badge-popover='left' data-doi="10.1021/acs.jpcb.6b03682"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Soft matter embodies a wide range of materials, which all share the common characteristics of weak interaction energies determining their supramolecular structure. This complicates structure-property predictions and hampers the direct application of data-driven approaches to their modeling. We present several aspects in which these methods play a role in designing soft-matter materials: drug design as well as information-driven computer simulations, e.g., histogram reweighting. We also discuss recent examples of rational design of soft-matter materials fostered by physical insight and assisted by data-driven approaches. We foresee the combination of data-driven and physical approaches a promising strategy to move the field forward.
+The thermodynamics of insertion of a protein in a membrane depends on the fine interplay between backbone and side-chain contributions interacting with the lipid environment. Using computer simulations, we probe how different descriptions of the backbone glycyl unit affect the thermodynamics of insertion of individual residues, dipeptides, and entire transmembrane helices. Due to the lack of reference data, we first introduce an efficient methodology to estimate atomistic potential of mean force (PMF) curves from a series of representative and uncorrelated coarse-grained (CG) snapshots. We find strong discrepancies between two CG models, Martini and PLUM, against reference atomistic PMFs and experiments. Atomistic simulations suggest a weak free energy of insertion between water and a POPC membrane for the glycyl unit, in overall agreement with experimental results despite severe assumptions in our calculations. We show that refining the backbone contribution in PLUM significantly improves the PMF of insertion of the WALP16 transmembrane peptide. An improper balance between the glycyl backbone and the attached side chain will lead to energetic artifacts, rationalizing Martini's overstabilization of WALP's adsorbed interfacial state. It illustrates difficulties associated with free-energy-based parametrizations of single-residue models, as the relevant free energy of partitioning used for force-field parametrization does not arise from the entire residue but rather the solvent-accessible chemical groups.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Soft matter embodies a wide range of materials, which all share the common chara
 
 ## TL;DR
 
-None
+It is shown that refining the backbone contribution in PLUM significantly improves the PMF of insertion of the WALP16 transmembrane peptide, and illustrates difficulties associated with free-energy-based parametrizations of single-residue models, as the relevant free energy of partitioning used for force-field paramETrization does not arise from the entire residue but rather the solvent-accessible chemical groups.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -50,16 +50,17 @@ None
 
 ```{bibtex}
 @article{Bereau_2016,
-	doi = {10.1063/1.4943287},
-	url = {https://doi.org/10.1063%2F1.4943287},
+	doi = {10.1021/acs.jpcb.6b03682},
+	url = {https://doi.org/10.1021%2Facs.jpcb.6b03682},
 	year = 2016,
-	month = {mar},
-	publisher = {{AIP} Publishing},
-	volume = {4},
-	number = {5},
-	author = {Tristan Bereau and Denis Andrienko and Kurt Kremer},
-	title = {Research Update: Computational materials discovery in soft matter},
-	journal = {{APL} Materials}
+	month = {may},
+	publisher = {American Chemical Society ({ACS})},
+	volume = {120},
+	number = {26},
+	pages = {6391--6400},
+	author = {Tristan Bereau and Kurt Kremer},
+	title = {Protein-Backbone Thermodynamics across the Membrane Interface},
+	journal = {The Journal of Physical Chemistry B}
 }
 ```
 ```{=html}
@@ -74,8 +75,8 @@ None
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://doi.org/10.1063/1.4943287" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -91,8 +92,8 @@ None
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://aip.scitation.org/doi/pdf/10.1063/1.4943287" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

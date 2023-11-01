@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2016-06-11">
-<meta name="description" content="Chemical Physics Letters 659 (2016)">
+<meta name="dcterms.date" content="2016-07-15">
+<meta name="description" content="Eur. Phys. J. Spec. Top. 225 (2016)">
 
-<title>Tristan Bereau - An in-silico walker</title>
+<title>Tristan Bereau - Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Tristan Bereau - An in-silico walker">
-<meta name="twitter:description" content="Chemical Physics Letters 659 (2016)">
+<meta name="twitter:title" content="Tristan Bereau - Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields">
+<meta name="twitter:description" content="Eur. Phys. J. Spec. Top. 225 (2016)">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -187,12 +187,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">An in-silico walker</h1>
+<h1 class="title">Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields</h1>
 </div>
 
 <div>
   <div class="description">
-    <em>Chemical Physics Letters</em> <strong>659</strong> (2016)
+    <em>Eur. Phys. J. Spec. Top.</em> <strong>225</strong> (2016)
   </div>
 </div>
 
@@ -202,14 +202,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Xiao, Chen, Bereau, Shi </p>
+             <p>Rudzinski, Bereau </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2016-06-11</p>
+      <p class="date">2016-07-15</p>
     </div>
   </div>
   
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
       <p class="doi">
-        <a href="https://doi.org/10.1016/j.cplett.2016.06.019">10.1016/j.cplett.2016.06.019</a>
+        <a href="https://doi.org/10.1140/epjst/e2016-60114-5">10.1140/epjst/e2016-60114-5</a>
       </p>
     </div>
   </div>
@@ -228,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div class="float-end">
-    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1016/j.cplett.2016.06.019"></div>
+    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1140/epjst/e2016-60114-5"></div>
 </div>
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <br><br><br>
@@ -236,30 +236,31 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Abstract</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">TL;DR</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">BibTeX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Open Access</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>The paradox of biomimetic research is to perform bio-functionality, usually associated with sophisticated structures optimized by nature, with minimal structural complexity for the ease of fabrication. Here we show that a three-particle trimer can exhibit kinesin-like autonomous walk on a track via reactive molecular dynamics simulations. The autonomous motion is due to imbalanced transitions resulting from exothermic catalytic reactions, and the spatial asymmetry from the track. This molecular design can be realized by reproducing the particle–particle interactions in functionalized nano- or colloidal particles. Our results open up the possibility of fabricating bio-mimetic nano-systems in a minimalist approach.</p>
+<p>The parametrization of coarse-grained (CG) simulation models for molecular systems often aims at reproducing static properties alone. The reduced molecular friction of the CG representation usually results in faster, albeit inconsistent, dynamics. In this work, we rely on Markov state models to simultaneously characterize the static and kinetic properties of two CG peptide force fields—one top-down and one bottom-up. Instead of a rigorous evolution of CG dynamics (e.g., using a generalized Langevin equation), we attempt to improve the description of kinetics by simply altering the existing CG models, which employ standard Langevin dynamics. By varying masses and relevant force-field parameters, we can improve the timescale separation of the slow kinetic processes, achieve a more consistent ratio of mean-first-passage times between metastable states, and refine the relative free-energies between these states. Importantly, we show that the incorporation of kinetic information into a structure-based parametrization improves the description of the helix-coil transition sampled by a minimal CG model. While structure-based models understabilize the helical state, kinetic constraints help identify CG models that improve the ratio of forward/backward timescales by effectively hindering the sampling of spurious conformational intermediate states.</p>
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &amp;
 <cite title="Source title">CrossRef</cite>
 </footer>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>None</p>
+<p>This work relies on Markov state models to simultaneously characterize the static and kinetic properties of two CG peptide force fields—one top-down and one bottom-up—in order to improve the description of kinetics.</p>
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<pre class="{bibtex}"><code>@article{Xiao_2016,
-    doi = {10.1016/j.cplett.2016.06.019},
-    url = {https://doi.org/10.1016%2Fj.cplett.2016.06.019},
+<pre class="{bibtex}"><code>@article{Rudzinski_2016,
+    doi = {10.1140/epjst/e2016-60114-5},
+    url = {https://doi.org/10.1140%2Fepjst%2Fe2016-60114-5},
     year = 2016,
-    month = {aug},
-    publisher = {Elsevier {BV}},
-    volume = {659},
-    pages = {6--9},
-    author = {Qiran Xiao and Yanping Chen and Tristan Bereau and Yunfeng Shi},
-    title = {An in-silico walker},
-    journal = {Chemical Physics Letters}
+    month = {jul},
+    publisher = {Springer Science and Business Media {LLC}},
+    volume = {225},
+    number = {8-9},
+    pages = {1373--1389},
+    author = {J.F. Rudzinski and T. Bereau},
+    title = {Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields},
+    journal = {The European Physical Journal Special Topics}
 }</code></pre>
 <footer class="blockquote-footer">from
 <cite title="Source Title">doi2bib</cite>
@@ -270,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  " href="https://doi.org/10.1016/j.cplett.2016.06.019" role="button">
+  " href="http://arxiv.org/abs/1607.05492" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewbox="0 0 16 16">
     <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995
        2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8
@@ -284,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      " href="http://manuscript.elsevier.com/S0009261416304146/pdf/S0009261416304146.pdf" role="button">
+      " href="http://arxiv.org/pdf/1607.05492" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-pdf" viewbox="0 0 16 16">
     <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2
         2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0

@@ -1,11 +1,11 @@
 
 ---
-title: "Designing exceptional gas-separation polymer membranes using machine learning"
-doi: "10.1126/sciadv.aaz4301"
-date: "2020-05-15 23:54:58"
+title: "Hydration free energies from kernel-based machine learning: Compound-database bias"
+doi: "10.1063/5.0012230"
+date: "2020-07-01 10:45:39"
 date-format: iso
-authors: "Barnett, Bilchak, Wang, Benicewicz, Murdock, Bereau, Kumar"
-description: "_Sci. Adv._ **6** (2020)"
+authors: "Rauer, Bereau"
+description: "_The Journal of Chemical Physics_ **153** (2020)"
 year: 2020
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1126/sciadv.aaz4301"></div>
+    data-badge-popover='left' data-doi="10.1063/5.0012230"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Designing advanced membrane materials with machine-assisted learning. The field of polymer membrane design is primarily based on empirical observation, which limits discovery of new materials optimized for separating a given gas pair. Instead of relying on exhaustive experimental investigations, we trained a machine learning (ML) algorithm, using a topological, path-based hash of the polymer repeating unit. We used a limited set of experimental gas permeability data for six different gases in ~700 polymeric constructs that have been measured to date to predict the gas-separation behavior of over 11,000 homopolymers not previously tested for these properties. To test the algorithm’s accuracy, we synthesized two of the most promising polymer membranes predicted by this approach and found that they exceeded the upper bound for CO2/CH4 separation performance. This ML technique, which is trained using a relatively small body of experimental data (and no simulation data), evidently represents an innovative means of exploring the vast phase space available for polymer membrane design.
+We consider the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules. Our in silico study is based on computer simulations at the atomistic level with implicit solvent. We report on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects: The representation is averaged over several conformers to account for the statistical ensemble. We also include an atomic-decomposition ansatz, which offers significant added transferability compared to molecular learning. Finally, we explore the existence of severe biases from databases of experimental compounds. By performing a combination of dimensionality reduction and cross-learning models, we show that the rate of learning depends significantly on the breadth and variety of the training dataset. Our study highlights the dangers of fitting machine-learning models to databases of a narrow chemical range.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Designing advanced membrane materials with machine-assisted learning. The field 
 
 ## TL;DR
 
-This work trained a machine learning (ML) algorithm, using a topological, path-based hash of the polymer repeating unit, to predict the gas-separation behavior of over 11,000 homopolymers not previously tested for these properties.
+This study considers the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules and reports on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,17 +49,17 @@ This work trained a machine learning (ML) algorithm, using a topological, path-b
 ## BibTeX
 
 ```{bibtex}
-@article{Barnett_2020,
-	doi = {10.1126/sciadv.aaz4301},
-	url = {https://doi.org/10.1126%2Fsciadv.aaz4301},
+@article{Rauer_2020,
+	doi = {10.1063/5.0012230},
+	url = {https://doi.org/10.1063%2F5.0012230},
 	year = 2020,
-	month = {may},
-	publisher = {American Association for the Advancement of Science ({AAAS})},
-	volume = {6},
-	number = {20},
-	author = {J. Wesley Barnett and Connor R. Bilchak and Yiwen Wang and Brian C. Benicewicz and Laura A. Murdock and Tristan Bereau and Sanat K. Kumar},
-	title = {Designing exceptional gas-separation polymer membranes using machine learning},
-	journal = {Science Advances}
+	month = {jul},
+	publisher = {{AIP} Publishing},
+	volume = {153},
+	number = {1},
+	author = {Clemens Rauer and Tristan Bereau},
+	title = {Hydration free energies from kernel-based machine learning: Compound-database bias},
+	journal = {The Journal of Chemical Physics}
 }
 ```
 ```{=html}
@@ -75,7 +75,7 @@ This work trained a machine learning (ML) algorithm, using a topological, path-b
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1126/sciadv.aaz4301" role="button">
+        href="https://doi.org/10.1063/5.0012230" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +92,7 @@ This work trained a machine learning (ML) algorithm, using a topological, path-b
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://advances.sciencemag.org/content/advances/6/20/eaaz4301.full.pdf" role="button">
+        href="https://aip.scitation.org/doi/10.1063/5.0012230" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

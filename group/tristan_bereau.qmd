@@ -50,7 +50,7 @@ PhD, Physics, Carnegie Mellon University | 2006 - 2011
 BSc, Physics, Ecole Polytechnique Fédérale de Lausanne | 2003 - 2006
 :::
 
-## Publications
+## Group publications
 
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
@@ -96,7 +96,7 @@ Inputs.table(my_papers, {
 })
 ```
 
-## Collaborators
+## Group collaborators
 
 ```{ojs}
 collaborators = Array.from(

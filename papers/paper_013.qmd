@@ -1,12 +1,12 @@
 
 ---
-title: "Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange"
-doi: "10.1007/s00232-014-9738-9"
-date: "2014-10-13 08:26:24"
+title: "Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study"
+doi: "10.1063/1.4916630"
+date: "2015-04-07 17:00:19"
 date-format: iso
-authors: "Bereau, Deserno"
-description: "_J Membrane Biol_ **248** (2014)"
-year: 2014
+authors: "Cazade, Tran, Bereau, Das, Kläsi, Hamm, Meuwly"
+description: "_The Journal of Chemical Physics_ **142** (2015)"
+year: 2015
 format:
   html:
     toc: false
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1007/s00232-014-9738-9"></div>
+    data-badge-popover='left' data-doi="10.1063/1.4916630"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Protein structure formation in the membrane highlights a grand challenge of sampling in computer simulations, because kinetic traps and slow dynamics make it difficult to find the native state. Exploiting increased fluctuations at higher temperatures can help overcome free-energy barriers, provided the membrane’s structure remains stable. In this work, we apply Hamiltonian replica-exchange molecular dynamics, where we only tune the backbone hydrogen-bond strength to help reduce the propensity of long-lived misfolded states. Using a recently developed coarse-grained model, we illustrate the robustness of the method by folding different WALP transmembrane helical peptides starting from stretched, unstructured conformations. We show the efficiency of the method by comparing to simulations without enhanced sampling, achieving folding in one example after significantly longer simulation times. Analysis of the bilayer structure during folding provides insight into the local membrane deformation during helix formation as a function of chain length (from 16 to 23 residues). Finally, we apply our method to fold the 50-residue-long major pVIII coat protein (fd coat) of the filamentous fd bacteriophage. Our results agree well with experimental structures and atomistic simulations based on implicit membrane models, suggesting that our explicit CG folding protocol can serve as a starting point for better-refined atomistic simulations in a multiscale framework.
+The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimensional infrared spectroscopy and atomistic simulations. The lineshape of the linear infrared spectrum is better captured by semiempirical (density functional tight binding) mixed quantum mechanical/molecular mechanics simulations, whereas force field simulations with multipolar interactions yield lineshapes that are significantly too narrow. For the solvent dynamics, a relatively slow time scale of 2 ps is found from the experiments and supported by the mixed quantum mechanical/molecular mechanics simulations. With multipolar force fields fitted to the available thermodynamical data, the time scale is considerably faster--on the 0.5 ps time scale. The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Protein structure formation in the membrane highlights a grand challenge of samp
 
 ## TL;DR
 
-The results agree well with experimental structures and atomistic simulations based on implicit membrane models, suggesting that the explicit CG folding protocol can serve as a starting point for better-refined atomistic simulation in a multiscale framework.
+The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ The results agree well with experimental structures and atomistic simulations ba
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2014,
-	doi = {10.1007/s00232-014-9738-9},
-	url = {https://doi.org/10.1007%2Fs00232-014-9738-9},
-	year = 2014,
-	month = {oct},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {248},
-	number = {3},
-	pages = {395--405},
-	author = {Tristan Bereau and Markus Deserno},
-	title = {Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange},
-	journal = {The Journal of Membrane Biology}
+@article{Cazade_2015,
+	doi = {10.1063/1.4916630},
+	url = {https://doi.org/10.1063%2F1.4916630},
+	year = 2015,
+	month = {jun},
+	publisher = {{AIP} Publishing},
+	volume = {142},
+	number = {21},
+	pages = {212415},
+	author = {Pierre-Andr{\'{e}} Cazade and Halina Tran and Tristan Bereau and Akshaya K. Das and Felix Kläsi and Peter Hamm and Markus Meuwly},
+	title = {Solvation of fluoro-acetonitrile in water by 2D-{IR} spectroscopy: A combined experimental-computational study},
+	journal = {The Journal of Chemical Physics}
 }
 ```
 ```{=html}
@@ -75,8 +75,8 @@ The results agree well with experimental structures and atomistic simulations ba
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +92,8 @@ The results agree well with experimental structures and atomistic simulations ba
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -1,11 +1,11 @@
 
 ---
-title: "Induced asymmetries in membranes"
-doi: "10.1016/j.bpj.2022.12.004"
-date: "2022-12-06 17:25:35"
+title: "Data-driven discovery of cardiolipin-selective small molecules by computational active learning"
+doi: "10.1039/D2SC00116K"
+date: "2022-03-02 21:01:32"
 date-format: iso
-authors: "Girard, Bereau"
-description: "_Biophysical Journal_ **122** (2022)"
+authors: "Mohr, Shmilovich, Kleinwächter, Schneider, Ferguson, Bereau"
+description: "_Chem. Sci._ **13** (2022)"
 year: 2022
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.bpj.2022.12.004"></div>
+    data-badge-popover='left' data-doi="10.1039/D2SC00116K"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Lipid asymmetry in plasma membrane of eukaryotes is ubiquitous. The first measurements reported compositional asymmetry: phosphatidylethanolamine and phosphatidylserine are mostly on the cytoplasmic leafet, while phosphatidylcholine and sphingomyelin are mostly on the exoplasmic leaflet. More recent experiments using lipidomics have evidenced the presence of saturation asymmetry between the two leaflets. A question that naturally arises is why such an asymmetry? To complicate matters, it is still largely unknown in which leaflet cholesterol lies. Here, we use chemical potentials to mimic flippase proteins responsible for maintenance of compositional asymmetry in silico. We show that saturation asymmetry naturally arises as a byproduct of phospholipid number asymmetry and sphingomyelin contents, thereby showing that some reported asymmetries may naturally result from others and do not necessarily require being externally driven. We also show that plasmalogen lipids’ tendency to be highly unsaturated is also natural. Additionally, we tackle the problem of cholesterol and show that, while it is influenced by all asymmetries, the resulting cholesterol asymmetry tends to be fairly mild.
+Subtle variations in the lipid composition of mitochondrial membranes can have a profound impact on mitochondrial function. The inner mitochondrial membrane contains the phospholipid cardiolipin, which has been demonstrated to act as a biomarker for a number of diverse pathologies. Small molecule dyes capable of selectively partitioning into cardiolipin membranes enable visualization and quantification of the cardiolipin content. Here we present a data-driven approach that combines a deep learning-enabled active learning workflow with coarse-grained molecular dynamics simulations and alchemical free energy calculations to discover small organic compounds able to selectively permeate cardiolipin-containing membranes. By employing transferable coarse-grained models we efficiently navigate the all-atom design space corresponding to small organic molecules with molecular weight less than ≈500 Da. After direct simulation of only 0.42% of our coarse-grained search space we identify molecules with considerably increased levels of cardiolipin selectivity compared to a widely used cardiolipin probe 10-N-nonyl acridine orange. Our accumulated simulation data enables us to derive interpretable design rules linking coarse-grained structure to cardiolipin selectivity. The findings are corroborated by fluorescence anisotropy measurements of two compounds conforming to our defined design rules. Our findings highlight the potential of coarse-grained representations and multiscale modelling for materials discovery and design.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Lipid asymmetry in plasma membrane of eukaryotes is ubiquitous. The first measur
 
 ## TL;DR
 
-It is shown that saturation asymmetry naturally arises as a byproduct of phospholipid number asymmetry and sphingomyelin contents, thereby showing that some reported asymmetries may naturally result from others and do not necessarily require being externally driven.
+A data-driven approach is presented that combines a deep learning-enabled active learning workflow with coarse-grained molecular dynamics simulations and alchemical free energy calculations to discover small organic compounds able to selectively permeate cardiolipin-containing membranes.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,17 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2023,
-	doi = {10.1016/j.bpj.2022.12.004},
-	url = {https://doi.org/10.1016%2Fj.bpj.2022.12.004},
-	year = 2023,
-	month = {jun},
-	publisher = {Elsevier {BV}},
-	volume = {122},
-	number = {11},
-	pages = {2092--2098},
-	author = {Martin Girard and Tristan Bereau},
-	title = {Induced asymmetries in membranes},
-	journal = {Biophysical Journal}
+@article{Mohr_2022,
+	doi = {10.1039/d2sc00116k},
+	url = {https://doi.org/10.1039%2Fd2sc00116k},
+	year = 2022,
+	publisher = {Royal Society of Chemistry ({RSC})},
+	volume = {13},
+	number = {16},
+	pages = {4498--4511},
+	author = {Bernadette Mohr and Kirill Shmilovich and Isabel S. Kleinwächter and Dirk Schneider and Andrew L. Ferguson and Tristan Bereau},
+	title = {Data-driven discovery of cardiolipin-selective small molecules by computational active learning},
+	journal = {Chemical Science}
 }
 ```
 ```{=html}
@@ -75,8 +74,8 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://doi.org/10.1039/d2sc00116k" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +91,8 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://pubs.rsc.org/en/content/articlepdf/2022/sc/d2sc00116k" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

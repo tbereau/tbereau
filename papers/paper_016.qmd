@@ -1,11 +1,11 @@
 
 ---
-title: "Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study"
-doi: "10.1063/1.4916630"
-date: "2015-04-07 17:00:19"
+title: "Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity"
+doi: "10.1016/j.bpj.2015.07.012"
+date: "2015-08-18 16:31:03"
 date-format: iso
-authors: "Cazade, Tran, Bereau, Das, Kläsi, Hamm, Meuwly"
-description: "_The Journal of Chemical Physics_ **142** (2015)"
+authors: "Bereau"
+description: "_Biophysical Journal_ **109** (2015)"
 year: 2015
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1063/1.4916630"></div>
+    data-badge-popover='left' data-doi="10.1016/j.bpj.2015.07.012"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimensional infrared spectroscopy and atomistic simulations. The lineshape of the linear infrared spectrum is better captured by semiempirical (density functional tight binding) mixed quantum mechanical/molecular mechanics simulations, whereas force field simulations with multipolar interactions yield lineshapes that are significantly too narrow. For the solvent dynamics, a relatively slow time scale of 2 ps is found from the experiments and supported by the mixed quantum mechanical/molecular mechanics simulations. With multipolar force fields fitted to the available thermodynamical data, the time scale is considerably faster--on the 0.5 ps time scale. The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
+
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimen
 
 ## TL;DR
 
-The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
+Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gained increasing interest, because they combine two attractive features: their mode of action is very generic and thus evolutionarily conserved; but unlike antimicrobial peptides, they involve much smaller molecular-weight peptides and are thus more in line with both practical and economical considerations of drug development.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
 ## BibTeX
 
 ```{bibtex}
-@article{Cazade_2015,
-	doi = {10.1063/1.4916630},
-	url = {https://doi.org/10.1063%2F1.4916630},
+@article{Bereau_2015,
+	doi = {10.1016/j.bpj.2015.07.012},
+	url = {https://doi.org/10.1016%2Fj.bpj.2015.07.012},
 	year = 2015,
-	month = {jun},
-	publisher = {{AIP} Publishing},
-	volume = {142},
-	number = {21},
-	pages = {212415},
-	author = {Pierre-Andr{\'{e}} Cazade and Halina Tran and Tristan Bereau and Akshaya K. Das and Felix Kläsi and Peter Hamm and Markus Meuwly},
-	title = {Solvation of fluoro-acetonitrile in water by 2D-{IR} spectroscopy: A combined experimental-computational study},
-	journal = {The Journal of Chemical Physics}
+	month = {aug},
+	publisher = {Elsevier {BV}},
+	volume = {109},
+	number = {4},
+	pages = {668--669},
+	author = {Tristan Bereau},
+	title = {Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity},
+	journal = {Biophysical Journal}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
+        href="https://doi.org/10.1016/j.bpj.2015.07.012" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
+        href="http://www.cell.com/article/S0006349515007183/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

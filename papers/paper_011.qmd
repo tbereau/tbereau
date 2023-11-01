@@ -1,12 +1,12 @@
 
 ---
-title: "Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules"
-doi: "10.1021/acs.jctc.5b00301"
-date: "2015-05-21 16:00:51"
+title: "Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange"
+doi: "10.1007/s00232-014-9738-9"
+date: "2014-10-13 08:26:24"
 date-format: iso
-authors: "Bereau, Andrienko, Von Lilienfeld"
-description: "_J. Chem. Theory Comput._ **11** (2015)"
-year: 2015
+authors: "Bereau, Deserno"
+description: "_J Membrane Biol_ **248** (2014)"
+year: 2014
 format:
   html:
     toc: false
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1021/acs.jctc.5b00301"></div>
+    data-badge-popover='left' data-doi="10.1007/s00232-014-9738-9"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Accurate representation of the molecular electrostatic potential, which is often expanded in distributed multipole moments, is crucial for an efficient evaluation of intermolecular interactions. Here we introduce a machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation. The model is trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules. Multipoles in systems with neutral, cationic, and anionic molecular charge states are treated with individual models. The models' predictive accuracy and applicability are illustrated by evaluating intermolecular interaction energies of nearly 1,000 dimers and the cohesive energy of the benzene crystal.
+Protein structure formation in the membrane highlights a grand challenge of sampling in computer simulations, because kinetic traps and slow dynamics make it difficult to find the native state. Exploiting increased fluctuations at higher temperatures can help overcome free-energy barriers, provided the membrane’s structure remains stable. In this work, we apply Hamiltonian replica-exchange molecular dynamics, where we only tune the backbone hydrogen-bond strength to help reduce the propensity of long-lived misfolded states. Using a recently developed coarse-grained model, we illustrate the robustness of the method by folding different WALP transmembrane helical peptides starting from stretched, unstructured conformations. We show the efficiency of the method by comparing to simulations without enhanced sampling, achieving folding in one example after significantly longer simulation times. Analysis of the bilayer structure during folding provides insight into the local membrane deformation during helix formation as a function of chain length (from 16 to 23 residues). Finally, we apply our method to fold the 50-residue-long major pVIII coat protein (fd coat) of the filamentous fd bacteriophage. Our results agree well with experimental structures and atomistic simulations based on implicit membrane models, suggesting that our explicit CG folding protocol can serve as a starting point for better-refined atomistic simulations in a multiscale framework.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Accurate representation of the molecular electrostatic potential, which is often
 
 ## TL;DR
 
-A machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation is introduced, trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules.
+The results agree well with experimental structures and atomistic simulations based on implicit membrane models, suggesting that the explicit CG folding protocol can serve as a starting point for better-refined atomistic simulation in a multiscale framework.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2015,
-	doi = {10.1021/acs.jctc.5b00301},
-	url = {https://doi.org/10.1021%2Facs.jctc.5b00301},
-	year = 2015,
-	month = {jun},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {11},
-	number = {7},
-	pages = {3225--3233},
-	author = {Tristan Bereau and Denis Andrienko and O. Anatole von Lilienfeld},
-	title = {Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules},
-	journal = {Journal of Chemical Theory and Computation}
+@article{Bereau_2014,
+	doi = {10.1007/s00232-014-9738-9},
+	url = {https://doi.org/10.1007%2Fs00232-014-9738-9},
+	year = 2014,
+	month = {oct},
+	publisher = {Springer Science and Business Media {LLC}},
+	volume = {248},
+	number = {3},
+	pages = {395--405},
+	author = {Tristan Bereau and Markus Deserno},
+	title = {Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange},
+	journal = {The Journal of Membrane Biology}
 }
 ```
 ```{=html}
@@ -75,8 +75,8 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://edoc.unibas.ch/43347/1/ct-2015-003013.R1_Proof_hi.pdf" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +92,8 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://edoc.unibas.ch/43347/1/ct-2015-003013.R1_Proof_hi.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

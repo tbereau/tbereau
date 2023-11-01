@@ -6,8 +6,8 @@ format:
     echo: false
     keep-hidden: true
 categories:
-  - current
   - postdoc
+  - current
 image: ../static/daniel.jpg
 about:
   id: hero-heading
@@ -19,8 +19,8 @@ about:
       text: Github
       href: https://github.com/braniii
     - icon: house
-      text: website
-      href: https://braniii.github.io
+      text: Website
+      href: https://braniii.github.io/
     - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=fg5aD8QAAAAJ
@@ -29,15 +29,18 @@ about:
 
 :::{#hero-heading}
 
+
+
 ## Experience
 
 Postdoc, Uni. Heidelberg | 2023 - now
 
-PhD [@stocklab](https://www.moldyn.uni-freiburg.de), ALU Freiburg | 2018 - 2023
+PhD [@stocklab](https://www.moldyn.uni-freiburg.de/), ALU Freiburg | 2018 - 2023
+
 
 :::
 
-## Publications
+## Group publications
 
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
@@ -83,7 +86,7 @@ Inputs.table(my_papers, {
 })
 ```
 
-## Collaborators
+## Group collaborators
 
 ```{ojs}
 collaborators = Array.from(

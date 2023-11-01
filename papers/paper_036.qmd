@@ -1,11 +1,11 @@
 
 ---
-title: "Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons"
-doi: "10.1002/adfm.201809112"
-date: "2019-04-15 10:14:43"
+title: "Revisiting the Meyer-Overton rule for drug-membrane permeabilities"
+doi: "10.1080/00268976.2019.1601787"
+date: "2019-04-08 03:49:22"
 date-format: iso
-authors: "Schilling, Mack, Lickfett, Sieste, Ruggeri, Sneideris, Dutta, Bereau, Naraghi, Sinske, Knowles, Synatschke, Weil, Knöll"
-description: "_Adv. Funct. Mater._ **29** (2019)"
+authors: "Menichetti, Bereau"
+description: "_Molecular Physics_ **117** (2019)"
 year: 2019
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1002/adfm.201809112"></div>
+    data-badge-popover='left' data-doi="10.1080/00268976.2019.1601787"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-There is an urgent need for biomaterials that support tissue healing, particularly neuronal regeneration. In a medium throughput screen novel self‐assembling peptide (SAP) sequences that form fibrils and stimulated nerve fiber growth of peripheral nervous system (PNS)‐derived neurons are identified. Based on the peptide sequences and fibril morphologies and by applying rational data‐mining, important structural parameters stimulating neuronal activity are elucidated. Three SAPs (SAP1e, SAP2e, and SAP5c) enhance adhesion and growth of PNS neurons. These SAPs form 2D and 3D matrices that serve as bioactive scaffolds stimulating cell adhesion and growth. The newly discovered SAPs also support the growth of CNS neurons and glia cells. Subsequently, the potential of SAPs to enhance PNS regeneration in vivo is analyzed. For this, the facial nerve driving whisker movement in mice is injured. Notably, SAPs persist for up to 3 weeks in the injury site indicating highly adhesive properties and stability. After SAP administration, more motor neurons incorporating markers for successive regeneration are observed. Recovery of whisker movement is elevated in SAP‐injected mice. In summary, short peptides that form fibrils are identified and the adhesion, growth, and regeneration of neurons have been efficiently enhanced without the necessity to attach hormones or growth factors.
+ABSTRACT Assessing the permeation rate of drug-like molecules across a lipid membrane is of paramount importance for pharmaceutical applications. While the Meyer-Overton rule relates the permeability coefficient to a few thermodynamic properties, its accuracy is limited by the homogeneity assumption. In this work, we extract an analogous relation for the permeation of a small solute through a lipid bilayer. This is obtained by systematically screening a subset of chemical space by means of high-throughput coarse-grained simulations, and relying on the accurate inhomogeneous solubility-diffusion model (ISDM). We connect the permeability coefficient of a compound to two molecular descriptors: partitioning free-energy and acid dissociation constant. In the ISDM the permeability is a functional of the potential of mean force. We discuss how – and when – combining together these profiles for a large variety of compounds can result in a smooth dependence of the permeability on the molecular descriptors. We focus on acidic molecules: for weak acids, the permeability largely depends on the main free-energy differences of the problem, which directly link to our molecular descriptors. For strong acids, the multivalued nature of the permeability requires to introduce a third variable, characterising the amphiphilicity of the small molecule. Abbreviations: CG: coarse-grained; HTCG: high-throughput coarse-grained; PMF: potential of mean force; ISDM: inhomogeneous solubility-diffusion model; DOPC: 1; 2-Dioleoyl-sn-glycero-3-phosphocholine GRAPHICAL ABSTRACT
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ There is an urgent need for biomaterials that support tissue healing, particular
 
 ## TL;DR
 
-Self‐assembling peptide sequences that form fibrils are identified and the adhesion, growth, and regeneration of neurons have been efficiently enhanced without the necessity to attach hormones or growth factors.
+This work extracts an analogous relation for the permeation of a small solute through a lipid bilayer by systematically screening a subset of chemical space by means of high-throughput coarse-grained simulations, and relying on the accurate inhomogeneous solubility-diffusion model (ISDM).
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
 ## BibTeX
 
 ```{bibtex}
-@article{Schilling_2019,
-	doi = {10.1002/adfm.201809112},
-	url = {https://doi.org/10.1002%2Fadfm.201809112},
+@article{Menichetti_2019,
+	doi = {10.1080/00268976.2019.1601787},
+	url = {https://doi.org/10.1080%2F00268976.2019.1601787},
 	year = 2019,
 	month = {apr},
-	publisher = {Wiley},
-	volume = {29},
-	number = {24},
-	pages = {1809112},
-	author = {Corinna Schilling and Thomas Mack and Selene Lickfett and Stefanie Sieste and Francesco S. Ruggeri and Tomas Sneideris and Arghya Dutta and Tristan Bereau and Ramin Naraghi and Daniela Sinske and Tuomas P. J. Knowles and Christopher V. Synatschke and Tanja Weil and Bernd Knöll},
-	title = {Sequence-Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons},
-	journal = {Advanced Functional Materials}
+	publisher = {Informa {UK} Limited},
+	volume = {117},
+	number = {20},
+	pages = {2900--2909},
+	author = {Roberto Menichetti and Tristan Bereau},
+	title = {Revisiting the Meyer-Overton rule for drug-membrane permeabilities},
+	journal = {Molecular Physics}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://hdl.handle.net/21.11116/0000-0003-8512-2" role="button">
+        href="https://doi.org/10.1080/00268976.2019.1601787" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.mpg.de/pubman/item/item_3052909_4/component/file_3221133/SchillingandMacketalAdFunctMat.pdf" role="button">
+        href="https://www.tandfonline.com/doi/pdf/10.1080/00268976.2019.1601787?needAccess=true" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

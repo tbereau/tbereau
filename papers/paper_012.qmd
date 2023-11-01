@@ -1,11 +1,11 @@
 
 ---
-title: "Multi-timestep Integrator for the Modified Andersen Barostat"
-doi: "10.1016/j.phpro.2015.07.101"
-date: "2015-08-28 01:16:57"
+title: "Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes"
+doi: "10.1021/jp508052q"
+date: "2015-01-13 21:47:43"
 date-format: iso
-authors: "Bereau"
-description: "_Physics Procedia_ **68** (2015)"
+authors: "Jakobsen, Bereau, Meuwly"
+description: "_J. Phys. Chem. B_ **119** (2015)"
 year: 2015
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.phpro.2015.07.101"></div>
+    data-badge-popover='left' data-doi="10.1021/jp508052q"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described. Proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model. Measurements of the configurational temperature indicate proper canonical sampling, while folding simu- lations of unstructured peptides into transmembrane helices provide a realistic application and suggest the maximum set of time steps usable for that model.
+The performance of multipole (MTP) and point charge (PC) force fields in classical molecular dynamics (MD) simulations of condensed-phase systems for both equilibrium and dynamical quantities is compared. MTP electrostatics provides an improved description of the anisotropic electrostatic potential, which is especially important to describe key, challenging interactions, such as lone pairs, π-interactions, and hydrogen bonds. These chemical environments are probed by focusing on the hydration properties of two molecules: N-methylacetamide and phenyl bromide. Both, equilibrium and dynamical, quantities are affected by the quality of the electrostatic model. The alteration of the first solvation shell in MTP simulations is validated by comparing with lifetimes and correlation times of solute-solvent interactions from experiment. The improved dynamical behavior found in the MTP simulations—observed for molecules parametrized using very different protocols—suggests that a systematic improvement of both equilibrium and dynamical quantities when using MTP electrostatics is possible.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
 
 ## TL;DR
 
-An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described, and proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model.
+The improved dynamical behavior found in the MTP simulations suggests that a systematic improvement of both equilibrium and dynamical quantities when using MTP electrostatics is possible.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,16 +49,18 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2015,
-	doi = {10.1016/j.phpro.2015.07.101},
-	url = {https://doi.org/10.1016%2Fj.phpro.2015.07.101},
+@article{Jakobsen_2015,
+	doi = {10.1021/jp508052q},
+	url = {https://doi.org/10.1021%2Fjp508052q},
 	year = 2015,
-	publisher = {Elsevier {BV}},
-	volume = {68},
-	pages = {7--15},
-	author = {Tristan Bereau},
-	title = {Multi-timestep Integrator for the Modified Andersen Barostat},
-	journal = {Physics Procedia}
+	month = {jan},
+	publisher = {American Chemical Society ({ACS})},
+	volume = {119},
+	number = {7},
+	pages = {3034--3045},
+	author = {Sofie Jakobsen and Tristan Bereau and Markus Meuwly},
+	title = {Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes},
+	journal = {The Journal of Physical Chemistry B}
 }
 ```
 ```{=html}
@@ -74,7 +76,7 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.phpro.2015.07.101" role="button">
+        href="https://edoc.unibas.ch/41803/1/jp-2014-08052q.R2_Proof_hi.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -90,8 +92,8 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://edoc.unibas.ch/41803/1/jp-2014-08052q.R2_Proof_hi.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

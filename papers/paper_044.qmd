@@ -1,11 +1,11 @@
 
 ---
-title: "Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics"
-doi: "10.1021/acs.jpcb.9b10469"
-date: "2020-01-17 21:44:30"
+title: "Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force"
+doi: "10.1016/j.bpj.2020.01.039"
+date: "2020-02-05 00:16:30"
 date-format: iso
-authors: "Koch, Morsbach, Bereau, Lévêque, Butt, Deserno, Landfester, Fytas"
-description: "_J. Phys. Chem. B_ **124** (2020)"
+authors: "Centi, Dutta, Parekh, Bereau"
+description: "_Biophysical Journal_ **118** (2020)"
 year: 2020
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1021/acs.jpcb.9b10469"></div>
+    data-badge-popover='left' data-doi="10.1016/j.bpj.2020.01.039"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Understanding the interactions between nanoparticles (NPs) and boundaries of cells is crucial both for their toxicity and therapeutic applications. Besides specific receptor-mediated endocytosis of surface-functionalized NPs, passive internalization is prompted by relatively unspecific parameters, such as particle size and charge. Based on theoretical treatments, adhesion to and bending of the cell membrane can induce NP wrapping. Experimentally, powerful tools are needed to selectively probe possible membrane-NP motifs at very dilute conditions and avoid dye labeling. In this work, we employ surface resonance-enhanced dynamic light scattering, surface plasmon resonance, electron microscopy, and simulations for sensing interactions between plasmonic AuNPs and polymersomes. We distinguish three different interaction scenarios at nanomolar concentrations by tuning the surface charge of AuNPs and rationalize these events by balancing vesicle bending and electrostatic/van der Waals AuNP and vesicle adhesion. The clarification of the physical conditions under which nanoparticles passively translocate across membranes can aid in the rational design of drugs that cannot exploit specific modes of cellular uptake and also elucidates physical properties that render nanoparticles in the environment particularly toxic.
+Small solutes have been shown to alter the lateral organization of cell membranes and reconstituted phospholipid bilayers; however, the mechanisms by which these changes happen are still largely unknown. Traditionally, both experiment and simulation studies have been restricted to testing only a few compounds at a time, failing to identify general molecular descriptors or chemical properties that would allow extrapolating beyond the subset of considered solutes. In this work, we probe the competing energetics of inserting a solute in different membrane environments by means of the potential of mean force. We show that these calculations can be used as a computationally efficient proxy to establish whether a solute will stabilize or destabilize domain phase separation. Combined with umbrella-sampling simulations and coarse-grained molecular dynamics simulations, we are able to screen solutes across a wide range of chemistries and polarities. Our results indicate that for the system under consideration, preferential partitioning and therefore effectiveness in altering membrane phase separation are strictly linked to the location of insertion in the bilayer (i.e., midplane or interface). Our approach represents a fast and simple tool for obtaining structural and thermodynamic insight into the partitioning of small molecules between lipid domains and its relation to phase separation, ultimately providing a platform for identifying the key determinants of this process.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Understanding the interactions between nanoparticles (NPs) and boundaries of cel
 
 ## TL;DR
 
-Three different interaction scenarios at nanomolar concentrations are distinguished by tuning the surface charge of AuNPs and rationalize these events by balancing vesicle bending and electrostatic/van der Waals AuNP and vesicles adhesion.
+None
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
 ## BibTeX
 
 ```{bibtex}
-@article{Koch_2020,
-	doi = {10.1021/acs.jpcb.9b10469},
-	url = {https://doi.org/10.1021%2Facs.jpcb.9b10469},
+@article{Centi_2020,
+	doi = {10.1016/j.bpj.2020.01.039},
+	url = {https://doi.org/10.1016%2Fj.bpj.2020.01.039},
 	year = 2020,
-	month = {jan},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {124},
-	number = {5},
-	pages = {742--750},
-	author = {Amelie H.R. Koch and Svenja Morsbach and Tristan Bereau and Gaëtan L{\'{e}}v{\^{e}}que and Hans-Jürgen Butt and Markus Deserno and Katharina Landfester and George Fytas},
-	title = {Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics},
-	journal = {The Journal of Physical Chemistry B}
+	month = {mar},
+	publisher = {Elsevier {BV}},
+	volume = {118},
+	number = {6},
+	pages = {1321--1332},
+	author = {Alessia Centi and Arghya Dutta and Sapun H. Parekh and Tristan Bereau},
+	title = {Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force},
+	journal = {Biophysical Journal}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1021/acs.jpcb.9b10469" role="button">
+        href="https://doi.org/10.1016/j.bpj.2020.01.039" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pubs.acs.org/doi/pdf/10.1021/acs.jpcb.9b10469" role="button">
+        href="http://www.cell.com/article/S0006349520301144/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -1,11 +1,11 @@
 
 ---
-title: "Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids"
-doi: "10.1021/acs.jctc.9b01256"
-date: "2020-04-13 17:36:52"
+title: "Designing exceptional gas-separation polymer membranes using machine learning"
+doi: "10.1126/sciadv.aaz4301"
+date: "2020-05-15 23:54:58"
 date-format: iso
-authors: "Scherer, Scheid, Andrienko, Bereau"
-description: "_J. Chem. Theory Comput._ **16** (2020)"
+authors: "Barnett, Bilchak, Wang, Benicewicz, Murdock, Bereau, Kumar"
+description: "_Sci. Adv._ **6** (2020)"
 year: 2020
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1021/acs.jctc.9b01256"></div>
+    data-badge-popover='left' data-doi="10.1126/sciadv.aaz4301"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Current machine learning (ML) models aimed at learning force fields are plagued by their high computational cost at every integration time step. We describe a number of practical and computationally efficient strategies to parametrize traditional force fields for molecular liquids from ML: the particle decomposition ansatz to two- and three-body force fields, the use of kernel-based ML models that incorporate physical symmetries, the incorporation of switching functions close to the cutoff, and the use of covariant meshing to boost the training set size. Results are presented for model molecular liquids: pairwise Lennard-Jones, three-body Stillinger–Weber, and bottom-up coarse-graining of water. Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces. We show that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two- and three-body distribution functions. Many-body representations, decomposition, and kernel regression schemes are all implemented in the open-source software package VOTCA.
+Designing advanced membrane materials with machine-assisted learning. The field of polymer membrane design is primarily based on empirical observation, which limits discovery of new materials optimized for separating a given gas pair. Instead of relying on exhaustive experimental investigations, we trained a machine learning (ML) algorithm, using a topological, path-based hash of the polymer repeating unit. We used a limited set of experimental gas permeability data for six different gases in ~700 polymeric constructs that have been measured to date to predict the gas-separation behavior of over 11,000 homopolymers not previously tested for these properties. To test the algorithm’s accuracy, we synthesized two of the most promising polymer membranes predicted by this approach and found that they exceeded the upper bound for CO2/CH4 separation performance. This ML technique, which is trained using a relatively small body of experimental data (and no simulation data), evidently represents an innovative means of exploring the vast phase space available for polymer membrane design.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Current machine learning (ML) models aimed at learning force fields are plagued 
 
 ## TL;DR
 
-Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces and it is shown that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two-and-three-body distribution functions.
+This work trained a machine learning (ML) algorithm, using a topological, path-based hash of the polymer repeating unit, to predict the gas-separation behavior of over 11,000 homopolymers not previously tested for these properties.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,17 @@ Here, covariant meshing proves to be an efficient strategy to learn canonically 
 ## BibTeX
 
 ```{bibtex}
-@article{Scherer_2020,
-	doi = {10.1021/acs.jctc.9b01256},
-	url = {https://doi.org/10.1021%2Facs.jctc.9b01256},
+@article{Barnett_2020,
+	doi = {10.1126/sciadv.aaz4301},
+	url = {https://doi.org/10.1126%2Fsciadv.aaz4301},
 	year = 2020,
-	month = {apr},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {16},
-	number = {5},
-	pages = {3194--3204},
-	author = {Christoph Scherer and Ren{\'{e}} Scheid and Denis Andrienko and Tristan Bereau},
-	title = {Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids},
-	journal = {Journal of Chemical Theory and Computation}
+	month = {may},
+	publisher = {American Association for the Advancement of Science ({AAAS})},
+	volume = {6},
+	number = {20},
+	author = {J. Wesley Barnett and Connor R. Bilchak and Yiwen Wang and Brian C. Benicewicz and Laura A. Murdock and Tristan Bereau and Sanat K. Kumar},
+	title = {Designing exceptional gas-separation polymer membranes using machine learning},
+	journal = {Science Advances}
 }
 ```
 ```{=html}
@@ -76,7 +75,7 @@ Here, covariant meshing proves to be an efficient strategy to learn canonically 
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1021/acs.jctc.9b01256" role="button">
+        href="https://doi.org/10.1126/sciadv.aaz4301" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +92,7 @@ Here, covariant meshing proves to be an efficient strategy to learn canonically 
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.9b01256" role="button">
+        href="https://advances.sciencemag.org/content/advances/6/20/eaaz4301.full.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

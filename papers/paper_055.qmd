@@ -1,11 +1,11 @@
 
 ---
-title: "Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability"
-doi: "10.1063/5.0039102"
-date: "2021-03-12 11:38:18"
+title: "Dynamical properties across different coarse-grained models for ionic liquids"
+doi: "10.1088/1361-648X/abe6e1"
+date: "2021-02-16 22:36:13"
 date-format: iso
-authors: "Stieffenhofer, Bereau, Wand"
-description: "_APL Materials_ **9** (2021)"
+authors: "Rudzinski, Kloth, Wörner, Pal, Kremer, Bereau, Vogel"
+description: "_J. Phys.: Condens. Matter_ **33** (2021)"
 year: 2021
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1063/5.0039102"></div>
+    data-badge-popover='left' data-doi="10.1088/1361-648X/abe6e1"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Switching between different levels of resolution is essential for multiscale modeling, but restoring details at higher resolution remains challenging. In our previous study, we have introduced deepBackmap, a deep neural-network-based approach to reverse-map equilibrated molecular structures for condensed-phase systems. Our method combines data-driven and physics-based aspects, leading to high-quality reconstructed structures. In this work, we expand the scope of our model and examine its chemical transferability. To this end, we train deepBackmap solely on homogeneous molecular liquids of small molecules and apply it to a more challenging polymer melt. We augment the generator’s objective with different force-field-based terms as a prior to regularize the results. The best performing physical prior depends on whether we train for a specific chemistry or transfer our model. Our local environment representation combined with the sequential reconstruction of fine-grained structures helps in reaching transferability of the learned correlations.
+Room-temperature ionic liquids (RTILs) stand out among molecular liquids for their rich physicochemical characteristics, including structural and dynamic heterogeneity. The significance of electrostatic interactions in RTILs results in long characteristic length- and timescales, and has motivated the development of a number of coarse-grained (CG) simulation models. In this study, we aim to better understand the connection between certain CG parameterization strategies and the dynamical properties and transferability of the resulting models. We systematically compare five CG models: a model largely parameterized from experimental thermodynamic observables; a refinement of this model to increase its structural accuracy; and three models that reproduce a given set of structural distribution functions by construction, with varying intramolecular parameterizations and reference temperatures. All five CG models display limited structural transferability over temperature, and also result in various effective dynamical speedup factors, relative to a reference atomistic model. On the other hand, the structure-based CG models tend to result in more consistent cation–anion relative diffusion than the thermodynamic-based models, for a single thermodynamic state point. By linking short- and long-timescale dynamical behaviors, we demonstrate that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Switching between different levels of resolution is essential for multiscale mod
 
 ## TL;DR
 
-This work expands the scope of deepBackmap, a deep neural-network-based approach to reverse-map equilibrated molecular structures for condensed-phase systems, and examines its chemical transferability.
+It is demonstrated that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ This work expands the scope of deepBackmap, a deep neural-network-based approach
 ## BibTeX
 
 ```{bibtex}
-@article{Stieffenhofer_2021,
-	doi = {10.1063/5.0039102},
-	url = {https://doi.org/10.1063%2F5.0039102},
+@article{Rudzinski_2021,
+	doi = {10.1088/1361-648x/abe6e1},
+	url = {https://doi.org/10.1088%2F1361-648x%2Fabe6e1},
 	year = 2021,
-	month = {mar},
-	publisher = {{AIP} Publishing},
-	volume = {9},
-	number = {3},
-	pages = {031107},
-	author = {Marc Stieffenhofer and Tristan Bereau and Michael Wand},
-	title = {Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability},
-	journal = {{APL} Materials}
+	month = {may},
+	publisher = {{IOP} Publishing},
+	volume = {33},
+	number = {22},
+	pages = {224001},
+	author = {Joseph F Rudzinski and Sebastian Kloth and Svenja Wörner and Tamisra Pal and Kurt Kremer and Tristan Bereau and Michael Vogel},
+	title = {Dynamical properties across different coarse-grained models for ionic liquids},
+	journal = {Journal of Physics: Condensed Matter}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ This work expands the scope of deepBackmap, a deep neural-network-based approach
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1063/5.0039102" role="button">
+        href="https://doi.org/10.1088/1361-648x/abe6e1" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ This work expands the scope of deepBackmap, a deep neural-network-based approach
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://aip.scitation.org/doi/pdf/10.1063/5.0039102" role="button">
+        href="https://iopscience.iop.org/article/10.1088/1361-648X/abe6e1/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

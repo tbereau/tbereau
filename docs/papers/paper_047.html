@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-03-18">
-<meta name="description" content="Mach. Learn.: Sci. Technol. 1 (2020)">
+<meta name="dcterms.date" content="2020-04-13">
+<meta name="description" content="J. Chem. Theory Comput. 16 (2020)">
 
-<title>Tristan Bereau - Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders</title>
+<title>Tristan Bereau - Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Tristan Bereau - Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders">
-<meta name="twitter:description" content="Mach. Learn.: Sci. Technol. 1 (2020)">
+<meta name="twitter:title" content="Tristan Bereau - Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids">
+<meta name="twitter:description" content="J. Chem. Theory Comput. 16 (2020)">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -187,12 +187,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders</h1>
+<h1 class="title">Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids</h1>
 </div>
 
 <div>
   <div class="description">
-    <em>Mach. Learn.: Sci. Technol.</em> <strong>1</strong> (2020)
+    <em>J. Chem. Theory Comput.</em> <strong>16</strong> (2020)
   </div>
 </div>
 
@@ -202,14 +202,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Bozkurt Varolgunes, Bereau, Rudzinski </p>
+             <p>Scherer, Scheid, Andrienko, Bereau </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2020-03-18</p>
+      <p class="date">2020-04-13</p>
     </div>
   </div>
   
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
       <p class="doi">
-        <a href="https://doi.org/10.1088/2632-2153/ab80b7">10.1088/2632-2153/ab80b7</a>
+        <a href="https://doi.org/10.1021/acs.jctc.9b01256">10.1021/acs.jctc.9b01256</a>
       </p>
     </div>
   </div>
@@ -228,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div class="float-end">
-    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1088/2632-2153/ab80b7"></div>
+    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1021/acs.jctc.9b01256"></div>
 </div>
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <br><br><br>
@@ -236,31 +236,31 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Abstract</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">TL;DR</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">BibTeX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Open Access</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Extracting insight from the enormous quantity of data generated from molecular simulations requires the identification of a small number of collective variables whose corresponding low-dimensional free-energy landscape retains the essential features of the underlying system. Data-driven techniques provide a systematic route to constructing this landscape, without the need for extensive a priori intuition into the relevant driving forces. In particular, autoencoders are powerful tools for dimensionality reduction, as they naturally force an information bottleneck and, thereby, a low-dimensional embedding of the essential features. While variational autoencoders ensure continuity of the embedding by assuming a unimodal Gaussian prior, this is at odds with the multi-basin free-energy landscapes that typically arise from the identification of meaningful collective variables. In this work, we incorporate this physical intuition into the prior by employing a Gaussian mixture variational autoencoder (GMVAE), which encourages the separation of metastable states within the embedding. The GMVAE performs dimensionality reduction and clustering within a single unified framework, and is capable of identifying the inherent dimensionality of the input data, in terms of the number of Gaussians required to categorize the data. We illustrate our approach on two toy models, alanine dipeptide, and a challenging disordered peptide ensemble, demonstrating the enhanced clustering effect of the GMVAE prior compared to standard VAEs. The resulting embeddings appear to be promising representations for constructing Markov state models, highlighting the transferability of the dimensionality reduction from static equilibrium properties to dynamics.</p>
+<p>Current machine learning (ML) models aimed at learning force fields are plagued by their high computational cost at every integration time step. We describe a number of practical and computationally efficient strategies to parametrize traditional force fields for molecular liquids from ML: the particle decomposition ansatz to two- and three-body force fields, the use of kernel-based ML models that incorporate physical symmetries, the incorporation of switching functions close to the cutoff, and the use of covariant meshing to boost the training set size. Results are presented for model molecular liquids: pairwise Lennard-Jones, three-body Stillinger–Weber, and bottom-up coarse-graining of water. Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces. We show that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two- and three-body distribution functions. Many-body representations, decomposition, and kernel regression schemes are all implemented in the open-source software package VOTCA.</p>
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &amp;
 <cite title="Source title">CrossRef</cite>
 </footer>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>This work incorporates physical intuition into the prior by employing a Gaussian mixture variational autoencoder (GMVAE), which encourages the separation of metastable states within the embedding, and demonstrates the enhanced clustering effect of the GMVAE prior compared to standard VAEs.</p>
+<p>Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces and it is shown that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two-and-three-body distribution functions.</p>
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<pre class="{bibtex}"><code>@article{Bozkurt_Varolg_ne__2020,
-    doi = {10.1088/2632-2153/ab80b7},
-    url = {https://doi.org/10.1088%2F2632-2153%2Fab80b7},
+<pre class="{bibtex}"><code>@article{Scherer_2020,
+    doi = {10.1021/acs.jctc.9b01256},
+    url = {https://doi.org/10.1021%2Facs.jctc.9b01256},
     year = 2020,
-    month = {mar},
-    publisher = {{IOP} Publishing},
-    volume = {1},
-    number = {1},
-    pages = {015012},
-    author = {Yasemin Bozkurt Varolgüne{\c{s}} and Tristan Bereau and Joseph F Rudzinski},
-    title = {Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders},
-    journal = {Machine Learning: Science and Technology}
+    month = {apr},
+    publisher = {American Chemical Society ({ACS})},
+    volume = {16},
+    number = {5},
+    pages = {3194--3204},
+    author = {Christoph Scherer and Ren{\'{e}} Scheid and Denis Andrienko and Tristan Bereau},
+    title = {Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids},
+    journal = {Journal of Chemical Theory and Computation}
 }</code></pre>
 <footer class="blockquote-footer">from
 <cite title="Source Title">doi2bib</cite>
@@ -271,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  " href="https://doi.org/10.1088/2632-2153/ab80b7" role="button">
+  " href="https://doi.org/10.1021/acs.jctc.9b01256" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewbox="0 0 16 16">
     <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995
        2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8
@@ -285,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      " href="https://iopscience.iop.org/article/10.1088/2632-2153/ab80b7/pdf" role="button">
+      " href="https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.9b01256" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-pdf" viewbox="0 0 16 16">
     <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2
         2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0

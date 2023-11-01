@@ -57,7 +57,7 @@ about:
 {education}
 :::
 
-## Publications
+## Group publications
 
 ```{{ojs}}
 import {{Plot}} from "@mkfreeman/plot-tooltip"
@@ -103,7 +103,7 @@ Inputs.table(my_papers, {{
 }})
 ```
 
-## Collaborators
+## Group collaborators
 
 ```{{ojs}}
 collaborators = Array.from(

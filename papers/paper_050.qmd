@@ -1,11 +1,11 @@
 
 ---
-title: "Hydration free energies from kernel-based machine learning: Compound-database bias"
-doi: "10.1063/5.0012230"
-date: "2020-07-01 10:45:39"
+title: "Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms"
+doi: "10.1016/j.bpj.2020.07.024"
+date: "2020-08-06 06:46:56"
 date-format: iso
-authors: "Rauer, Bereau"
-description: "_The Journal of Chemical Physics_ **153** (2020)"
+authors: "Girard, Bereau"
+description: "_Biophysical Journal_ **119** (2020)"
 year: 2020
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1063/5.0012230"></div>
+    data-badge-popover='left' data-doi="10.1016/j.bpj.2020.07.024"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-We consider the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules. Our in silico study is based on computer simulations at the atomistic level with implicit solvent. We report on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects: The representation is averaged over several conformers to account for the statistical ensemble. We also include an atomic-decomposition ansatz, which offers significant added transferability compared to molecular learning. Finally, we explore the existence of severe biases from databases of experimental compounds. By performing a combination of dimensionality reduction and cross-learning models, we show that the rate of learning depends significantly on the breadth and variety of the training dataset. Our study highlights the dangers of fitting machine-learning models to databases of a narrow chemical range.
+Cell membranes mainly consist of lipid bilayers with an actively regulated composition. The underlying processes are still poorly understood, in particular, how the hundreds of components are controlled. Cholesterol has been found to correlate with phospholipid saturation for reasons that remain unclear. To better understand the link between cell membrane regulation and chemical composition, we establish a computational framework based on chemical reaction networks, resulting in multiple semigrand canonical ensembles. By running computer simulations, we show that regulating the chemical potential of lipid species is sufficient to reproduce the experimentally observed increase in acyl tail saturation with added cholesterol. Our model proposes a different picture of lipid regulation in which components can be regulated passively instead of actively. In this picture, phospholipid acyl tail composition naturally adapts to added molecules such as cholesterol or proteins. A comparison between regulated membranes with commonly studied ternary model membranes shows stark differences: for instance, correlation lengths and viscosities observed are independent of lipid chemical affinity.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ We consider the prediction of a basic thermodynamic property-hydration free ener
 
 ## TL;DR
 
-This study considers the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules and reports on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects.
+None
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,17 +49,18 @@ This study considers the prediction of a basic thermodynamic property-hydration 
 ## BibTeX
 
 ```{bibtex}
-@article{Rauer_2020,
-	doi = {10.1063/5.0012230},
-	url = {https://doi.org/10.1063%2F5.0012230},
+@article{Girard_2020,
+	doi = {10.1016/j.bpj.2020.07.024},
+	url = {https://doi.org/10.1016%2Fj.bpj.2020.07.024},
 	year = 2020,
-	month = {jul},
-	publisher = {{AIP} Publishing},
-	volume = {153},
-	number = {1},
-	author = {Clemens Rauer and Tristan Bereau},
-	title = {Hydration free energies from kernel-based machine learning: Compound-database bias},
-	journal = {The Journal of Chemical Physics}
+	month = {sep},
+	publisher = {Elsevier {BV}},
+	volume = {119},
+	number = {5},
+	pages = {892--899},
+	author = {Martin Girard and Tristan Bereau},
+	title = {Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms},
+	journal = {Biophysical Journal}
 }
 ```
 ```{=html}
@@ -75,7 +76,7 @@ This study considers the prediction of a basic thermodynamic property-hydration 
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1063/5.0012230" role="button">
+        href="https://doi.org/10.1016/j.bpj.2020.07.024" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +93,7 @@ This study considers the prediction of a basic thermodynamic property-hydration 
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://aip.scitation.org/doi/10.1063/5.0012230" role="button">
+        href="http://www.cell.com/article/S0006349520305889/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

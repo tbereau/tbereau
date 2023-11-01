@@ -1,11 +1,11 @@
 
 ---
-title: "Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms"
-doi: "10.1016/j.bpj.2020.07.024"
-date: "2020-08-06 06:46:56"
+title: "Free-energy landscape of polymer-crystal polymorphism"
+doi: "10.1039/D0SM01342K"
+date: "2020-09-03 08:43:53"
 date-format: iso
-authors: "Girard, Bereau"
-description: "_Biophysical Journal_ **119** (2020)"
+authors: "Liu, Brandenburg, Valsson, Kremer, Bereau"
+description: "_Soft Matter_ **16** (2020)"
 year: 2020
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1016/j.bpj.2020.07.024"></div>
+    data-badge-popover='left' data-doi="10.1039/D0SM01342K"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Cell membranes mainly consist of lipid bilayers with an actively regulated composition. The underlying processes are still poorly understood, in particular, how the hundreds of components are controlled. Cholesterol has been found to correlate with phospholipid saturation for reasons that remain unclear. To better understand the link between cell membrane regulation and chemical composition, we establish a computational framework based on chemical reaction networks, resulting in multiple semigrand canonical ensembles. By running computer simulations, we show that regulating the chemical potential of lipid species is sufficient to reproduce the experimentally observed increase in acyl tail saturation with added cholesterol. Our model proposes a different picture of lipid regulation in which components can be regulated passively instead of actively. In this picture, phospholipid acyl tail composition naturally adapts to added molecules such as cholesterol or proteins. A comparison between regulated membranes with commonly studied ternary model membranes shows stark differences: for instance, correlation lengths and viscosities observed are independent of lipid chemical affinity.
+Polymorphism rationalizes how processing can control the final structure of a material. The rugged free-energy landscape and exceedingly slow kinetics in the solid state have so far hampered computational investigations. We report for the first time the free-energy landscape of a polymorphic crystalline polymer, syndiotactic polystyrene. Coarse-grained metadynamics simulations allow us to efficiently sample the landscape at large. The free-energy difference between the two main polymorphs, α and β, is further investigated by quantum-chemical calculations. The results of the two methods are in line with experimental observations: they predict β as the more stable polymorph under standard conditions. Critically, the free-energy landscape suggests how the α polymorph may lead to experimentally observed kinetic traps. The combination of multiscale modeling, enhanced sampling, and quantum-chemical calculations offers an appealing strategy to uncover complex free-energy landscapes with polymorphic behavior.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Cell membranes mainly consist of lipid bilayers with an actively regulated compo
 
 ## TL;DR
 
-None
+This work reports for the first time the free-energy landscape of a polymorphic crystalline polymer, syndiotactic polystyrene, and suggests how the α polymorph may lead to experimentally observed kinetic traps.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,17 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2020,
-	doi = {10.1016/j.bpj.2020.07.024},
-	url = {https://doi.org/10.1016%2Fj.bpj.2020.07.024},
+@article{Liu_2020,
+	doi = {10.1039/d0sm01342k},
+	url = {https://doi.org/10.1039%2Fd0sm01342k},
 	year = 2020,
-	month = {sep},
-	publisher = {Elsevier {BV}},
-	volume = {119},
-	number = {5},
-	pages = {892--899},
-	author = {Martin Girard and Tristan Bereau},
-	title = {Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms},
-	journal = {Biophysical Journal}
+	publisher = {Royal Society of Chemistry ({RSC})},
+	volume = {16},
+	number = {42},
+	pages = {9683--9692},
+	author = {Chan Liu and Jan Gerit Brandenburg and Omar Valsson and Kurt Kremer and Tristan Bereau},
+	title = {Free-energy landscape of polymer-crystal polymorphism},
+	journal = {Soft Matter}
 }
 ```
 ```{=html}
@@ -76,7 +75,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2020.07.024" role="button">
+        href="https://doi.org/10.1039/d0sm01342k" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +92,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://www.cell.com/article/S0006349520305889/pdf" role="button">
+        href="https://pubs.rsc.org/en/content/articlepdf/2020/sm/d0sm01342k" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

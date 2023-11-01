@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from my_scientific_profile.database.papers import load_all_papers_from_s3
 from my_scientific_profile.database.aws_s3 import S3_BUCKET, S3_CLIENT
 

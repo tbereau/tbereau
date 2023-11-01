@@ -1,11 +1,11 @@
 
 ---
-title: "Broad chemical transferability in structure-based coarse-graining"
-doi: "10.1063/5.0104914"
-date: "2022-08-12 11:51:35"
+title: "Identifying Sequential Residue Patterns in Bitter and Umami Peptides"
+doi: "10.1021/acsfoodscitech.2c00251"
+date: "2022-11-09 14:00:22"
 date-format: iso
-authors: "Kanekal, Rudzinski, Bereau"
-description: "_J. Chem. Phys._ **157** (2022)"
+authors: "Dutta, Bereau, Vilgis"
+description: "_ACS Food Sci. Technol._ **2** (2022)"
 year: 2022
 format:
   html:
@@ -18,7 +18,7 @@ format:
 ```{=html}
 <div class="float-end">
     <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="10.1063/5.0104914"></div>
+    data-badge-popover='left' data-doi="10.1021/acsfoodscitech.2c00251"></div>
 </div>
 <script type='text/javascript'
   src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Compared to top-down coarse-grained (CG) models, bottom-up approaches are capable of offering higher structural fidelity. This fidelity results from the tight link to a higher resolution reference, making the CG model chemically specific. Unfortunately, chemical specificity can be at odds with compound-screening strategies, which call for transferable parameterizations. Here, we present an approach to reconcile bottom-up, structure-preserving CG models with chemical transferability. We consider the bottom-up CG parameterization of 3441 C7O2 small-molecule isomers. Our approach combines atomic representations, unsupervised learning, and a large-scale extended-ensemble force-matching parameterization. We first identify a subset of 19 representative molecules, which maximally encode the local environment of all gas-phase conformers. Reference interactions between the 19 representative molecules were obtained from both homogeneous bulk liquids and various binary mixtures. An extended-ensemble parameterization over all 703 state points leads to a CG model that is both structure-based and chemically transferable. Remarkably, the resulting force field is on average more structurally accurate than single-state-point equivalents. Averaging over the extended ensemble acts as a mean-force regularizer, smoothing out both force and structural correlations that are overly specific to a single-state point. Our approach aims at transferability through a set of CG bead types that can be used to easily construct new molecules while retaining the benefits of a structure-based parameterization.
+The primary structures of peptides, originating from food proteins, aﬀect their taste. Connecting primary structure to taste, however, is diﬃcult because the size of the peptide sequence space increases exponentially with increasing peptide length, while experimentally-labeled data on peptides’ tastes remain scarce. We propose a method that coarse-grains the sequence space to reduce its size and systematically identiﬁes the most common coarse-grained residue patterns found in known bitter and umami peptides. We select the optimal patterns by performing extensive out-of-sample tests. The optimal patterns better represent the bitter and umami peptides when compared against baseline peptides, bitter peptides with all hydrophobic residues and umami peptides with all negatively charged residues, and peptides with randomly-chosen residues. Our method complements quantitative structure–activity relationship methods by oﬀering generic, coarse-grained bitter and umami residue patterns that can aid in locating short bitter or umami segments in a protein and in designing new umami peptides.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Compared to top-down coarse-grained (CG) models, bottom-up approaches are capabl
 
 ## TL;DR
 
-None
+This work proposes a method that coarse-grains the sequence space to reduce its size and systematically identifies the most common coarse- grained residue patterns found in known bitter and umami peptides, and selects the optimal patterns by performing extensive out-of-sample tests.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,18 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Kanekal_2022,
-	doi = {10.1063/5.0104914},
-	url = {https://doi.org/10.1063%2F5.0104914},
+@article{Dutta_2022,
+	doi = {10.1021/acsfoodscitech.2c00251},
+	url = {https://doi.org/10.1021%2Facsfoodscitech.2c00251},
 	year = 2022,
-	month = {sep},
-	publisher = {{AIP} Publishing},
-	volume = {157},
-	number = {10},
-	pages = {104102},
-	author = {Kiran H. Kanekal and Joseph F. Rudzinski and Tristan Bereau},
-	title = {Broad chemical transferability in structure-based coarse-graining},
-	journal = {The Journal of Chemical Physics}
+	month = {nov},
+	publisher = {American Chemical Society ({ACS})},
+	volume = {2},
+	number = {11},
+	pages = {1773--1780},
+	author = {Arghya Dutta and Tristan Bereau and Thomas A. Vilgis},
+	title = {Identifying Sequential Residue Patterns in Bitter and Umami Peptides},
+	journal = {{ACS} Food Science {\&}amp$\mathsemicolon$ Technology}
 }
 ```
 ```{=html}
@@ -76,7 +76,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1063/5.0104914" role="button">
+        href="https://doi.org/10.1021/acsfoodscitech.2c00251" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +93,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://aip.scitation.org/doi/pdf/10.1063/5.0104914" role="button">
+        href="https://pubs.acs.org/doi/pdf/10.1021/acsfoodscitech.2c00251" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
