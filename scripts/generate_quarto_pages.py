@@ -26,7 +26,9 @@ authors = load_all_paper_authors_from_s3(s3_client=S3_CLIENT, s3_bucket=S3_BUCKE
 author_infos_with_categories = get_authors_with_categories()
 authors_with_categories = []
 for author_info in author_infos_with_categories:
-    authors_with_categories.append(search_author_from_config_info(author_info))
+    authors_with_categories.append(
+        search_author_from_config_info(author_info, allow_generic=True)
+    )
 for author in authors_with_categories:
     save_quarto_author_page_to_file(
         author, str(team_path.joinpath(f"{author.lower_case_snake_name}.qmd"))
