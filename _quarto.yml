@@ -39,7 +39,7 @@ website:
                 menu:
                     -   text: Members
                         icon: file-person
-                        href: group_members.qmd
+                        href: group_members.qmd#category=current
                     -   text: Positions
                         icon: person-plus
                         href: positions.qmd

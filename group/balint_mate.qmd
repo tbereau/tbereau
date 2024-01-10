@@ -1,19 +1,23 @@
 
 ---
-title: "Yasemin Bozkurt Varolgunes"
+title: "Bálint Máté"
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
-  - alumnus
   - visiting phd student
-image: ../static/bozkurt.jpg
+  - current
+image: ../static/balint.jpeg
 about:
   id: hero-heading
   template: solana
-  image: ../static/bozkurt.jpg
+  image: ../static/balint.jpeg
+  links:
 
+    - icon: house
+      text: Website
+      href: https://balintmate.github.io/
 ---
 
 
@@ -38,7 +42,7 @@ index_array = Array.from({length: n_columns}, (_, i) => i)
 papers = map(i => map(x => x[i], papers_r), index_array)
 
 my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Yasemin Bozkurt Varolgunes")
+    return p.authors.map(a => a.full_name).includes("Bálint Máté")
 })
 
 Inputs.table(my_papers, {
@@ -79,7 +83,7 @@ collaborators = Array.from(
     new Set(
         my_papers.flatMap(p => p.authors)
         .filter(function(a) {
-            return a.full_name != "Yasemin Bozkurt Varolgunes"
+            return a.full_name != "Bálint Máté"
             }
         )
     )
