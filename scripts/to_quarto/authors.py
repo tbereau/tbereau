@@ -171,6 +171,7 @@ Inputs.table(
 def get_icon_links_for_author(author_info: dict) -> str:
     field_map = {
         "twitter": {"icon": "twitter", "text": "twitter"},
+        "cv": {"icon": "file-earmark-person", "text": "CV"},
         "github": {"icon": "github", "text": "Github"},
         "website": {"icon": "house", "text": "Website"},
         "scholar": {"icon": "google", "text": "Google Scholar"},
