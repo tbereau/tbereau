@@ -29,6 +29,22 @@ postdocs, and collaborators I've had the chance to work with.
 [Research topics](research_topics.html){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 :::
 
+#### CCSC 2024
+
+:::: {.columns}
+
+::: {.column width="79%"}
+
+We're organizing the [Chemical Compound Space Conference 2024](https://ccsc2024.github.io/) to bring together the growing community dedicated to chemical-space exploration. Topics will include quantum-chemistry calculations, molecular simulations, and self-driving labs. The event will take place in beautiful Heidelberg on May 21-24, 2024. Register now on the website.
+
+::: 
+
+::: {.column width="19%"}
+[![CCSC 2024](static/ccsc2024.jpg)](https://ccsc2024.github.io/)
+
+:::
+::::
+
 :::
 
 ::: {.hero-image .hero-image-right}

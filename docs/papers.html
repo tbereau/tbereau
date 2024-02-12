@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,12 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +61,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -96,6 +102,33 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Tristan Bereau - Publications">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
@@ -107,9 +140,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Tristan Bereau</span>
     </a>
@@ -121,90 +154,90 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Research</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="./research_landscape.html" rel="" target=""><i class="bi bi-geo-alt" role="img">
+    <a class="dropdown-item" href="./research_landscape.html"><i class="bi bi-geo-alt" role="img">
 </i> 
  <span class="dropdown-text">Landscape</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./research_topics.html" rel="" target=""><i class="bi bi-lightbulb" role="img">
+    <a class="dropdown-item" href="./research_topics.html"><i class="bi bi-lightbulb" role="img">
 </i> 
  <span class="dropdown-text">Topics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./papers.html" rel="" target=""><i class="bi bi-file-earmark-text" role="img">
+    <a class="dropdown-item" href="./papers.html"><i class="bi bi-file-earmark-text" role="img">
 </i> 
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./notes.html" rel="" target=""><i class="bi bi-journal-text" role="img">
+    <a class="dropdown-item" href="./notes.html"><i class="bi bi-journal-text" role="img">
 </i> 
  <span class="dropdown-text">Notes</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-group" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-group" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Group</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-group">    
         <li>
-    <a class="dropdown-item" href="./group_members.html#category=current" rel="" target=""><i class="bi bi-file-person" role="img">
+    <a class="dropdown-item" href="./group_members.html#category=current"><i class="bi bi-file-person" role="img">
 </i> 
  <span class="dropdown-text">Members</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./positions.html" rel="" target=""><i class="bi bi-person-plus" role="img">
+    <a class="dropdown-item" href="./positions.html"><i class="bi bi-person-plus" role="img">
 </i> 
  <span class="dropdown-text">Positions</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html" rel="" target="">
- <span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html" rel="" target="">
- <span class="menu-text">Software</span></a>
+    <a class="nav-link" href="./software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
- <span class="menu-text">Contact</span></a>
+    <a class="nav-link" href="./contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/tristanbereau" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/tristanbereau"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ" rel="" target=""><i class="bi bi-google" role="img">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ"> <i class="bi bi-google" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./files/bereau_cv.pdf" rel="" target=""><i class="bi bi-file-earmark-person" role="img">
+    <a class="nav-link" href="./files/bereau_cv.pdf"> <i class="bi bi-file-earmark-person" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -233,7 +266,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -262,7 +297,6 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-
 <table class="quarto-listing-table table">
 <thead>
 <tr>
@@ -281,7 +315,7 @@ Description
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-date-sort="1694696833000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Shared metadata for data-centric materials science" data-listing-filename-sort="paper_074.qmd">
+<tr data-index="0" data-listing-date-sort="1694696833000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="825" data-listing-title-sort="Shared metadata for data-centric materials science" data-listing-filename-sort="paper_074.qmd">
 <td>
 <a href="./papers/paper_074.html" class="title listing-title">Shared metadata for data-centric materials science</a>
 </td>
@@ -295,7 +329,7 @@ Description
 <span class="listing-date">2023-09-14</span>
 </td>
 </tr>
-<tr data-index="1" data-listing-date-sort="1692777783000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides" data-listing-filename-sort="paper_073.qmd">
+<tr data-index="1" data-listing-date-sort="1692777783000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="922" data-listing-title-sort="Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides" data-listing-filename-sort="paper_073.qmd">
 <td>
 <a href="./papers/paper_073.html" class="title listing-title">Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides</a>
 </td>
@@ -309,7 +343,7 @@ Description
 <span class="listing-date">2023-08-23</span>
 </td>
 </tr>
-<tr data-index="2" data-listing-date-sort="1688381455000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics" data-listing-filename-sort="paper_072.qmd">
+<tr data-index="2" data-listing-date-sort="1688381455000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="835" data-listing-title-sort="Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics" data-listing-filename-sort="paper_072.qmd">
 <td>
 <a href="./papers/paper_072.html" class="title listing-title">Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics</a>
 </td>
@@ -323,7 +357,7 @@ Description
 <span class="listing-date">2023-07-03</span>
 </td>
 </tr>
-<tr data-index="3" data-listing-date-sort="1686819678000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings" data-listing-filename-sort="paper_071.qmd">
+<tr data-index="3" data-listing-date-sort="1686819678000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="988" data-listing-title-sort="Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings" data-listing-filename-sort="paper_071.qmd">
 <td>
 <a href="./papers/paper_071.html" class="title listing-title">Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings</a>
 </td>
@@ -337,7 +371,7 @@ Description
 <span class="listing-date">2023-06-15</span>
 </td>
 </tr>
-<tr data-index="4" data-listing-date-sort="1670343935000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Induced asymmetries in membranes" data-listing-filename-sort="paper_070.qmd">
+<tr data-index="4" data-listing-date-sort="1670343935000" data-listing-file-modified-sort="1706897288237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="879" data-listing-title-sort="Induced asymmetries in membranes" data-listing-filename-sort="paper_070.qmd">
 <td>
 <a href="./papers/paper_070.html" class="title listing-title">Induced asymmetries in membranes</a>
 </td>
@@ -351,7 +385,7 @@ Description
 <span class="listing-date">2022-12-06</span>
 </td>
 </tr>
-<tr data-index="5" data-listing-date-sort="1667998822000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Identifying Sequential Residue Patterns in Bitter and Umami Peptides" data-listing-filename-sort="paper_069.qmd">
+<tr data-index="5" data-listing-date-sort="1667998822000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="881" data-listing-title-sort="Identifying Sequential Residue Patterns in Bitter and Umami Peptides" data-listing-filename-sort="paper_069.qmd">
 <td>
 <a href="./papers/paper_069.html" class="title listing-title">Identifying Sequential Residue Patterns in Bitter and Umami Peptides</a>
 </td>
@@ -365,7 +399,7 @@ Description
 <span class="listing-date">2022-11-09</span>
 </td>
 </tr>
-<tr data-index="6" data-listing-date-sort="1662694847000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Benchmarking coarse-grained models of organic semiconductors via deep backmapping" data-listing-filename-sort="paper_068.qmd">
+<tr data-index="6" data-listing-date-sort="1662694847000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="879" data-listing-title-sort="Benchmarking coarse-grained models of organic semiconductors via deep backmapping" data-listing-filename-sort="paper_068.qmd">
 <td>
 <a href="./papers/paper_068.html" class="title listing-title">Benchmarking coarse-grained models of organic semiconductors via deep backmapping</a>
 </td>
@@ -379,7 +413,7 @@ Description
 <span class="listing-date">2022-09-09</span>
 </td>
 </tr>
-<tr data-index="7" data-listing-date-sort="1660297895000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Broad chemical transferability in structure-based coarse-graining" data-listing-filename-sort="paper_067.qmd">
+<tr data-index="7" data-listing-date-sort="1660297895000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="898" data-listing-title-sort="Broad chemical transferability in structure-based coarse-graining" data-listing-filename-sort="paper_067.qmd">
 <td>
 <a href="./papers/paper_067.html" class="title listing-title">Broad chemical transferability in structure-based coarse-graining</a>
 </td>
@@ -393,7 +427,7 @@ Description
 <span class="listing-date">2022-08-12</span>
 </td>
 </tr>
-<tr data-index="8" data-listing-date-sort="1654852877000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="CLiB – a novel cardiolipin-binder isolated <i>via</i> data-driven and <i>in vitro</i> screening" data-listing-filename-sort="paper_066.qmd">
+<tr data-index="8" data-listing-date-sort="1654852877000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="904" data-listing-title-sort="CLiB – a novel cardiolipin-binder isolated <i>via</i> data-driven and <i>in vitro</i> screening" data-listing-filename-sort="paper_066.qmd">
 <td>
 <a href="./papers/paper_066.html" class="title listing-title">CLiB – a novel cardiolipin-binder isolated <i>via</i> data-driven and <i>in vitro</i> screening</a>
 </td>
@@ -407,7 +441,7 @@ Description
 <span class="listing-date">2022-06-10</span>
 </td>
 </tr>
-<tr data-index="9" data-listing-date-sort="1651068195000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="FAIR data enabling new horizons for materials research" data-listing-filename-sort="paper_065.qmd">
+<tr data-index="9" data-listing-date-sort="1651068195000" data-listing-file-modified-sort="1706897288236" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="933" data-listing-title-sort="FAIR data enabling new horizons for materials research" data-listing-filename-sort="paper_065.qmd">
 <td>
 <a href="./papers/paper_065.html" class="title listing-title">FAIR data enabling new horizons for materials research</a>
 </td>
@@ -421,7 +455,7 @@ Description
 <span class="listing-date">2022-04-27</span>
 </td>
 </tr>
-<tr data-index="10" data-listing-date-sort="1646251292000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Data-driven discovery of cardiolipin-selective small molecules by computational active learning" data-listing-filename-sort="paper_064.qmd">
+<tr data-index="10" data-listing-date-sort="1646251292000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="929" data-listing-title-sort="Data-driven discovery of cardiolipin-selective small molecules by computational active learning" data-listing-filename-sort="paper_064.qmd">
 <td>
 <a href="./papers/paper_064.html" class="title listing-title">Data-driven discovery of cardiolipin-selective small molecules by computational active learning</a>
 </td>
@@ -435,7 +469,7 @@ Description
 <span class="listing-date">2022-03-02</span>
 </td>
 </tr>
-<tr data-index="11" data-listing-date-sort="1632494663000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Multipolar Force Fields for Amide-I Spectroscopy from Conformational Dynamics of the Alanine Trimer" data-listing-filename-sort="paper_063.qmd">
+<tr data-index="11" data-listing-date-sort="1632494663000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001" data-listing-title-sort="Multipolar Force Fields for Amide-I Spectroscopy from Conformational Dynamics of the Alanine Trimer" data-listing-filename-sort="paper_063.qmd">
 <td>
 <a href="./papers/paper_063.html" class="title listing-title">Multipolar Force Fields for Amide-I Spectroscopy from Conformational Dynamics of the Alanine Trimer</a>
 </td>
@@ -449,7 +483,7 @@ Description
 <span class="listing-date">2021-09-24</span>
 </td>
 </tr>
-<tr data-index="12" data-listing-date-sort="1626692931000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Publisher’s Note: “Data-driven equation for drug–membrane permeability across drugs and membranes” [J. Chem. Phys. 154, 244114 (2021)]" data-listing-filename-sort="paper_062.qmd">
+<tr data-index="12" data-listing-date-sort="1626692931000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="699" data-listing-title-sort="Publisher’s Note: “Data-driven equation for drug–membrane permeability across drugs and membranes” [J. Chem. Phys. 154, 244114 (2021)]" data-listing-filename-sort="paper_062.qmd">
 <td>
 <a href="./papers/paper_062.html" class="title listing-title">Publisher’s Note: “Data-driven equation for drug–membrane permeability across drugs and membranes” [J. Chem. Phys. 154, 244114 (2021)]</a>
 </td>
@@ -463,7 +497,7 @@ Description
 <span class="listing-date">2021-07-19</span>
 </td>
 </tr>
-<tr data-index="13" data-listing-date-sort="1624952788000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Data-driven equation for drug–membrane permeability across drugs and membranes" data-listing-filename-sort="paper_061.qmd">
+<tr data-index="13" data-listing-date-sort="1624952788000" data-listing-file-modified-sort="1706897288235" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="869" data-listing-title-sort="Data-driven equation for drug–membrane permeability across drugs and membranes" data-listing-filename-sort="paper_061.qmd">
 <td>
 <a href="./papers/paper_061.html" class="title listing-title">Data-driven equation for drug–membrane permeability across drugs and membranes</a>
 </td>
@@ -477,7 +511,7 @@ Description
 <span class="listing-date">2021-06-29</span>
 </td>
 </tr>
-<tr data-index="14" data-listing-date-sort="1620134264000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Finite-size transitions in complex membranes" data-listing-filename-sort="paper_060.qmd">
+<tr data-index="14" data-listing-date-sort="1620134264000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="921" data-listing-title-sort="Finite-size transitions in complex membranes" data-listing-filename-sort="paper_060.qmd">
 <td>
 <a href="./papers/paper_060.html" class="title listing-title">Finite-size transitions in complex membranes</a>
 </td>
@@ -491,7 +525,7 @@ Description
 <span class="listing-date">2021-05-04</span>
 </td>
 </tr>
-<tr data-index="15" data-listing-date-sort="1619844448000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Computer simulations of lipid regulation by molecular semigrand canonical ensembles" data-listing-filename-sort="paper_059.qmd">
+<tr data-index="15" data-listing-date-sort="1619844448000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="843" data-listing-title-sort="Computer simulations of lipid regulation by molecular semigrand canonical ensembles" data-listing-filename-sort="paper_059.qmd">
 <td>
 <a href="./papers/paper_059.html" class="title listing-title">Computer simulations of lipid regulation by molecular semigrand canonical ensembles</a>
 </td>
@@ -505,7 +539,7 @@ Description
 <span class="listing-date">2021-05-01</span>
 </td>
 </tr>
-<tr data-index="16" data-listing-date-sort="1617285403000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Reweighting non-equilibrium steady-state dynamics along collective variables" data-listing-filename-sort="paper_058.qmd">
+<tr data-index="16" data-listing-date-sort="1617285403000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891" data-listing-title-sort="Reweighting non-equilibrium steady-state dynamics along collective variables" data-listing-filename-sort="paper_058.qmd">
 <td>
 <a href="./papers/paper_058.html" class="title listing-title">Reweighting non-equilibrium steady-state dynamics along collective variables</a>
 </td>
@@ -519,7 +553,7 @@ Description
 <span class="listing-date">2021-04-01</span>
 </td>
 </tr>
-<tr data-index="17" data-listing-date-sort="1617193473000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity" data-listing-filename-sort="paper_057.qmd">
+<tr data-index="17" data-listing-date-sort="1617193473000" data-listing-file-modified-sort="1706897288234" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="948" data-listing-title-sort="The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity" data-listing-filename-sort="paper_057.qmd">
 <td>
 <a href="./papers/paper_057.html" class="title listing-title">The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity</a>
 </td>
@@ -533,7 +567,7 @@ Description
 <span class="listing-date">2021-03-31</span>
 </td>
 </tr>
-<tr data-index="18" data-listing-date-sort="1615545498000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability" data-listing-filename-sort="paper_056.qmd">
+<tr data-index="18" data-listing-date-sort="1615545498000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="851" data-listing-title-sort="Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability" data-listing-filename-sort="paper_056.qmd">
 <td>
 <a href="./papers/paper_056.html" class="title listing-title">Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability</a>
 </td>
@@ -547,7 +581,7 @@ Description
 <span class="listing-date">2021-03-12</span>
 </td>
 </tr>
-<tr data-index="19" data-listing-date-sort="1613511373000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Dynamical properties across different coarse-grained models for ionic liquids" data-listing-filename-sort="paper_055.qmd">
+<tr data-index="19" data-listing-date-sort="1613511373000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="942" data-listing-title-sort="Dynamical properties across different coarse-grained models for ionic liquids" data-listing-filename-sort="paper_055.qmd">
 <td>
 <a href="./papers/paper_055.html" class="title listing-title">Dynamical properties across different coarse-grained models for ionic liquids</a>
 </td>
@@ -561,7 +595,7 @@ Description
 <span class="listing-date">2021-02-16</span>
 </td>
 </tr>
-<tr data-index="20" data-listing-date-sort="1607084897000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Coarse-grained conformational surface hopping: Methodology and transferability" data-listing-filename-sort="paper_054.qmd">
+<tr data-index="20" data-listing-date-sort="1607084897000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="887" data-listing-title-sort="Coarse-grained conformational surface hopping: Methodology and transferability" data-listing-filename-sort="paper_054.qmd">
 <td>
 <a href="./papers/paper_054.html" class="title listing-title">Coarse-grained conformational surface hopping: Methodology and transferability</a>
 </td>
@@ -575,7 +609,7 @@ Description
 <span class="listing-date">2020-12-04</span>
 </td>
 </tr>
-<tr data-index="21" data-listing-date-sort="1607030202000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Computational compound screening of biomolecules and soft materials by molecular simulations" data-listing-filename-sort="paper_053.qmd">
+<tr data-index="21" data-listing-date-sort="1607030202000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="898" data-listing-title-sort="Computational compound screening of biomolecules and soft materials by molecular simulations" data-listing-filename-sort="paper_053.qmd">
 <td>
 <a href="./papers/paper_053.html" class="title listing-title">Computational compound screening of biomolecules and soft materials by molecular simulations</a>
 </td>
@@ -589,7 +623,7 @@ Description
 <span class="listing-date">2020-12-03</span>
 </td>
 </tr>
-<tr data-index="22" data-listing-date-sort="1599683645000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Adversarial reverse mapping of equilibrated condensed-phase molecular structures" data-listing-filename-sort="paper_052.qmd">
+<tr data-index="22" data-listing-date-sort="1599683645000" data-listing-file-modified-sort="1706897288233" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="870" data-listing-title-sort="Adversarial reverse mapping of equilibrated condensed-phase molecular structures" data-listing-filename-sort="paper_052.qmd">
 <td>
 <a href="./papers/paper_052.html" class="title listing-title">Adversarial reverse mapping of equilibrated condensed-phase molecular structures</a>
 </td>
@@ -603,7 +637,7 @@ Description
 <span class="listing-date">2020-09-09</span>
 </td>
 </tr>
-<tr data-index="23" data-listing-date-sort="1599115433000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Free-energy landscape of polymer-crystal polymorphism" data-listing-filename-sort="paper_051.qmd">
+<tr data-index="23" data-listing-date-sort="1599115433000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="854" data-listing-title-sort="Free-energy landscape of polymer-crystal polymorphism" data-listing-filename-sort="paper_051.qmd">
 <td>
 <a href="./papers/paper_051.html" class="title listing-title">Free-energy landscape of polymer-crystal polymorphism</a>
 </td>
@@ -617,7 +651,7 @@ Description
 <span class="listing-date">2020-09-03</span>
 </td>
 </tr>
-<tr data-index="24" data-listing-date-sort="1596689216000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms" data-listing-filename-sort="paper_050.qmd">
+<tr data-index="24" data-listing-date-sort="1596689216000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="845" data-listing-title-sort="Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms" data-listing-filename-sort="paper_050.qmd">
 <td>
 <a href="./papers/paper_050.html" class="title listing-title">Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms</a>
 </td>
@@ -631,7 +665,7 @@ Description
 <span class="listing-date">2020-08-06</span>
 </td>
 </tr>
-<tr data-index="25" data-listing-date-sort="1593593139000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Hydration free energies from kernel-based machine learning: Compound-database bias" data-listing-filename-sort="paper_049.qmd">
+<tr data-index="25" data-listing-date-sort="1593593139000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="874" data-listing-title-sort="Hydration free energies from kernel-based machine learning: Compound-database bias" data-listing-filename-sort="paper_049.qmd">
 <td>
 <a href="./papers/paper_049.html" class="title listing-title">Hydration free energies from kernel-based machine learning: Compound-database bias</a>
 </td>
@@ -645,7 +679,7 @@ Description
 <span class="listing-date">2020-07-01</span>
 </td>
 </tr>
-<tr data-index="26" data-listing-date-sort="1589579698000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Designing exceptional gas-separation polymer membranes using machine learning" data-listing-filename-sort="paper_048.qmd">
+<tr data-index="26" data-listing-date-sort="1589579698000" data-listing-file-modified-sort="1706897288232" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="896" data-listing-title-sort="Designing exceptional gas-separation polymer membranes using machine learning" data-listing-filename-sort="paper_048.qmd">
 <td>
 <a href="./papers/paper_048.html" class="title listing-title">Designing exceptional gas-separation polymer membranes using machine learning</a>
 </td>
@@ -659,7 +693,7 @@ Description
 <span class="listing-date">2020-05-15</span>
 </td>
 </tr>
-<tr data-index="27" data-listing-date-sort="1586792212000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids" data-listing-filename-sort="paper_047.qmd">
+<tr data-index="27" data-listing-date-sort="1586792212000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="884" data-listing-title-sort="Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids" data-listing-filename-sort="paper_047.qmd">
 <td>
 <a href="./papers/paper_047.html" class="title listing-title">Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids</a>
 </td>
@@ -673,8 +707,7 @@ Description
 <span class="listing-date">2020-04-13</span>
 </td>
 </tr>
-
-<tr data-index="28" data-listing-date-sort="1584538184000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders" data-listing-filename-sort="paper_046.qmd">
+<tr data-index="28" data-listing-date-sort="1584538184000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="966" data-listing-title-sort="Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders" data-listing-filename-sort="paper_046.qmd">
 <td>
 <a href="./papers/paper_046.html" class="title listing-title">Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders</a>
 </td>
@@ -688,7 +721,7 @@ Description
 <span class="listing-date">2020-03-18</span>
 </td>
 </tr>
-<tr data-index="29" data-listing-date-sort="1581588191000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Molecular dynamics trajectories for 630 coarse-grained drug-membrane permeations" data-listing-filename-sort="paper_045.qmd">
+<tr data-index="29" data-listing-date-sort="1581588191000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="850" data-listing-title-sort="Molecular dynamics trajectories for 630 coarse-grained drug-membrane permeations" data-listing-filename-sort="paper_045.qmd">
 <td>
 <a href="./papers/paper_045.html" class="title listing-title">Molecular dynamics trajectories for 630 coarse-grained drug-membrane permeations</a>
 </td>
@@ -702,7 +735,7 @@ Description
 <span class="listing-date">2020-02-13</span>
 </td>
 </tr>
-<tr data-index="30" data-listing-date-sort="1580858190000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force" data-listing-filename-sort="paper_044.qmd">
+<tr data-index="30" data-listing-date-sort="1580858190000" data-listing-file-modified-sort="1706897288231" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="906" data-listing-title-sort="Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force" data-listing-filename-sort="paper_044.qmd">
 <td>
 <a href="./papers/paper_044.html" class="title listing-title">Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force</a>
 </td>
@@ -716,7 +749,7 @@ Description
 <span class="listing-date">2020-02-05</span>
 </td>
 </tr>
-<tr data-index="31" data-listing-date-sort="1579293870000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics" data-listing-filename-sort="paper_043.qmd">
+<tr data-index="31" data-listing-date-sort="1579293870000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="914" data-listing-title-sort="Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics" data-listing-filename-sort="paper_043.qmd">
 <td>
 <a href="./papers/paper_043.html" class="title listing-title">Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics</a>
 </td>
@@ -730,7 +763,7 @@ Description
 <span class="listing-date">2020-01-17</span>
 </td>
 </tr>
-<tr data-index="32" data-listing-date-sort="1577364720000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Direct route to reproducing pair distribution functions with coarse-grained models via transformed atomistic cross correlations" data-listing-filename-sort="paper_042.qmd">
+<tr data-index="32" data-listing-date-sort="1577364720000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="987" data-listing-title-sort="Direct route to reproducing pair distribution functions with coarse-grained models via transformed atomistic cross correlations" data-listing-filename-sort="paper_042.qmd">
 <td>
 <a href="./papers/paper_042.html" class="title listing-title">Direct route to reproducing pair distribution functions with coarse-grained models via transformed atomistic cross correlations</a>
 </td>
@@ -744,7 +777,7 @@ Description
 <span class="listing-date">2019-12-26</span>
 </td>
 </tr>
-<tr data-index="33" data-listing-date-sort="1576768078000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Microscopic reweighting for nonequilibrium steady-state dynamics" data-listing-filename-sort="paper_041.qmd">
+<tr data-index="33" data-listing-date-sort="1576768078000" data-listing-file-modified-sort="1706897288230" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="823" data-listing-title-sort="Microscopic reweighting for nonequilibrium steady-state dynamics" data-listing-filename-sort="paper_041.qmd">
 <td>
 <a href="./papers/paper_041.html" class="title listing-title">Microscopic reweighting for nonequilibrium steady-state dynamics</a>
 </td>
@@ -758,7 +791,7 @@ Description
 <span class="listing-date">2019-12-19</span>
 </td>
 </tr>
-<tr data-index="34" data-listing-date-sort="1571753095000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Resolution limit of data-driven coarse-grained models spanning chemical space" data-listing-filename-sort="paper_040.qmd">
+<tr data-index="34" data-listing-date-sort="1571753095000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="965" data-listing-title-sort="Resolution limit of data-driven coarse-grained models spanning chemical space" data-listing-filename-sort="paper_040.qmd">
 <td>
 <a href="./papers/paper_040.html" class="title listing-title">Resolution limit of data-driven coarse-grained models spanning chemical space</a>
 </td>
@@ -772,7 +805,7 @@ Description
 <span class="listing-date">2019-10-22</span>
 </td>
 </tr>
-<tr data-index="35" data-listing-date-sort="1567620468000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Controlled exploration of chemical space by machine learning of coarse-grained representations" data-listing-filename-sort="paper_039.qmd">
+<tr data-index="35" data-listing-date-sort="1567620468000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="898" data-listing-title-sort="Controlled exploration of chemical space by machine learning of coarse-grained representations" data-listing-filename-sort="paper_039.qmd">
 <td>
 <a href="./papers/paper_039.html" class="title listing-title">Controlled exploration of chemical space by machine learning of coarse-grained representations</a>
 </td>
@@ -786,7 +819,7 @@ Description
 <span class="listing-date">2019-09-04</span>
 </td>
 </tr>
-<tr data-index="36" data-listing-date-sort="1558341906000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Hoobas: A highly object-oriented builder for molecular dynamics" data-listing-filename-sort="paper_038.qmd">
+<tr data-index="36" data-listing-date-sort="1558341906000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="824" data-listing-title-sort="Hoobas: A highly object-oriented builder for molecular dynamics" data-listing-filename-sort="paper_038.qmd">
 <td>
 <a href="./papers/paper_038.html" class="title listing-title">Hoobas: A highly object-oriented builder for molecular dynamics</a>
 </td>
@@ -800,7 +833,7 @@ Description
 <span class="listing-date">2019-05-20</span>
 </td>
 </tr>
-<tr data-index="37" data-listing-date-sort="1555316083000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons" data-listing-filename-sort="paper_037.qmd">
+<tr data-index="37" data-listing-date-sort="1555316083000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="952" data-listing-title-sort="Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons" data-listing-filename-sort="paper_037.qmd">
 <td>
 <a href="./papers/paper_037.html" class="title listing-title">Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons</a>
 </td>
@@ -814,7 +847,7 @@ Description
 <span class="listing-date">2019-04-15</span>
 </td>
 </tr>
-<tr data-index="38" data-listing-date-sort="1554688162000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Revisiting the Meyer-Overton rule for drug-membrane permeabilities" data-listing-filename-sort="paper_036.qmd">
+<tr data-index="38" data-listing-date-sort="1554688162000" data-listing-file-modified-sort="1706897288229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="936" data-listing-title-sort="Revisiting the Meyer-Overton rule for drug-membrane permeabilities" data-listing-filename-sort="paper_036.qmd">
 <td>
 <a href="./papers/paper_036.html" class="title listing-title">Revisiting the Meyer-Overton rule for drug-membrane permeabilities</a>
 </td>
@@ -828,7 +861,7 @@ Description
 <span class="listing-date">2019-04-08</span>
 </td>
 </tr>
-<tr data-index="39" data-listing-date-sort="1546996467000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Drug–Membrane Permeability across Chemical Space" data-listing-filename-sort="paper_035.qmd">
+<tr data-index="39" data-listing-date-sort="1546996467000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949" data-listing-title-sort="Drug–Membrane Permeability across Chemical Space" data-listing-filename-sort="paper_035.qmd">
 <td>
 <a href="./papers/paper_035.html" class="title listing-title">Drug–Membrane Permeability across Chemical Space</a>
 </td>
@@ -842,7 +875,7 @@ Description
 <span class="listing-date">2019-01-09</span>
 </td>
 </tr>
-<tr data-index="40" data-listing-date-sort="1546969697000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Automated detection of many-particle solvation states for accurate characterizations of diffusion kinetics" data-listing-filename-sort="paper_034.qmd">
+<tr data-index="40" data-listing-date-sort="1546969697000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949" data-listing-title-sort="Automated detection of many-particle solvation states for accurate characterizations of diffusion kinetics" data-listing-filename-sort="paper_034.qmd">
 <td>
 <a href="./papers/paper_034.html" class="title listing-title">Automated detection of many-particle solvation states for accurate characterizations of diffusion kinetics</a>
 </td>
@@ -856,7 +889,7 @@ Description
 <span class="listing-date">2019-01-08</span>
 </td>
 </tr>
-<tr data-index="41" data-listing-date-sort="1545395506000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics" data-listing-filename-sort="paper_033.qmd">
+<tr data-index="41" data-listing-date-sort="1545395506000" data-listing-file-modified-sort="1706897288228" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="798" data-listing-title-sort="Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics" data-listing-filename-sort="paper_033.qmd">
 <td>
 <a href="./papers/paper_033.html" class="title listing-title">Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics</a>
 </td>
@@ -870,7 +903,7 @@ Description
 <span class="listing-date">2018-12-21</span>
 </td>
 </tr>
-<tr data-index="42" data-listing-date-sort="1527683965000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models" data-listing-filename-sort="paper_032.qmd">
+<tr data-index="42" data-listing-date-sort="1527683965000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="898" data-listing-title-sort="Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models" data-listing-filename-sort="paper_032.qmd">
 <td>
 <a href="./papers/paper_032.html" class="title listing-title">Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models</a>
 </td>
@@ -884,7 +917,7 @@ Description
 <span class="listing-date">2018-05-30</span>
 </td>
 </tr>
-<tr data-index="43" data-listing-date-sort="1526455259000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations" data-listing-filename-sort="paper_031.qmd">
+<tr data-index="43" data-listing-date-sort="1526455259000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="808" data-listing-title-sort="Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations" data-listing-filename-sort="paper_031.qmd">
 <td>
 <a href="./papers/paper_031.html" class="title listing-title">Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations</a>
 </td>
@@ -898,7 +931,7 @@ Description
 <span class="listing-date">2018-05-16</span>
 </td>
 </tr>
-<tr data-index="44" data-listing-date-sort="1523948218000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Engineering Proteins at Interfaces: From Complementary Characterization to Material Surfaces with Designed Functions" data-listing-filename-sort="paper_030.qmd">
+<tr data-index="44" data-listing-date-sort="1523948218000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="855" data-listing-title-sort="Engineering Proteins at Interfaces: From Complementary Characterization to Material Surfaces with Designed Functions" data-listing-filename-sort="paper_030.qmd">
 <td>
 <a href="./papers/paper_030.html" class="title listing-title">Engineering Proteins at Interfaces: From Complementary Characterization to Material Surfaces with Designed Functions</a>
 </td>
@@ -912,7 +945,7 @@ Description
 <span class="listing-date">2018-04-17</span>
 </td>
 </tr>
-<tr data-index="45" data-listing-date-sort="1521124471000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Non-covalent interactions across organic and biological subsets of chemical space: Physics-based potentials parametrized from machine learning" data-listing-filename-sort="paper_029.qmd">
+<tr data-index="45" data-listing-date-sort="1521124471000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="975" data-listing-title-sort="Non-covalent interactions across organic and biological subsets of chemical space: Physics-based potentials parametrized from machine learning" data-listing-filename-sort="paper_029.qmd">
 <td>
 <a href="./papers/paper_029.html" class="title listing-title">Non-covalent interactions across organic and biological subsets of chemical space: Physics-based potentials parametrized from machine learning</a>
 </td>
@@ -926,7 +959,7 @@ Description
 <span class="listing-date">2018-03-15</span>
 </td>
 </tr>
-<tr data-index="46" data-listing-date-sort="1519716972000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions" data-listing-filename-sort="paper_028.qmd">
+<tr data-index="46" data-listing-date-sort="1519716972000" data-listing-file-modified-sort="1706897288227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="909" data-listing-title-sort="The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions" data-listing-filename-sort="paper_028.qmd">
 <td>
 <a href="./papers/paper_028.html" class="title listing-title">The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions</a>
 </td>
@@ -940,7 +973,7 @@ Description
 <span class="listing-date">2018-02-27</span>
 </td>
 </tr>
-<tr data-index="47" data-listing-date-sort="1506342811000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="<i>In silico</i> screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force" data-listing-filename-sort="paper_027.qmd">
+<tr data-index="47" data-listing-date-sort="1506342811000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="879" data-listing-title-sort="<i>In silico</i> screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force" data-listing-filename-sort="paper_027.qmd">
 <td>
 <a href="./papers/paper_027.html" class="title listing-title"><i>In silico</i> screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force</a>
 </td>
@@ -954,7 +987,7 @@ Description
 <span class="listing-date">2017-09-25</span>
 </td>
 </tr>
-<tr data-index="48" data-listing-date-sort="1504815367000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane" data-listing-filename-sort="paper_026.qmd">
+<tr data-index="48" data-listing-date-sort="1504815367000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="881" data-listing-title-sort="Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane" data-listing-filename-sort="paper_026.qmd">
 <td>
 <a href="./papers/paper_026.html" class="title listing-title">Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane</a>
 </td>
@@ -968,7 +1001,7 @@ Description
 <span class="listing-date">2017-09-07</span>
 </td>
 </tr>
-<tr data-index="49" data-listing-date-sort="1494845679000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins" data-listing-filename-sort="paper_025.qmd">
+<tr data-index="49" data-listing-date-sort="1494845679000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="882" data-listing-title-sort="Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins" data-listing-filename-sort="paper_025.qmd">
 <td>
 <a href="./papers/paper_025.html" class="title listing-title">Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins</a>
 </td>
@@ -982,7 +1015,7 @@ Description
 <span class="listing-date">2017-05-15</span>
 </td>
 </tr>
-<tr data-index="50" data-listing-date-sort="1468560924000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields" data-listing-filename-sort="paper_024.qmd">
+<tr data-index="50" data-listing-date-sort="1468560924000" data-listing-file-modified-sort="1706897288226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="912" data-listing-title-sort="Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields" data-listing-filename-sort="paper_024.qmd">
 <td>
 <a href="./papers/paper_024.html" class="title listing-title">Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields</a>
 </td>
@@ -996,7 +1029,7 @@ Description
 <span class="listing-date">2016-07-15</span>
 </td>
 </tr>
-<tr data-index="51" data-listing-date-sort="1465639121000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="An in-silico walker" data-listing-filename-sort="paper_023.qmd">
+<tr data-index="51" data-listing-date-sort="1465639121000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="778" data-listing-title-sort="An in-silico walker" data-listing-filename-sort="paper_023.qmd">
 <td>
 <a href="./papers/paper_023.html" class="title listing-title">An in-silico walker</a>
 </td>
@@ -1010,7 +1043,7 @@ Description
 <span class="listing-date">2016-06-11</span>
 </td>
 </tr>
-<tr data-index="52" data-listing-date-sort="1462817253000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Impact of Quadrupolar Electrostatics on Atoms Adjacent to the Sigma-Hole in Condensed-Phase Simulations" data-listing-filename-sort="paper_022.qmd">
+<tr data-index="52" data-listing-date-sort="1462817253000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="930" data-listing-title-sort="Impact of Quadrupolar Electrostatics on Atoms Adjacent to the Sigma-Hole in Condensed-Phase Simulations" data-listing-filename-sort="paper_022.qmd">
 <td>
 <a href="./papers/paper_022.html" class="title listing-title">Impact of Quadrupolar Electrostatics on Atoms Adjacent to the Sigma-Hole in Condensed-Phase Simulations</a>
 </td>
@@ -1024,7 +1057,7 @@ Description
 <span class="listing-date">2016-05-09</span>
 </td>
 </tr>
-<tr data-index="53" data-listing-date-sort="1462298062000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Protein-Backbone Thermodynamics across the Membrane Interface" data-listing-filename-sort="paper_021.qmd">
+<tr data-index="53" data-listing-date-sort="1462298062000" data-listing-file-modified-sort="1706897288225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949" data-listing-title-sort="Protein-Backbone Thermodynamics across the Membrane Interface" data-listing-filename-sort="paper_021.qmd">
 <td>
 <a href="./papers/paper_021.html" class="title listing-title">Protein-Backbone Thermodynamics across the Membrane Interface</a>
 </td>
@@ -1038,7 +1071,7 @@ Description
 <span class="listing-date">2016-05-03</span>
 </td>
 </tr>
-<tr data-index="54" data-listing-date-sort="1458057621000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Research Update: Computational materials discovery in soft matter" data-listing-filename-sort="paper_020.qmd">
+<tr data-index="54" data-listing-date-sort="1458057621000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="782" data-listing-title-sort="Research Update: Computational materials discovery in soft matter" data-listing-filename-sort="paper_020.qmd">
 <td>
 <a href="./papers/paper_020.html" class="title listing-title">Research Update: Computational materials discovery in soft matter</a>
 </td>
@@ -1052,7 +1085,7 @@ Description
 <span class="listing-date">2016-03-15</span>
 </td>
 </tr>
-<tr data-index="55" data-listing-date-sort="1454691623000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Communication: Consistent interpretation of molecular simulation kinetics using Markov state models biased with external information" data-listing-filename-sort="paper_019.qmd">
+<tr data-index="55" data-listing-date-sort="1454691623000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="935" data-listing-title-sort="Communication: Consistent interpretation of molecular simulation kinetics using Markov state models biased with external information" data-listing-filename-sort="paper_019.qmd">
 <td>
 <a href="./papers/paper_019.html" class="title listing-title">Communication: Consistent interpretation of molecular simulation kinetics using Markov state models biased with external information</a>
 </td>
@@ -1066,7 +1099,7 @@ Description
 <span class="listing-date">2016-02-05</span>
 </td>
 </tr>
-<tr data-index="56" data-listing-date-sort="1447434026000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Folding and insertion thermodynamics of the transmembrane WALP peptide" data-listing-filename-sort="paper_018.qmd">
+<tr data-index="56" data-listing-date-sort="1447434026000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="940" data-listing-title-sort="Folding and insertion thermodynamics of the transmembrane WALP peptide" data-listing-filename-sort="paper_018.qmd">
 <td>
 <a href="./papers/paper_018.html" class="title listing-title">Folding and insertion thermodynamics of the transmembrane WALP peptide</a>
 </td>
@@ -1080,7 +1113,7 @@ Description
 <span class="listing-date">2015-11-13</span>
 </td>
 </tr>
-<tr data-index="57" data-listing-date-sort="1440717417000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Multi-timestep Integrator for the Modified Andersen Barostat" data-listing-filename-sort="paper_017.qmd">
+<tr data-index="57" data-listing-date-sort="1440717417000" data-listing-file-modified-sort="1706897288224" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="786" data-listing-title-sort="Multi-timestep Integrator for the Modified Andersen Barostat" data-listing-filename-sort="paper_017.qmd">
 <td>
 <a href="./papers/paper_017.html" class="title listing-title">Multi-timestep Integrator for the Modified Andersen Barostat</a>
 </td>
@@ -1094,7 +1127,7 @@ Description
 <span class="listing-date">2015-08-28</span>
 </td>
 </tr>
-<tr data-index="58" data-listing-date-sort="1439908263000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity" data-listing-filename-sort="paper_016.qmd">
+<tr data-index="58" data-listing-date-sort="1439908263000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="731" data-listing-title-sort="Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity" data-listing-filename-sort="paper_016.qmd">
 <td>
 <a href="./papers/paper_016.html" class="title listing-title">Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity</a>
 </td>
@@ -1108,7 +1141,7 @@ Description
 <span class="listing-date">2015-08-18</span>
 </td>
 </tr>
-<tr data-index="59" data-listing-date-sort="1432216851000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules" data-listing-filename-sort="paper_015.qmd">
+<tr data-index="59" data-listing-date-sort="1432216851000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="842" data-listing-title-sort="Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules" data-listing-filename-sort="paper_015.qmd">
 <td>
 <a href="./papers/paper_015.html" class="title listing-title">Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules</a>
 </td>
@@ -1122,7 +1155,7 @@ Description
 <span class="listing-date">2015-05-21</span>
 </td>
 </tr>
-<tr data-index="60" data-listing-date-sort="1430229996000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules" data-listing-filename-sort="paper_014.qmd">
+<tr data-index="60" data-listing-date-sort="1430229996000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="931" data-listing-title-sort="Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules" data-listing-filename-sort="paper_014.qmd">
 <td>
 <a href="./papers/paper_014.html" class="title listing-title">Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules</a>
 </td>
@@ -1136,7 +1169,7 @@ Description
 <span class="listing-date">2015-04-28</span>
 </td>
 </tr>
-<tr data-index="61" data-listing-date-sort="1428418819000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study" data-listing-filename-sort="paper_013.qmd">
+<tr data-index="61" data-listing-date-sort="1428418819000" data-listing-file-modified-sort="1706897288223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="864" data-listing-title-sort="Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study" data-listing-filename-sort="paper_013.qmd">
 <td>
 <a href="./papers/paper_013.html" class="title listing-title">Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study</a>
 </td>
@@ -1150,7 +1183,7 @@ Description
 <span class="listing-date">2015-04-07</span>
 </td>
 </tr>
-<tr data-index="62" data-listing-date-sort="1421182063000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes" data-listing-filename-sort="paper_012.qmd">
+<tr data-index="62" data-listing-date-sort="1421182063000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="863" data-listing-title-sort="Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes" data-listing-filename-sort="paper_012.qmd">
 <td>
 <a href="./papers/paper_012.html" class="title listing-title">Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes</a>
 </td>
@@ -1164,7 +1197,7 @@ Description
 <span class="listing-date">2015-01-13</span>
 </td>
 </tr>
-<tr data-index="63" data-listing-date-sort="1413181584000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange" data-listing-filename-sort="paper_011.qmd">
+<tr data-index="63" data-listing-date-sort="1413181584000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="931" data-listing-title-sort="Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange" data-listing-filename-sort="paper_011.qmd">
 <td>
 <a href="./papers/paper_011.html" class="title listing-title">Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange</a>
 </td>
@@ -1178,7 +1211,7 @@ Description
 <span class="listing-date">2014-10-13</span>
 </td>
 </tr>
-<tr data-index="64" data-listing-date-sort="1405511017000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion" data-listing-filename-sort="paper_010.qmd">
+<tr data-index="64" data-listing-date-sort="1405511017000" data-listing-file-modified-sort="1706897288222" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="891" data-listing-title-sort="Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion" data-listing-filename-sort="paper_010.qmd">
 <td>
 <a href="./papers/paper_010.html" class="title listing-title">Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion</a>
 </td>
@@ -1192,7 +1225,7 @@ Description
 <span class="listing-date">2014-07-16</span>
 </td>
 </tr>
-<tr data-index="65" data-listing-date-sort="1396284556000" data-listing-file-modified-sort="1706897288221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Computational Two-Dimensional Infrared Spectroscopy without Maps: <i>N</i>-Methylacetamide in Water" data-listing-filename-sort="paper_009.qmd">
+<tr data-index="65" data-listing-date-sort="1396284556000" data-listing-file-modified-sort="1706897288221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1001" data-listing-title-sort="Computational Two-Dimensional Infrared Spectroscopy without Maps: <i>N</i>-Methylacetamide in Water" data-listing-filename-sort="paper_009.qmd">
 <td>
 <a href="./papers/paper_009.html" class="title listing-title">Computational Two-Dimensional Infrared Spectroscopy without Maps: <i>N</i>-Methylacetamide in Water</a>
 </td>
@@ -1206,7 +1239,7 @@ Description
 <span class="listing-date">2014-03-31</span>
 </td>
 </tr>
-<tr data-index="66" data-listing-date-sort="1395099024000" data-listing-file-modified-sort="1706897288221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization" data-listing-filename-sort="paper_008.qmd">
+<tr data-index="66" data-listing-date-sort="1395099024000" data-listing-file-modified-sort="1706897288221" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="864" data-listing-title-sort="More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization" data-listing-filename-sort="paper_008.qmd">
 <td>
 <a href="./papers/paper_008.html" class="title listing-title">More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization</a>
 </td>
@@ -1220,7 +1253,7 @@ Description
 <span class="listing-date">2014-03-18</span>
 </td>
 </tr>
-<tr data-index="67" data-listing-date-sort="1386243756000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Deriving Static Atomic Multipoles from the Electrostatic Potential" data-listing-filename-sort="paper_007.qmd">
+<tr data-index="67" data-listing-date-sort="1386243756000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="823" data-listing-title-sort="Deriving Static Atomic Multipoles from the Electrostatic Potential" data-listing-filename-sort="paper_007.qmd">
 <td>
 <a href="./papers/paper_007.html" class="title listing-title">Deriving Static Atomic Multipoles from the Electrostatic Potential</a>
 </td>
@@ -1234,7 +1267,7 @@ Description
 <span class="listing-date">2013-12-05</span>
 </td>
 </tr>
-<tr data-index="68" data-listing-date-sort="1383686281000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations" data-listing-filename-sort="paper_006.qmd">
+<tr data-index="68" data-listing-date-sort="1383686281000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="877" data-listing-title-sort="Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations" data-listing-filename-sort="paper_006.qmd">
 <td>
 <a href="./papers/paper_006.html" class="title listing-title">Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations</a>
 </td>
@@ -1248,7 +1281,7 @@ Description
 <span class="listing-date">2013-11-05</span>
 </td>
 </tr>
-<tr data-index="69" data-listing-date-sort="1365176185000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations" data-listing-filename-sort="paper_005.qmd">
+<tr data-index="69" data-listing-date-sort="1365176185000" data-listing-file-modified-sort="1706897288220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="960" data-listing-title-sort="Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations" data-listing-filename-sort="paper_005.qmd">
 <td>
 <a href="./papers/paper_005.html" class="title listing-title">Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations</a>
 </td>
@@ -1262,8 +1295,7 @@ Description
 <span class="listing-date">2013-04-05</span>
 </td>
 </tr>
-
-<tr data-index="70" data-listing-date-sort="1335187573000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries" data-listing-filename-sort="paper_004.qmd">
+<tr data-index="70" data-listing-date-sort="1335187573000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="897" data-listing-title-sort="Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries" data-listing-filename-sort="paper_004.qmd">
 <td>
 <a href="./papers/paper_004.html" class="title listing-title">Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries</a>
 </td>
@@ -1277,7 +1309,7 @@ Description
 <span class="listing-date">2012-04-23</span>
 </td>
 </tr>
-<tr data-index="71" data-listing-date-sort="1308408151000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective" data-listing-filename-sort="paper_003.qmd">
+<tr data-index="71" data-listing-date-sort="1308408151000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="930" data-listing-title-sort="Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective" data-listing-filename-sort="paper_003.qmd">
 <td>
 <a href="./papers/paper_003.html" class="title listing-title">Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective</a>
 </td>
@@ -1291,7 +1323,7 @@ Description
 <span class="listing-date">2011-06-18</span>
 </td>
 </tr>
-<tr data-index="72" data-listing-date-sort="1283884481000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Interplay between Secondary and Tertiary Structure Formation in Protein Folding Cooperativity" data-listing-filename-sort="paper_002.qmd">
+<tr data-index="72" data-listing-date-sort="1283884481000" data-listing-file-modified-sort="1706897288219" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="888" data-listing-title-sort="Interplay between Secondary and Tertiary Structure Formation in Protein Folding Cooperativity" data-listing-filename-sort="paper_002.qmd">
 <td>
 <a href="./papers/paper_002.html" class="title listing-title">Interplay between Secondary and Tertiary Structure Formation in Protein Folding Cooperativity</a>
 </td>
@@ -1305,7 +1337,7 @@ Description
 <span class="listing-date">2010-09-07</span>
 </td>
 </tr>
-<tr data-index="73" data-listing-date-sort="1245356626000" data-listing-file-modified-sort="1706897288218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-title-sort="Generic coarse-grained model for protein folding and aggregation" data-listing-filename-sort="paper_001.qmd">
+<tr data-index="73" data-listing-date-sort="1245356626000" data-listing-file-modified-sort="1706897288218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="883" data-listing-title-sort="Generic coarse-grained model for protein folding and aggregation" data-listing-filename-sort="paper_001.qmd">
 <td>
 <a href="./papers/paper_001.html" class="title listing-title">Generic coarse-grained model for protein folding and aggregation</a>
 </td>
@@ -1319,7 +1351,7 @@ Description
 <span class="listing-date">2009-06-18</span>
 </td>
 </tr>
-<tr data-index="74" data-listing-date-sort="1242704251000" data-listing-file-modified-sort="1706897288218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Optimized convergence for multiple histogram analysis" data-listing-filename-sort="paper_000.qmd">
+<tr data-index="74" data-listing-date-sort="1242704251000" data-listing-file-modified-sort="1706897288218" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="798" data-listing-title-sort="Optimized convergence for multiple histogram analysis" data-listing-filename-sort="paper_000.qmd">
 <td>
 <a href="./papers/paper_000.html" class="title listing-title">Optimized convergence for multiple histogram analysis</a>
 </td>
@@ -1334,7 +1366,6 @@ Description
 </td>
 </tr>
 </tbody>
-
 </table>
 <div class="listing-no-matching d-none">
 No matching items
@@ -1422,10 +1453,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1435,8 +1465,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1449,6 +1488,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1492,6 +1650,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1517,6 +1676,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1585,9 +1770,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Tristan Bereau, <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></div>
+    <div class="nav-footer-right">
+<p>Tristan Bereau, <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></p>
+</div>
   </div>
 </footer>
+
 
 
 

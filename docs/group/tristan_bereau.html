@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -78,7 +78,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -87,6 +92,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -99,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <link rel="stylesheet" href="../styles.css">
 <meta name="twitter:title" content="Tristan Bereau">
-<meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
+<meta name="twitter:image" content="https://tristanbereau.com/static/tristan.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -108,9 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Tristan Bereau</span>
     </a>
@@ -122,90 +128,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Research</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-research">    
         <li>
-    <a class="dropdown-item" href="../research_landscape.html" rel="" target=""><i class="bi bi-geo-alt" role="img">
+    <a class="dropdown-item" href="../research_landscape.html"><i class="bi bi-geo-alt" role="img">
 </i> 
  <span class="dropdown-text">Landscape</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../research_topics.html" rel="" target=""><i class="bi bi-lightbulb" role="img">
+    <a class="dropdown-item" href="../research_topics.html"><i class="bi bi-lightbulb" role="img">
 </i> 
  <span class="dropdown-text">Topics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../papers.html" rel="" target=""><i class="bi bi-file-earmark-text" role="img">
+    <a class="dropdown-item" href="../papers.html"><i class="bi bi-file-earmark-text" role="img">
 </i> 
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../notes.html" rel="" target=""><i class="bi bi-journal-text" role="img">
+    <a class="dropdown-item" href="../notes.html"><i class="bi bi-journal-text" role="img">
 </i> 
  <span class="dropdown-text">Notes</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-group" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-group" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Group</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-group">    
         <li>
-    <a class="dropdown-item" href="../group_members.html#category=current" rel="" target=""><i class="bi bi-file-person" role="img">
+    <a class="dropdown-item" href="../group_members.html#category=current"><i class="bi bi-file-person" role="img">
 </i> 
  <span class="dropdown-text">Members</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../positions.html" rel="" target=""><i class="bi bi-person-plus" role="img">
+    <a class="dropdown-item" href="../positions.html"><i class="bi bi-person-plus" role="img">
 </i> 
  <span class="dropdown-text">Positions</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../teaching.html" rel="" target="">
- <span class="menu-text">Teaching</span></a>
+    <a class="nav-link" href="../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../software.html" rel="" target="">
- <span class="menu-text">Software</span></a>
+    <a class="nav-link" href="../software.html"> 
+<span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../contact.html" rel="" target="">
- <span class="menu-text">Contact</span></a>
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/tristanbereau" rel="" target=""><i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://twitter.com/tristanbereau"> <i class="bi bi-twitter" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ" rel="" target=""><i class="bi bi-google" role="img">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ"> <i class="bi bi-google" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../files/bereau_cv.pdf" rel="" target=""><i class="bi bi-file-earmark-person" role="img">
+    <a class="nav-link" href="../files/bereau_cv.pdf"> <i class="bi bi-file-earmark-person" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -228,7 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="quarto-about-solana column-body">
+
+<div class="quarto-about-solana column-body content">
   <div class="about-entity">
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
@@ -477,9 +484,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
-
 <script type="ojs-module-contents">
-{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"import {Plot} from \"@mkfreeman/plot-tooltip\"\nimport {map} from \"@martien/ramda\"\n\npapers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) => i)\npapers = map(i => map(x => x[i], papers_r), index_array)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a => a.full_name).includes(\"Tristan Bereau\")\n})\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi => htl.html`<a href=https://doi.org/${doi} target=_blank>${doi}</a>`,\n    title: title => htl.html`${title}`,\n    \"journal.volume\": volume => htl.html`<b>${volume}</b>`,\n    year: year => htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"collaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p => p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Tristan Bereau\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a => a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) => (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c => dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =>\n            htl.html`<a href=https://orcid.org/${orcid} target=_blank>${orcid}</a>`\n        },\n    }\n)\n"}]}
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbmltcG9ydCB7bWFwfSBmcm9tIFwiQG1hcnRpZW4vcmFtZGFcIlxuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBtYXAoaSA9PiBtYXAoeCA9PiB4W2ldLCBwYXBlcnNfciksIGluZGV4X2FycmF5KVxuXG5teV9wYXBlcnMgPSBwYXBlcnMuZmlsdGVyKGZ1bmN0aW9uKHApIHtcbiAgICByZXR1cm4gcC5hdXRob3JzLm1hcChhID0+IGEuZnVsbF9uYW1lKS5pbmNsdWRlcyhcIlRyaXN0YW4gQmVyZWF1XCIpXG59KVxuXG5JbnB1dHMudGFibGUobXlfcGFwZXJzLCB7XG4gICAgY29sdW1uczogW1xuICAgIFwiZG9pXCIsXG4gICAgXCJ0aXRsZVwiLFxuICAgIFwiam91cm5hbC5uYW1lXCIsXG4gICAgXCJqb3VybmFsLnZvbHVtZVwiLFxuICAgIFwiam91cm5hbC5pc3N1ZVwiLFxuICAgIFwiam91cm5hbC5wYWdlc1wiLFxuICAgIFwieWVhclwiLFxuICAgIFwiZW1iZWRkaW5nLnRvcGljX25hbWVcIlxuICBdLFxuICBoZWFkZXI6IHtcbiAgICBcImpvdXJuYWwubmFtZVwiOiBcImpvdXJuYWxcIixcbiAgICBcImpvdXJuYWwudm9sdW1lXCI6IFwidm9sdW1lXCIsXG4gICAgXCJqb3VybmFsLmlzc3VlXCI6IFwiaXNzdWVcIixcbiAgICBcImpvdXJuYWwucGFnZXNcIjogXCJwYWdlc1wiLFxuICAgIFwiZW1iZWRkaW5nLnRvcGljX25hbWVcIjogXCJ0b3BpY1wiLFxuICB9LFxuICBmb3JtYXQ6IHtcbiAgICBkb2k6IGRvaSA9PiBodGwuaHRtbGA8YSBocmVmPWh0dHBzOi8vZG9pLm9yZy8ke2RvaX0gdGFyZ2V0PV9ibGFuaz4ke2RvaX08L2E+YCxcbiAgICB0aXRsZTogdGl0bGUgPT4gaHRsLmh0bWxgJHt0aXRsZX1gLFxuICAgIFwiam91cm5hbC52b2x1bWVcIjogdm9sdW1lID0+IGh0bC5odG1sYDxiPiR7dm9sdW1lfTwvYj5gLFxuICAgIHllYXI6IHllYXIgPT4gaHRsLmh0bWxgJHt5ZWFyfWAsXG4gIH0sXG4gIHdpZHRoOiB7XG4gICAgXCJ0aXRsZVwiOiAxMFxuICB9LFxuICBsYXlvdXQ6IFwiYXV0b1wiLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImNvbGxhYm9yYXRvcnMgPSBBcnJheS5mcm9tKFxuICAgIG5ldyBTZXQoXG4gICAgICAgIG15X3BhcGVycy5mbGF0TWFwKHAgPT4gcC5hdXRob3JzKVxuICAgICAgICAuZmlsdGVyKGZ1bmN0aW9uKGEpIHtcbiAgICAgICAgICAgIHJldHVybiBhLmZ1bGxfbmFtZSAhPSBcIlRyaXN0YW4gQmVyZWF1XCJcbiAgICAgICAgICAgIH1cbiAgICAgICAgKVxuICAgIClcbilcblxubGlzdF9vZl9jb2xsYWJvcmF0b3JzID0gKFxuICAgIEFycmF5LmZyb20oZDMuZ3JvdXAoY29sbGFib3JhdG9ycywgYSA9PiBhLmZ1bGxfbmFtZSkua2V5cygpKVxuKVxuZGljdF9vZl9jb2xsYWJvcmF0b3JzID0gKFxuICAgIGNvbGxhYm9yYXRvcnMucmVkdWNlKFxuICAgICAgICAoYWNjLCB4KSA9PiAoXG4gICAgICAgICAgICB7Li4uYWNjLCBbeC5mdWxsX25hbWVdOlxuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgICAgXCJnaXZlblwiOiB4LmdpdmVuLFxuICAgICAgICAgICAgICAgICAgICBcImZhbWlseVwiOiB4LmZhbWlseSxcbiAgICAgICAgICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jaXR5XCI6IHguYWZmaWxpYXRpb24uY2l0eSxcbiAgICAgICAgICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9uYW1lXCI6IHguYWZmaWxpYXRpb24ubmFtZSxcbiAgICAgICAgICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jb3VudHJ5XCI6IHguYWZmaWxpYXRpb24uY291bnRyeSxcbiAgICAgICAgICAgICAgICAgICAgXCJvcmNpZFwiOiB4Lm9yY2lkLFxuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgIH1cbiAgICAgICAgKSxcbiAgICAgICAge31cbiAgICApXG4pXG5cbklucHV0cy50YWJsZShcbiAgICBsaXN0X29mX2NvbGxhYm9yYXRvcnMubWFwKGMgPT4gZGljdF9vZl9jb2xsYWJvcmF0b3JzW2NdKSxcbiAgICB7XG4gICAgICAgIGNvbHVtbnM6IFtcbiAgICAgICAgICAgIFwiZ2l2ZW5cIixcbiAgICAgICAgICAgIFwiZmFtaWx5XCIsXG4gICAgICAgICAgICBcIm9yY2lkXCIsXG4gICAgICAgICAgICBcImFmZmlsaWF0aW9uX2NvdW50cnlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY2l0eVwiLFxuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9uYW1lXCIsXG4gICAgICAgIF0sXG4gICAgICAgIGhlYWRlcjoge1xuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jb3VudHJ5XCI6IFwiY291bnRyeVwiLFxuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jaXR5XCI6IFwiY2l0eVwiLFxuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9uYW1lXCI6IFwiYWZmaWxpYXRpb25cIixcbiAgICAgICAgfSxcbiAgICAgICAgbXVsdGlwbGU6IGZhbHNlLFxuICAgICAgICBzb3J0OiBcImZhbWlseVwiLFxuICAgICAgICBsYXlvdXQ6IFwiZml4ZWRcIixcbiAgICAgICAgZm9ybWF0OiB7XG4gICAgICAgICAgICBvcmNpZDogb3JjaWQgPT5cbiAgICAgICAgICAgIGh0bC5odG1sYDxhIGhyZWY9aHR0cHM6Ly9vcmNpZC5vcmcvJHtvcmNpZH0gdGFyZ2V0PV9ibGFuaz4ke29yY2lkfTwvYT5gXG4gICAgICAgIH0sXG4gICAgfVxuKVxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -561,10 +567,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -574,8 +579,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -588,6 +602,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -631,6 +764,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -656,6 +790,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -724,9 +884,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">Tristan Bereau, <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></div>
+    <div class="nav-footer-right">
+<p>Tristan Bereau, <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></p>
+</div>
   </div>
 </footer>
+
 
 
 
