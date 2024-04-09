@@ -17,17 +17,6 @@ about:
 ---
 
 
-:::{#hero-heading}
-
-
-
-
-
-
-:::
-
-## Group publications
-
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
 import {map} from "@martien/ramda"
@@ -40,7 +29,20 @@ papers = map(i => map(x => x[i], papers_r), index_array)
 my_papers = papers.filter(function(p) {
     return p.authors.map(a => a.full_name).includes("Timon Wittenstein")
 })
+```
 
+:::{#hero-heading}
+
+
+
+
+
+
+:::
+
+## Group publications
+
+```{ojs}
 Inputs.table(my_papers, {
     columns: [
     "doi",

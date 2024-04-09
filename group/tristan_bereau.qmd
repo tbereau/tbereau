@@ -16,7 +16,7 @@ about:
   links:
 
     - icon: twitter
-      text: twitter
+      text: X
       href: https://twitter.com/tristanbereau
     - icon: file-earmark-person
       text: CV
@@ -27,8 +27,25 @@ about:
     - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=9cYdrBUAAAAJ
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0001-9945-1271
 ---
 
+
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+import {map} from "@martien/ramda"
+
+papers_r = FileAttachment("../data/all_papers.json").json()
+n_columns = Object.entries(papers_r["doi"]).length
+index_array = Array.from({length: n_columns}, (_, i) => i)
+papers = map(i => map(x => x[i], papers_r), index_array)
+
+my_papers = papers.filter(function(p) {
+    return p.authors.map(a => a.full_name).includes("Tristan Bereau")
+})
+```
 
 :::{#hero-heading}
 
@@ -56,18 +73,6 @@ BSc, Physics, Ecole Polytechnique Fédérale de Lausanne | 2003 - 2006
 ## Group publications
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
-import {map} from "@martien/ramda"
-
-papers_r = FileAttachment("../data/all_papers.json").json()
-n_columns = Object.entries(papers_r["doi"]).length
-index_array = Array.from({length: n_columns}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
-
-my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Tristan Bereau")
-})
-
 Inputs.table(my_papers, {
     columns: [
     "doi",

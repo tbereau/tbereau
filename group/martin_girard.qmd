@@ -13,20 +13,13 @@ about:
   id: hero-heading
   template: solana
   image: ../static/girard.png
+  links:
 
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0003-2051-6218
 ---
 
-
-:::{#hero-heading}
-
-
-
-
-
-
-:::
-
-## Group publications
 
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
@@ -40,7 +33,20 @@ papers = map(i => map(x => x[i], papers_r), index_array)
 my_papers = papers.filter(function(p) {
     return p.authors.map(a => a.full_name).includes("Martin Girard")
 })
+```
 
+:::{#hero-heading}
+
+
+
+
+
+
+:::
+
+## Group publications
+
+```{ojs}
 Inputs.table(my_papers, {
     columns: [
     "doi",

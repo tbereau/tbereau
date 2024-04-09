@@ -48,17 +48,6 @@ about:
     )
     body = f"""
 
-:::{{#hero-heading}}
-
-{summary}
-
-{experience}
-
-{education}
-:::
-
-## Group publications
-
 ```{{ojs}}
 import {{Plot}} from "@mkfreeman/plot-tooltip"
 import {{map}} from "@martien/ramda"
@@ -71,7 +60,20 @@ papers = map(i => map(x => x[i], papers_r), index_array)
 my_papers = papers.filter(function(p) {{
     return p.authors.map(a => a.full_name).includes("{author.full_name}")
 }})
+```
 
+:::{{#hero-heading}}
+
+{summary}
+
+{experience}
+
+{education}
+:::
+
+## Group publications
+
+```{{ojs}}
 Inputs.table(my_papers, {{
     columns: [
     "doi",
@@ -170,15 +172,18 @@ Inputs.table(
 
 def get_icon_links_for_author(author_info: dict) -> str:
     field_map = {
-        "twitter": {"icon": "twitter", "text": "twitter"},
+        "twitter": {"icon": "twitter", "text": "X"},
         "cv": {"icon": "file-earmark-person", "text": "CV"},
         "github": {"icon": "github", "text": "Github"},
         "website": {"icon": "house", "text": "Website"},
         "scholar": {"icon": "google", "text": "Google Scholar"},
+        "orcid": {"icon": "orcid", "text": "ORCID"}
     }
 
     def get_author_links(author_info_: dict, field: str) -> str:
         if href := author_info_.get(field):
+            if field == "orcid":
+                href = f"https://orcid.org/{href}"
             return f"""
     - icon: {field_map[field]["icon"]}
       text: {field_map[field]["text"]}

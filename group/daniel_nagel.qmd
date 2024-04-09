@@ -24,8 +24,25 @@ about:
     - icon: google
       text: Google Scholar
       href: https://scholar.google.com/citations?user=fg5aD8QAAAAJ
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0002-2863-2646
 ---
 
+
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+import {map} from "@martien/ramda"
+
+papers_r = FileAttachment("../data/all_papers.json").json()
+n_columns = Object.entries(papers_r["doi"]).length
+index_array = Array.from({length: n_columns}, (_, i) => i)
+papers = map(i => map(x => x[i], papers_r), index_array)
+
+my_papers = papers.filter(function(p) {
+    return p.authors.map(a => a.full_name).includes("Daniel Nagel")
+})
+```
 
 :::{#hero-heading}
 
@@ -43,18 +60,6 @@ PhD [@stocklab](https://www.moldyn.uni-freiburg.de/), ALU Freiburg | 2018 - 2023
 ## Group publications
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
-import {map} from "@martien/ramda"
-
-papers_r = FileAttachment("../data/all_papers.json").json()
-n_columns = Object.entries(papers_r["doi"]).length
-index_array = Array.from({length: n_columns}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
-
-my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Daniel Nagel")
-})
-
 Inputs.table(my_papers, {
     columns: [
     "doi",

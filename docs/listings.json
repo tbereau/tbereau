@@ -9,11 +9,12 @@
       "/group/balint_mate.html",
       "/group/chan_liu.html",
       "/group/christian_hoffmann.html",
+      "/group/claudia_leticia_gomez-flores.html",
       "/group/clemens_rauer.html",
       "/group/daniel_nagel.html",
       "/group/joseph_rudzinski.html",
       "/group/kiran_kanekal.html",
-      "/group/luis_walter.html",
+      "/group/luis_j_walter.html",
       "/group/marc_stieffenhofer.html",
       "/group/marius_bause.html",
       "/group/martin_girard.html",
@@ -24,18 +25,6 @@
       "/group/tristan_bereau.html",
       "/group/yasemin_bozkurt_varolgunes.html"
     ]
-  },
-  {
-    "listing": "/notes.html",
-    "items": [
-      "/notes/kernel_lennard_jones.html",
-      "/notes/symmetries-in-kernel-ml.html",
-      "/notes/nonequilibrium-reweighting.html"
-    ]
-  },
-  {
-    "listing": "/positions.html",
-    "items": []
   },
   {
     "listing": "/papers.html",
@@ -115,6 +104,14 @@
       "/papers/paper_002.html",
       "/papers/paper_001.html",
       "/papers/paper_000.html"
+    ]
+  },
+  {
+    "listing": "/notes.html",
+    "items": [
+      "/notes/kernel_lennard_jones.html",
+      "/notes/symmetries-in-kernel-ml.html",
+      "/notes/nonequilibrium-reweighting.html"
     ]
   }
 ]

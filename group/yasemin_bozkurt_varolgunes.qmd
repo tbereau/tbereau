@@ -13,20 +13,13 @@ about:
   id: hero-heading
   template: solana
   image: ../static/bozkurt.jpg
+  links:
 
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0000-0002-9179-2458
 ---
 
-
-:::{#hero-heading}
-
-
-
-
-
-
-:::
-
-## Group publications
 
 ```{ojs}
 import {Plot} from "@mkfreeman/plot-tooltip"
@@ -40,7 +33,20 @@ papers = map(i => map(x => x[i], papers_r), index_array)
 my_papers = papers.filter(function(p) {
     return p.authors.map(a => a.full_name).includes("Yasemin Bozkurt Varolgunes")
 })
+```
 
+:::{#hero-heading}
+
+
+
+
+
+
+:::
+
+## Group publications
+
+```{ojs}
 Inputs.table(my_papers, {
     columns: [
     "doi",

@@ -1,19 +1,26 @@
 
 ---
-title: "Clemens Rauer"
+title: "Claudia Leticia Gómez-Flores"
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
-  - alumnus
   - postdoc
-image: ../static/rauer.jpg
+  - current
+image: ../static/leticia.jpeg
 about:
   id: hero-heading
   template: solana
-  image: ../static/rauer.jpg
+  image: ../static/leticia.jpeg
+  links:
 
+    - icon: github
+      text: Github
+      href: https://github.com/tipiorgup
+    - icon: google
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=sYMYlVIAAAAJ&hl=es
 ---
 
 
@@ -27,7 +34,7 @@ index_array = Array.from({length: n_columns}, (_, i) => i)
 papers = map(i => map(x => x[i], papers_r), index_array)
 
 my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Clemens Rauer")
+    return p.authors.map(a => a.full_name).includes("Claudia Leticia Gómez-Flores")
 })
 ```
 
@@ -81,7 +88,7 @@ collaborators = Array.from(
     new Set(
         my_papers.flatMap(p => p.authors)
         .filter(function(a) {
-            return a.full_name != "Clemens Rauer"
+            return a.full_name != "Claudia Leticia Gómez-Flores"
             }
         )
     )

@@ -1,6 +1,6 @@
 
 ---
-title: "Luis Walter"
+title: "Luis J. Walter"
 format:
   html:
     echo: false
@@ -13,9 +13,27 @@ about:
   id: hero-heading
   template: solana
   image: ../static/luis_w.png
+  links:
 
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0009-0000-0113-6215
 ---
 
+
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+import {map} from "@martien/ramda"
+
+papers_r = FileAttachment("../data/all_papers.json").json()
+n_columns = Object.entries(papers_r["doi"]).length
+index_array = Array.from({length: n_columns}, (_, i) => i)
+papers = map(i => map(x => x[i], papers_r), index_array)
+
+my_papers = papers.filter(function(p) {
+    return p.authors.map(a => a.full_name).includes("Luis J. Walter")
+})
+```
 
 :::{#hero-heading}
 
@@ -29,18 +47,6 @@ about:
 ## Group publications
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
-import {map} from "@martien/ramda"
-
-papers_r = FileAttachment("../data/all_papers.json").json()
-n_columns = Object.entries(papers_r["doi"]).length
-index_array = Array.from({length: n_columns}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
-
-my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Luis Walter")
-})
-
 Inputs.table(my_papers, {
     columns: [
     "doi",
@@ -79,7 +85,7 @@ collaborators = Array.from(
     new Set(
         my_papers.flatMap(p => p.authors)
         .filter(function(a) {
-            return a.full_name != "Luis Walter"
+            return a.full_name != "Luis J. Walter"
             }
         )
     )
