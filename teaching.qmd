@@ -4,6 +4,7 @@ title: "Teaching"
 
 | Course | Level | Type | Semester |
 |--------|-------|-------|---------:|
+| Theoretical Statistical Physics | Master | course | W2024/2025 |
 | [Computational Statistics and Data Analysis (MVComp2)](https://mvcomp2-s24.tristanbereau.com/) | Master | course | S2024 |
 | Soft Matter Physics | Master | seminar | S2024 |
 | Machine learning for the Biomolecular World | Master | Seminar | S2024 |

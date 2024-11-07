@@ -32,8 +32,20 @@
     ]
   },
   {
+    "listing": "/notes.html",
+    "items": [
+      "/notes/kernel_lennard_jones.html",
+      "/notes/symmetries-in-kernel-ml.html",
+      "/notes/nonequilibrium-reweighting.html"
+    ]
+  },
+  {
     "listing": "/papers.html",
     "items": [
+      "/papers/paper_078.html",
+      "/papers/paper_077.html",
+      "/papers/paper_076.html",
+      "/papers/paper_075.html",
       "/papers/paper_074.html",
       "/papers/paper_073.html",
       "/papers/paper_072.html",
@@ -109,14 +121,6 @@
       "/papers/paper_002.html",
       "/papers/paper_001.html",
       "/papers/paper_000.html"
-    ]
-  },
-  {
-    "listing": "/notes.html",
-    "items": [
-      "/notes/kernel_lennard_jones.html",
-      "/notes/symmetries-in-kernel-ml.html",
-      "/notes/nonequilibrium-reweighting.html"
     ]
   }
 ]

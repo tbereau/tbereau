@@ -9,7 +9,7 @@ title: "Open positions"
 #     - title
 ---
 
-Current physics students of Heidelberg University are always welcome to reach out to discuss projects for their **Master thesis**. Topics include (but are not limited to) multiscale molecular simulations, machine learning, and statistical mechanics. Please contact me directly ([Contact](contact.html)).
+Current physics students of Heidelberg University are always welcome to reach out to discuss projects for their **Bachelor thesis** or **Master thesis**. Topics include (but are not limited to) multiscale molecular simulations, machine learning, and statistical mechanics. Please contact me directly ([Contact](contact.html)).
 
 ## Announcements
 
