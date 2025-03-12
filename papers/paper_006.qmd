@@ -49,19 +49,8 @@ A CHARMM implementation of MTP electrostatics in terms of spherical harmonics is
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2013,
-	doi = {10.1021/ct400803f},
-	url = {https://doi.org/10.1021%2Fct400803f},
-	year = 2013,
-	month = {nov},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {9},
-	number = {12},
-	pages = {5450--5459},
-	author = {Tristan Bereau and Christian Kramer and Markus Meuwly},
-	title = {Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{Bereau_2013, title={Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations}, volume={9}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct400803f}, DOI={10.1021/ct400803f}, number={12}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Meuwly, Markus}, year={2013}, month=nov, pages={5450–5459} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

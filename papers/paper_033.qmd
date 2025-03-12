@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Classical molecular dynamics strategies are inherently limited by the molecular-mechanics basis set employed. Here we extend the concept of multisurface dynamics, initially developed to describe electronic transitions in chemical reactions, to sample the conformational ensemble of a classical system in equilibrium. In analogy to describing different electronic configurations, a surface-hopping scheme couples distinct conformational basins. A structural criterion for the surface selection effectively introduces coupling beyond the additivity of the Hamiltonian. We illustrate the method through a systematic coarse-graining of two molecular systems that give rise to notoriously challenging many-body potentials of mean force. Incorporating more surfaces leads systematically towards unimodal distributions within each basin, resulting in structural improvements that also yield kinetic consistency.
+Structure-based coarse graining of molecular systems offers a systematic route to reproduce the many-body potential of mean force. Unfortunately, common strategies are inherently limited by the molecular mechanics force field employed. Here, we extend the concept of multisurface dynamics, initially developed to describe electronic transitions in chemical reactions, to accurately sample the conformational ensemble of a classical system in equilibrium. In analogy to describing different electronic configurations, a surface-hopping scheme couples distinct conformational basins beyond the additivity of the Hamiltonian. The incorporation of more surfaces leads systematically toward improved cross-correlations. The resulting models naturally achieve consistent long-time dynamics for systems governed by barrier-crossing events.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ Classical molecular dynamics strategies are inherently limited by the molecular-
 
 ## TL;DR
 
-None
+The concept of multisurface dynamics is extended to accurately sample the conformational ensemble of a classical system in equilibrium, and a surface-hopping scheme is proposed that couples distinct conformational basins beyond the additivity of the Hamiltonian.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2018,
-	doi = {10.1103/physrevlett.121.256002},
-	url = {https://doi.org/10.1103%2Fphysrevlett.121.256002},
-	year = 2018,
-	month = {dec},
-	publisher = {American Physical Society ({APS})},
-	volume = {121},
-	number = {25},
-	author = {Tristan Bereau and Joseph F. Rudzinski},
-	title = {Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics},
-	journal = {Physical Review Letters}
-}
+ @article{Bereau_2018, title={Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics}, volume={121}, ISSN={1079-7114}, url={http://dx.doi.org/10.1103/physrevlett.121.256002}, DOI={10.1103/physrevlett.121.256002}, number={25}, journal={Physical Review Letters}, publisher={American Physical Society (APS)}, author={Bereau, Tristan and Rudzinski, Joseph F.}, year={2018}, month=dec }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -75,7 +65,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1808.05644" role="button">
+        href="https://arxiv.org/abs/1808.05644" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +82,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1808.05644" role="button">
+        href="https://arxiv.org/pdf/1808.05644" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

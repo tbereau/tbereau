@@ -5,7 +5,7 @@ doi: "10.1002/chem.201702041"
 date: "2017-05-15 12:54:39"
 date-format: iso
 authors: "Franz, Bereau, Pannwitt, Anbazhagan, Lehr, Nubbemeyer, Dietz, Bonn, Weidner, Schneider"
-description: "_Chem. Eur. J._ **23** (2017)"
+description: "_Chemistry A European J_ **23** (2017)"
 year: 2017
 format:
   html:
@@ -49,19 +49,8 @@ Fluorescence measurements with surface-specific sum frequency generation vibrati
 ## BibTeX
 
 ```{bibtex}
-@article{Franz_2017,
-	doi = {10.1002/chem.201702041},
-	url = {https://doi.org/10.1002%2Fchem.201702041},
-	year = 2017,
-	month = {jun},
-	publisher = {Wiley},
-	volume = {23},
-	number = {40},
-	pages = {9690--9697},
-	author = {Johannes Franz and Tristan Bereau and Stefanie Pannwitt and Veerappan Anbazhagan and Alexander Lehr and Udo Nubbemeyer and Ulrich Dietz and Mischa Bonn and Tobias Weidner and Dirk Schneider},
-	title = {Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins},
-	journal = {Chemistry {\textendash} A European Journal}
-}
+ @article{Franz_2017, title={Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins}, volume={23}, ISSN={1521-3765}, url={http://dx.doi.org/10.1002/chem.201702041}, DOI={10.1002/chem.201702041}, number={40}, journal={Chemistry – A European Journal}, publisher={Wiley}, author={Franz, Johannes and Bereau, Tristan and Pannwitt, Stefanie and Anbazhagan, Veerappan and Lehr, Alexander and Nubbemeyer, Udo and Dietz, Ulrich and Bonn, Mischa and Weidner, Tobias and Schneider, Dirk}, year={2017}, month=jun, pages={9690–9697} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

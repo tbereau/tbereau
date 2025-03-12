@@ -5,7 +5,7 @@ doi: "10.1039/D3BM00412K"
 date: "2023-06-15 11:01:18"
 date-format: iso
 authors: "Kaygisiz, Dutta, Rauch-Wirth, Synatschke, Münch, Bereau, Weil"
-description: "_Biomater. Sci._ **None** (2023)"
+description: "_Biomater. Sci._ **11** (2023)"
 year: 2023
 format:
   html:
@@ -49,15 +49,8 @@ These de novo sequences are the shortest active peptides for infectivity enhance
 ## BibTeX
 
 ```{bibtex}
-@article{Kaygisiz_2023,
-	doi = {10.1039/d3bm00412k},
-	url = {https://doi.org/10.1039%2Fd3bm00412k},
-	year = 2023,
-	publisher = {Royal Society of Chemistry ({RSC})},
-	author = {Kübra Kaygisiz and Arghya Dutta and Lena Rauch-Wirth and Christopher V. Synatschke and Jan Münch and Tristan Bereau and Tanja Weil},
-	title = {Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings},
-	journal = {Biomaterials Science}
-}
+ @article{Kaygisiz_2023, title={Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings}, volume={11}, ISSN={2047-4849}, url={http://dx.doi.org/10.1039/D3BM00412K}, DOI={10.1039/d3bm00412k}, number={15}, journal={Biomaterials Science}, publisher={Royal Society of Chemistry (RSC)}, author={Kaygisiz, Kübra and Dutta, Arghya and Rauch-Wirth, Lena and Synatschke, Christopher V. and Münch, Jan and Bereau, Tristan and Weil, Tanja}, year={2023}, pages={5251–5261} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

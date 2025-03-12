@@ -39,7 +39,7 @@ Protein folding cooperativity is defined by the nature of the finite-size thermo
 
 ## TL;DR
 
-It is found that the interplay between secondary structure and the loss of non-native tertiary contacts that determines the nature of the transition between thermodynamics and structure for helical peptides using a high-resolution coarse-grained model.
+It is found that it is the interplay between secondary structure and the loss of non-native tertiary contacts that determines the nature of the transition.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,19 +49,8 @@ It is found that the interplay between secondary structure and the loss of non-n
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2010,
-	doi = {10.1021/ja105206w},
-	url = {https://doi.org/10.1021%2Fja105206w},
-	year = 2010,
-	month = {sep},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {132},
-	number = {38},
-	pages = {13129--13131},
-	author = {Tristan Bereau and Michael Bachmann and Markus Deserno},
-	title = {Interplay between Secondary and Tertiary Structure Formation in Protein Folding Cooperativity},
-	journal = {Journal of the American Chemical Society}
-}
+ @article{Bereau_2010, title={Interplay between Secondary and Tertiary Structure Formation in Protein Folding Cooperativity}, volume={132}, ISSN={1520-5126}, url={http://dx.doi.org/10.1021/ja105206w}, DOI={10.1021/ja105206w}, number={38}, journal={Journal of the American Chemical Society}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Bachmann, Michael and Deserno, Markus}, year={2010}, month=sep, pages={13129–13131} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

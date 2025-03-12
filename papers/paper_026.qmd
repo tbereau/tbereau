@@ -49,19 +49,8 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
 ## BibTeX
 
 ```{bibtex}
-@article{Menichetti_2018,
-	doi = {10.1016/j.bbrc.2017.08.095},
-	url = {https://doi.org/10.1016%2Fj.bbrc.2017.08.095},
-	year = 2018,
-	month = {mar},
-	publisher = {Elsevier {BV}},
-	volume = {498},
-	number = {2},
-	pages = {282--287},
-	author = {Roberto Menichetti and Kurt Kremer and Tristan Bereau},
-	title = {Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane},
-	journal = {Biochemical and Biophysical Research Communications}
-}
+ @article{Menichetti_2018, title={Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane}, volume={498}, ISSN={0006-291X}, url={http://dx.doi.org/10.1016/j.bbrc.2017.08.095}, DOI={10.1016/j.bbrc.2017.08.095}, number={2}, journal={Biochemical and Biophysical Research Communications}, publisher={Elsevier BV}, author={Menichetti, Roberto and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=mar, pages={282–287} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

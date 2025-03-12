@@ -1,6 +1,6 @@
 
 ---
-title: "Computational Two-Dimensional Infrared Spectroscopy without Maps: <i>N</i>-Methylacetamide in Water"
+title: "Computational Two-Dimensional Infrared Spectroscopy without Maps:<i>N</i>-Methylacetamide in Water"
 doi: "10.1021/jp5011692"
 date: "2014-03-31 18:49:16"
 date-format: iso
@@ -49,19 +49,8 @@ PC-based models perform well compared to those based on MTPs for NMAD in D2O and
 ## BibTeX
 
 ```{bibtex}
-@article{Cazade_2014,
-	doi = {10.1021/jp5011692},
-	url = {https://doi.org/10.1021%2Fjp5011692},
-	year = 2014,
-	month = {apr},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {118},
-	number = {28},
-	pages = {8135--8147},
-	author = {Pierre-Andr{\'{e}} Cazade and Tristan Bereau and Markus Meuwly},
-	title = {Computational Two-Dimensional Infrared Spectroscopy without Maps: $\less$i$\greater$N$\less$/i$\greater$-Methylacetamide in Water},
-	journal = {The Journal of Physical Chemistry B}
-}
+ @article{Cazade_2014, title={Computational Two-Dimensional Infrared Spectroscopy without Maps:N-Methylacetamide in Water}, volume={118}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp5011692}, DOI={10.1021/jp5011692}, number={28}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Cazade, Pierre-André and Bereau, Tristan and Meuwly, Markus}, year={2014}, month=apr, pages={8135–8147} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

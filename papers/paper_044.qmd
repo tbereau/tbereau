@@ -49,19 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Centi_2020,
-	doi = {10.1016/j.bpj.2020.01.039},
-	url = {https://doi.org/10.1016%2Fj.bpj.2020.01.039},
-	year = 2020,
-	month = {mar},
-	publisher = {Elsevier {BV}},
-	volume = {118},
-	number = {6},
-	pages = {1321--1332},
-	author = {Alessia Centi and Arghya Dutta and Sapun H. Parekh and Tristan Bereau},
-	title = {Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force},
-	journal = {Biophysical Journal}
-}
+ @article{Centi_2020, title={Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force}, volume={118}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.01.039}, DOI={10.1016/j.bpj.2020.01.039}, number={6}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Centi, Alessia and Dutta, Arghya and Parekh, Sapun H. and Bereau, Tristan}, year={2020}, month=mar, pages={1321–1332} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -93,7 +82,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://www.cell.com/article/S0006349520301144/pdf" role="button">
+        href="https://www.cell.com/article/S0006349520301144/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

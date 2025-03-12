@@ -49,19 +49,8 @@ It is shown that refining the backbone contribution in PLUM significantly improv
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2016,
-	doi = {10.1021/acs.jpcb.6b03682},
-	url = {https://doi.org/10.1021%2Facs.jpcb.6b03682},
-	year = 2016,
-	month = {may},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {120},
-	number = {26},
-	pages = {6391--6400},
-	author = {Tristan Bereau and Kurt Kremer},
-	title = {Protein-Backbone Thermodynamics across the Membrane Interface},
-	journal = {The Journal of Physical Chemistry B}
-}
+ @article{Bereau_2016, title={Protein-Backbone Thermodynamics across the Membrane Interface}, volume={120}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.6b03682}, DOI={10.1021/acs.jpcb.6b03682}, number={26}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kremer, Kurt}, year={2016}, month=may, pages={6391–6400} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

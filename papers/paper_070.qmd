@@ -49,19 +49,8 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2023,
-	doi = {10.1016/j.bpj.2022.12.004},
-	url = {https://doi.org/10.1016%2Fj.bpj.2022.12.004},
-	year = 2023,
-	month = {jun},
-	publisher = {Elsevier {BV}},
-	volume = {122},
-	number = {11},
-	pages = {2092--2098},
-	author = {Martin Girard and Tristan Bereau},
-	title = {Induced asymmetries in membranes},
-	journal = {Biophysical Journal}
-}
+ @article{Girard_2023, title={Induced asymmetries in membranes}, volume={122}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2022.12.004}, DOI={10.1016/j.bpj.2022.12.004}, number={11}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Girard, Martin and Bereau, Tristan}, year={2023}, month=jun, pages={2092–2098} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -75,8 +64,8 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://doi.org/10.1016/j.bpj.2022.12.004" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

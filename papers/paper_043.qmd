@@ -49,19 +49,8 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
 ## BibTeX
 
 ```{bibtex}
-@article{Koch_2020,
-	doi = {10.1021/acs.jpcb.9b10469},
-	url = {https://doi.org/10.1021%2Facs.jpcb.9b10469},
-	year = 2020,
-	month = {jan},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {124},
-	number = {5},
-	pages = {742--750},
-	author = {Amelie H.R. Koch and Svenja Morsbach and Tristan Bereau and Gaëtan L{\'{e}}v{\^{e}}que and Hans-Jürgen Butt and Markus Deserno and Katharina Landfester and George Fytas},
-	title = {Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics},
-	journal = {The Journal of Physical Chemistry B}
-}
+ @article{Koch_2020, title={Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics}, volume={124}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.9b10469}, DOI={10.1021/acs.jpcb.9b10469}, number={5}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Koch, Amelie H.R. and Morsbach, Svenja and Bereau, Tristan and Lévêque, Gaëtan and Butt, Hans-Jürgen and Deserno, Markus and Landfester, Katharina and Fytas, George}, year={2020}, month=jan, pages={742–750} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -49,19 +49,8 @@ High-throughput coarse-grained molecular dynamics simulations are introduced to 
 ## BibTeX
 
 ```{bibtex}
-@article{Menichetti_2017,
-	doi = {10.1063/1.4987012},
-	url = {https://doi.org/10.1063%2F1.4987012},
-	year = 2017,
-	month = {sep},
-	publisher = {{AIP} Publishing},
-	volume = {147},
-	number = {12},
-	pages = {125101},
-	author = {Roberto Menichetti and Kiran H. Kanekal and Kurt Kremer and Tristan Bereau},
-	title = {$\less$i$\greater$In silico$\less$/i$\greater$ screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Menichetti_2017, title={In silico screening of drug-membrane thermodynamics reveals linear relations between bulk partitioning and the potential of mean force}, volume={147}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4987012}, DOI={10.1063/1.4987012}, number={12}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Menichetti, Roberto and Kanekal, Kiran H. and Kremer, Kurt and Bereau, Tristan}, year={2017}, month=sep }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

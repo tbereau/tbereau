@@ -49,19 +49,8 @@ The improved dynamical behavior found in the MTP simulations suggests that a sys
 ## BibTeX
 
 ```{bibtex}
-@article{Jakobsen_2015,
-	doi = {10.1021/jp508052q},
-	url = {https://doi.org/10.1021%2Fjp508052q},
-	year = 2015,
-	month = {jan},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {119},
-	number = {7},
-	pages = {3034--3045},
-	author = {Sofie Jakobsen and Tristan Bereau and Markus Meuwly},
-	title = {Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes},
-	journal = {The Journal of Physical Chemistry B}
-}
+ @article{Jakobsen_2015, title={Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes}, volume={119}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp508052q}, DOI={10.1021/jp508052q}, number={7}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Jakobsen, Sofie and Bereau, Tristan and Meuwly, Markus}, year={2015}, month=jan, pages={3034–3045} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

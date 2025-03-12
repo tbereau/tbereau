@@ -2,7 +2,7 @@
 ---
 title: "Controlled exploration of chemical space by machine learning of coarse-grained representations"
 doi: "10.1103/PhysRevE.100.033302"
-date: "2019-09-04 20:07:48"
+date: "2019-09-04 16:07:48"
 date-format: iso
 authors: "Hoffmann, Menichetti, Kanekal, Bereau"
 description: "_Phys. Rev. E_ **100** (2019)"
@@ -49,18 +49,8 @@ Bridging coarse-grained simulations with ML gives rise to an unprecedented datab
 ## BibTeX
 
 ```{bibtex}
-@article{Hoffmann_2019,
-	doi = {10.1103/physreve.100.033302},
-	url = {https://doi.org/10.1103%2Fphysreve.100.033302},
-	year = 2019,
-	month = {sep},
-	publisher = {American Physical Society ({APS})},
-	volume = {100},
-	number = {3},
-	author = {Christian Hoffmann and Roberto Menichetti and Kiran H. Kanekal and Tristan Bereau},
-	title = {Controlled exploration of chemical space by machine learning of coarse-grained representations},
-	journal = {Physical Review E}
-}
+ @article{Hoffmann_2019, title={Controlled exploration of chemical space by machine learning of coarse-grained representations}, volume={100}, ISSN={2470-0053}, url={http://dx.doi.org/10.1103/PhysRevE.100.033302}, DOI={10.1103/physreve.100.033302}, number={3}, journal={Physical Review E}, publisher={American Physical Society (APS)}, author={Hoffmann, Christian and Menichetti, Roberto and Kanekal, Kiran H. and Bereau, Tristan}, year={2019}, month=sep }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -75,7 +65,7 @@ Bridging coarse-grained simulations with ML gives rise to an unprecedented datab
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1905.01897" role="button">
+        href="https://arxiv.org/abs/1905.01897" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +82,7 @@ Bridging coarse-grained simulations with ML gives rise to an unprecedented datab
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1905.01897" role="button">
+        href="https://arxiv.org/pdf/1905.01897" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -49,19 +49,8 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2011,
-	doi = {10.1016/j.bpj.2011.03.056},
-	url = {https://doi.org/10.1016%2Fj.bpj.2011.03.056},
-	year = 2011,
-	month = {jun},
-	publisher = {Elsevier {BV}},
-	volume = {100},
-	number = {11},
-	pages = {2764--2772},
-	author = {Tristan Bereau and Markus Deserno and Michael Bachmann},
-	title = {Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective},
-	journal = {Biophysical Journal}
-}
+ @article{Bereau_2011, title={Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective}, volume={100}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2011.03.056}, DOI={10.1016/j.bpj.2011.03.056}, number={11}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan and Deserno, Markus and Bachmann, Michael}, year={2011}, month=jun, pages={2764–2772} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -76,7 +65,7 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2011.03.056" role="button">
+        href="https://europepmc.org/articles/pmc3117192" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +82,7 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://www.cell.com/article/S0006349511004140/pdf" role="button">
+        href="https://europepmc.org/articles/pmc3117192?pdf=render" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

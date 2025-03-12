@@ -49,19 +49,8 @@ The accuracy involved in folding not only the test protein but also other ones s
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2009,
-	doi = {10.1063/1.3152842},
-	url = {https://doi.org/10.1063%2F1.3152842},
-	year = 2009,
-	month = {jun},
-	publisher = {{AIP} Publishing},
-	volume = {130},
-	number = {23},
-	pages = {235106},
-	author = {Tristan Bereau and Markus Deserno},
-	title = {Generic coarse-grained model for protein folding and aggregation},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Bereau_2009, title={Generic coarse-grained model for protein folding and aggregation}, volume={130}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.3152842}, DOI={10.1063/1.3152842}, number={23}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Deserno, Markus}, year={2009}, month=jun }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

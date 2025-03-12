@@ -49,17 +49,8 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2015,
-	doi = {10.1016/j.phpro.2015.07.101},
-	url = {https://doi.org/10.1016%2Fj.phpro.2015.07.101},
-	year = 2015,
-	publisher = {Elsevier {BV}},
-	volume = {68},
-	pages = {7--15},
-	author = {Tristan Bereau},
-	title = {Multi-timestep Integrator for the Modified Andersen Barostat},
-	journal = {Physics Procedia}
-}
+ @article{Bereau_2015, title={Multi-timestep Integrator for the Modified Andersen Barostat}, volume={68}, ISSN={1875-3892}, url={http://dx.doi.org/10.1016/j.phpro.2015.07.101}, DOI={10.1016/j.phpro.2015.07.101}, journal={Physics Procedia}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, pages={7–15} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -2,7 +2,7 @@
 ---
 title: "Revisiting the Meyer-Overton rule for drug-membrane permeabilities"
 doi: "10.1080/00268976.2019.1601787"
-date: "2019-04-08 03:49:22"
+date: "2019-04-07 23:49:22"
 date-format: iso
 authors: "Menichetti, Bereau"
 description: "_Molecular Physics_ **117** (2019)"
@@ -49,19 +49,8 @@ This work extracts an analogous relation for the permeation of a small solute th
 ## BibTeX
 
 ```{bibtex}
-@article{Menichetti_2019,
-	doi = {10.1080/00268976.2019.1601787},
-	url = {https://doi.org/10.1080%2F00268976.2019.1601787},
-	year = 2019,
-	month = {apr},
-	publisher = {Informa {UK} Limited},
-	volume = {117},
-	number = {20},
-	pages = {2900--2909},
-	author = {Roberto Menichetti and Tristan Bereau},
-	title = {Revisiting the Meyer-Overton rule for drug-membrane permeabilities},
-	journal = {Molecular Physics}
-}
+ @article{Menichetti_2019, title={Revisiting the Meyer-Overton rule for drug-membrane permeabilities}, volume={117}, ISSN={1362-3028}, url={http://dx.doi.org/10.1080/00268976.2019.1601787}, DOI={10.1080/00268976.2019.1601787}, number={20}, journal={Molecular Physics}, publisher={Informa UK Limited}, author={Menichetti, Roberto and Bereau, Tristan}, year={2019}, month=apr, pages={2900–2909} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

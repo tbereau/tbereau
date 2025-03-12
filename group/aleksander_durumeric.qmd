@@ -7,7 +7,6 @@ format:
     keep-hidden: true
 categories:
   - postdoc
-  - current
 image: ../static/aleksander.jpg
 about:
   id: hero-heading

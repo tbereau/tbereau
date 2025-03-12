@@ -49,18 +49,8 @@ This work trained a machine learning (ML) algorithm, using a topological, path-b
 ## BibTeX
 
 ```{bibtex}
-@article{Barnett_2020,
-	doi = {10.1126/sciadv.aaz4301},
-	url = {https://doi.org/10.1126%2Fsciadv.aaz4301},
-	year = 2020,
-	month = {may},
-	publisher = {American Association for the Advancement of Science ({AAAS})},
-	volume = {6},
-	number = {20},
-	author = {J. Wesley Barnett and Connor R. Bilchak and Yiwen Wang and Brian C. Benicewicz and Laura A. Murdock and Tristan Bereau and Sanat K. Kumar},
-	title = {Designing exceptional gas-separation polymer membranes using machine learning},
-	journal = {Science Advances}
-}
+ @article{Barnett_2020, title={Designing exceptional gas-separation polymer membranes using machine learning}, volume={6}, ISSN={2375-2548}, url={http://dx.doi.org/10.1126/sciadv.aaz4301}, DOI={10.1126/sciadv.aaz4301}, number={20}, journal={Science Advances}, publisher={American Association for the Advancement of Science (AAAS)}, author={Barnett, J. Wesley and Bilchak, Connor R. and Wang, Yiwen and Benicewicz, Brian C. and Murdock, Laura A. and Bereau, Tristan and Kumar, Sanat K.}, year={2020}, month=may }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -7,7 +7,6 @@ format:
     keep-hidden: true
 categories:
   - visiting phd student
-  - current
 image: ../static/balint.jpeg
 about:
   id: hero-heading

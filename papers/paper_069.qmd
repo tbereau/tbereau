@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The primary structures of peptides, originating from food proteins, aﬀect their taste. Connecting primary structure to taste, however, is diﬃcult because the size of the peptide sequence space increases exponentially with increasing peptide length, while experimentally-labeled data on peptides’ tastes remain scarce. We propose a method that coarse-grains the sequence space to reduce its size and systematically identiﬁes the most common coarse-grained residue patterns found in known bitter and umami peptides. We select the optimal patterns by performing extensive out-of-sample tests. The optimal patterns better represent the bitter and umami peptides when compared against baseline peptides, bitter peptides with all hydrophobic residues and umami peptides with all negatively charged residues, and peptides with randomly-chosen residues. Our method complements quantitative structure–activity relationship methods by oﬀering generic, coarse-grained bitter and umami residue patterns that can aid in locating short bitter or umami segments in a protein and in designing new umami peptides.
+The primary structures of peptides, originating from food proteins, affect their taste. Connecting primary structure to taste, however, is difficult because the size of the peptide sequence space increases exponentially with increasing peptide length, while experimentally-labeled data on peptides' tastes remain scarce. We propose a method that coarse-grains the sequence space to reduce its size and systematically identifies the most common coarse-grained residue patterns found in known bitter and umami peptides. We select the optimal patterns by performing extensive out-of-sample tests. The optimal patterns better represent the bitter and umami peptides when compared against baseline peptides, bitter peptides with all hydrophobic residues and umami peptides with all negatively charged residues, and peptides with randomly-chosen residues. Our method complements quantitative structure--activity relationship methods by offering generic, coarse-grained bitter and umami residue patterns that can aid in locating short bitter or umami segments in a protein and in designing new umami peptides.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -49,19 +49,8 @@ This work proposes a method that coarse-grains the sequence space to reduce its 
 ## BibTeX
 
 ```{bibtex}
-@article{Dutta_2022,
-	doi = {10.1021/acsfoodscitech.2c00251},
-	url = {https://doi.org/10.1021%2Facsfoodscitech.2c00251},
-	year = 2022,
-	month = {nov},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {2},
-	number = {11},
-	pages = {1773--1780},
-	author = {Arghya Dutta and Tristan Bereau and Thomas A. Vilgis},
-	title = {Identifying Sequential Residue Patterns in Bitter and Umami Peptides},
-	journal = {{ACS} Food Science {\&}amp$\mathsemicolon$ Technology}
-}
+ @article{Dutta_2022, title={Identifying Sequential Residue Patterns in Bitter and Umami Peptides}, volume={2}, ISSN={2692-1944}, url={http://dx.doi.org/10.1021/acsfoodscitech.2c00251}, DOI={10.1021/acsfoodscitech.2c00251}, number={11}, journal={ACS Food Science &amp; Technology}, publisher={American Chemical Society (ACS)}, author={Dutta, Arghya and Bereau, Tristan and Vilgis, Thomas A.}, year={2022}, month=nov, pages={1773–1780} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -4,7 +4,7 @@ title: "Interpretable embeddings from molecular simulations using Gaussian mixtu
 doi: "10.1088/2632-2153/ab80b7"
 date: "2020-03-18 14:29:44"
 date-format: iso
-authors: "Bozkurt Varolgunes, Bereau, Rudzinski"
+authors: "Bozkurt Varolgüneş, Bereau, Rudzinski"
 description: "_Mach. Learn.: Sci. Technol._ **1** (2020)"
 year: 2020
 format:
@@ -49,19 +49,8 @@ This work incorporates physical intuition into the prior by employing a Gaussian
 ## BibTeX
 
 ```{bibtex}
-@article{Bozkurt_Varolg_ne__2020,
-	doi = {10.1088/2632-2153/ab80b7},
-	url = {https://doi.org/10.1088%2F2632-2153%2Fab80b7},
-	year = 2020,
-	month = {mar},
-	publisher = {{IOP} Publishing},
-	volume = {1},
-	number = {1},
-	pages = {015012},
-	author = {Yasemin Bozkurt Varolgüne{\c{s}} and Tristan Bereau and Joseph F Rudzinski},
-	title = {Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders},
-	journal = {Machine Learning: Science and Technology}
-}
+ @article{Bozkurt_Varolg_ne__2020, title={Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/ab80b7}, DOI={10.1088/2632-2153/ab80b7}, number={1}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Bozkurt Varolgüneş, Yasemin and Bereau, Tristan and Rudzinski, Joseph F}, year={2020}, month=mar, pages={015012} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

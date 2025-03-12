@@ -5,7 +5,7 @@ doi: "10.1063/1.5119101"
 date: "2019-10-22 16:04:55"
 date-format: iso
 authors: "Kanekal, Bereau"
-description: "_J. Chem. Phys._ **151** (2019)"
+description: "_The Journal of Chemical Physics_ **151** (2019)"
 year: 2019
 format:
   html:
@@ -49,19 +49,8 @@ New criteria for the design of coarse-grained models allowing for the optimizati
 ## BibTeX
 
 ```{bibtex}
-@article{Kanekal_2019,
-	doi = {10.1063/1.5119101},
-	url = {https://doi.org/10.1063%2F1.5119101},
-	year = 2019,
-	month = {oct},
-	publisher = {{AIP} Publishing},
-	volume = {151},
-	number = {16},
-	pages = {164106},
-	author = {Kiran H. Kanekal and Tristan Bereau},
-	title = {Resolution limit of data-driven coarse-grained models spanning chemical space},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Kanekal_2019, title={Resolution limit of data-driven coarse-grained models spanning chemical space}, volume={151}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5119101}, DOI={10.1063/1.5119101}, number={16}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Kanekal, Kiran H. and Bereau, Tristan}, year={2019}, month=oct }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -49,19 +49,8 @@ Analysis of pair distribution functions and hydration free energies of halogenat
 ## BibTeX
 
 ```{bibtex}
-@article{El_Hage_2016,
-	doi = {10.1021/acs.jctc.6b00202},
-	url = {https://doi.org/10.1021%2Facs.jctc.6b00202},
-	year = 2016,
-	month = {jun},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {12},
-	number = {7},
-	pages = {3008--3019},
-	author = {Krystel El Hage and Tristan Bereau and Sofie Jakobsen and Markus Meuwly},
-	title = {Impact of Quadrupolar Electrostatics on Atoms Adjacent to the Sigma-Hole in Condensed-Phase Simulations},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{El_Hage_2016, title={Impact of Quadrupolar Electrostatics on Atoms Adjacent to the Sigma-Hole in Condensed-Phase Simulations}, volume={12}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.6b00202}, DOI={10.1021/acs.jctc.6b00202}, number={7}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={El Hage, Krystel and Bereau, Tristan and Jakobsen, Sofie and Meuwly, Markus}, year={2016}, month=jun, pages={3008–3019} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

@@ -49,18 +49,8 @@ The membrane binding properties of the 22 most promising molecules identified in
 ## BibTeX
 
 ```{bibtex}
-@article{Kleinw_chter_2022,
-	doi = {10.1039/d2cb00125j},
-	url = {https://doi.org/10.1039%2Fd2cb00125j},
-	year = 2022,
-	publisher = {Royal Society of Chemistry ({RSC})},
-	volume = {3},
-	number = {7},
-	pages = {941--954},
-	author = {Isabel Kleinwächter and Bernadette Mohr and Aljoscha Joppe and Nadja Hellmann and Tristan Bereau and Heinz D. Osiewacz and Dirk Schneider},
-	title = {{CLiB} {\textendash} a novel cardiolipin-binder isolated $\less$i$\greater$via$\less$/i$\greater$ data-driven and $\less$i$\greater$in vitro$\less$/i$\greater$ screening},
-	journal = {{RSC} Chemical Biology}
-}
+ @article{Kleinw_chter_2022, title={CLiB – a novel cardiolipin-binder isolated via data-driven and in vitro screening}, volume={3}, ISSN={2633-0679}, url={http://dx.doi.org/10.1039/D2CB00125J}, DOI={10.1039/d2cb00125j}, number={7}, journal={RSC Chemical Biology}, publisher={Royal Society of Chemistry (RSC)}, author={Kleinwächter, Isabel and Mohr, Bernadette and Joppe, Aljoscha and Hellmann, Nadja and Bereau, Tristan and Osiewacz, Heinz D. and Schneider, Dirk}, year={2022}, pages={941–954} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

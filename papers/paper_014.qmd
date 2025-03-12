@@ -49,19 +49,8 @@ The present work aims at automating the mapping and parametrization of common sm
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2015,
-	doi = {10.1021/acs.jctc.5b00056},
-	url = {https://doi.org/10.1021%2Facs.jctc.5b00056},
-	year = 2015,
-	month = {may},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {11},
-	number = {6},
-	pages = {2783--2791},
-	author = {Tristan Bereau and Kurt Kremer},
-	title = {Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{Bereau_2015, title={Automated Parametrization of the Coarse-Grained Martini Force Field for Small Organic Molecules}, volume={11}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5b00056}, DOI={10.1021/acs.jctc.5b00056}, number={6}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kremer, Kurt}, year={2015}, month=may, pages={2783–2791} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

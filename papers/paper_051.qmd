@@ -49,18 +49,8 @@ This work reports for the first time the free-energy landscape of a polymorphic 
 ## BibTeX
 
 ```{bibtex}
-@article{Liu_2020,
-	doi = {10.1039/d0sm01342k},
-	url = {https://doi.org/10.1039%2Fd0sm01342k},
-	year = 2020,
-	publisher = {Royal Society of Chemistry ({RSC})},
-	volume = {16},
-	number = {42},
-	pages = {9683--9692},
-	author = {Chan Liu and Jan Gerit Brandenburg and Omar Valsson and Kurt Kremer and Tristan Bereau},
-	title = {Free-energy landscape of polymer-crystal polymorphism},
-	journal = {Soft Matter}
-}
+ @article{Liu_2020, title={Free-energy landscape of polymer-crystal polymorphism}, volume={16}, ISSN={1744-6848}, url={http://dx.doi.org/10.1039/D0SM01342K}, DOI={10.1039/d0sm01342k}, number={42}, journal={Soft Matter}, publisher={Royal Society of Chemistry (RSC)}, author={Liu, Chan and Brandenburg, Jan Gerit and Valsson, Omar and Kremer, Kurt and Bereau, Tristan}, year={2020}, pages={9683–9692} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

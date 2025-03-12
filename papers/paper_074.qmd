@@ -49,18 +49,8 @@ This paper presents an operative definition of metadata, and the features that a
 ## BibTeX
 
 ```{bibtex}
-@article{Ghiringhelli_2023,
-	doi = {10.1038/s41597-023-02501-8},
-	url = {https://doi.org/10.1038%2Fs41597-023-02501-8},
-	year = 2023,
-	month = {sep},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {10},
-	number = {1},
-	author = {Luca M. Ghiringhelli and Carsten Baldauf and Tristan Bereau and Sandor Brockhauser and Christian Carbogno and Javad Chamanara and Stefano Cozzini and Stefano Curtarolo and Claudia Draxl and Shyam Dwaraknath and {\'{A}}d{\'{a}}m Fekete and James Kermode and Christoph T. Koch and Markus Kühbach and Alvin Noe Ladines and Patrick Lambrix and Maja-Olivia Himmer and Sergey V. Levchenko and Micael Oliveira and Adam Michalchuk and Ronald E. Miller and Berk Onat and Pasquale Pavone and Giovanni Pizzi and Benjamin Regler and Gian-Marco Rignanese and Jörg Schaarschmidt and Markus Scheidgen and Astrid Schneidewind and Tatyana Sheveleva and Chuanxun Su and Denis Usvyat and Omar Valsson and Christof Wöll and Matthias Scheffler},
-	title = {Shared metadata for data-centric materials science},
-	journal = {Scientific Data}
-}
+ @article{Ghiringhelli_2023, title={Shared metadata for data-centric materials science}, volume={10}, ISSN={2052-4463}, url={http://dx.doi.org/10.1038/s41597-023-02501-8}, DOI={10.1038/s41597-023-02501-8}, number={1}, journal={Scientific Data}, publisher={Springer Science and Business Media LLC}, author={Ghiringhelli, Luca M. and Baldauf, Carsten and Bereau, Tristan and Brockhauser, Sandor and Carbogno, Christian and Chamanara, Javad and Cozzini, Stefano and Curtarolo, Stefano and Draxl, Claudia and Dwaraknath, Shyam and Fekete, Ádám and Kermode, James and Koch, Christoph T. and Kühbach, Markus and Ladines, Alvin Noe and Lambrix, Patrick and Himmer, Maja-Olivia and Levchenko, Sergey V. and Oliveira, Micael and Michalchuk, Adam and Miller, Ronald E. and Onat, Berk and Pavone, Pasquale and Pizzi, Giovanni and Regler, Benjamin and Rignanese, Gian-Marco and Schaarschmidt, Jörg and Scheidgen, Markus and Schneidewind, Astrid and Sheveleva, Tatyana and Su, Chuanxun and Usvyat, Denis and Valsson, Omar and Wöll, Christof and Scheffler, Matthias}, year={2023}, month=sep }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

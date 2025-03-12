@@ -5,7 +5,7 @@ doi: "10.1002/adfm.201809112"
 date: "2019-04-15 10:14:43"
 date-format: iso
 authors: "Schilling, Mack, Lickfett, Sieste, Ruggeri, Sneideris, Dutta, Bereau, Naraghi, Sinske, Knowles, Synatschke, Weil, Knöll"
-description: "_Adv. Funct. Mater._ **29** (2019)"
+description: "_Adv Funct Materials_ **29** (2019)"
 year: 2019
 format:
   html:
@@ -49,19 +49,8 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
 ## BibTeX
 
 ```{bibtex}
-@article{Schilling_2019,
-	doi = {10.1002/adfm.201809112},
-	url = {https://doi.org/10.1002%2Fadfm.201809112},
-	year = 2019,
-	month = {apr},
-	publisher = {Wiley},
-	volume = {29},
-	number = {24},
-	pages = {1809112},
-	author = {Corinna Schilling and Thomas Mack and Selene Lickfett and Stefanie Sieste and Francesco S. Ruggeri and Tomas Sneideris and Arghya Dutta and Tristan Bereau and Ramin Naraghi and Daniela Sinske and Tuomas P. J. Knowles and Christopher V. Synatschke and Tanja Weil and Bernd Knöll},
-	title = {Sequence-Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons},
-	journal = {Advanced Functional Materials}
-}
+ @article{Schilling_2019, title={Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons}, volume={29}, ISSN={1616-3028}, url={http://dx.doi.org/10.1002/adfm.201809112}, DOI={10.1002/adfm.201809112}, number={24}, journal={Advanced Functional Materials}, publisher={Wiley}, author={Schilling, Corinna and Mack, Thomas and Lickfett, Selene and Sieste, Stefanie and Ruggeri, Francesco S. and Sneideris, Tomas and Dutta, Arghya and Bereau, Tristan and Naraghi, Ramin and Sinske, Daniela and Knowles, Tuomas P. J. and Synatschke, Christopher V. and Weil, Tanja and Knöll, Bernd}, year={2019}, month=apr }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -93,7 +82,7 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.mpg.de/pubman/item/item_3052909_4/component/file_3221133/SchillingandMacketalAdFunctMat.pdf" role="button">
+        href="https://pure.mpg.de/pubman/item/item_3052909_5/component/file_3221133/SchillingandMacketalAdFunctMat.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

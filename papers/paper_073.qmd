@@ -49,18 +49,8 @@ This data-mining study elucidates the multi-scale structure–property–activit
 ## BibTeX
 
 ```{bibtex}
-@article{Kaygisiz_2023,
-	doi = {10.1038/s41467-023-40663-6},
-	url = {https://doi.org/10.1038%2Fs41467-023-40663-6},
-	year = 2023,
-	month = {aug},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {14},
-	number = {1},
-	author = {Kübra Kaygisiz and Lena Rauch-Wirth and Arghya Dutta and Xiaoqing Yu and Yuki Nagata and Tristan Bereau and Jan Münch and Christopher V. Synatschke and Tanja Weil},
-	title = {Data-mining unveils structure{\textendash}property{\textendash}activity correlation of viral infectivity enhancing self-assembling peptides},
-	journal = {Nature Communications}
-}
+ @article{Kaygisiz_2023, title={Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides}, volume={14}, ISSN={2041-1723}, url={http://dx.doi.org/10.1038/s41467-023-40663-6}, DOI={10.1038/s41467-023-40663-6}, number={1}, journal={Nature Communications}, publisher={Springer Science and Business Media LLC}, author={Kaygisiz, Kübra and Rauch-Wirth, Lena and Dutta, Arghya and Yu, Xiaoqing and Nagata, Yuki and Bereau, Tristan and Münch, Jan and Synatschke, Christopher V. and Weil, Tanja}, year={2023}, month=aug }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

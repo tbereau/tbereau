@@ -49,19 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2020,
-	doi = {10.1016/j.bpj.2020.07.024},
-	url = {https://doi.org/10.1016%2Fj.bpj.2020.07.024},
-	year = 2020,
-	month = {sep},
-	publisher = {Elsevier {BV}},
-	volume = {119},
-	number = {5},
-	pages = {892--899},
-	author = {Martin Girard and Tristan Bereau},
-	title = {Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms},
-	journal = {Biophysical Journal}
-}
+ @article{Girard_2020, title={Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms}, volume={119}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.07.024}, DOI={10.1016/j.bpj.2020.07.024}, number={5}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Girard, Martin and Bereau, Tristan}, year={2020}, month=sep, pages={892–899} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -76,7 +65,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2020.07.024" role="button">
+        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7474175" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,8 +81,8 @@ None
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://www.cell.com/article/S0006349520305889/pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

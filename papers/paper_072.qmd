@@ -5,7 +5,7 @@ doi: "10.1021/acs.jctc.3c00201"
 date: "2023-07-03 12:50:55"
 date-format: iso
 authors: "Mohr, Van Der Mast, Bereau"
-description: "_J. Chem. Theory Comput._ **None** (2023)"
+description: "_J. Chem. Theory Comput._ **19** (2023)"
 year: 2023
 format:
   html:
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Molecular design requires systematic and broadly applicable methods to extract structure-property relationships. The focus of this study is on learning thermodynamic properties from molecular-liquid simulations. The methodology relies on an atomic representation originally developed for electronic properties: the Spectrum of London and Axilrod-Teller-Muto representation (SLATM). SLATM's expansion in one-, two-, and three-body interactions makes it amenable to probing structural ordering in molecular liquids. We show that such representation encodes enough critical information to permit the learning of thermodynamic properties via linear methods. We demonstrate our approach on the preferential insertion of small solute molecules toward cardiolipin membranes and monitor selectivity against a similar lipid. Our analysis reveals simple, interpretable relationships between two- and three-body interactions and selectivity, identifies key interactions to build optimal prototypical solutes, and charts a two-dimensional projection that displays clearly separated basins. The methodology is generally applicable to a variety of thermodynamic properties.
+Molecular design requires systematic and broadly applicable methods to extract structure–property relationships. The focus of this study is on learning thermodynamic properties from molecular-liquid simulations. The methodology relies on an atomic representation originally developed for electronic properties: the Spectrum of London and Axilrod–Teller–Muto representation (SLATM). SLATM’s expansion in one-, two-, and three-body interactions makes it amenable to probing structural ordering in molecular liquids. We show that such representation encodes enough critical information to permit the learning of thermodynamic properties via linear methods. We demonstrate our approach on the preferential insertion of small solute molecules toward cardiolipin membranes and monitor selectivity against a similar lipid. Our analysis reveals simple, interpretable relationships between two- and three-body interactions and selectivity, identifies key interactions to build optimal prototypical solutes, and charts a two-dimensional projection that displays clearly separated basins. The methodology is generally applicable to a variety of thermodynamic properties.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -49,16 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Mohr_2023,
-	doi = {10.1021/acs.jctc.3c00201},
-	url = {https://doi.org/10.1021%2Facs.jctc.3c00201},
-	year = 2023,
-	month = {jul},
-	publisher = {American Chemical Society ({ACS})},
-	author = {Bernadette Mohr and Diego van der Mast and Tristan Bereau},
-	title = {Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{Mohr_2023, title={Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics}, volume={19}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.3c00201}, DOI={10.1021/acs.jctc.3c00201}, number={14}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Mohr, Bernadette and van der Mast, Diego and Bereau, Tristan}, year={2023}, month=jul, pages={4770–4779} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

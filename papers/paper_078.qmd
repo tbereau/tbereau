@@ -5,7 +5,7 @@ doi: "10.1021/acs.jpclett.4c01958"
 date: "2024-11-06 15:50:48"
 date-format: iso
 authors: "Máté, Fleuret, Bereau"
-description: "_J. Phys. Chem. Lett._ **None** (2024)"
+description: "_J. Phys. Chem. Lett._ **15** (2024)"
 year: 2024
 format:
   html:
@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-
+Thermodynamic integration (TI) offers a rigorous method for estimating free-energy differences by integrating over a sequence of interpolating conformational ensembles. However, TI calculations are computationally expensive and typically limited to coupling a small number of degrees of freedom due to the need to sample numerous intermediate ensembles with sufficient conformational-space overlap. In this work, we propose to perform TI along an alchemical pathway represented by a trainable neural network, which we term Neural TI. Critically, we parametrize a time-dependent Hamiltonian interpolating between the interacting and noninteracting systems and optimize its gradient using a score matching objective. The ability of the resulting energy-based diffusion model to sample all intermediate ensembles allows us to perform TI from a single reference calculation. We apply our method to Lennard-Jones fluids, where we report accurate calculations of the excess chemical potential, demonstrating that Neural TI reproduces the underlying changes in free energy without the need for simulations at interpolating Hamiltonians.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -39,7 +39,7 @@ format:
 
 ## TL;DR
 
-None
+This work parametrize a time-dependent Hamiltonian interpolating between the interacting and noninteracting systems and optimize its gradient using a score matching objective, demonstrating that Neural TI reproduces the underlying changes in free energy without the need for simulations at interpolating Hamiltonians.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,7 +49,7 @@ None
 ## BibTeX
 
 ```{bibtex}
- @article{M_t__2024, title={Neural Thermodynamic Integration: Free Energies from Energy-Based Diffusion Models}, ISSN={1948-7185}, url={http://dx.doi.org/10.1021/acs.jpclett.4c01958}, DOI={10.1021/acs.jpclett.4c01958}, journal={The Journal of Physical Chemistry Letters}, publisher={American Chemical Society (ACS)}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2024}, month=nov, pages={11395–11404} }
+ @article{M_t__2024, title={Neural Thermodynamic Integration: Free Energies from Energy-Based Diffusion Models}, volume={15}, ISSN={1948-7185}, url={http://dx.doi.org/10.1021/acs.jpclett.4c01958}, DOI={10.1021/acs.jpclett.4c01958}, number={45}, journal={The Journal of Physical Chemistry Letters}, publisher={American Chemical Society (ACS)}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2024}, month=nov, pages={11395–11404} }
 
 ```
 ```{=html}

@@ -7,7 +7,6 @@ format:
     keep-hidden: true
 categories:
   - postdoc
-  - current
 image: ../static/leticia.jpeg
 about:
   id: hero-heading

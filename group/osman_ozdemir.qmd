@@ -7,7 +7,6 @@ format:
     keep-hidden: true
 categories:
   - master student
-  - current
 image: ../static/osman.jpg
 about:
   id: hero-heading

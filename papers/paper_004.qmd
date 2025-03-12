@@ -49,19 +49,8 @@ This work combines CG and atomistic simulations with clustering algorithms and f
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2012,
-	doi = {10.1021/ct200888u},
-	url = {https://doi.org/10.1021%2Fct200888u},
-	year = 2012,
-	month = {may},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {8},
-	number = {10},
-	pages = {3750--3758},
-	author = {Tristan Bereau and Christoph Globisch and Markus Deserno and Christine Peter},
-	title = {Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus ({SS}-{CCMV}) Subunit 26{\textendash}49: $\upbeta$-Barrel Stability of the Hexamer and Pentamer Geometries},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{Bereau_2012, title={Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries}, volume={8}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct200888u}, DOI={10.1021/ct200888u}, number={10}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Globisch, Christoph and Deserno, Markus and Peter, Christine}, year={2012}, month=may, pages={3750–3758} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

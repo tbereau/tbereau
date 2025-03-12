@@ -49,18 +49,8 @@ This work proposes a method that reweights the microscopic transitions of the sy
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2016,
-	doi = {10.1063/1.4941455},
-	url = {https://doi.org/10.1063%2F1.4941455},
-	year = 2016,
-	month = {feb},
-	publisher = {{AIP} Publishing},
-	volume = {144},
-	number = {5},
-	author = {Joseph F. Rudzinski and Kurt Kremer and Tristan Bereau},
-	title = {Communication: Consistent interpretation of molecular simulation kinetics using Markov state models biased with external information},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Rudzinski_2016, title={Communication: Consistent interpretation of molecular simulation kinetics using Markov state models biased with external information}, volume={144}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4941455}, DOI={10.1063/1.4941455}, number={5}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Kremer, Kurt and Bereau, Tristan}, year={2016}, month=feb }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -75,7 +65,7 @@ This work proposes a method that reweights the microscopic transitions of the sy
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1602.03809" role="button">
+        href="https://doi.org/10.1063/1.4941455" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -92,7 +82,7 @@ This work proposes a method that reweights the microscopic transitions of the sy
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1602.03809" role="button">
+        href="https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/1.4941455/14800164/051102_1_online.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

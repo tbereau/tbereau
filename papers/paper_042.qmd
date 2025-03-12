@@ -5,7 +5,7 @@ doi: "10.1063/1.5131105"
 date: "2019-12-26 13:52:00"
 date-format: iso
 authors: "Wörner, Bereau, Kremer, Rudzinski"
-description: "_J. Chem. Phys._ **151** (2019)"
+description: "_The Journal of Chemical Physics_ **151** (2019)"
 year: 2019
 format:
   html:
@@ -49,19 +49,8 @@ Two distinct approaches for the direct parameterization of a CG model are propos
 ## BibTeX
 
 ```{bibtex}
-@article{W_rner_2019,
-	doi = {10.1063/1.5131105},
-	url = {https://doi.org/10.1063%2F1.5131105},
-	year = 2019,
-	month = {dec},
-	publisher = {{AIP} Publishing},
-	volume = {151},
-	number = {24},
-	pages = {244110},
-	author = {Svenja J. Wörner and Tristan Bereau and Kurt Kremer and Joseph F. Rudzinski},
-	title = {Direct route to reproducing pair distribution functions with coarse-grained models via transformed atomistic cross correlations},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{W_rner_2019, title={Direct route to reproducing pair distribution functions with coarse-grained models via transformed atomistic cross correlations}, volume={151}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5131105}, DOI={10.1063/1.5131105}, number={24}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Wörner, Svenja J. and Bereau, Tristan and Kremer, Kurt and Rudzinski, Joseph F.}, year={2019}, month=dec }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -76,7 +65,7 @@ Two distinct approaches for the direct parameterization of a CG model are propos
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1910.04018" role="button">
+        href="https://arxiv.org/abs/1910.04018" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -93,7 +82,7 @@ Two distinct approaches for the direct parameterization of a CG model are propos
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1910.04018" role="button">
+        href="https://arxiv.org/pdf/1910.04018" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

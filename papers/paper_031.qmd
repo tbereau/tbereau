@@ -5,7 +5,7 @@ doi: "10.1002/adts.201800024"
 date: "2018-05-16 09:20:59"
 date-format: iso
 authors: "Liu, Kremer, Bereau"
-description: "_Adv. Theory Simul._ **1** (2018)"
+description: "_Advcd Theory and Sims_ **1** (2018)"
 year: 2018
 format:
   html:
@@ -49,19 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Liu_2018,
-	doi = {10.1002/adts.201800024},
-	url = {https://doi.org/10.1002%2Fadts.201800024},
-	year = 2018,
-	month = {may},
-	publisher = {Wiley},
-	volume = {1},
-	number = {7},
-	pages = {1800024},
-	author = {Chan Liu and Kurt Kremer and Tristan Bereau},
-	title = {Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations},
-	journal = {Advanced Theory and Simulations}
-}
+ @article{Liu_2018, title={Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations}, volume={1}, ISSN={2513-0390}, url={http://dx.doi.org/10.1002/adts.201800024}, DOI={10.1002/adts.201800024}, number={7}, journal={Advanced Theory and Simulations}, publisher={Wiley}, author={Liu, Chan and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=may }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

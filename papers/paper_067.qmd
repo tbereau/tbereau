@@ -5,7 +5,7 @@ doi: "10.1063/5.0104914"
 date: "2022-08-12 11:51:35"
 date-format: iso
 authors: "Kanekal, Rudzinski, Bereau"
-description: "_J. Chem. Phys._ **157** (2022)"
+description: "_The Journal of Chemical Physics_ **157** (2022)"
 year: 2022
 format:
   html:
@@ -49,19 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Kanekal_2022,
-	doi = {10.1063/5.0104914},
-	url = {https://doi.org/10.1063%2F5.0104914},
-	year = 2022,
-	month = {sep},
-	publisher = {{AIP} Publishing},
-	volume = {157},
-	number = {10},
-	pages = {104102},
-	author = {Kiran H. Kanekal and Joseph F. Rudzinski and Tristan Bereau},
-	title = {Broad chemical transferability in structure-based coarse-graining},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Kanekal_2022, title={Broad chemical transferability in structure-based coarse-graining}, volume={157}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0104914}, DOI={10.1063/5.0104914}, number={10}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Kanekal, Kiran H. and Rudzinski, Joseph F. and Bereau, Tristan}, year={2022}, month=sep }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

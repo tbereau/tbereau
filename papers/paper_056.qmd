@@ -49,19 +49,8 @@ This work expands the scope of deepBackmap, a deep neural-network-based approach
 ## BibTeX
 
 ```{bibtex}
-@article{Stieffenhofer_2021,
-	doi = {10.1063/5.0039102},
-	url = {https://doi.org/10.1063%2F5.0039102},
-	year = 2021,
-	month = {mar},
-	publisher = {{AIP} Publishing},
-	volume = {9},
-	number = {3},
-	pages = {031107},
-	author = {Marc Stieffenhofer and Tristan Bereau and Michael Wand},
-	title = {Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability},
-	journal = {{APL} Materials}
-}
+ @article{Stieffenhofer_2021, title={Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability}, volume={9}, ISSN={2166-532X}, url={http://dx.doi.org/10.1063/5.0039102}, DOI={10.1063/5.0039102}, number={3}, journal={APL Materials}, publisher={AIP Publishing}, author={Stieffenhofer, Marc and Bereau, Tristan and Wand, Michael}, year={2021}, month=mar }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

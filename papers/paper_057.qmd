@@ -49,19 +49,8 @@ It is shown that the 2-phenylethanol derivatives phenylacetic acid, phenyllactic
 ## BibTeX
 
 ```{bibtex}
-@article{Kleinw_chter_2021,
-	doi = {10.3390/membranes11040254},
-	url = {https://doi.org/10.3390%2Fmembranes11040254},
-	year = 2021,
-	month = {mar},
-	publisher = {{MDPI} {AG}},
-	volume = {11},
-	number = {4},
-	pages = {254},
-	author = {Isabel S. Kleinwächter and Stefanie Pannwitt and Alessia Centi and Nadja Hellmann and Eckhard Thines and Tristan Bereau and Dirk Schneider},
-	title = {The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity},
-	journal = {Membranes}
-}
+ @article{Kleinw_chter_2021, title={The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity}, volume={11}, ISSN={2077-0375}, url={http://dx.doi.org/10.3390/membranes11040254}, DOI={10.3390/membranes11040254}, number={4}, journal={Membranes}, publisher={MDPI AG}, author={Kleinwächter, Isabel S. and Pannwitt, Stefanie and Centi, Alessia and Hellmann, Nadja and Thines, Eckhard and Bereau, Tristan and Schneider, Dirk}, year={2021}, month=mar, pages={254} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

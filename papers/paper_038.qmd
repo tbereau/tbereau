@@ -49,18 +49,8 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 ## BibTeX
 
 ```{bibtex}
-@article{Girard_2019,
-	doi = {10.1016/j.commatsci.2019.05.003},
-	url = {https://doi.org/10.1016%2Fj.commatsci.2019.05.003},
-	year = 2019,
-	month = {sep},
-	publisher = {Elsevier {BV}},
-	volume = {167},
-	pages = {25--33},
-	author = {Martin Girard and Ali Ehlen and Anisha Shakya and Tristan Bereau and Monica Olvera de la Cruz},
-	title = {Hoobas: A highly object-oriented builder for molecular dynamics},
-	journal = {Computational Materials Science}
-}
+ @article{Girard_2019, title={Hoobas: A highly object-oriented builder for molecular dynamics}, volume={167}, ISSN={0927-0256}, url={http://dx.doi.org/10.1016/j.commatsci.2019.05.003}, DOI={10.1016/j.commatsci.2019.05.003}, journal={Computational Materials Science}, publisher={Elsevier BV}, author={Girard, Martin and Ehlen, Ali and Shakya, Anisha and Bereau, Tristan and de la Cruz, Monica Olvera}, year={2019}, month=sep, pages={25–33} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -75,7 +65,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.commatsci.2019.05.003" role="button">
+        href="https://www.osti.gov/biblio/1510937" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -91,8 +81,8 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://manuscript.elsevier.com/S0927025619302745/pdf/S0927025619302745.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

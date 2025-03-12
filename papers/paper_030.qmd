@@ -5,7 +5,7 @@ doi: "10.1002/anie.201712448"
 date: "2018-04-17 08:56:58"
 date-format: iso
 authors: "Morsbach, Gonella, Mailänder, Wegner, Wu, Weidner, Berger, Koynov, Vollmer, Encinas, Kuan, Bereau, Kremer, Weil, Bonn, Butt, Landfester"
-description: "_Angew. Chem. Int. Ed._ **57** (2018)"
+description: "_Angew Chem Int Ed_ **57** (2018)"
 year: 2018
 format:
   html:
@@ -49,19 +49,8 @@ An overview of the most commonly used characterization methods employed to gain 
 ## BibTeX
 
 ```{bibtex}
-@article{Morsbach_2018,
-	doi = {10.1002/anie.201712448},
-	url = {https://doi.org/10.1002%2Fanie.201712448},
-	year = 2018,
-	month = {aug},
-	publisher = {Wiley},
-	volume = {57},
-	number = {39},
-	pages = {12626--12648},
-	author = {Svenja Morsbach and Grazia Gonella and Volker Mailänder and Seraphine Wegner and Si Wu and Tobias Weidner and Rüdiger Berger and Kaloian Koynov and Doris Vollmer and Noem{\'{\i}} Encinas and Seah Ling Kuan and Tristan Bereau and Kurt Kremer and Tanja Weil and Mischa Bonn and Hans-Jürgen Butt and Katharina Landfester},
-	title = {Engineering Proteins at Interfaces: From Complementary Characterization to Material Surfaces with Designed Functions},
-	journal = {Angewandte Chemie International Edition}
-}
+ @article{Morsbach_2018, title={Engineering Proteins at Interfaces: From Complementary Characterization to Material Surfaces with Designed Functions}, volume={57}, ISSN={1521-3773}, url={http://dx.doi.org/10.1002/anie.201712448}, DOI={10.1002/anie.201712448}, number={39}, journal={Angewandte Chemie International Edition}, publisher={Wiley}, author={Morsbach, Svenja and Gonella, Grazia and Mailänder, Volker and Wegner, Seraphine and Wu, Si and Weidner, Tobias and Berger, Rüdiger and Koynov, Kaloian and Vollmer, Doris and Encinas, Noemí and Kuan, Seah Ling and Bereau, Tristan and Kremer, Kurt and Weil, Tanja and Bonn, Mischa and Butt, Hans‐Jürgen and Landfester, Katharina}, year={2018}, month=aug, pages={12626–12648} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

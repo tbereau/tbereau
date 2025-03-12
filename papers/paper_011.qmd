@@ -49,19 +49,8 @@ The results agree well with experimental structures and atomistic simulations ba
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2014,
-	doi = {10.1007/s00232-014-9738-9},
-	url = {https://doi.org/10.1007%2Fs00232-014-9738-9},
-	year = 2014,
-	month = {oct},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {248},
-	number = {3},
-	pages = {395--405},
-	author = {Tristan Bereau and Markus Deserno},
-	title = {Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange},
-	journal = {The Journal of Membrane Biology}
-}
+ @article{Bereau_2014, title={Enhanced Sampling of Coarse-Grained Transmembrane-Peptide Structure Formation from Hydrogen-Bond Replica Exchange}, volume={248}, ISSN={1432-1424}, url={http://dx.doi.org/10.1007/s00232-014-9738-9}, DOI={10.1007/s00232-014-9738-9}, number={3}, journal={The Journal of Membrane Biology}, publisher={Springer Science and Business Media LLC}, author={Bereau, Tristan and Deserno, Markus}, year={2014}, month=oct, pages={395–405} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

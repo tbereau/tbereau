@@ -49,18 +49,8 @@ An automated method is proposed for generating a coarse configuration-space repr
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2019,
-	doi = {10.1063/1.5064808},
-	url = {https://doi.org/10.1063%2F1.5064808},
-	year = 2019,
-	month = {jan},
-	publisher = {{AIP} Publishing},
-	volume = {150},
-	number = {2},
-	author = {Joseph F. Rudzinski and Marc Radu and Tristan Bereau},
-	title = {Automated detection of many-particle solvation states for accurate characterizations of diffusion kinetics},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Rudzinski_2019, title={Automated detection of many-particle solvation states for accurate characterizations of diffusion kinetics}, volume={150}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5064808}, DOI={10.1063/1.5064808}, number={2}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Radu, Marc and Bereau, Tristan}, year={2019}, month=jan }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

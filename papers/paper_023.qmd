@@ -39,7 +39,7 @@ The paradox of biomimetic research is to perform bio-functionality, usually asso
 
 ## TL;DR
 
-None
+It is shown that a three-particle trimer can exhibit kinesin-like autonomous walk on a track via reactive molecular dynamics simulations, which opens up the possibility of fabricating bio-mimetic nano-systems in a minimalist approach.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Semantic Scholar</cite>
@@ -49,18 +49,8 @@ None
 ## BibTeX
 
 ```{bibtex}
-@article{Xiao_2016,
-	doi = {10.1016/j.cplett.2016.06.019},
-	url = {https://doi.org/10.1016%2Fj.cplett.2016.06.019},
-	year = 2016,
-	month = {aug},
-	publisher = {Elsevier {BV}},
-	volume = {659},
-	pages = {6--9},
-	author = {Qiran Xiao and Yanping Chen and Tristan Bereau and Yunfeng Shi},
-	title = {An in-silico walker},
-	journal = {Chemical Physics Letters}
-}
+ @article{Xiao_2016, title={An in-silico walker}, volume={659}, ISSN={0009-2614}, url={http://dx.doi.org/10.1016/j.cplett.2016.06.019}, DOI={10.1016/j.cplett.2016.06.019}, journal={Chemical Physics Letters}, publisher={Elsevier BV}, author={Xiao, Qiran and Chen, Yanping and Bereau, Tristan and Shi, Yunfeng}, year={2016}, month=aug, pages={6–9} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -92,7 +82,7 @@ None
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://manuscript.elsevier.com/S0009261416304146/pdf/S0009261416304146.pdf" role="button">
+        href="https://www.sciencedirect.com/science/article/am/pii/S0009261416304146" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

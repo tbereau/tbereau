@@ -49,19 +49,8 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2015,
-	doi = {10.1016/j.bpj.2015.07.012},
-	url = {https://doi.org/10.1016%2Fj.bpj.2015.07.012},
-	year = 2015,
-	month = {aug},
-	publisher = {Elsevier {BV}},
-	volume = {109},
-	number = {4},
-	pages = {668--669},
-	author = {Tristan Bereau},
-	title = {Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity},
-	journal = {Biophysical Journal}
-}
+ @article{Bereau_2015, title={Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity}, volume={109}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2015.07.012}, DOI={10.1016/j.bpj.2015.07.012}, number={4}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, month=aug, pages={668–669} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
@@ -92,8 +81,8 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="http://www.cell.com/article/S0006349515007183/pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

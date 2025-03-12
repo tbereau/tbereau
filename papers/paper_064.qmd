@@ -49,18 +49,8 @@ A data-driven approach is presented that combines a deep learning-enabled active
 ## BibTeX
 
 ```{bibtex}
-@article{Mohr_2022,
-	doi = {10.1039/d2sc00116k},
-	url = {https://doi.org/10.1039%2Fd2sc00116k},
-	year = 2022,
-	publisher = {Royal Society of Chemistry ({RSC})},
-	volume = {13},
-	number = {16},
-	pages = {4498--4511},
-	author = {Bernadette Mohr and Kirill Shmilovich and Isabel S. Kleinwächter and Dirk Schneider and Andrew L. Ferguson and Tristan Bereau},
-	title = {Data-driven discovery of cardiolipin-selective small molecules by computational active learning},
-	journal = {Chemical Science}
-}
+ @article{Mohr_2022, title={Data-driven discovery of cardiolipin-selective small molecules by computational active learning}, volume={13}, ISSN={2041-6539}, url={http://dx.doi.org/10.1039/D2SC00116K}, DOI={10.1039/d2sc00116k}, number={16}, journal={Chemical Science}, publisher={Royal Society of Chemistry (RSC)}, author={Mohr, Bernadette and Shmilovich, Kirill and Kleinwächter, Isabel S. and Schneider, Dirk and Ferguson, Andrew L. and Bereau, Tristan}, year={2022}, pages={4498–4511} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

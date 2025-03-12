@@ -49,19 +49,8 @@ This work proposes an alternative to the computationally expensive MTP molecular
 ## BibTeX
 
 ```{bibtex}
-@article{Bereau_2013,
-	doi = {10.1021/jp400593c},
-	url = {https://doi.org/10.1021%2Fjp400593c},
-	year = 2013,
-	month = {apr},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {117},
-	number = {18},
-	pages = {5460--5471},
-	author = {Tristan Bereau and Christian Kramer and Fabien W. Monnard and Elisa S. Nogueira and Thomas R. Ward and Markus Meuwly},
-	title = {Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations},
-	journal = {The Journal of Physical Chemistry B}
-}
+ @article{Bereau_2013, title={Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations}, volume={117}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp400593c}, DOI={10.1021/jp400593c}, number={18}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Monnard, Fabien W. and Nogueira, Elisa S. and Ward, Thomas R. and Meuwly, Markus}, year={2013}, month=apr, pages={5460–5471} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

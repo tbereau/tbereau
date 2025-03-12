@@ -49,18 +49,8 @@ This work systematically vary force-field parameters and monitor their structura
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2018,
-	doi = {10.1063/1.5025125},
-	url = {https://doi.org/10.1063%2F1.5025125},
-	year = 2018,
-	month = {may},
-	publisher = {{AIP} Publishing},
-	volume = {148},
-	number = {20},
-	author = {Joseph F. Rudzinski and Tristan Bereau},
-	title = {Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Rudzinski_2018, title={Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models}, volume={148}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5025125}, DOI={10.1063/1.5025125}, number={20}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2018}, month=may }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

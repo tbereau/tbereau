@@ -49,19 +49,8 @@ Here, covariant meshing proves to be an efficient strategy to learn canonically 
 ## BibTeX
 
 ```{bibtex}
-@article{Scherer_2020,
-	doi = {10.1021/acs.jctc.9b01256},
-	url = {https://doi.org/10.1021%2Facs.jctc.9b01256},
-	year = 2020,
-	month = {apr},
-	publisher = {American Chemical Society ({ACS})},
-	volume = {16},
-	number = {5},
-	pages = {3194--3204},
-	author = {Christoph Scherer and Ren{\'{e}} Scheid and Denis Andrienko and Tristan Bereau},
-	title = {Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids},
-	journal = {Journal of Chemical Theory and Computation}
-}
+ @article{Scherer_2020, title={Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids}, volume={16}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.9b01256}, DOI={10.1021/acs.jctc.9b01256}, number={5}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Scherer, Christoph and Scheid, René and Andrienko, Denis and Bereau, Tristan}, year={2020}, month=apr, pages={3194–3204} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

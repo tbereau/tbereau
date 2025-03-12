@@ -49,19 +49,8 @@ This work relies on Markov state models to simultaneously characterize the stati
 ## BibTeX
 
 ```{bibtex}
-@article{Rudzinski_2016,
-	doi = {10.1140/epjst/e2016-60114-5},
-	url = {https://doi.org/10.1140%2Fepjst%2Fe2016-60114-5},
-	year = 2016,
-	month = {jul},
-	publisher = {Springer Science and Business Media {LLC}},
-	volume = {225},
-	number = {8-9},
-	pages = {1373--1389},
-	author = {J.F. Rudzinski and T. Bereau},
-	title = {Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields},
-	journal = {The European Physical Journal Special Topics}
-}
+ @article{Rudzinski_2016, title={Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields}, volume={225}, ISSN={1951-6401}, url={http://dx.doi.org/10.1140/epjst/e2016-60114-5}, DOI={10.1140/epjst/e2016-60114-5}, number={8–9}, journal={The European Physical Journal Special Topics}, publisher={Springer Science and Business Media LLC}, author={Rudzinski, J.F. and Bereau, T.}, year={2016}, month=jul, pages={1373–1389} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

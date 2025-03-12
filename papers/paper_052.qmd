@@ -2,7 +2,7 @@
 ---
 title: "Adversarial reverse mapping of equilibrated condensed-phase molecular structures"
 doi: "10.1088/2632-2153/abb6d4"
-date: "2020-09-09 22:34:05"
+date: "2020-09-09 18:34:05"
 date-format: iso
 authors: "Stieffenhofer, Wand, Bereau"
 description: "_Mach. Learn.: Sci. Technol._ **1** (2020)"
@@ -49,19 +49,8 @@ This study introduces DeepBackmap: A deep neural network based approach to direc
 ## BibTeX
 
 ```{bibtex}
-@article{Stieffenhofer_2020,
-	doi = {10.1088/2632-2153/abb6d4},
-	url = {https://doi.org/10.1088%2F2632-2153%2Fabb6d4},
-	year = 2020,
-	month = {oct},
-	publisher = {{IOP} Publishing},
-	volume = {1},
-	number = {4},
-	pages = {045014},
-	author = {Marc Stieffenhofer and Michael Wand and Tristan Bereau},
-	title = {Adversarial reverse mapping of equilibrated condensed-phase molecular structures},
-	journal = {Machine Learning: Science and Technology}
-}
+ @article{Stieffenhofer_2020, title={Adversarial reverse mapping of equilibrated condensed-phase molecular structures}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/abb6d4}, DOI={10.1088/2632-2153/abb6d4}, number={4}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Stieffenhofer, Marc and Wand, Michael and Bereau, Tristan}, year={2020}, month=oct, pages={045014} }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from

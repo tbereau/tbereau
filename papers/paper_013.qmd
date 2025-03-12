@@ -49,19 +49,8 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
 ## BibTeX
 
 ```{bibtex}
-@article{Cazade_2015,
-	doi = {10.1063/1.4916630},
-	url = {https://doi.org/10.1063%2F1.4916630},
-	year = 2015,
-	month = {jun},
-	publisher = {{AIP} Publishing},
-	volume = {142},
-	number = {21},
-	pages = {212415},
-	author = {Pierre-Andr{\'{e}} Cazade and Halina Tran and Tristan Bereau and Akshaya K. Das and Felix Kläsi and Peter Hamm and Markus Meuwly},
-	title = {Solvation of fluoro-acetonitrile in water by 2D-{IR} spectroscopy: A combined experimental-computational study},
-	journal = {The Journal of Chemical Physics}
-}
+ @article{Cazade_2015, title={Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study}, volume={142}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4916630}, DOI={10.1063/1.4916630}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Cazade, Pierre-André and Tran, Halina and Bereau, Tristan and Das, Akshaya K. and Kläsi, Felix and Hamm, Peter and Meuwly, Markus}, year={2015}, month=apr }
+
 ```
 ```{=html}
 <footer class="blockquote-footer">from
