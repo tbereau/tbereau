@@ -2,7 +2,7 @@
 ---
 title: "Computer simulations of lipid regulation by molecular semigrand canonical ensembles"
 doi: "10.1016/j.bpj.2021.04.025"
-date: "2021-05-01 06:47:28"
+date: "2021-05-01 02:47:28"
 date-format: iso
 authors: "Girard, Bereau"
 description: "_Biophysical Journal_ **120** (2021)"
@@ -65,7 +65,7 @@ This work proposes a variation of existing algorithms that efficiently character
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://dare.uva.nl/personal/pure/en/publications/computer-simulations-of-lipid-regulation-by-molecular-semigrand-canonical-ensembles(d3f9f0fe-0f68-4cf0-b3e7-432f0eacdd87).html" role="button">
+        href="https://doi.org/10.1016/j.bpj.2021.04.025" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ This work proposes a variation of existing algorithms that efficiently character
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.uva.nl/ws/files/68264880/1_s2.0_S0006349521003635_main.pdf" role="button">
+        href="http://www.cell.com/article/S0006349521003635/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

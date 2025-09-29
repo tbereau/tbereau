@@ -65,7 +65,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.osti.gov/biblio/1510937" role="button">
+        href="https://www.osti.gov/biblio/1510779" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Interfacial systems are at the core of fascinating phenomena in many disciplines, such as biochemistry, soft-matter physics, and food science. However, the parametrization of accurate, reliable, and consistent coarse-grained (CG) models for systems at interfaces remains a challenging endeavor. In the present work, we explore to what extent two independently developed solvent-free CG models of peptides and lipids--of different mapping schemes, parametrization methods, target functions, and validation criteria--can be combined by only tuning the cross-interactions. Our results show that the cross-parametrization can reproduce a number of structural properties of membrane peptides (for example, tilt and hydrophobic mismatch), in agreement with existing peptide-lipid CG force fields. We find encouraging results for two challenging biophysical problems: (i) membrane pore formation mediated by the cooperative action of several antimicrobial peptides, and (ii) the insertion and folding of the helix-forming peptide WALP23 in the membrane.
+<jats:p>Interfacial systems are at the core of fascinating phenomena in many disciplines, such as biochemistry, soft-matter physics, and food science. However, the parametrization of accurate, reliable, and consistent coarse-grained (CG) models for systems at interfaces remains a challenging endeavor. In the present work, we explore to what extent two independently developed solvent-free CG models of peptides and lipids—of different mapping schemes, parametrization methods, target functions, and validation criteria—can be combined by only tuning the cross-interactions. Our results show that the cross-parametrization can reproduce a number of structural properties of membrane peptides (for example, tilt and hydrophobic mismatch), in agreement with existing peptide-lipid CG force fields. We find encouraging results for two challenging biophysical problems: (i) membrane pore formation mediated by the cooperative action of several antimicrobial peptides, and (ii) the insertion and folding of the helix-forming peptide WALP23 in the membrane.</jats:p>
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -65,7 +65,7 @@ The results show that the cross-parametrization can reproduce a number of struct
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://europepmc.org/articles/pmc3977883" role="button">
+        href="https://www.ncbi.nlm.nih.gov/pmc/articles/3977883" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ The results show that the cross-parametrization can reproduce a number of struct
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://europepmc.org/articles/pmc3977883?pdf=render" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

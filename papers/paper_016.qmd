@@ -81,8 +81,8 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="http://www.cell.com/article/S0006349515007183/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

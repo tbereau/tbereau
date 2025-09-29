@@ -1,13 +1,11 @@
 
 ---
-title: "Luis J. Walter"
+title: "Luis Walter"
 format:
   html:
     echo: false
     keep-hidden: true
-categories:
-  - phd student
-  - current
+
 image: ../static/luis_w.png
 about:
   id: hero-heading
@@ -31,7 +29,7 @@ index_array = Array.from({length: n_columns}, (_, i) => i)
 papers = map(i => map(x => x[i], papers_r), index_array)
 
 my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Luis J. Walter")
+    return p.authors.map(a => a.full_name).includes("Luis Walter")
 })
 ```
 
@@ -85,7 +83,7 @@ collaborators = Array.from(
     new Set(
         my_papers.flatMap(p => p.authors)
         .filter(function(a) {
-            return a.full_name != "Luis J. Walter"
+            return a.full_name != "Luis Walter"
             }
         )
     )

@@ -65,7 +65,7 @@ This work reduces the dimensionality of the configurational space to collective 
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://dare.uva.nl/personal/pure/en/publications/reweighting-nonequilibrium-steadystate-dynamics-along-collective-variables(822972c8-ffca-4e4c-8599-45a23ee47012).html" role="button">
+        href="https://doi.org/10.1063/5.0042972" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ This work reduces the dimensionality of the configurational space to collective 
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.uva.nl/ws/files/63962693/5.0042972.pdf" role="button">
+        href="https://aip.scitation.org/doi/pdf/10.1063/5.0042972" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

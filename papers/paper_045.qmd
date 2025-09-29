@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-<jats:title>Abstract</jats:title><jats:p>The permeation of small-molecule drugs across a phospholipid membrane bears much interest both in the pharmaceutical sciences and in physical chemistry. Connecting the chemistry of the drug and the lipids to the resulting thermodynamic properties remains of immediate importance. Here we report molecular dynamics (MD) simulation trajectories using the coarse-grained (CG) Martini force field. A wide, representative coverage of chemistry is provided: across solutes—exhaustively enumerating all 105 CG dimers—and across six phospholipids. For each combination, umbrella-sampling simulations provide detailed structural information of the solute at all depths from the bilayer midplane to bulk water, allowing a precise reconstruction of the potential of mean force. Overall, the present database contains trajectories from 15,120 MD simulations. This database may serve the further identification of structure-property relationships between compound chemistry and drug permeability.</jats:p>
+The permeation of small-molecule drugs across a phospholipid membrane bears much interest both in the pharmaceutical sciences and in physical chemistry. Connecting the chemistry of the drug and the lipids to the resulting thermodynamic properties remains of immediate importance. Here we report molecular dynamics (MD) simulation trajectories using the coarse-grained (CG) Martini force field. A wide, representative coverage of chemistry is provided: across solutes—exhaustively enumerating all 105 CG dimers—and across six phospholipids. For each combination, umbrella-sampling simulations provide detailed structural information of the solute at all depths from the bilayer midplane to bulk water, allowing a precise reconstruction of the potential of mean force. Overall, the present database contains trajectories from 15,120 MD simulations. This database may serve the further identification of structure-property relationships between compound chemistry and drug permeability. Measurement(s) molecular dynamics trajectories Technology Type(s) computational modeling technique • molecular dynamics simulation Factor Type(s) Small organic molecules • phospholipid Measurement(s) molecular dynamics trajectories Technology Type(s) computational modeling technique • molecular dynamics simulation Factor Type(s) Small organic molecules • phospholipid Machine-accessible metadata file describing the reported data: https://doi.org/10.6084/m9.figshare.11733504
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -81,8 +81,8 @@ The present database contains trajectories from 15,120 molecular dynamics simula
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://www.nature.com/articles/s41597-020-0391-0.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

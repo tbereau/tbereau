@@ -2,7 +2,7 @@
 ---
 title: "Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force"
 doi: "10.1016/j.bpj.2020.01.039"
-date: "2020-02-05 00:16:30"
+date: "2020-02-04 19:16:30"
 date-format: iso
 authors: "Centi, Dutta, Parekh, Bereau"
 description: "_Biophysical Journal_ **118** (2020)"
@@ -65,7 +65,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2020.01.039" role="button">
+        href="https://www.ncbi.nlm.nih.gov/pmc/articles/7091563" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ None
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://www.cell.com/article/S0006349520301144/pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

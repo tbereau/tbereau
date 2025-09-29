@@ -65,7 +65,7 @@ FNM analysis together with a MTP representation provides a meaningful model to c
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://dare.uva.nl/personal/pure/en/publications/multipolar-force-fields-for-amidei-spectroscopy-from-conformational-dynamics-of-the-alanine-trimer(3f7cd18b-e629-4a80-ae2d-c36f3aa1ad0d).html" role="button">
+        href="http://export.arxiv.org/pdf/2106.10142" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ FNM analysis together with a MTP representation provides a meaningful model to c
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://pure.uva.nl/ws/files/68600507/acs.jpcb.1c05423.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

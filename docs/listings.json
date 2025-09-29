@@ -20,7 +20,7 @@
       "/group/joseph_rudzinski.html",
       "/group/kiran_kanekal.html",
       "/group/luis_itza_vazquez-salazar.html",
-      "/group/luis_j_walter.html",
+      "/group/luis_walter.html",
       "/group/marc_stieffenhofer.html",
       "/group/marius_bause.html",
       "/group/martin_girard.html",
@@ -46,6 +46,8 @@
   {
     "listing": "/papers.html",
     "items": [
+      "/papers/paper_081.html",
+      "/papers/paper_080.html",
       "/papers/paper_079.html",
       "/papers/paper_078.html",
       "/papers/paper_077.html",

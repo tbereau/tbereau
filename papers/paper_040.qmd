@@ -65,7 +65,7 @@ New criteria for the design of coarse-grained models allowing for the optimizati
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://hdl.handle.net/21.11116/0000-0004-F60B-B" role="button">
+        href="https://doi.org/10.1063/1.5119101" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ New criteria for the design of coarse-grained models allowing for the optimizati
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.mpg.de/pubman/item/item_3174115_1/component/file_3174119/1.5119101-1.pdf" role="button">
+        href="https://aip.scitation.org/doi/pdf/10.1063/1.5119101" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

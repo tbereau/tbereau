@@ -81,8 +81,8 @@ A data-driven approach is presented that combines a deep learning-enabled active
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://pubs.rsc.org/en/content/articlepdf/2022/sc/d2sc00116k" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

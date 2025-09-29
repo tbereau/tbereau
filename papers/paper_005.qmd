@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Permanent multipoles (MTPs) embody a natural extension to common point-charge (PC) representations in atomistic simulations. In this work, we propose an alternative to the computationally expensive MTP molecular dynamics simulations by running a simple PC simulation and later reevaluate-"score''-all energies using the more detailed MTP force field. The method, which relies on the assumption that the PC and MTP force fields generate closely related phase spaces, is accomplished by enforcing identical sets of monopoles between the two force fields-effectively highlighting the higher MTP terms as a correction to the PC approximation. We first detail our consistent parametrization of the electrostatics and van der Waals interactions for the two force fields. We then validate the method by comparing the accuracy of protein-ligand binding free energies from both PC and MTP-scored representations with experimentally determined binding constants obtained by us. Specifically, we study the binding of several arylsulfonamide ligands to human carbonic anhydrase II. We find that both representations yield an accuracy of 1 kcal/mol with respect to experiment. Finally, we apply the method to rank the energetic contributions of individual atomic MTP coefficients for molecules solvated in water. All in all, MTP scoring is a computationally appealing method that can provide insight into the multipolar electrostatic interactions of condensed-phase systems.
+
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &

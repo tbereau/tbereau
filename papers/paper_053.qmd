@@ -65,7 +65,7 @@ This topical review explores the use of MD outside the scope of individual syste
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://pure.uva.nl/ws/files/63965675/Bereau_2021_Modelling_Simul._Mater._Sci._Eng._29_023001.pdf" role="button">
+        href="https://doi.org/10.1088/1361-651x/abd042" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ This topical review explores the use of MD outside the scope of individual syste
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.uva.nl/ws/files/63965675/Bereau_2021_Modelling_Simul._Mater._Sci._Eng._29_023001.pdf" role="button">
+        href="https://iopscience.iop.org/article/10.1088/1361-651X/abd042/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

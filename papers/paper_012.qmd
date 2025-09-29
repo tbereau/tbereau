@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The performance of multipole (MTP) and point charge (PC) force fields in classical molecular dynamics (MD) simulations of condensed-phase systems for both equilibrium and dynamical quantities is compared. MTP electrostatics provides an improved description of the anisotropic electrostatic potential, which is especially important to describe key, challenging interactions, such as lone pairs, π-interactions, and hydrogen bonds. These chemical environments are probed by focusing on the hydration properties of two molecules: N-methylacetamide and phenyl bromide. Both, equilibrium and dynamical, quantities are affected by the quality of the electrostatic model. The alteration of the first solvation shell in MTP simulations is validated by comparing with lifetimes and correlation times of solute-solvent interactions from experiment. The improved dynamical behavior found in the MTP simulations—observed for molecules parametrized using very different protocols—suggests that a systematic improvement of both equilibrium and dynamical quantities when using MTP electrostatics is possible.
+
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -64,8 +64,8 @@ The improved dynamical behavior found in the MTP simulations suggests that a sys
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://edoc.unibas.ch/41803/1/jp-2014-08052q.R2_Proof_hi.pdf" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ The improved dynamical behavior found in the MTP simulations suggests that a sys
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://edoc.unibas.ch/41803/1/jp-2014-08052q.R2_Proof_hi.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

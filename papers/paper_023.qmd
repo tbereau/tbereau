@@ -2,7 +2,7 @@
 ---
 title: "An in-silico walker"
 doi: "10.1016/j.cplett.2016.06.019"
-date: "2016-06-11 11:58:41"
+date: "2016-06-11 07:58:41"
 date-format: iso
 authors: "Xiao, Chen, Bereau, Shi"
 description: "_Chemical Physics Letters_ **659** (2016)"
@@ -64,8 +64,8 @@ It is shown that a three-particle trimer can exhibit kinesin-like autonomous wal
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://doi.org/10.1016/j.cplett.2016.06.019" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ It is shown that a three-particle trimer can exhibit kinesin-like autonomous wal
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://www.sciencedirect.com/science/article/am/pii/S0009261416304146" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

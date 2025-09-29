@@ -2,7 +2,7 @@
 ---
 title: "Finite-size transitions in complex membranes"
 doi: "10.1016/j.bpj.2021.03.043"
-date: "2021-05-04 15:17:44"
+date: "2021-05-04 11:17:44"
 date-format: iso
 authors: "Girard, Bereau"
 description: "_Biophysical Journal_ **120** (2021)"
@@ -81,8 +81,8 @@ None
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="http://www.cell.com/article/S0006349521003672/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

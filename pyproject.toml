@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Tristan Bereau <bereau@thphys.uni-heidelberg.de>"]
 readme = "README.rst"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -32,7 +33,7 @@ numpy = "1.24.0"
 setuptools = "^68.0.0"
 nbformat = "^5.9.0"
 typing-extensions = "4.6.3"
-my_scientific_profile = {git = "git@github.com:tbereau/my_scientific_profile.git", rev="master"}
+my_scientific_profile = {git = "git@github.com:tbereau/my_scientific_profile.git", branch="master"}
 python-dotenv = "^1.0.0"
 
 

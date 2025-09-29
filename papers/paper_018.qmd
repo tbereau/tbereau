@@ -65,7 +65,7 @@ Folding of WALP in the two environments indicates the helix as the most stable s
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1063/1.4935487" role="button">
+        href="https://research.tue.nl/en/publications/39a903fd-079c-453f-b819-14736fafbec0" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ Folding of WALP in the two environments indicates the helix as the most stable s
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/1.4935487/15508610/243127_1_online.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

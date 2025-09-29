@@ -2,7 +2,7 @@
 ---
 title: "Induced asymmetries in membranes"
 doi: "10.1016/j.bpj.2022.12.004"
-date: "2022-12-06 17:25:35"
+date: "2022-12-06 12:25:35"
 date-format: iso
 authors: "Girard, Bereau"
 description: "_Biophysical Journal_ **122** (2022)"
@@ -65,7 +65,7 @@ It is shown that saturation asymmetry naturally arises as a byproduct of phospho
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://doi.org/10.1016/j.bpj.2022.12.004" role="button">
+        href="https://www.ncbi.nlm.nih.gov/pmc/articles/10257082" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

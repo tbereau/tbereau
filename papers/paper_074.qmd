@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-
+The expansive production of data in materials science, their widespread sharing and repurposing requires educated support and stewardship. In order to ensure that this need helps rather than hinders scientific work, the implementation of the FAIR-data principles ( Findable, Accessible, Interoperable, and Reusable ) must not be too narrow. Besides, the wider materials-science community ought to agree on the strategies to tackle the challenges that are specific to its data, both from computations and experiments. In this paper, we present the result of the discussions held at the workshop on “Shared Metadata and Data Formats for Big-Data Driven Materials Science”. We start from an operative definition of metadata, and the features that  a FAIR-compliant metadata schema should have. We will mainly focus on computational materials-science data and propose a constructive approach for the FAIRification of the (meta)data related to ground-state and excited-states calculations, potential-energy sampling, and generalized workflows. Finally, challenges with the FAIRification of experimental (meta)data and materials-science ontologies are presented together with an outlook of how to meet them.
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &

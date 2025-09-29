@@ -65,7 +65,7 @@ An automated method is proposed for generating a coarse configuration-space repr
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://hdl.handle.net/21.11116/0000-0002-ED2E-1" role="button">
+        href="https://doi.org/10.1063/1.5064808" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ An automated method is proposed for generating a coarse configuration-space repr
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://pure.mpg.de/pubman/item/item_3025632_6/component/file_3192897/1.5064808.pdf" role="button">
+        href="https://aip.scitation.org/doi/pdf/10.1063/1.5064808" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

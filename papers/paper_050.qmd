@@ -2,7 +2,7 @@
 ---
 title: "Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms"
 doi: "10.1016/j.bpj.2020.07.024"
-date: "2020-08-06 06:46:56"
+date: "2020-08-06 02:46:56"
 date-format: iso
 authors: "Girard, Bereau"
 description: "_Biophysical Journal_ **119** (2020)"
@@ -65,7 +65,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7474175" role="button">
+        href="https://dare.uva.nl/personal/pure/en/publications/regulating-lipid-composition-rationalizes-acyl-tail-saturation-homeostasis-in-ectotherms(ded8e5ad-1cf7-4600-8a87-a5cc986257ed).html" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

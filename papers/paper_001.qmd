@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-A generic coarse-grained (CG) protein model is presented. The intermediate level of resolution (four beads per amino acid, implicit solvent) allows for accurate sampling of local conformations. It relies on simple interactions that emphasize structure, such as hydrogen bonds and hydrophobicity. Realistic alpha/beta content is achieved by including an effective nearest-neighbor dipolar interaction. Parameters are tuned to reproduce both local conformations and tertiary structures. The thermodynamics and kinetics of a three-helix bundle are studied. We check that the CG model is able to fold proteins with tertiary structures and amino acid sequences different from the one used for parameter tuning. By studying both helical and extended conformations we make sure the force field is not biased toward any particular secondary structure. The accuracy involved in folding not only the test protein but also other ones show strong evidence for amino acid cooperativity embedded in the model. Without any further adjustments or bias a realistic oligopeptide aggregation scenario is observed.
+<jats:p>A generic coarse-grained (CG) protein model is presented. The intermediate level of resolution (four beads per amino acid, implicit solvent) allows for accurate sampling of local conformations. It relies on simple interactions that emphasize structure, such as hydrogen bonds and hydrophobicity. Realistic α/β content is achieved by including an effective nearest-neighbor dipolar interaction. Parameters are tuned to reproduce both local conformations and tertiary structures. The thermodynamics and kinetics of a three-helix bundle are studied. We check that the CG model is able to fold proteins with tertiary structures and amino acid sequences different from the one used for parameter tuning. By studying both helical and extended conformations we make sure the force field is not biased toward any particular secondary structure. The accuracy involved in folding not only the test protein but also other ones show strong evidence for amino acid cooperativity embedded in the model. Without any further adjustments or bias a realistic oligopeptide aggregation scenario is observed.</jats:p>
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -65,7 +65,7 @@ The accuracy involved in folding not only the test protein but also other ones s
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://europepmc.org/articles/pmc3910140" role="button">
+        href="https://figshare.com/articles/journal_contribution/Generic_coarse-grained_model_for_protein_folding_and_aggregation/6506861" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ The accuracy involved in folding not only the test protein but also other ones s
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://europepmc.org/articles/pmc3910140?pdf=render" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-Halogenation is one of the cases for which advanced molecular simulation methods are mandatory for quantitative and predictive studies. The present work provides a systematic investigation of the importance of higher-order multipoles on specific sites of halobenzenes, other than the halogen, for static and dynamic properties in condensed-phase simulations. For that purpose, solute-solvent interactions using point charge (PC), multipole (MTP), and hybrid point charge/multipole (HYB) electrostatic models are analyzed in regions of halogen bonding and extended to regions of π orbitals of phenyl carbons. Using molecular dynamics simulations and quantum chemical methods, it is found that the sigma-hole does not only affect the halogen and the carbon bound to it but its effect extends to the carbons adjacent to the CX bond. This effect increases with the magnitude of the positive potential of the sigma-hole. With the MTP and HYB3 models, all hydration free energies of the PhX compounds are reproduced within 0.1 kcal/mol. Analysis of pair distribution functions and hydration free energies of halogenated benzenes provides a microscopic explanation why "point charge"-based representations with off-site charges fail in reproducing thermodynamic properties of the sigma-hole. Application of the hybrid models to study protein-ligand binding demonstrates both their accuracy and computational efficiency.
+
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -64,8 +64,8 @@ Analysis of pair distribution functions and hydration free energies of halogenat
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://edoc.unibas.ch/53185/1/ct-2016-00202d.R1_Proof_hi.pdf" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ Analysis of pair distribution functions and hydration free energies of halogenat
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://edoc.unibas.ch/53185/1/ct-2016-00202d.R1_Proof_hi.pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

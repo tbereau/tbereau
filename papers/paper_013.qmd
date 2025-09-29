@@ -29,7 +29,7 @@ format:
 
 ## Abstract
 
-The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimensional infrared spectroscopy and atomistic simulations. The lineshape of the linear infrared spectrum is better captured by semiempirical (density functional tight binding) mixed quantum mechanical/molecular mechanics simulations, whereas force field simulations with multipolar interactions yield lineshapes that are significantly too narrow. For the solvent dynamics, a relatively slow time scale of 2 ps is found from the experiments and supported by the mixed quantum mechanical/molecular mechanics simulations. With multipolar force fields fitted to the available thermodynamical data, the time scale is considerably faster--on the 0.5 ps time scale. The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
+<jats:p>The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimensional infrared spectroscopy and atomistic simulations. The lineshape of the linear infrared spectrum is better captured by semiempirical (density functional tight binding) mixed quantum mechanical/molecular mechanics simulations, whereas force field simulations with multipolar interactions yield lineshapes that are significantly too narrow. For the solvent dynamics, a relatively slow time scale of 2 ps is found from the experiments and supported by the mixed quantum mechanical/molecular mechanics simulations. With multipolar force fields fitted to the available thermodynamical data, the time scale is considerably faster—on the 0.5 ps time scale. The simulations provide evidence for a well established CF–HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.</jats:p>
 ```{=html}
 <footer class="blockquote-footer">from
 <cite title="Source Title">Orcid</cite> &
@@ -65,7 +65,7 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
+        href="https://doi.org/10.1063/1.4916630" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://www.zora.uzh.ch/id/eprint/112696/1/1.4916630%281%29.pdf" role="button">
+        href="https://aip.scitation.org/doi/pdf/10.1063/1.4916630" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

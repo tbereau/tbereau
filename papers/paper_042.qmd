@@ -64,8 +64,8 @@ Two distinct approaches for the direct parameterization of a CG model are propos
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://arxiv.org/abs/1910.04018" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ Two distinct approaches for the direct parameterization of a CG model are propos
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://arxiv.org/pdf/1910.04018" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

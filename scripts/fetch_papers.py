@@ -1,4 +1,8 @@
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 from my_scientific_profile.papers.papers import (
     fetch_all_paper_authors,

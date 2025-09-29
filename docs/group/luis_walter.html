@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Luis J. Walter – Tristan Bereau</title>
+<title>Luis Walter – Tristan Bereau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,7 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Luis J. Walter – Tristan Bereau">
+<meta name="twitter:title" content="Luis Walter – Tristan Bereau">
 <meta name="twitter:image" content="https://tristanbereau.com/static/luis_w.png">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:image-height" content="611">
@@ -238,17 +238,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="25" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 24;"><span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {map} <span class="im">from</span> <span class="st">"@martien/ramda"</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> <span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="fu">map</span>(x <span class="kw">=&gt;</span> x[i]<span class="op">,</span> papers_r)<span class="op">,</span> index_array)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>my_papers <span class="op">=</span> papers<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(p) {</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p<span class="op">.</span><span class="at">authors</span><span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Luis J. Walter"</span>)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="23" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 22;"><span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {map} <span class="im">from</span> <span class="st">"@martien/ramda"</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> <span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="fu">map</span>(x <span class="kw">=&gt;</span> x[i]<span class="op">,</span> papers_r)<span class="op">,</span> index_array)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>my_papers <span class="op">=</span> papers<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(p) {</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> p<span class="op">.</span><span class="at">authors</span><span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Luis Walter"</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -304,12 +304,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="entity-contents">
       <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Luis J. Walter</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">phd student</div>
-    <div class="quarto-category">current</div>
-  </div>
-  </div>
+<h1 class="title">Luis Walter</h1>
+</div>
 <div class="quarto-title-meta">
   </div>
 </header> <div class="about-links">
@@ -329,35 +325,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="group-publications" class="level2">
 <h2 data-anchor-id="group-publications">Group publications</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="49" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 48;"><span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(my_papers<span class="op">,</span> {</span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">columns</span><span class="op">:</span> [</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"doi"</span><span class="op">,</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">,</span></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">,</span></span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">,</span></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.issue"</span><span class="op">,</span></span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.pages"</span><span class="op">,</span></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span><span class="op">,</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding.topic_name"</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.issue"</span><span class="op">:</span> <span class="st">"issue"</span><span class="op">,</span></span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.pages"</span><span class="op">:</span> <span class="st">"pages"</span><span class="op">,</span></span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding.topic_name"</span><span class="op">:</span> <span class="st">"topic"</span><span class="op">,</span></span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="47" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 46;"><span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(my_papers<span class="op">,</span> {</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    <span class="dt">columns</span><span class="op">:</span> [</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="st">"doi"</span><span class="op">,</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">,</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">,</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">,</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.issue"</span><span class="op">,</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.pages"</span><span class="op">,</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span><span class="op">,</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding.topic_name"</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.issue"</span><span class="op">:</span> <span class="st">"issue"</span><span class="op">,</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.pages"</span><span class="op">:</span> <span class="st">"pages"</span><span class="op">,</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">"embedding.topic_name"</span><span class="op">:</span> <span class="st">"topic"</span><span class="op">,</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -368,62 +364,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="group-collaborators" class="level2">
 <h2 data-anchor-id="group-collaborators">Group collaborators</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="84" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 83;"><span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>collaborators <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
-<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="bu">Set</span>(</span>
-<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>        my_papers<span class="op">.</span><span class="fu">flatMap</span>(p <span class="kw">=&gt;</span> p<span class="op">.</span><span class="at">authors</span>)</span>
-<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
-<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> a<span class="op">.</span><span class="at">full_name</span> <span class="op">!=</span> <span class="st">"Luis J. Walter"</span></span>
-<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>list_of_collaborators <span class="op">=</span> (</span>
-<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(d3<span class="op">.</span><span class="fu">group</span>(collaborators<span class="op">,</span> a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">keys</span>())</span>
-<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>dict_of_collaborators <span class="op">=</span> (</span>
-<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>    collaborators<span class="op">.</span><span class="fu">reduce</span>(</span>
-<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>        (acc<span class="op">,</span> x) <span class="kw">=&gt;</span> (</span>
-<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>            {<span class="op">...</span>acc<span class="op">,</span> [x<span class="op">.</span><span class="at">full_name</span>]<span class="op">:</span></span>
-<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>                {</span>
-<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"given"</span><span class="op">:</span> x<span class="op">.</span><span class="at">given</span><span class="op">,</span></span>
-<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"family"</span><span class="op">:</span> x<span class="op">.</span><span class="at">family</span><span class="op">,</span></span>
-<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_city"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">city</span><span class="op">,</span></span>
-<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_name"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
-<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_country"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">country</span><span class="op">,</span></span>
-<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"orcid"</span><span class="op">:</span> x<span class="op">.</span><span class="at">orcid</span><span class="op">,</span></span>
-<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>                }</span>
-<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
-<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>        {}</span>
-<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(</span>
-<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>    list_of_collaborators<span class="op">.</span><span class="fu">map</span>(c <span class="kw">=&gt;</span> dict_of_collaborators[c])<span class="op">,</span></span>
-<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>    {</span>
-<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
-<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>            <span class="st">"given"</span><span class="op">,</span></span>
-<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>            <span class="st">"family"</span><span class="op">,</span></span>
-<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>            <span class="st">"orcid"</span><span class="op">,</span></span>
-<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_country"</span><span class="op">,</span></span>
-<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_city"</span><span class="op">,</span></span>
-<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_name"</span><span class="op">,</span></span>
-<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>        ]<span class="op">,</span></span>
-<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>        <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_country"</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
-<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_city"</span><span class="op">:</span> <span class="st">"city"</span><span class="op">,</span></span>
-<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_name"</span><span class="op">:</span> <span class="st">"affiliation"</span><span class="op">,</span></span>
-<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>        <span class="dt">multiple</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>        <span class="dt">sort</span><span class="op">:</span> <span class="st">"family"</span><span class="op">,</span></span>
-<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>        <span class="dt">layout</span><span class="op">:</span> <span class="st">"fixed"</span><span class="op">,</span></span>
-<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>        <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>            <span class="dt">orcid</span><span class="op">:</span> orcid <span class="kw">=&gt;</span></span>
-<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>            htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://orcid.org/</span><span class="sc">${</span>orcid<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>orcid<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span></span>
-<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="82" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 81;"><span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>collaborators <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(</span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="bu">Set</span>(</span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a>        my_papers<span class="op">.</span><span class="fu">flatMap</span>(p <span class="kw">=&gt;</span> p<span class="op">.</span><span class="at">authors</span>)</span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a>        <span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(a) {</span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> a<span class="op">.</span><span class="at">full_name</span> <span class="op">!=</span> <span class="st">"Luis Walter"</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>list_of_collaborators <span class="op">=</span> (</span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(d3<span class="op">.</span><span class="fu">group</span>(collaborators<span class="op">,</span> a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">keys</span>())</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>dict_of_collaborators <span class="op">=</span> (</span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>    collaborators<span class="op">.</span><span class="fu">reduce</span>(</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>        (acc<span class="op">,</span> x) <span class="kw">=&gt;</span> (</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>            {<span class="op">...</span>acc<span class="op">,</span> [x<span class="op">.</span><span class="at">full_name</span>]<span class="op">:</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>                {</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"given"</span><span class="op">:</span> x<span class="op">.</span><span class="at">given</span><span class="op">,</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"family"</span><span class="op">:</span> x<span class="op">.</span><span class="at">family</span><span class="op">,</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_city"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">city</span><span class="op">,</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_name"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">name</span><span class="op">,</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"affiliation_country"</span><span class="op">:</span> x<span class="op">.</span><span class="at">affiliation</span><span class="op">.</span><span class="at">country</span><span class="op">,</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"orcid"</span><span class="op">:</span> x<span class="op">.</span><span class="at">orcid</span><span class="op">,</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>                }</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>        )<span class="op">,</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>        {}</span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>    list_of_collaborators<span class="op">.</span><span class="fu">map</span>(c <span class="kw">=&gt;</span> dict_of_collaborators[c])<span class="op">,</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>            <span class="st">"given"</span><span class="op">,</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>            <span class="st">"family"</span><span class="op">,</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>            <span class="st">"orcid"</span><span class="op">,</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_country"</span><span class="op">,</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_city"</span><span class="op">,</span></span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_name"</span><span class="op">,</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>        ]<span class="op">,</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>        <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_country"</span><span class="op">:</span> <span class="st">"country"</span><span class="op">,</span></span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_city"</span><span class="op">:</span> <span class="st">"city"</span><span class="op">,</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>            <span class="st">"affiliation_name"</span><span class="op">:</span> <span class="st">"affiliation"</span><span class="op">,</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>        <span class="dt">multiple</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>        <span class="dt">sort</span><span class="op">:</span> <span class="st">"family"</span><span class="op">,</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>        <span class="dt">layout</span><span class="op">:</span> <span class="st">"fixed"</span><span class="op">,</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>        <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>            <span class="dt">orcid</span><span class="op">:</span> orcid <span class="kw">=&gt;</span></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>            htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://orcid.org/</span><span class="sc">${</span>orcid<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>orcid<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="declaration">
@@ -460,7 +456,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbmltcG9ydCB7bWFwfSBmcm9tIFwiQG1hcnRpZW4vcmFtZGFcIlxuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBtYXAoaSA9PiBtYXAoeCA9PiB4W2ldLCBwYXBlcnNfciksIGluZGV4X2FycmF5KVxuXG5teV9wYXBlcnMgPSBwYXBlcnMuZmlsdGVyKGZ1bmN0aW9uKHApIHtcbiAgICByZXR1cm4gcC5hdXRob3JzLm1hcChhID0+IGEuZnVsbF9uYW1lKS5pbmNsdWRlcyhcIkx1aXMgSi4gV2FsdGVyXCIpXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKG15X3BhcGVycywge1xuICAgIGNvbHVtbnM6IFtcbiAgICBcImRvaVwiLFxuICAgIFwidGl0bGVcIixcbiAgICBcImpvdXJuYWwubmFtZVwiLFxuICAgIFwiam91cm5hbC52b2x1bWVcIixcbiAgICBcImpvdXJuYWwuaXNzdWVcIixcbiAgICBcImpvdXJuYWwucGFnZXNcIixcbiAgICBcInllYXJcIixcbiAgICBcImVtYmVkZGluZy50b3BpY19uYW1lXCJcbiAgXSxcbiAgaGVhZGVyOiB7XG4gICAgXCJqb3VybmFsLm5hbWVcIjogXCJqb3VybmFsXCIsXG4gICAgXCJqb3VybmFsLnZvbHVtZVwiOiBcInZvbHVtZVwiLFxuICAgIFwiam91cm5hbC5pc3N1ZVwiOiBcImlzc3VlXCIsXG4gICAgXCJqb3VybmFsLnBhZ2VzXCI6IFwicGFnZXNcIixcbiAgICBcImVtYmVkZGluZy50b3BpY19uYW1lXCI6IFwidG9waWNcIixcbiAgfSxcbiAgZm9ybWF0OiB7XG4gICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgdGl0bGU6IHRpdGxlID0+IGh0bC5odG1sYCR7dGl0bGV9YCxcbiAgICBcImpvdXJuYWwudm9sdW1lXCI6IHZvbHVtZSA9PiBodGwuaHRtbGA8Yj4ke3ZvbHVtZX08L2I+YCxcbiAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICB9LFxuICB3aWR0aDoge1xuICAgIFwidGl0bGVcIjogMTBcbiAgfSxcbiAgbGF5b3V0OiBcImF1dG9cIixcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjb2xsYWJvcmF0b3JzID0gQXJyYXkuZnJvbShcbiAgICBuZXcgU2V0KFxuICAgICAgICBteV9wYXBlcnMuZmxhdE1hcChwID0+IHAuYXV0aG9ycylcbiAgICAgICAgLmZpbHRlcihmdW5jdGlvbihhKSB7XG4gICAgICAgICAgICByZXR1cm4gYS5mdWxsX25hbWUgIT0gXCJMdWlzIEouIFdhbHRlclwiXG4gICAgICAgICAgICB9XG4gICAgICAgIClcbiAgICApXG4pXG5cbmxpc3Rfb2ZfY29sbGFib3JhdG9ycyA9IChcbiAgICBBcnJheS5mcm9tKGQzLmdyb3VwKGNvbGxhYm9yYXRvcnMsIGEgPT4gYS5mdWxsX25hbWUpLmtleXMoKSlcbilcbmRpY3Rfb2ZfY29sbGFib3JhdG9ycyA9IChcbiAgICBjb2xsYWJvcmF0b3JzLnJlZHVjZShcbiAgICAgICAgKGFjYywgeCkgPT4gKFxuICAgICAgICAgICAgey4uLmFjYywgW3guZnVsbF9uYW1lXTpcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIFwiZ2l2ZW5cIjogeC5naXZlbixcbiAgICAgICAgICAgICAgICAgICAgXCJmYW1pbHlcIjogeC5mYW1pbHksXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY2l0eVwiOiB4LmFmZmlsaWF0aW9uLmNpdHksXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiOiB4LmFmZmlsaWF0aW9uLm5hbWUsXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY291bnRyeVwiOiB4LmFmZmlsaWF0aW9uLmNvdW50cnksXG4gICAgICAgICAgICAgICAgICAgIFwib3JjaWRcIjogeC5vcmNpZCxcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICksXG4gICAgICAgIHt9XG4gICAgKVxuKVxuXG5JbnB1dHMudGFibGUoXG4gICAgbGlzdF9vZl9jb2xsYWJvcmF0b3JzLm1hcChjID0+IGRpY3Rfb2ZfY29sbGFib3JhdG9yc1tjXSksXG4gICAge1xuICAgICAgICBjb2x1bW5zOiBbXG4gICAgICAgICAgICBcImdpdmVuXCIsXG4gICAgICAgICAgICBcImZhbWlseVwiLFxuICAgICAgICAgICAgXCJvcmNpZFwiLFxuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jb3VudHJ5XCIsXG4gICAgICAgICAgICBcImFmZmlsaWF0aW9uX2NpdHlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiLFxuICAgICAgICBdLFxuICAgICAgICBoZWFkZXI6IHtcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY291bnRyeVwiOiBcImNvdW50cnlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY2l0eVwiOiBcImNpdHlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiOiBcImFmZmlsaWF0aW9uXCIsXG4gICAgICAgIH0sXG4gICAgICAgIG11bHRpcGxlOiBmYWxzZSxcbiAgICAgICAgc29ydDogXCJmYW1pbHlcIixcbiAgICAgICAgbGF5b3V0OiBcImZpeGVkXCIsXG4gICAgICAgIGZvcm1hdDoge1xuICAgICAgICAgICAgb3JjaWQ6IG9yY2lkID0+XG4gICAgICAgICAgICBodGwuaHRtbGA8YSBocmVmPWh0dHBzOi8vb3JjaWQub3JnLyR7b3JjaWR9IHRhcmdldD1fYmxhbms+JHtvcmNpZH08L2E+YFxuICAgICAgICB9LFxuICAgIH1cbilcbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbmltcG9ydCB7bWFwfSBmcm9tIFwiQG1hcnRpZW4vcmFtZGFcIlxuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBtYXAoaSA9PiBtYXAoeCA9PiB4W2ldLCBwYXBlcnNfciksIGluZGV4X2FycmF5KVxuXG5teV9wYXBlcnMgPSBwYXBlcnMuZmlsdGVyKGZ1bmN0aW9uKHApIHtcbiAgICByZXR1cm4gcC5hdXRob3JzLm1hcChhID0+IGEuZnVsbF9uYW1lKS5pbmNsdWRlcyhcIkx1aXMgV2FsdGVyXCIpXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKG15X3BhcGVycywge1xuICAgIGNvbHVtbnM6IFtcbiAgICBcImRvaVwiLFxuICAgIFwidGl0bGVcIixcbiAgICBcImpvdXJuYWwubmFtZVwiLFxuICAgIFwiam91cm5hbC52b2x1bWVcIixcbiAgICBcImpvdXJuYWwuaXNzdWVcIixcbiAgICBcImpvdXJuYWwucGFnZXNcIixcbiAgICBcInllYXJcIixcbiAgICBcImVtYmVkZGluZy50b3BpY19uYW1lXCJcbiAgXSxcbiAgaGVhZGVyOiB7XG4gICAgXCJqb3VybmFsLm5hbWVcIjogXCJqb3VybmFsXCIsXG4gICAgXCJqb3VybmFsLnZvbHVtZVwiOiBcInZvbHVtZVwiLFxuICAgIFwiam91cm5hbC5pc3N1ZVwiOiBcImlzc3VlXCIsXG4gICAgXCJqb3VybmFsLnBhZ2VzXCI6IFwicGFnZXNcIixcbiAgICBcImVtYmVkZGluZy50b3BpY19uYW1lXCI6IFwidG9waWNcIixcbiAgfSxcbiAgZm9ybWF0OiB7XG4gICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgdGl0bGU6IHRpdGxlID0+IGh0bC5odG1sYCR7dGl0bGV9YCxcbiAgICBcImpvdXJuYWwudm9sdW1lXCI6IHZvbHVtZSA9PiBodGwuaHRtbGA8Yj4ke3ZvbHVtZX08L2I+YCxcbiAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICB9LFxuICB3aWR0aDoge1xuICAgIFwidGl0bGVcIjogMTBcbiAgfSxcbiAgbGF5b3V0OiBcImF1dG9cIixcbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJjb2xsYWJvcmF0b3JzID0gQXJyYXkuZnJvbShcbiAgICBuZXcgU2V0KFxuICAgICAgICBteV9wYXBlcnMuZmxhdE1hcChwID0+IHAuYXV0aG9ycylcbiAgICAgICAgLmZpbHRlcihmdW5jdGlvbihhKSB7XG4gICAgICAgICAgICByZXR1cm4gYS5mdWxsX25hbWUgIT0gXCJMdWlzIFdhbHRlclwiXG4gICAgICAgICAgICB9XG4gICAgICAgIClcbiAgICApXG4pXG5cbmxpc3Rfb2ZfY29sbGFib3JhdG9ycyA9IChcbiAgICBBcnJheS5mcm9tKGQzLmdyb3VwKGNvbGxhYm9yYXRvcnMsIGEgPT4gYS5mdWxsX25hbWUpLmtleXMoKSlcbilcbmRpY3Rfb2ZfY29sbGFib3JhdG9ycyA9IChcbiAgICBjb2xsYWJvcmF0b3JzLnJlZHVjZShcbiAgICAgICAgKGFjYywgeCkgPT4gKFxuICAgICAgICAgICAgey4uLmFjYywgW3guZnVsbF9uYW1lXTpcbiAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIFwiZ2l2ZW5cIjogeC5naXZlbixcbiAgICAgICAgICAgICAgICAgICAgXCJmYW1pbHlcIjogeC5mYW1pbHksXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY2l0eVwiOiB4LmFmZmlsaWF0aW9uLmNpdHksXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiOiB4LmFmZmlsaWF0aW9uLm5hbWUsXG4gICAgICAgICAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY291bnRyeVwiOiB4LmFmZmlsaWF0aW9uLmNvdW50cnksXG4gICAgICAgICAgICAgICAgICAgIFwib3JjaWRcIjogeC5vcmNpZCxcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgICksXG4gICAgICAgIHt9XG4gICAgKVxuKVxuXG5JbnB1dHMudGFibGUoXG4gICAgbGlzdF9vZl9jb2xsYWJvcmF0b3JzLm1hcChjID0+IGRpY3Rfb2ZfY29sbGFib3JhdG9yc1tjXSksXG4gICAge1xuICAgICAgICBjb2x1bW5zOiBbXG4gICAgICAgICAgICBcImdpdmVuXCIsXG4gICAgICAgICAgICBcImZhbWlseVwiLFxuICAgICAgICAgICAgXCJvcmNpZFwiLFxuICAgICAgICAgICAgXCJhZmZpbGlhdGlvbl9jb3VudHJ5XCIsXG4gICAgICAgICAgICBcImFmZmlsaWF0aW9uX2NpdHlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiLFxuICAgICAgICBdLFxuICAgICAgICBoZWFkZXI6IHtcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY291bnRyeVwiOiBcImNvdW50cnlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fY2l0eVwiOiBcImNpdHlcIixcbiAgICAgICAgICAgIFwiYWZmaWxpYXRpb25fbmFtZVwiOiBcImFmZmlsaWF0aW9uXCIsXG4gICAgICAgIH0sXG4gICAgICAgIG11bHRpcGxlOiBmYWxzZSxcbiAgICAgICAgc29ydDogXCJmYW1pbHlcIixcbiAgICAgICAgbGF5b3V0OiBcImZpeGVkXCIsXG4gICAgICAgIGZvcm1hdDoge1xuICAgICAgICAgICAgb3JjaWQ6IG9yY2lkID0+XG4gICAgICAgICAgICBodGwuaHRtbGA8YSBocmVmPWh0dHBzOi8vb3JjaWQub3JnLyR7b3JjaWR9IHRhcmdldD1fYmxhbms+JHtvcmNpZH08L2E+YFxuICAgICAgICB9LFxuICAgIH1cbilcbiJ9XX0=
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }

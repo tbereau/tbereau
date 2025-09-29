@@ -65,7 +65,7 @@ This work avoids the combinatorial explosion of microtrajectories by systematica
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://arxiv.org/abs/1907.08480" role="button">
+        href="http://arxiv.org/abs/1907.08480" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

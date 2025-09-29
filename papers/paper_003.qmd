@@ -2,7 +2,7 @@
 ---
 title: "Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective"
 doi: "10.1016/j.bpj.2011.03.056"
-date: "2011-06-18 16:42:31"
+date: "2011-06-18 12:42:31"
 date-format: iso
 authors: "Bereau, Deserno, Bachmann"
 description: "_Biophysical Journal_ **100** (2011)"
@@ -65,7 +65,7 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://europepmc.org/articles/pmc3117192" role="button">
+        href="https://doi.org/10.1016/j.bpj.2011.03.056" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://europepmc.org/articles/pmc3117192?pdf=render" role="button">
+        href="http://www.cell.com/article/S0006349511004140/pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

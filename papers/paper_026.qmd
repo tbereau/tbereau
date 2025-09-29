@@ -2,7 +2,7 @@
 ---
 title: "Efficient potential of mean force calculation from multiscale simulations: Solute insertion in a lipid membrane"
 doi: "10.1016/j.bbrc.2017.08.095"
-date: "2017-09-07 22:16:07"
+date: "2017-09-07 18:16:07"
 date-format: iso
 authors: "Menichetti, Kremer, Bereau"
 description: "_Biochemical and Biophysical Research Communications_ **498** (2017)"
@@ -82,7 +82,7 @@ The efficiency of this multiscale method is analyzed by comparing its prediction
     </a>
     <a class="btn btn-outline-primary
       "
-        href="http://arxiv.org/pdf/1710.02291" role="button">
+        href="https://arxiv.org/pdf/1710.02291" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
