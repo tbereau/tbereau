@@ -4,13 +4,16 @@ title: "Teaching"
 
 | Course | Level | Type | Semester |
 |--------|-------|-------|---------:|
-| Theoretical Statistical Physics | Master | course | W2024/2025 |
+| [Machine Learning and Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20252/2064) | Master | course | W25/26 |
+| [Theoretical Biophysics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20251/1989) | Master | course | S2025 |
+| [Soft Matter Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20251/2002) | Master | seminar | S2025 |
+| [Theoretical Statistical Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20242/1911) | Master | course | W24/25 |
 | [Computational Statistics and Data Analysis (MVComp2)](https://mvcomp2-s24.tristanbereau.com/) | Master | course | S2024 |
-| Soft Matter Physics | Master | seminar | S2024 |
-| Machine learning for the Biomolecular World | Master | Seminar | S2024 |
-| [Computational Statistics and Data Analysis (MVComp2)](https://mvcomp2-w2324.tristanbereau.com/) | Master | course | W2023/2024 |
+| [Soft Matter Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20241/1882) | Master | seminar | S2024 |
+| [Machine learning for the Biomolecular World](https://uebungen.physik.uni-heidelberg.de/vorlesung/20241/1852) | Master | Seminar | S2024 |
+| [Computational Statistics and Data Analysis (MVComp2)](https://mvcomp2-w2324.tristanbereau.com/) | Master | course | W23/24 |
 | [Generative Learning for Molecular Systems](https://gen-learn-mol-sys23.tristanbereau.com/) | GradDays | course | W2023 |
 
-: Teaching schedule
+: Teaching schedule {.hover}
 
 - GradDays: [Heidelberg Physics Graduate Days](https://www.physik.uni-heidelberg.de/graddays/?lang=en)
