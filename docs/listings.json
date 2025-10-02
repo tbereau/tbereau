@@ -16,6 +16,7 @@
       "/group/daniel_hofmann.html",
       "/group/daniel_nagel.html",
       "/group/dominic_holst.html",
+      "/group/ferdinand_horstel.html",
       "/group/gerrit_gerhartz.html",
       "/group/joseph_rudzinski.html",
       "/group/kiran_kanekal.html",
@@ -33,14 +34,6 @@
       "/group/timon_wittenstein.html",
       "/group/tristan_bereau.html",
       "/group/yasemin_bozkurt_varolgunes.html"
-    ]
-  },
-  {
-    "listing": "/notes.html",
-    "items": [
-      "/notes/kernel_lennard_jones.html",
-      "/notes/symmetries-in-kernel-ml.html",
-      "/notes/nonequilibrium-reweighting.html"
     ]
   },
   {
@@ -128,6 +121,14 @@
       "/papers/paper_002.html",
       "/papers/paper_001.html",
       "/papers/paper_000.html"
+    ]
+  },
+  {
+    "listing": "/notes.html",
+    "items": [
+      "/notes/kernel_lennard_jones.html",
+      "/notes/symmetries-in-kernel-ml.html",
+      "/notes/nonequilibrium-reweighting.html"
     ]
   }
 ]
