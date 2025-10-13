@@ -23,7 +23,7 @@ about:
       href: https://braniii.github.io/
     - icon: google
       text: Google Scholar
-      href: https://scholar.google.com/citations?user=fg5aD8QAAAAJ
+      href: https://scholar.google.com/citations?user=3Pz_4wwAAAAJ
     - icon: orcid
       text: ORCID
       href: https://orcid.org/0000-0002-2863-2646
