@@ -2,7 +2,7 @@
 ---
 title: "Concurrent parametrization against static and kinetic information leads to more robust coarse-grained force fields"
 doi: "10.1140/epjst/e2016-60114-5"
-date: "2016-07-15 07:35:24"
+date: "2016-07-15 11:35:24"
 date-format: iso
 authors: "Rudzinski, Bereau"
 description: "_Eur. Phys. J. Spec. Top._ **225** (2016)"

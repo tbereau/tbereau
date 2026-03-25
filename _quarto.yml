@@ -32,9 +32,6 @@ website:
                     -   text: Publications
                         icon: file-earmark-text
                         href: papers.qmd
-                    -   text: Notes
-                        icon: journal-text
-                        href: notes.qmd
             -   text: Group
                 menu:
                     -   text: Members

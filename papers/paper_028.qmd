@@ -2,7 +2,7 @@
 ---
 title: "The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions"
 doi: "10.3390/computation6010021"
-date: "2018-02-27 08:36:12"
+date: "2018-02-27 03:36:12"
 date-format: iso
 authors: "Rudzinski, Bereau"
 description: "_Computation_ **6** (2018)"

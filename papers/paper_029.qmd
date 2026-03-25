@@ -2,7 +2,7 @@
 ---
 title: "Non-covalent interactions across organic and biological subsets of chemical space: Physics-based potentials parametrized from machine learning"
 doi: "10.1063/1.5009502"
-date: "2018-03-15 15:34:31"
+date: "2018-03-15 11:34:31"
 date-format: iso
 authors: "Bereau, Distasio, Tkatchenko, Von Lilienfeld"
 description: "_The Journal of Chemical Physics_ **148** (2018)"
@@ -49,7 +49,8 @@ A combination of physics-based potentials with machine learning (ML) is proposed
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2018, title={Non-covalent interactions across organic and biological subsets of chemical space: Physics-based potentials parametrized from machine learning}, volume={148}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5009502}, DOI={10.1063/1.5009502}, number={24}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and DiStasio, Robert A. and Tkatchenko, Alexandre and von Lilienfeld, O. Anatole}, year={2018}, month=mar }
+ @article{Bereau_2018, title={Non-covalent interactions across organic and biological subsets of chemical
+          space: Physics-based potentials parametrized from machine learning}, volume={148}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5009502}, DOI={10.1063/1.5009502}, number={24}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and DiStasio, Robert A. and Tkatchenko, Alexandre and von Lilienfeld, O. Anatole}, year={2018}, month=mar }
 
 ```
 ```{=html}

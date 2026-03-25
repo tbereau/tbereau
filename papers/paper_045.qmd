@@ -81,8 +81,8 @@ The present database contains trajectories from 15,120 molecular dynamics simula
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://www.nature.com/articles/s41597-020-0391-0.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

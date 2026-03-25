@@ -65,7 +65,7 @@ A findable, accessible, interoperable and reusable (FAIR) data infrastructure is
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/2204.13240" role="button">
+        href="https://doi.org/10.1038/s41586-022-04501-x" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -82,7 +82,7 @@ A findable, accessible, interoperable and reusable (FAIR) data infrastructure is
     </a>
     <a class="btn btn-outline-primary
       "
-        href="https://arxiv.org/pdf/2204.13240" role="button">
+        href="https://www.nature.com/articles/s41586-022-04501-x.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

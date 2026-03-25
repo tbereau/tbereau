@@ -2,7 +2,7 @@
 ---
 title: "Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons"
 doi: "10.1002/adfm.201809112"
-date: "2019-04-15 10:14:43"
+date: "2019-04-15 06:14:43"
 date-format: iso
 authors: "Schilling, Mack, Lickfett, Sieste, Ruggeri, Sneideris, Dutta, Bereau, Naraghi, Sinske, Knowles, Synatschke, Weil, Knöll"
 description: "_Adv Funct Materials_ **29** (2019)"
@@ -64,8 +64,8 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://research.wur.nl/en/publications/sequence-optimized-peptide-nanofibers-as-growth-stimulators-for-r" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"

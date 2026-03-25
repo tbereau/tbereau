@@ -4,6 +4,8 @@ title: "Teaching"
 
 | Course | Level | Type | Semester |
 |--------|-------|-------|---------:|
+| [Molecular Simulation](https://uebungen.physik.uni-heidelberg.de/vorlesung/20261/2168) | Master | course | S2026 |
+| [Soft Matter Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20261/2176) | Master | seminar | S2026 |
 | [Machine Learning and Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20252/2064) | Master | course | W25/26 |
 | [Theoretical Biophysics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20251/1989) | Master | course | S2025 |
 | [Soft Matter Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20251/2002) | Master | seminar | S2025 |

@@ -2,7 +2,7 @@
 ---
 title: "Computational compound screening of biomolecules and soft materials by molecular simulations"
 doi: "10.1088/1361-651X/abd042"
-date: "2020-12-03 22:16:42"
+date: "2020-12-03 17:16:42"
 date-format: iso
 authors: "Bereau"
 description: "_Modelling Simul. Mater. Sci. Eng._ **29** (2020)"

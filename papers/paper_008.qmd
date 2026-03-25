@@ -65,7 +65,7 @@ The results show that the cross-parametrization can reproduce a number of struct
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.ncbi.nlm.nih.gov/pmc/articles/3977883" role="button">
+        href="https://doi.org/10.1063/1.4867465" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ The results show that the cross-parametrization can reproduce a number of struct
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/1.4867465/15476122/115101_1_online.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

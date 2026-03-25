@@ -81,8 +81,8 @@ A method for computing free-energy differences using thermodynamic integration w
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/5.0251736/20452824/124107_1_5.0251736.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

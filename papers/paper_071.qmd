@@ -2,7 +2,7 @@
 ---
 title: "Inverse design of viral infectivity-enhancing peptide fibrils from continuous protein-vector embeddings"
 doi: "10.1039/D3BM00412K"
-date: "2023-06-15 11:01:18"
+date: "2023-06-15 07:01:18"
 date-format: iso
 authors: "Kaygisiz, Dutta, Rauch-Wirth, Synatschke, Münch, Bereau, Weil"
 description: "_Biomater. Sci._ **11** (2023)"

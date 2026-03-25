@@ -65,7 +65,7 @@ The accuracy involved in folding not only the test protein but also other ones s
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://figshare.com/articles/journal_contribution/Generic_coarse-grained_model_for_protein_folding_and_aggregation/6506861" role="button">
+        href="https://doi.org/10.1063/1.3152842" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +81,8 @@ The accuracy involved in folding not only the test protein but also other ones s
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://pubs.aip.org/aip/jcp/article-pdf/doi/10.1063/1.3152842/13132161/235106_1_online.pdf" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

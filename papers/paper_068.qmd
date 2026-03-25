@@ -81,8 +81,8 @@ The reintroduced details enable force computations based on the all-atom force f
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://www.frontiersin.org/articles/10.3389/fchem.2022.982757/pdf" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

@@ -2,7 +2,7 @@
 ---
 title: "Data-driven equation for drug–membrane permeability across drugs and membranes"
 doi: "10.1063/5.0053931"
-date: "2021-06-29 09:46:28"
+date: "2021-06-29 05:46:28"
 date-format: iso
 authors: "Dutta, Vreeken, Ghiringhelli, Bereau"
 description: "_The Journal of Chemical Physics_ **154** (2021)"

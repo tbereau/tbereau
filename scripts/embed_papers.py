@@ -34,22 +34,35 @@ papers = load_all_papers_from_s3(s3_client=S3_CLIENT, s3_bucket=S3_BUCKET)
 df = convert_papers_to_dataframe(papers)
 stopwords = nltk.corpus.stopwords.words("english")
 df["abstract"] = df["abstract"].fillna("")
-df["abstract_without_stopwords"] = df["abstract"].apply(
-    lambda x: " ".join([w for w in x.split() if w.lower() not in stopwords])
+
+# 1. Fallback to title if abstract is empty or effectively empty (e.g., < 20 chars)
+df["text_to_embed"] = df.apply(
+    lambda x: x["title"] if (not x["abstract"] or len(str(x["abstract"]).strip()) < 20) 
+    else x["abstract"], 
+    axis=1
 )
-df["abstract_lemmatized"] = df["abstract_without_stopwords"].apply(
-    lambda x: " ".join([wn.lemmatize(w) for w in x.split() if w not in stopwords])
+
+# 2. Clean the combined text
+df["text_lemmatized"] = df["text_to_embed"].apply(
+    lambda x: " ".join([
+        wn.lemmatize(w.lower()) 
+        for w in str(x).split() 
+        if w.lower() not in stopwords and w.isalnum()
+    ])
 )
+
 umap_model = UMAP(
-    n_neighbors=2, n_components=2, min_dist=0.0, metric="euclidean", random_state=100
+    n_neighbors=5, n_components=2, min_dist=0.0, metric="cosine", random_state=100
 )
+
+sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
+
+embeddings = sentence_model.encode(df["text_lemmatized"].tolist())
+
 topic_model = BERTopic(
     umap_model=umap_model,
     min_topic_size=2,
-    top_n_words=10,
-).fit(df["abstract_lemmatized"])
-sentence_model = SentenceTransformer("all-MiniLM-L6-v2")
-embeddings = sentence_model.encode(df["abstract_lemmatized"])
+).fit(df["text_lemmatized"], embeddings=embeddings)
 
 topic_labels = topic_model.generate_topic_labels(
     nr_words=3, topic_prefix=False, word_length=15, separator=" | "

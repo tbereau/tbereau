@@ -2,7 +2,7 @@
 ---
 title: "The Bacteriostatic Activity of 2-Phenylethanol Derivatives Correlates with Membrane Binding Affinity"
 doi: "10.3390/membranes11040254"
-date: "2021-03-31 14:24:33"
+date: "2021-03-31 10:24:33"
 date-format: iso
 authors: "Kleinwächter, Pannwitt, Centi, Hellmann, Thines, Bereau, Schneider"
 description: "_Membranes_ **11** (2021)"
