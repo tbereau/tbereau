@@ -1,8 +1,58 @@
 import logging
 
-from my_scientific_profile.papers.papers import Paper
+from my_scientific_profile.papers.papers import Paper, VenueKind
 
 logger = logging.getLogger(__name__)
+
+NOT_AVAILABLE = "_Not available._"
+
+# How each provider is credited on the page. The library reports which one
+# supplied each field, so these footers follow the data instead of asserting a
+# fixed pipeline that no longer holds.
+PROVIDER_NAMES = {
+    "crossref": "CrossRef",
+    "openalex": "OpenAlex",
+    "datacite": "DataCite",
+    "dblp": "DBLP",
+    "semantic_scholar": "Semantic Scholar",
+    "unpaywall": "Unpaywall",
+    "doi2bib": "doi2bib",
+    "orcid": "ORCID",
+    "config": "manual entry",
+    "rendered": "this site",
+}
+
+# Altmetric tracks Crossref DOIs; an arXiv or Zenodo DOI renders an empty badge.
+UNTRACKED_DOI_PREFIXES = ("10.48550/", "10.5281/")
+
+
+def credit(paper: Paper, field: str) -> str:
+    """A footer naming whichever provider actually supplied a field."""
+    provider = paper.source_of(field)
+    if not provider:
+        return ""
+    name = PROVIDER_NAMES.get(provider, provider)
+    return (
+        '```{=html}\n<footer class="blockquote-footer">from '
+        f'<cite title="Source Title">{name}</cite>\n</footer>\n```'
+    )
+
+
+def altmetric_badge(paper: Paper) -> str:
+    """The Altmetric donut, omitted where Altmetric has nothing to show."""
+    if paper.doi.startswith(UNTRACKED_DOI_PREFIXES):
+        return ""
+    return (
+        "```{=html}\n"
+        '<div class="float-end">\n'
+        "    <div data-badge-type='donut' class='altmetric-embed'\n"
+        f"    data-badge-popover='left' data-doi=\"{paper.doi}\"></div>\n"
+        "</div>\n"
+        "<script type='text/javascript'\n"
+        "  src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>\n"
+        "<br><br><br>\n"
+        "```"
+    )
 
 
 def save_quarto_paper_page_to_file(paper: Paper, filename: str) -> None:
@@ -11,12 +61,38 @@ def save_quarto_paper_page_to_file(paper: Paper, filename: str) -> None:
         stream.write(generate_quarto_paper_page(paper))
 
 
+def format_description(paper: Paper) -> str:
+    """The one-line venue citation shown in the listing.
+
+    Only journal articles have a volume, so the shape has to vary: a conference
+    paper or preprint would otherwise read "**None**".
+    """
+    venue = paper.journal
+    parts = []
+    if venue.abbreviation:
+        parts.append(f"_{venue.abbreviation}_")
+    if venue.kind == VenueKind.PREPRINT:
+        parts.append("preprint")
+    if venue.volume:
+        parts.append(f"**{venue.volume}**")
+    parts.append(f"({paper.year})")
+    return " ".join(parts)
+
+
 def generate_quarto_paper_page(paper: Paper) -> str:
     authors_list = [a.family for a in paper.authors]
     authors = ""
     for author in authors_list[:-1]:
         authors += author + ", "
     authors += authors_list[-1]
+    abstract = paper.abstract or NOT_AVAILABLE
+    tldr = paper.tldr or NOT_AVAILABLE
+    bibtex = (
+        "```{bibtex}\n" + paper.bib_entry + "\n```"
+        if paper.bib_entry
+        else NOT_AVAILABLE
+    )
+    altmetric = altmetric_badge(paper)
     header = f"""
 ---
 title: "{paper.title}"
@@ -24,7 +100,7 @@ doi: "{paper.doi}"
 date: "{paper.publication_date}"
 date-format: iso
 authors: "{authors}"
-description: "_{paper.journal.abbreviation}_ **{paper.journal.volume}** ({paper.year})"
+description: "{format_description(paper)}"
 year: {paper.year}
 format:
   html:
@@ -35,47 +111,24 @@ format:
 ---
 """
     body = f"""
-```{{=html}}
-<div class="float-end">
-    <div data-badge-type='donut' class='altmetric-embed'
-    data-badge-popover='left' data-doi="{paper.doi}"></div>
-</div>
-<script type='text/javascript'
-  src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-<br><br><br>
-```
+{altmetric}
 
 ::: {{.panel-tabset}}
 
 ## Abstract
 
-{paper.abstract}
-```{{=html}}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
-</footer>
-```
+{abstract}
+{credit(paper, "abstract")}
 
 ## TL;DR
 
-{paper.tldr}
-```{{=html}}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+{tldr}
+{credit(paper, "tldr")}
 
 ## BibTeX
 
-```{{bibtex}}
-{paper.bib_entry}
-```
-```{{=html}}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
-</footer>
-```
+{bibtex}
+{credit(paper, "bib_entry")}
 
 ## Open Access
 ```{{=html}}
@@ -136,9 +189,8 @@ format:
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
 ```
+{credit(paper, "open_access")}
 
 :::
 """

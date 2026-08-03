@@ -103,7 +103,9 @@ for _, item in df_coord.iterrows():
         topic_name=item["topic_name"],
     )
 
-save_all_papers_to_s3(S3_CLIENT, S3_BUCKET)
+# Pass the papers we just attached embeddings to, rather than letting the save
+# refetch and quietly store copies without them.
+save_all_papers_to_s3(S3_CLIENT, S3_BUCKET, papers)
 
 
 df = convert_papers_to_dataframe(papers)

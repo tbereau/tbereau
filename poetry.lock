@@ -2029,7 +2029,7 @@ tests = ["pytest (>=4.6)"]
 
 [[package]]
 name = "my-scientific-profile"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 optional = false
 python-versions = "^3.10"
@@ -2047,6 +2047,7 @@ jupyter = "^1.1.1"
 matplotlib = "^3.7.1"
 nbformat = "^5.9.0"
 nltk = "^3.8.1"
+numpy = "<1.25"
 pandas = "^2.0.3"
 plotly = "^5.15.0"
 pydantic = "2.0.2"
@@ -2063,8 +2064,8 @@ xmltodict = "^0.13.0"
 [package.source]
 type = "git"
 url = "ssh://git@github.com/tbereau/my_scientific_profile.git"
-reference = "master"
-resolved_reference = "b0591e3d3ceb1f12f9fed088a73fcc343e5a7f93"
+reference = "v0.2.0"
+resolved_reference = "8b9991e779b8a33c59ed08c6acf082af7c522f3b"
 
 [[package]]
 name = "nbclient"
@@ -4595,4 +4596,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "4b3edffaf858dcc6d904deb9147e1c6b2463302988c8cbc0b3c923281a823642"
+content-hash = "659a6abc3f961d5d905ec3f982469c7b655d22fb43163b2cc8083c12afadfe3e"

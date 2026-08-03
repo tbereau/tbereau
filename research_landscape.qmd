@@ -42,7 +42,7 @@ Plot.plot({
             x: "embedding.x",
             y: "embedding.y",
             title: (d) =>
-        `${d.doi}\n ${d.title}\n ${d['journal.abbreviation']} ${d['journal.volume']} (${d['year']})`,
+        `${d.doi}\n ${d.title}\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,
             fill: "embedding.topic_name",
             r: 6,
         }
