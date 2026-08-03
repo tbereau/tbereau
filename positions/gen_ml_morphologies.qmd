@@ -1,0 +1,92 @@
+---
+title: "Generative machine learning for molecular thin films"
+format:
+  html:
+    echo: false
+    keep-hidden: true
+    include-in-header:
+            -   file: ../header_email.html
+categories:
+  - phd student
+  - active
+image: ../static/simplaix_position.png
+about:
+  id: hero-heading
+  template: solana
+  image: ../static/simplaix_position.png
+---
+
+
+:::{#hero-heading}
+
+
+:::
+
+A fully funded PhD position is available in the group of Prof. Tristan Bereau ([tristanbereau.com](https://tristanbereau.com)) at the [Institute for Theoretical Physics, Heidelberg University](https://www.thphys.uni-heidelberg.de/aitp/).
+
+## Project
+
+The successful candidate will develop generative machine-learning methods for amorphous molecular thin films — the supramolecular structures that govern the performance of organic-electronic materials. Equilibrating such films by brute-force molecular dynamics is prohibitively slow. Instead, we build them using diffusion models at coarse-grained resolution, formulated so that the model yields not only realistic structures but also free energies.
+
+The work sits at the interface of statistical mechanics, molecular simulation, and deep generative modeling. It is a joint project with the group of [Prof. Ullrich Köthe](https://hci.iwr.uni-heidelberg.de/vislearn/people/ullrich-koethe/), and is embedded in [SIMPLAIX](https://www.h-its.org/research/simplaix/), a research initiative on multiscale simulation and machine learning funded by the Klaus Tschira Foundation.
+
+## Profile
+
+- Solid grounding in statistical mechanics
+- Experience with machine learning and/or molecular simulation; strong Python and PyTorch skills
+- Genuine interest in method development, and comfort with mathematical formalism
+- **A degree in physics is required** for admission to the [Heidelberg Graduate School for Physics](https://hgsfp.uni-heidelberg.de).
+
+## Conditions
+
+The position is fully funded for three years at 75% E13 TV-L. There is no application deadline: applications will be reviewed on a rolling basis until the position is filled.
+
+Please send a CV, a short statement of interest, and the names of two referees to Prof. Tristan Bereau at <span id="email-placeholder"></span>.
+
+Relevant group publications around generative machine learning for molecular systems include:
+
+```{ojs}
+import {Plot} from "@mkfreeman/plot-tooltip"
+import {map} from "@martien/ramda"
+
+papers_r = FileAttachment("../data/all_papers.json").json()
+n_columns = Object.entries(papers_r["doi"]).length
+index_array = Array.from({length: n_columns}, (_, i) => i)
+papers = map(i => map(x => x[i], papers_r), index_array)
+
+function displayTable(papers_) {
+    return Inputs.table(papers_, {
+        columns: [
+        "doi",
+        "title",
+        "journal.name",
+        "journal.volume",
+        "year",
+      ],
+      header: {
+        "journal.name": "journal",
+        "journal.volume": "volume",
+      },
+      format: {
+        doi: doi => htl.html`<a href=https://doi.org/${doi} target=_blank>${doi}</a>`,
+        title: title => htl.html`${title}`,
+        "journal.volume": volume => htl.html`<b>${volume}</b>`,
+        year: year => htl.html`${year}`,
+      },
+      width: {
+        "title": 10
+      },
+      layout: "auto",
+    })
+}
+
+displayTable(
+    papers.filter(function(p) {
+        return (
+            p.authors.map(a => a.full_name).includes("Bálint Máté")
+            || p.authors.map(a => a.full_name).includes("Daniel Nagel")
+            || p.authors.map(a => a.full_name).includes("Sander Hummerich")
+        )
+    })
+)
+```
