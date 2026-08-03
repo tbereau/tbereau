@@ -31,9 +31,7 @@ format:
 
 Coarse-grained molecular simulation models have provided immense, often general, insight into the complex behavior of condensed-phase systems but suffer from a lost connection to the true dynamical properties of the underlying system. In general, the physics that is built into a model shapes the free-energy landscape, restricting the attainable static and kinetic properties. In this work, we perform a detailed investigation into the property interrelationships resulting from these restrictions, for a representative system of the helix-coil transition. Inspired by high-throughput studies, we systematically vary force-field parameters and monitor their structural, kinetic, and thermodynamic properties. The focus of our investigation is a simple coarse-grained model, which accurately represents the underlying structural ensemble, i.e., effectively avoids sterically-forbidden configurations. As a result of this built-in physics, we observe a rather large restriction in the topology of the networks characterizing the simulation kinetics. When screening across force-field parameters, we find that structurally accurate models also best reproduce the kinetics, suggesting structural-kinetic relationships for these models. Additionally, an investigation into thermodynamic properties reveals a link between the cooperativity of the transition and the network topology at a single reference temperature.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Coarse-grained molecular simulation models have provided immense, often general,
 
 This work systematically vary force-field parameters and monitor their structural, kinetic, and thermodynamic properties, and finds that structurally accurate models also best reproduce the kinetics, suggesting structural-kinetic relationships for these models.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2018, title={Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models}, volume={148}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5025125}, DOI={10.1063/1.5025125}, number={20}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2018}, month=May }
-
+@article{Rudzinski_2018, title={Structural-kinetic-thermodynamic relationships identified from physics-based molecular simulation models}, volume={148}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5025125}, DOI={10.1063/1.5025125}, number={20}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2018}, month=May }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work systematically vary force-field parameters and monitor their structura
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

@@ -31,9 +31,7 @@ format:
 
 Current machine learning (ML) models aimed at learning force fields are plagued by their high computational cost at every integration time step. We describe a number of practical and computationally efficient strategies to parametrize traditional force fields for molecular liquids from ML: the particle decomposition ansatz to two- and three-body force fields, the use of kernel-based ML models that incorporate physical symmetries, the incorporation of switching functions close to the cutoff, and the use of covariant meshing to boost the training set size. Results are presented for model molecular liquids: pairwise Lennard-Jones, three-body Stillinger–Weber, and bottom-up coarse-graining of water. Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces. We show that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two- and three-body distribution functions. Many-body representations, decomposition, and kernel regression schemes are all implemented in the open-source software package VOTCA.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Current machine learning (ML) models aimed at learning force fields are plagued 
 
 Here, covariant meshing proves to be an efficient strategy to learn canonically averaged instantaneous forces and it is shown that molecular dynamics simulations with tabulated two- and three-body ML potentials are computationally efficient and recover two-and-three-body distribution functions.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Scherer_2020, title={Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids}, volume={16}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.9b01256}, DOI={10.1021/acs.jctc.9b01256}, number={5}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Scherer, Christoph and Scheid, René and Andrienko, Denis and Bereau, Tristan}, year={2020}, month=Apr, pages={3194–3204} }
-
+@article{Scherer_2020, title={Kernel-Based Machine Learning for Efficient Simulations of Molecular Liquids}, volume={16}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.9b01256}, DOI={10.1021/acs.jctc.9b01256}, number={5}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Scherer, Christoph and Scheid, René and Andrienko, Denis and Bereau, Tristan}, year={2020}, month=Apr, pages={3194–3204} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ Here, covariant meshing proves to be an efficient strategy to learn canonically 
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

@@ -31,30 +31,22 @@ format:
 
 Small solutes have been shown to alter the lateral organization of cell membranes and reconstituted phospholipid bilayers; however, the mechanisms by which these changes happen are still largely unknown. Traditionally, both experiment and simulation studies have been restricted to testing only a few compounds at a time, failing to identify general molecular descriptors or chemical properties that would allow extrapolating beyond the subset of considered solutes. In this work, we probe the competing energetics of inserting a solute in different membrane environments by means of the potential of mean force. We show that these calculations can be used as a computationally efficient proxy to establish whether a solute will stabilize or destabilize domain phase separation. Combined with umbrella-sampling simulations and coarse-grained molecular dynamics simulations, we are able to screen solutes across a wide range of chemistries and polarities. Our results indicate that for the system under consideration, preferential partitioning and therefore effectiveness in altering membrane phase separation are strictly linked to the location of insertion in the bilayer (i.e., midplane or interface). Our approach represents a fast and simple tool for obtaining structural and thermodynamic insight into the partitioning of small molecules between lipid domains and its relation to phase separation, ultimately providing a platform for identifying the key determinants of this process.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Centi_2020, title={Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force}, volume={118}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.01.039}, DOI={10.1016/j.bpj.2020.01.039}, number={6}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Centi, Alessia and Dutta, Arghya and Parekh, Sapun H. and Bereau, Tristan}, year={2020}, month=Mar, pages={1321–1332} }
-
+@article{Centi_2020, title={Inserting Small Molecules across Membrane Mixtures: Insight from the Potential of Mean Force}, volume={118}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.01.039}, DOI={10.1016/j.bpj.2020.01.039}, number={6}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Centi, Alessia and Dutta, Arghya and Parekh, Sapun H. and Bereau, Tristan}, year={2020}, month=Mar, pages={1321–1332} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

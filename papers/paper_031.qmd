@@ -31,30 +31,22 @@ format:
 
 Syndiotactic polystyrene (sPS) exhibits complex polymorphic behavior upon crystallization. Computational modeling of polymer crystallization has remained a challenging task because the relevant processes are slow on the molecular time scale. A detailed characterization of sPS‐crystal polymorphism by means of coarse‐grained (CG) and atomistic (AA) modeling is reported herein. The CG model, parametrized in the melt, shows remarkable transferability properties in the crystalline phase. Not only is the transition temperature in good agreement with atomistic simulations, it stabilizes the main α and β polymorphs, observed experimentally. The propensities of polymorphs at the CG and AA levels are compared in detail, as well as finite‐size and box‐geometry effects. All in all, CG modeling stands as an efficient approach to characterize polymer‐crystal poymorphism at large scale.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Liu_2018, title={Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations}, volume={1}, ISSN={2513-0390}, url={http://dx.doi.org/10.1002/adts.201800024}, DOI={10.1002/adts.201800024}, number={7}, journal={Advanced Theory and Simulations}, publisher={Wiley}, author={Liu, Chan and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=May }
-
+@article{Liu_2018, title={Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations}, volume={1}, ISSN={2513-0390}, url={http://dx.doi.org/10.1002/adts.201800024}, DOI={10.1002/adts.201800024}, number={7}, journal={Advanced Theory and Simulations}, publisher={Wiley}, author={Liu, Chan and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=May }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -65,7 +57,7 @@ None
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1805.10147" role="button">
+        href="https://doi.org/10.1002/adts.201800024" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

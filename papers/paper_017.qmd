@@ -29,11 +29,9 @@ format:
 
 ## Abstract
 
-Abstract An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described. Proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model. Measurements of the configurational temperature indicate proper canonical sampling, while folding simu- lations of unstructured peptides into transmembrane helices provide a realistic application and suggest the maximum set of time steps usable for that model.
+An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described. Proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model. Measurements of the configurational temperature indicate proper canonical sampling, while folding simu- lations of unstructured peptides into transmembrane helices provide a realistic application and suggest the maximum set of time steps usable for that model.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Abstract An extension of the multiple time-step integration following Kopf et al
 
 An extension of the multiple time-step integration following Kopf et al. (1997) for the Langevin thermostat and modified Ander- sen barostat is described, and proper isothermal and isobaric properties are validated on a Lennard-Jones liquid and a coarse-grained peptide-lipid model.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2015, title={Multi-timestep Integrator for the Modified Andersen Barostat}, volume={68}, ISSN={1875-3892}, url={http://dx.doi.org/10.1016/j.phpro.2015.07.101}, DOI={10.1016/j.phpro.2015.07.101}, journal={Physics Procedia}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, pages={7–15} }
-
+@article{Bereau_2015, title={Multi-timestep Integrator for the Modified Andersen Barostat}, volume={68}, ISSN={1875-3892}, url={http://dx.doi.org/10.1016/j.phpro.2015.07.101}, DOI={10.1016/j.phpro.2015.07.101}, journal={Physics Procedia}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, pages={7–15} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ An extension of the multiple time-step integration following Kopf et al. (1997) 
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

@@ -31,9 +31,7 @@ format:
 
 Room-temperature ionic liquids (RTILs) stand out among molecular liquids for their rich physicochemical characteristics, including structural and dynamic heterogeneity. The significance of electrostatic interactions in RTILs results in long characteristic length- and timescales, and has motivated the development of a number of coarse-grained (CG) simulation models. In this study, we aim to better understand the connection between certain CG parameterization strategies and the dynamical properties and transferability of the resulting models. We systematically compare five CG models: a model largely parameterized from experimental thermodynamic observables; a refinement of this model to increase its structural accuracy; and three models that reproduce a given set of structural distribution functions by construction, with varying intramolecular parameterizations and reference temperatures. All five CG models display limited structural transferability over temperature, and also result in various effective dynamical speedup factors, relative to a reference atomistic model. On the other hand, the structure-based CG models tend to result in more consistent cation–anion relative diffusion than the thermodynamic-based models, for a single thermodynamic state point. By linking short- and long-timescale dynamical behaviors, we demonstrate that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Room-temperature ionic liquids (RTILs) stand out among molecular liquids for the
 
 It is demonstrated that the varying dynamical properties of the different CG models can be largely collapsed onto a single curve, which provides evidence for a route to constructing dynamically-consistent CG models of RTILs.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2021, title={Dynamical properties across different coarse-grained models for ionic liquids}, volume={33}, ISSN={1361-648X}, url={http://dx.doi.org/10.1088/1361-648X/abe6e1}, DOI={10.1088/1361-648x/abe6e1}, number={22}, journal={Journal of Physics: Condensed Matter}, publisher={IOP Publishing}, author={Rudzinski, Joseph F and Kloth, Sebastian and Wörner, Svenja and Pal, Tamisra and Kremer, Kurt and Bereau, Tristan and Vogel, Michael}, year={2021}, month=May, pages={224001} }
-
+@article{Rudzinski_2021, title={Dynamical properties across different coarse-grained models for ionic liquids}, volume={33}, ISSN={1361-648X}, url={http://dx.doi.org/10.1088/1361-648X/abe6e1}, DOI={10.1088/1361-648x/abe6e1}, number={22}, journal={Journal of Physics: Condensed Matter}, publisher={IOP Publishing}, author={Rudzinski, Joseph F and Kloth, Sebastian and Wörner, Svenja and Pal, Tamisra and Kremer, Kurt and Bereau, Tristan and Vogel, Michael}, year={2021}, month=May, pages={224001} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ It is demonstrated that the varying dynamical properties of the different CG mod
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

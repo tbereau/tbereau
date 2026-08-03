@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan Bereau">
-<meta name="dcterms.date" content="2023-03-23">
+<meta name="dcterms.date" content="2025-12-20">
+<meta name="description" content="J. Chem. Theory Comput. 22 (2025)">
 
-<title>Symmetries in kernel-based machine learning – Tristan Bereau</title>
+<title>Fast Parametrization of Martini3 Models for Fragments and Small Molecules – Tristan Bereau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,45 +69,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script data-goatcounter="https://tristanbereau.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Symmetries in kernel-based machine learning – Tristan Bereau">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Fast Parametrization of Martini3 Models for Fragments and Small Molecules – Tristan Bereau">
+<meta name="twitter:description" content="J. Chem. Theory Comput. 22 (2025)">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,11 +118,6 @@ window.Quarto = {
     <a class="dropdown-item" href="../papers.html"><i class="bi bi-file-earmark-text" role="img">
 </i> 
  <span class="dropdown-text">Publications</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notes.html"><i class="bi bi-journal-text" role="img">
-</i> 
- <span class="dropdown-text">Notes</span></a>
   </li>  
     </ul>
   </li>
@@ -216,32 +182,20 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#setting" id="toc-setting" class="nav-link active" data-scroll-target="#setting">Setting</a></li>
-  <li><a href="#kernel-machine-learning-101" id="toc-kernel-machine-learning-101" class="nav-link" data-scroll-target="#kernel-machine-learning-101">Kernel machine learning 101</a></li>
-  <li><a href="#noether-theorem" id="toc-noether-theorem" class="nav-link" data-scroll-target="#noether-theorem">Noether theorem</a></li>
-  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a>
-  <ul class="collapse">
-  <li><a href="#invariance" id="toc-invariance" class="nav-link" data-scroll-target="#invariance">Invariance</a></li>
-  <li><a href="#covariance" id="toc-covariance" class="nav-link" data-scroll-target="#covariance">Covariance</a></li>
-  </ul></li>
-  <li><a href="#energy-conservation" id="toc-energy-conservation" class="nav-link" data-scroll-target="#energy-conservation">Energy conservation</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Symmetries in kernel-based machine learning</h1>
+<h1 class="title">Fast Parametrization of Martini3 Models for Fragments and Small Molecules</h1>
 </div>
 
+<div>
+  <div class="description">
+    <em>J. Chem. Theory Comput.</em> <strong>22</strong> (2025)
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -249,18 +203,26 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Tristan Bereau </p>
+             <p>Szczuka, Pereira, Walter, Gueroult, Poulain, Bereau, Souza, Chavent </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 23, 2023</p>
+      <p class="date">2025-12-20</p>
     </div>
   </div>
   
     
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/10.1021/acs.jctc.5c01178">10.1021/acs.jctc.5c01178</a>
+      </p>
+    </div>
+  </div>
   </div>
   
 
@@ -268,95 +230,87 @@ window.Quarto = {
 </header>
 
 
-<section id="setting" class="level2">
-<h2 class="anchored" data-anchor-id="setting">Setting</h2>
-<p>We propose to learn a mapping <span class="math inline">\({\bf Q} \rightarrow O\)</span> between the (featurized) representation of sample <span class="math inline">\(i\)</span>, <span class="math inline">\({\bf Q}_i\)</span>, and a target observable, <span class="math inline">\(O_i = O({\bf Q}_i)\)</span>. Examples of <span class="math inline">\(O\)</span> for molecular systems could include a LUMO energy, a binding constant, or a solubility value.</p>
-<p>The formalims outlined here follows [Scherer et al.].</p>
-</section>
-<section id="kernel-machine-learning-101" class="level2">
-<h2 class="anchored" data-anchor-id="kernel-machine-learning-101">Kernel machine learning 101</h2>
-<p>Training a kernel machine learning (ML) model is equivalent to solving the set of linear equations <span class="math display">\[{\bf O} = \hat{K}{\bf \alpha},\]</span> where the kernel function <span class="math inline">\(K_{ij} = K({\bf Q}_i, {\bf Q}_j) = {\rm Cov}(O_i, O_j)\)</span> measures the similarity between samples <span class="math inline">\({\bf Q}_i\)</span> and <span class="math inline">\({\bf Q}_j\)</span> (via the covariance function), and <span class="math inline">\({\bf \alpha}\)</span> is the (unknown) vector of weight coefficients. Because of the linearity of the equation, we can invert–only if we also <em>regularize</em>–the problem at hand <span class="math display">\[
-\alpha = (\hat K + \lambda \mathbb{1})^{-1}{\bf O},
-\]</span> where <span class="math inline">\(\lambda\)</span> implements Tikhonov regularization and <span class="math inline">\(\mathbb{1}\)</span> is the identity matrix. Both <span class="math inline">\(\hat K\)</span> and <span class="math inline">\(\mathbb{1}\)</span> are <span class="math inline">\(N \times N\)</span> matrices, while <span class="math inline">\(\alpha\)</span> and <span class="math inline">\({\bf O}\)</span> are both vectors of length <span class="math inline">\(N\)</span>. Here <span class="math inline">\(N\)</span> corresponds to the number of training samples. Determination of the coefficients <span class="math inline">\({\bf \alpha}\)</span> corresponds to <em>training the ML model</em>.</p>
-<p>Once trained, we can use it to predict new samples! Given a yet unseen configuration <span class="math inline">\({\bf Q}^*\)</span>, the predicted observable is given by <span class="math display">\[
-O({\bf Q}^*) = \sum_{i=1}^N \alpha_i K({\bf Q}_i, {\bf Q}^*).
-\tag{1}
-\]</span> Eq. (1) takes on a particularly intuitive form: it is a linear expansion of kernel evaluations between each one of the <span class="math inline">\(N\)</span> training points against the new configuration <span class="math inline">\({\bf Q}^*\)</span>. Though it’s linear, this expression is typically far more expressive than a straight-up linear regression because of the so-called kernel trick: the kernel function gathers similarities in a high-dimensional (and implicit!) Hilbert space.</p>
-</section>
-<section id="noether-theorem" class="level2">
-<h2 class="anchored" data-anchor-id="noether-theorem">Noether theorem</h2>
-<p>Emmy Noether tells us that to any conservation law, there is an associated symmetry. According to Wikipedia: “To every differentiable symmetry generated by local actions there corresponds a conserved current.”</p>
-<p>Important examples:</p>
-<ul>
-<li>Translational invariance leads to conservation of linear momentum</li>
-<li>Rotational invariance leads to conservation of angular momentum</li>
-<li>Time invariance leads to convervation of energy</li>
-</ul>
-</section>
-<section id="rotation" class="level2">
-<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
-<p>Let’s start with rotations. There are two types of symmetries: invariance and covariance.</p>
-<section id="invariance" class="level3">
-<h3 class="anchored" data-anchor-id="invariance">Invariance</h3>
-<p>Invariance means that the target observable does <em>not</em> depend on the orientation of the sample. Intuitively, the net charge of a molecule (in vacuum) does not depend on its orientation. Making our ML model invariant to rotations simply means ignoring rotational degrees of freedom in the representation. For instance, working with internal coordinates (e.g., pairwise distances) will do just that.</p>
-</section>
-<section id="covariance" class="level3">
-<h3 class="anchored" data-anchor-id="covariance">Covariance</h3>
-<p>Covariance is a bit more interesting. Compared to invariance, now the observable will rotate <em>together</em> with the input sample. For instance, the dipole moment of a molecule rotates with the molecule itself.</p>
-<p>There are two main routes that lead to covariance ML Models:</p>
-<ol type="1">
-<li>Preprocess all samples to rotate them in an (arbitrary but consistent) local axis system; train and predict in that local frame; Rotate back in the global frame;</li>
-<li>Pick a kernel that correctly orients its prediction based on the input sample</li>
-</ol>
-<p>Route 1 is relatively easy to implement, and can be a good strategy for small molecules. For larger structures it may turn out challenging to define a local axis system.</p>
-<p>Let’s dive into route 2.</p>
-<p>First of all, “pick a kernel” means that among the very large number of kernels that one could choose, one / a few / some may have interesting mathematical properties. To be more precise, we’re looking for kernels that know a bit about geometry, and in fact obey the SO(3) rotation group—the group of rotations in 3D space. Because of the 3 dimensions, we will seek a <em>matrix-valued kernel</em>, i.e., one entry in the kernel matrix between any two samples will be of shape <span class="math inline">\(3 \times 3\)</span>.</p>
-<p>For simplicity we will focus on two-body interactions. The representation for sample <span class="math inline">\(i\)</span> will be <span class="math inline">\({\bf q}_i = {\bf r}_i\)</span>, where <span class="math inline">\({\bf r}\)</span> is the interparticle vector.</p>
-<p>Let’s first define a base (scalar) Gaussian kernel, <span class="math display">\[
-k_{\rm b}({\bf q}_m, {\bf q}_l) = \exp\left( - \frac{({\bf r}_m - {\bf r}_l)^2}{2\sigma ^2} \right),
-\]</span> which only picks up distance information between the two samples.</p>
-<p>Constructing a covariant matrix-valued kernel can be obtained by integrating <span class="math inline">\(k_{\rm b}\)</span> over all rotation matrices, i.e., summing over all actions of the rotation group [Mehta] <span class="math display">\[
-\hat \kappa_{\rm c}({\bf q}_m, {\bf q}_l) =
-\int {\rm d} \hat{\mathcal{R}} \, \hat{\mathcal{R}} k_{\rm b} ({\bf q}_m, \hat{\mathcal{R}}{\bf q}_l),
-\]</span> note how the rotation matrix is applied onto one of the two samples of the kernel function. An insightful paper by [Glielmo et al.] offered an analytical solution for pairs: <span class="math display">\[
-\hat \kappa_{\rm c}({\bf q}_m, {\bf q}_l) =
-{\rm e}^{-\alpha_{ml}}
-\left( \frac{\cosh \gamma_{ml}}{\gamma_{ml}} - \frac{\sinh \gamma_{ml}}{\gamma_{ml}^2} \right)
-\hat{{\bf r}}_m \hat{{\bf r}}_l^{\rm T},
-\tag{2}
-\]</span> where <span class="math inline">\(\alpha_{ml} = r_m^2 + r_l^2 / 4\sigma^2\)</span>, <span class="math inline">\(\gamma_{ml} = r_mr_l/2\sigma^2\)</span>, and <span class="math inline">\(\hat{{\bf r}}_m = {\bf r}_m / r_m\)</span>. What’s important in Eq. (2) is the right-most part of the RHS: the tensor product between the pairwise vectors is <em>solely</em> responsible for the covariance of <span class="math inline">\(\hat \kappa_{\rm c}({\bf q}_m, {\bf q}_l)\)</span>.</p>
-</section>
-</section>
-<section id="energy-conservation" class="level2">
-<h2 class="anchored" data-anchor-id="energy-conservation">Energy conservation</h2>
-<p>Let’s say we’re learning a force field. Energy conservation can take several forms, including:</p>
-<ul>
-<li>Curl of the force is zero: <span class="math inline">\(\nabla \times {\bf F} = 0\)</span></li>
-<li>Force derives from a potential: <span class="math inline">\({\bf F} = -\nabla E\)</span></li>
-</ul>
-<p>Let’s select/construct a kernel that implements energy conservation! (See, among others, these important papers: [Macedo &amp; Castro], [Chmiela et al.], [Bartok &amp; Csanyi]). <span class="math display">\[
-\begin{align}
-\hat\kappa_{\rm h}({\bf q}_m, {\bf q}_l)
-&amp;= {\rm Cov}\left( \frac{\partial E({\bf q}_m)}{\partial {\bf r}_m}, \frac{\partial E({\bf q}_l)}{\partial {\bf r}_l} \right) \\
-&amp;= \sum_{\alpha, \beta} \frac{\partial^2 k({\bf q}_m, {\bf q}_l)}{\partial q_{m, \alpha}\partial q_{l, \beta}}
-\left( \frac{\partial q_{m,\alpha}}{\partial{\bf r}_m} \right)
-\left( \frac{\partial q_{l,\beta}}{\partial{\bf r}_l} \right)^{\rm T},
-\end{align}
-\]</span> which is sometimes called the Hesian kernal, due to the first term of the RHS. While you can try to work out the partial derivatives for a given kernel (e.g., the abovementioned Gaussian kernel), what’s important here again are the <em>other</em> terms: We recognize once again a tensor product! For pairwise interactions, covariance and energy conservation go hand in hand, and lead to matrix-valued kernels with similar characteristics.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li>[Scherer et al.] : <a href="https://dx.doi.org/10.1021/acs.jctc.9b01256" class="uri">https://dx.doi.org/10.1021/acs.jctc.9b01256</a></li>
-<li>[Mehta] : Mehta, M. L. Random Matrices; Elsevier: 2004; Vol. 142.</li>
-<li>[Glielmo et al.] : <a href="https://link.aps.org/doi/10.1103/PhysRevB.95.214302" class="uri">https://link.aps.org/doi/10.1103/PhysRevB.95.214302</a></li>
-<li>[Macedo &amp; Castro] : <a href="https://www.yumpu.com/en/document/view/37810994/learning-divergence-free-and-curl-free-vector-fields-with-matrix-" class="uri">https://www.yumpu.com/en/document/view/37810994/learning-divergence-free-and-curl-free-vector-fields-with-matrix-</a></li>
-<li>[Chmiela et al.] : <a href="https://dx.doi.org/10.1126/sciadv.1603015" class="uri">https://dx.doi.org/10.1126/sciadv.1603015</a></li>
-<li>[Bartok &amp; Csanyi] : <a href="https://doi.org/10.1002/qua.24927" class="uri">https://doi.org/10.1002/qua.24927</a></li>
-</ul>
+<div class="float-end">
+    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1021/acs.jctc.5c01178"></div>
+</div>
+<script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+<br><br><br>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Abstract</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">TL;DR</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">BibTeX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Open Access</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Coarse-grained molecular dynamics simulations, such as those performed with the recently parametrized Martini 3 force field, simplify molecular models and enable the study of larger systems over longer time scales. With this new implementation, Martini 3 allows more bead types and sizes, becoming more amenable to studying dynamical phenomena involving small molecules such as protein-ligand interactions and membrane permeation. However, while solutions existed to automatically model small molecules using the previous iteration of the Martini force field, there is no simple way to generate such molecules for Martini 3 yet. Here, we introduce Auto-MartiniM3, an advanced and updated version of the Auto-Martini program designed to automate the coarse-graining of small molecules to be used with the Martini 3 force field. We validated our approach by modeling 81 simple molecules from the Martini Database and comparing their structural and thermodynamic properties with those obtained from models designed by Martini experts. Additionally, we assessed the behavior of Auto-MartiniM3-generated models by calculating solute translocation and free energy across lipid bilayers. We also evaluated more complex molecules such as caffeine by testing its binding to the adenosine A2A receptor. Finally, our results from deploying Auto-MartiniM3 on a large data set of molecular fragments demonstrate that this program can become a tool of choice for fast, high-throughput creation of coarse-grained models of small molecules, offering a good balance between automation and accuracy. Auto-MartiniM3 source code is freely available at https://github.com/Martini-Force-Field-Initiative/Automartini_M3.</p>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
+</footer>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>The results from deploying Auto-MartiniM3 on a large data set of molecular fragments demonstrate that this program can become a tool of choice for fast, high-throughput creation of coarse-grained models of small molecules, offering a good balance between automation and accuracy.</p>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
+</footer>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<pre class="{bibtex}"><code>@article{Szczuka_2025, title={Fast Parametrization of Martini3 Models for Fragments and Small Molecules}, volume={22}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5c01178}, DOI={10.1021/acs.jctc.5c01178}, number={1}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Szczuka, Magdalena and Pereira, Gilberto P. and Walter, Luis J. and Gueroult, Marc and Poulain, Pierre and Bereau, Tristan and Souza, Paulo C. T. and Chavent, Matthieu}, year={2025}, month=Dec, pages={610–623} }</code></pre>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
+</footer>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="float-end">
+  <img src="../static/open_access.png" height="64">
+</div>
+<a class="btn btn-outline-primary
+  disabled" href="None" role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewbox="0 0 16 16">
+    <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995
+       2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8
+       8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978
+       2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986
+       2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0
+       8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418
+       5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0
+       0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+    </svg>
+        Webpage
+    </a>
+    <a class="btn btn-outline-primary
+      disabled" href="None" role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-pdf" viewbox="0 0 16 16">
+    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2
+        2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0
+        0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1
+        1 0 0 1 1-1z"></path>
+    <path d="M4.603 12.087a.81.81 0 0
+        1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68
+        7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0
+        1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7
+        0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27
+        1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1
+        1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04
+        1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716
+        5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021
+        1.51c-.29.35-.608.655-.926.787a.793.793 0 0
+        1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27
+        0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0
+        .45-.606zm1.64-1.33a12.647
+        12.647 0 0 1 1.01-.193 11.666 11.666 0 0
+        1-.51-.858 20.741 20.741 0 0 1-.5
+        1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107
+        0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0
+        .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0
+        0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0
+        .2-.828c.031-.188.043-.343.038-.465a.613.613 0
+        0 0-.032-.198.517.517 0 0
+        0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path>
+    </svg>
+    PDF
+    </a>
+    <p></p>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

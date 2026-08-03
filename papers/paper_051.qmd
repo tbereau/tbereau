@@ -31,9 +31,7 @@ format:
 
 Polymorphism rationalizes how processing can control the final structure of a material. The rugged free-energy landscape and exceedingly slow kinetics in the solid state have so far hampered computational investigations. We report for the first time the free-energy landscape of a polymorphic crystalline polymer, syndiotactic polystyrene. Coarse-grained metadynamics simulations allow us to efficiently sample the landscape at large. The free-energy difference between the two main polymorphs, α and β, is further investigated by quantum-chemical calculations. The results of the two methods are in line with experimental observations: they predict β as the more stable polymorph under standard conditions. Critically, the free-energy landscape suggests how the α polymorph may lead to experimentally observed kinetic traps. The combination of multiscale modeling, enhanced sampling, and quantum-chemical calculations offers an appealing strategy to uncover complex free-energy landscapes with polymorphic behavior.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Polymorphism rationalizes how processing can control the final structure of a ma
 
 This work reports for the first time the free-energy landscape of a polymorphic crystalline polymer, syndiotactic polystyrene, and suggests how the α polymorph may lead to experimentally observed kinetic traps.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Liu_2020, title={Free-energy landscape of polymer-crystal polymorphism}, volume={16}, ISSN={1744-6848}, url={http://dx.doi.org/10.1039/D0SM01342K}, DOI={10.1039/d0sm01342k}, number={42}, journal={Soft Matter}, publisher={Royal Society of Chemistry (RSC)}, author={Liu, Chan and Brandenburg, Jan Gerit and Valsson, Omar and Kremer, Kurt and Bereau, Tristan}, year={2020}, pages={9683–9692} }
-
+@article{Liu_2020, title={Free-energy landscape of polymer-crystal polymorphism}, volume={16}, ISSN={1744-6848}, url={http://dx.doi.org/10.1039/D0SM01342K}, DOI={10.1039/d0sm01342k}, number={42}, journal={Soft Matter}, publisher={Royal Society of Chemistry (RSC)}, author={Liu, Chan and Brandenburg, Jan Gerit and Valsson, Omar and Kremer, Kurt and Bereau, Tristan}, year={2020}, pages={9683–9692} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work reports for the first time the free-energy landscape of a polymorphic 
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

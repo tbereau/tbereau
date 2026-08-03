@@ -31,9 +31,7 @@ format:
 
 Multipole (MTP) electrostatics provides the means to describe anisotropic interactions in a rigorous and systematic manner. A number of earlier molecular dynamics (MD) implementations have increasingly relied on the use of molecular symmetry to reduce the (possibly large) number of MTP interactions. Here, we present a CHARMM implementation of MTP electrostatics in terms of spherical harmonics. By relying on a systematic set of reference-axis systems tailored to various chemical environments, we obtain an implementation that is both efficient and scalable for (bio)molecular systems. We apply the method to a series of halogenated compounds to show (i) energy conservation; (ii) improvements in reproducing thermodynamic properties compared to standard point-charge (PC) models; (iii) performance of the code; and (iv) better stabilization of a brominated ligand in a target protein, compared to a PC force field. The implementation provides interesting perspectives toward a dual PC/MTP resolution, à la QM/MM.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Multipole (MTP) electrostatics provides the means to describe anisotropic intera
 
 A CHARMM implementation of MTP electrostatics in terms of spherical harmonics is presented, relying on a systematic set of reference-axis systems tailored to various chemical environments, to obtain an implementation that is both efficient and scalable for (bio)molecular systems.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2013, title={Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations}, volume={9}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct400803f}, DOI={10.1021/ct400803f}, number={12}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Meuwly, Markus}, year={2013}, month=Nov, pages={5450–5459} }
-
+@article{Bereau_2013, title={Leveraging Symmetries of Static Atomic Multipole Electrostatics in Molecular Dynamics Simulations}, volume={9}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct400803f}, DOI={10.1021/ct400803f}, number={12}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Meuwly, Markus}, year={2013}, month=Nov, pages={5450–5459} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ A CHARMM implementation of MTP electrostatics in terms of spherical harmonics is
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

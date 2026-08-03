@@ -31,9 +31,7 @@ format:
 
 Accurate representation of the molecular electrostatic potential, which is often expanded in distributed multipole moments, is crucial for an efficient evaluation of intermolecular interactions. Here we introduce a machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation. The model is trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules. Multipoles in systems with neutral, cationic, and anionic molecular charge states are treated with individual models. The models' predictive accuracy and applicability are illustrated by evaluating intermolecular interaction energies of nearly 1,000 dimers and the cohesive energy of the benzene crystal.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Accurate representation of the molecular electrostatic potential, which is often
 
 A machine learning model for multipole coefficients of atom types H, C, O, N, S, F, and Cl in any molecular conformation is introduced, trained on quantum-chemical results for atoms in varying chemical environments drawn from thousands of organic molecules.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2015, title={Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules}, volume={11}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5b00301}, DOI={10.1021/acs.jctc.5b00301}, number={7}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Andrienko, Denis and von Lilienfeld, O. Anatole}, year={2015}, month=June, pages={3225–3233} }
-
+@article{Bereau_2015, title={Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules}, volume={11}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5b00301}, DOI={10.1021/acs.jctc.5b00301}, number={7}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Andrienko, Denis and von Lilienfeld, O. Anatole}, year={2015}, month=June, pages={3225–3233} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -64,8 +59,8 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://doi.org/10.1021/acs.jctc.5b00301" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -117,8 +112,10 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

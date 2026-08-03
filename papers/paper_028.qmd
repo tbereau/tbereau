@@ -31,30 +31,22 @@ format:
 
 <jats:p>Coarse-grained molecular simulation models can provide significant insight into the complex behavior of protein systems, but suffer from an inherently distorted description of dynamical properties. We recently demonstrated that, for a heptapeptide of alanine residues, the structural and kinetic properties of a simulation model are linked in a rather simple way, given a certain level of physics present in the model. In this work, we extend these findings to a longer peptide, for which the representation of configuration space in terms of a full enumeration of sequences of helical/coil states along the peptide backbone is impractical. We verify the structural-kinetic relationships by scanning the parameter space of a simple native-biased model and then employ a distinct transferable model to validate and generalize the conclusions. Our results further demonstrate the validity of the previous findings, while clarifying the role of conformational entropy in the determination of the structural-kinetic relationships. More specifically, while the global, long timescale kinetic properties of a particular class of models with varying energetic parameters but approximately fixed conformational entropy are determined by the overarching structural features of the ensemble, a shift in these kinetic observables occurs for models with a distinct representation of steric interactions. At the same time, the relationship between structure and more local, faster kinetic properties is not affected by varying the conformational entropy of the model.</jats:p>
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">CrossRef</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2018, title={The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions}, volume={6}, ISSN={2079-3197}, url={http://dx.doi.org/10.3390/computation6010021}, DOI={10.3390/computation6010021}, number={1}, journal={Computation}, publisher={MDPI AG}, author={Rudzinski, Joseph and Bereau, Tristan}, year={2018}, month=Feb, pages={21} }
-
+@article{Rudzinski_2018, title={The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions}, volume={6}, ISSN={2079-3197}, url={http://dx.doi.org/10.3390/computation6010021}, DOI={10.3390/computation6010021}, number={1}, journal={Computation}, publisher={MDPI AG}, author={Rudzinski, Joseph and Bereau, Tristan}, year={2018}, month=Feb, pages={21} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

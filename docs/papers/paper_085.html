@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan Bereau">
-<meta name="dcterms.date" content="2023-03-22">
+<meta name="dcterms.date" content="2026-05-02">
+<meta name="description" content="AISTATS 267 (2026)">
 
-<title>Non-equilibrium reweighting – Tristan Bereau</title>
+<title>Split-Flows: Measure Transport and Information Loss Across Molecular Resolutions – Tristan Bereau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,45 +69,16 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script data-goatcounter="https://tristanbereau.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Non-equilibrium reweighting – Tristan Bereau">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Split-Flows: Measure Transport and Information Loss Across Molecular Resolutions – Tristan Bereau">
+<meta name="twitter:description" content="AISTATS 267 (2026)">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -147,11 +118,6 @@ window.Quarto = {
     <a class="dropdown-item" href="../papers.html"><i class="bi bi-file-earmark-text" role="img">
 </i> 
  <span class="dropdown-text">Publications</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../notes.html"><i class="bi bi-journal-text" role="img">
-</i> 
- <span class="dropdown-text">Notes</span></a>
   </li>  
     </ul>
   </li>
@@ -216,30 +182,20 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#equilibrium-reweighting-from-information-theory" id="toc-equilibrium-reweighting-from-information-theory" class="nav-link active" data-scroll-target="#equilibrium-reweighting-from-information-theory">Equilibrium reweighting from information theory</a></li>
-  <li><a href="#reweighting-of-nonequilibrium-steady-state-dynamics" id="toc-reweighting-of-nonequilibrium-steady-state-dynamics" class="nav-link" data-scroll-target="#reweighting-of-nonequilibrium-steady-state-dynamics">Reweighting of nonequilibrium steady-state dynamics</a>
-  <ul class="collapse">
-  <li><a href="#crooks-fluctuation-theorem" id="toc-crooks-fluctuation-theorem" class="nav-link" data-scroll-target="#crooks-fluctuation-theorem">Crooks fluctuation theorem</a></li>
-  <li><a href="#seifert-expression-for-the-local-entropy-production" id="toc-seifert-expression-for-the-local-entropy-production" class="nav-link" data-scroll-target="#seifert-expression-for-the-local-entropy-production">Seifert expression for the local entropy production</a></li>
-  </ul></li>
-  <li><a href="#collective-variables" id="toc-collective-variables" class="nav-link" data-scroll-target="#collective-variables">Collective variables</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Non-equilibrium reweighting</h1>
+<h1 class="title">Split-Flows: Measure Transport and Information Loss Across Molecular Resolutions</h1>
 </div>
 
+<div>
+  <div class="description">
+    <em>AISTATS</em> <strong>267</strong> (2026)
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -247,18 +203,26 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Tristan Bereau </p>
+             <p>Hummerich, Bereau, Köthe </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 22, 2023</p>
+      <p class="date">2026-05-02</p>
     </div>
   </div>
   
     
+    <div>
+    <div class="quarto-title-meta-heading">Doi</div>
+    <div class="quarto-title-meta-contents">
+      <p class="doi">
+        <a href="https://doi.org/10.48550/arXiv.2511.01464">10.48550/arXiv.2511.01464</a>
+      </p>
+    </div>
+  </div>
   </div>
   
 
@@ -266,74 +230,88 @@ window.Quarto = {
 </header>
 
 
-<section id="equilibrium-reweighting-from-information-theory" class="level2">
-<h2 class="anchored" data-anchor-id="equilibrium-reweighting-from-information-theory">Equilibrium reweighting from information theory</h2>
-<p>Consider a coordinate <span class="math inline">\(x\)</span> with unknown probability distribution, <span class="math inline">\(p(x)\)</span>. We further define <span class="math inline">\(q(x)\)</span> as a prior distribution on <span class="math inline">\(p(x)\)</span>. The most likely representation of <span class="math inline">\(p(x)\)</span> can be found by minimizing the cross-entropy functional <span class="math display">\[
-\mathcal{C}[p(x)] = - \int {\rm d}x \, p(x) \ln \frac{p(x)}{q(x)}.
-\tag{1}
-\]</span> Without further constraints, this will naturally lead to <span class="math inline">\(p(x) = q(x)\)</span>.</p>
-<p>Now let’s add some constraints.</p>
-<p>First we will enforce all probabilities to be normalized <span class="math display">\[
-\int {\rm d}x \, p(x) = 1.
-\]</span></p>
-<p>Working in the canonical ensemble, we add a constraint on the average energy, <span class="math inline">\(\langle E \rangle\)</span>. The resulting cross-entropy functional yields <span class="math display">\[
-\begin{align}
-\mathcal{C}_{\rm equ}[p(x)] = &amp;- \int {\rm d}x \, p(x) \ln \frac{p(x)}{q(x)} \\
-  &amp;- \zeta \left( \int {\rm d}x \, p(x) - 1 \right) \\
-  &amp;- \beta \left( \int {\rm d}x \, p(x)E(x) -\langle E \rangle \right).
-  \tag{2}
-\end{align}
-\]</span> Minimization of <span class="math inline">\(\mathcal{C}_{\rm equ}\)</span> leads to the Boltzmann expression <span class="math display">\[
-  p(x) = \frac{q(x)}{Z(\beta)}\exp[-\beta E(x)],
-\]</span> where the partition function <span class="math inline">\(Z(\beta) = \int {\rm d}x q(x) \exp[-\beta E(x)]\)</span> normalizes <span class="math inline">\(p(x)\)</span> and the Lagrange multiplier is naturally identified with the inverse temperature, <span class="math inline">\(\beta^{-1} = k_{\rm B}T\)</span>.</p>
-<p>The expression lends itself to equilibrium reweighting: sampling of <span class="math inline">\(q(x)\)</span> at inverse temperature <span class="math inline">\(\beta'\)</span> to reweight at another, <span class="math inline">\(\beta''\)</span>. Caveat: this only works if we have a good knowledge/sampling of the density of states, <span class="math inline">\(\Omega(x) = q(x) \exp[\beta' E(x)]\)</span>). Interestingly this basically recovers the celebrated Ferrenberg and Swendsen histogram reweighting formula, but from a Bayesian perspective!</p>
-</section>
-<section id="reweighting-of-nonequilibrium-steady-state-dynamics" class="level2">
-<h2 class="anchored" data-anchor-id="reweighting-of-nonequilibrium-steady-state-dynamics">Reweighting of nonequilibrium steady-state dynamics</h2>
-<p>This formalism can be extended to nonequilibrium steady-state (NESS) dynamics. Moving from equilibrium thermodynamics to dynamics leads to the consideration of <em>microtrajectories</em>. Compared to microstates, their number quickly becomes intractable for all but the simplest of systems. For simplicity, we assume Markovian dynamics, so that we chop microtrajectories into bits that we can combine together. Effectively it converts an integral over a space-time trajectory into a sum <span class="math display">\[
-\int {\rm d}t \, x(t) \rightarrow \sum_i x_i.
-\]</span></p>
-<p>The discretized version of the cross-entropy functional becomes <span class="math display">\[
-  \mathcal{C} = - \sum_{i,j} \pi_i p_{ij} \ln \frac{p_{ij}}{q_{ij}},
-\]</span> which looks pretty familiar to the continuous case (1), but now uses the stationary distribution, <span class="math inline">\(\pi\)</span>, and transition probability matrix elements, <span class="math inline">\(p_{ij}\)</span>, over a pre-defined lagtime.</p>
-<p>Let’s add some constraints!</p>
-<p>Ok, so there are different types of constraints we could include, but here we’ll only deal with <em>microscopic</em> ones. If we were in equilibrium, we’d be working with detailed balance, <span class="math inline">\(\pi_i p_{ij} = \pi_j p_{ji}\)</span>. Detailed balance ensures there’s no net local flux. Out of equilbrium, we can still expect a balance constraint, but a weaker one–the famous Crooks fluctuation theorem.</p>
-<section id="crooks-fluctuation-theorem" class="level3">
-<h3 class="anchored" data-anchor-id="crooks-fluctuation-theorem">Crooks fluctuation theorem</h3>
-<p>The Crooks fluctuation theorem weighs the probability of observing a trajectory under an external driving force <em>against</em> its time-reversed analog. Let’s denote the probability of observing the time-forward trajectory by <span class="math inline">\(\mathcal{P}[\Gamma(+t)|f(+t)]\)</span> and its time-reversed counterpart by <span class="math inline">\(\mathcal{P}[\Gamma(-t)|f(-t)]\)</span>. Crooks then tells us that <span class="math display">\[
-  \frac{\mathcal{P}[\Gamma(+t)|f(+t)]}{\mathcal{P}[\Gamma(-t)|f(-t)]} = \exp(-\beta Q[\Gamma(+t)|f(+t)]),
-\]</span> where <span class="math inline">\(Q[\Gamma(+t)|f(+t)]\)</span> refers to the amount of heat exchanged between the system and the reservoir. This equation can be integrated to yield the more familiar expression <span class="math display">\[
-\langle \Delta S_{ij}\rangle = \ln \frac{p_{ij}}{p_{ji}},
-\tag{3}
-\]</span> where <span class="math inline">\(\Delta S_{ij}\)</span>, the local entropy production, describes the amount of work an external reservoir has to perform on the system to transition between the two states <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>. This expression generalizes detailed balance.</p>
-<p>The expression for the local entropy production can be inserted as a constraint on the transition probability matrix elements to the cross-entropy functional (Eq. 2). We proposed such a functional in [Bause et al.][1], using such an approach for local balance, as well as a looser global balance constraint.</p>
-<p>The resulting equation can be solved analytically, and its coefficients determined numerically by self-iteration.</p>
-</section>
-<section id="seifert-expression-for-the-local-entropy-production" class="level3">
-<h3 class="anchored" data-anchor-id="seifert-expression-for-the-local-entropy-production">Seifert expression for the local entropy production</h3>
-<p>One exciting aspect of Eq. (3) is the possibility to determine <span class="math inline">\(\Delta S_{ij}\)</span>. Thanks to Udo Seifert, we can determine the local entropy production of a microscopic trajectory, <span class="math inline">\(\Gamma(t)\)</span>, itself <span class="math display">\[
-\Delta S[\Gamma(t)] = \int {\rm d}t \, \frac{\bf{F}\cdot \bf{\dot\Gamma}}{T},
-\tag{4}
-\]</span> where we integrate over time, <span class="math inline">\(\bf{\dot\Gamma}\)</span> is the velocity, and <span class="math inline">\(T\)</span> is the temperature.</p>
-<p>Marius Bause (first author in the paper) shows that the cross-entropy (aka Maximum Caliber) functional yields quantitative reweighting for overdamped Brownian dynamics. Here’s a comparison of reweighting in and out of equilibrium against direct simulations (take away: the points are on the top of the curves!):</p>
-<p><img src="../static/nonequ.png" class="img-fluid"></p>
-<p>His work leads to the formulation of an <em>invariant</em>. Just like the density of states, which does not change under change in temperature, this invariant does not depend on the driving force. It does, however, depend on the control variable (temperature of <span class="math inline">\(\Delta S\)</span>).</p>
-</section>
-</section>
-<section id="collective-variables" class="level2">
-<h2 class="anchored" data-anchor-id="collective-variables">Collective variables</h2>
-<p>Marius’ follow-up work demonstrates the applicability of the method to larger systems by working with <em>collective variables</em>. The trick consists of replacing the potential energy that is hidden in Eq. (4) by a potential of mean force. In analogy, think of how structure-based coarse-graining goes from an atomistic potential energy surface to a smaller potential of mean force. The derivation of local entropy production in collective coordinates can be found in [Bause &amp; Bereau][2]. It allowed Marius to perform quantitative non-equilibrium reweighting for a small peptide.</p>
-<p><img src="../static/noneq-peptide.png" class="img-fluid"></p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li>[1] : <a href="https://doi.org/10.1103/PhysRevE.100.060103" class="uri">https://doi.org/10.1103/PhysRevE.100.060103</a></li>
-<li>[2] : <a href="https://doi.org/10.1063/5.0042972" class="uri">https://doi.org/10.1063/5.0042972</a></li>
-</ul>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Abstract</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">TL;DR</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">BibTeX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Open Access</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>By reducing resolution, coarse-grained models greatly accelerate molecular simulations, unlocking access to long-timescale phenomena, though at the expense of microscopic information. Recovering this fine-grained detail is essential for tasks that depend on atomistic accuracy, making backmapping a central challenge in molecular modeling. We introduce split-flows, a novel flow-based approach that reinterprets backmapping as a continuous-time measure transport across resolutions. Unlike existing generative strategies, split-flows establish a direct probabilistic link between resolutions, enabling expressive conditional sampling of atomistic structures and – for the first time – a tractable route to computing mapping entropies, an information-theoretic measure of the irreducible detail lost in coarse-graining. We demonstrate these capabilities on diverse molecular systems, including chignolin, a lipid bilayer, and alanine dipeptide, highlighting split-flows as a principled framework for accurate backmapping and systematic evaluation of coarse-grained models.</p>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><em>Not available.</em></p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<pre class="{bibtex}"><code>@inproceedings{hummerich_2026,
+    title = {Split-Flows: Measure Transport and Information Loss Across Molecular Resolutions},
+    author = {Sander Hummerich and Tristan Bereau and Ullrich Köthe},
+    booktitle = {Proceedings of the 29th International Conference on Artificial Intelligence and Statistics},
+    volume = {267},
+    year = {2026},
+    doi = {10.48550/arXiv.2511.01464},
+    url = {https://proceedings.mlr.press/v267/}
+}</code></pre>
+<footer class="blockquote-footer">from <cite title="Source Title">this site</cite>
+</footer>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="float-end">
+  <img src="../static/open_access.png" height="64">
+</div>
+<a class="btn btn-outline-primary
+  " href="http://arxiv.org/abs/2511.01464" role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-browser-chrome" viewbox="0 0 16 16">
+    <path fill-rule="evenodd" d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995
+       2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8
+       8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978
+       2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986
+       2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0
+       8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418
+       5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0
+       0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+    </svg>
+        Webpage
+    </a>
+    <a class="btn btn-outline-primary
+      " href="https://arxiv.org/pdf/2511.01464" role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-pdf" viewbox="0 0 16 16">
+    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2
+        2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0
+        0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1
+        1 0 0 1 1-1z"></path>
+    <path d="M4.603 12.087a.81.81 0 0
+        1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68
+        7.68 0 0 1 1.482-.645 19.701 19.701 0 0 0 1.062-2.227 7.269 7.269 0 0
+        1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7
+        0 0 1 .477.365c.088.164.12.356.127.538.007.187-.012.395-.047.614-.084.51-.27
+        1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1
+        1.334.05c.364.065.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04
+        1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.716
+        5.716 0 0 1-.911-.95 11.642 11.642 0 0 0-1.997.406 11.311 11.311 0 0 1-1.021
+        1.51c-.29.35-.608.655-.926.787a.793.793 0 0
+        1-.58.029zm1.379-1.901c-.166.076-.32.156-.459.238-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361.01.022.02.036.026.044a.27.27
+        0 0 0 .035-.012c.137-.056.355-.235.635-.572a8.18 8.18 0 0 0
+        .45-.606zm1.64-1.33a12.647
+        12.647 0 0 1 1.01-.193 11.666 11.666 0 0
+        1-.51-.858 20.741 20.741 0 0 1-.5
+        1.05zm2.446.45c.15.162.296.3.435.41.24.19.407.253.498.256a.107.107
+        0 0 0 .07-.015.307.307 0 0 0 .094-.125.436.436 0 0 0
+        .059-.2.095.095 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a3.881 3.881 0 0
+        0-.612-.053zM8.078 5.8a6.7 6.7 0 0 0
+        .2-.828c.031-.188.043-.343.038-.465a.613.613 0
+        0 0-.032-.198.517.517 0 0
+        0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822.024.111.054.227.09.346z"></path>
+    </svg>
+    PDF
+    </a>
+    <p></p>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -29,32 +29,24 @@ format:
 
 ## Abstract
 
-
+First Page
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Dutta_2021, title={Publisher’s Note: “Data-driven equation for drug–membrane permeability across drugs and membranes” [J. Chem. Phys. 154, 244114 (2021)]}, volume={155}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0061875}, DOI={10.1063/5.0061875}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Dutta, Arghya and Vreeken, Jilles and Ghiringhelli, Luca M. and Bereau, Tristan}, year={2021}, month=July }
-
+@article{Dutta_2021, title={Publisher’s Note: “Data-driven equation for drug–membrane permeability across drugs and membranes” [J. Chem. Phys. 154, 244114 (2021)]}, volume={155}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0061875}, DOI={10.1063/5.0061875}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Dutta, Arghya and Vreeken, Jilles and Ghiringhelli, Luca M. and Bereau, Tristan}, year={2021}, month=July }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

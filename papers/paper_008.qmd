@@ -31,9 +31,7 @@ format:
 
 <jats:p>Interfacial systems are at the core of fascinating phenomena in many disciplines, such as biochemistry, soft-matter physics, and food science. However, the parametrization of accurate, reliable, and consistent coarse-grained (CG) models for systems at interfaces remains a challenging endeavor. In the present work, we explore to what extent two independently developed solvent-free CG models of peptides and lipids—of different mapping schemes, parametrization methods, target functions, and validation criteria—can be combined by only tuning the cross-interactions. Our results show that the cross-parametrization can reproduce a number of structural properties of membrane peptides (for example, tilt and hydrophobic mismatch), in agreement with existing peptide-lipid CG force fields. We find encouraging results for two challenging biophysical problems: (i) membrane pore formation mediated by the cooperative action of several antimicrobial peptides, and (ii) the insertion and folding of the helix-forming peptide WALP23 in the membrane.</jats:p>
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">CrossRef</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 The results show that the cross-parametrization can reproduce a number of structural properties of membrane peptides, in agreement with existing peptide-lipid CG force fields, and finds encouraging results for two challenging biophysical problems.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2014, title={More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization}, volume={140}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4867465}, DOI={10.1063/1.4867465}, number={11}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Wang, Zun-Jing and Deserno, Markus}, year={2014}, month=Mar }
-
+@article{Bereau_2014, title={More than the sum of its parts: Coarse-grained peptide-lipid interactions from a simple cross-parametrization}, volume={140}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4867465}, DOI={10.1063/1.4867465}, number={11}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Wang, Zun-Jing and Deserno, Markus}, year={2014}, month=Mar }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ The results show that the cross-parametrization can reproduce a number of struct
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

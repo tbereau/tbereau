@@ -31,9 +31,7 @@ format:
 
 The potential of mean force is an effective coarse-grained potential, which is often approximated by pairwise potentials. While the approximated potential reproduces certain distributions of the reference all-atom model with remarkable accuracy, important cross-correlations are typically not captured. In general, the quality of coarse-grained models is evaluated at the coarse-grained resolution, hindering the detection of important discrepancies between the all-atom and coarse-grained ensembles. In this work, the quality of different coarse-grained models is assessed at the atomistic resolution deploying reverse-mapping strategies. In particular, coarse-grained structures for Tris-Meta-Biphenyl-Triazine are reverse-mapped from two different sources: 1) All-atom configurations projected onto the coarse-grained resolution and 2) snapshots obtained by molecular dynamics simulations based on the coarse-grained force fields. To assess the quality of the coarse-grained models, reverse-mapped structures of both sources are compared revealing significant discrepancies between the all-atom and the coarse-grained ensembles. Specifically, the reintroduced details enable force computations based on the all-atom force field that yield a clear ranking for the quality of the different coarse-grained models.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ The potential of mean force is an effective coarse-grained potential, which is o
 
 The reintroduced details enable force computations based on the all-atom force field that yield a clear ranking for the quality of the different coarse-grained models.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Stieffenhofer_2022, title={Benchmarking coarse-grained models of organic semiconductors via deep backmapping}, volume={10}, ISSN={2296-2646}, url={http://dx.doi.org/10.3389/fchem.2022.982757}, DOI={10.3389/fchem.2022.982757}, journal={Frontiers in Chemistry}, publisher={Frontiers Media SA}, author={Stieffenhofer, Marc and Scherer, Christoph and May, Falk and Bereau, Tristan and Andrienko, Denis}, year={2022}, month=Sept }
-
+@article{Stieffenhofer_2022, title={Benchmarking coarse-grained models of organic semiconductors via deep backmapping}, volume={10}, ISSN={2296-2646}, url={http://dx.doi.org/10.3389/fchem.2022.982757}, DOI={10.3389/fchem.2022.982757}, journal={Frontiers in Chemistry}, publisher={Frontiers Media SA}, author={Stieffenhofer, Marc and Scherer, Christoph and May, Falk and Bereau, Tristan and Andrienko, Denis}, year={2022}, month=Sept }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -81,8 +76,8 @@ The reintroduced details enable force computations based on the all-atom force f
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://doi.org/10.3389/fchem.2022.982757" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
@@ -117,8 +112,10 @@ The reintroduced details enable force computations based on the all-atom force f
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

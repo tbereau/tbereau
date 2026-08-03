@@ -31,9 +31,7 @@ format:
 
 We present a method for computing free-energy differences using thermodynamic integration with a neural network potential that interpolates between two target Hamiltonians. The interpolation is defined at the sample distribution level, and the neural network potential is optimized to match the corresponding equilibrium potential at every intermediate time step. Once the interpolating potentials and samples are well-aligned, the free-energy difference can be estimated using (neural) thermodynamic integration. To target molecular systems, we simultaneously couple Lennard-Jones and electrostatic interactions and model the rigid-body rotation of molecules. We report accurate results for several benchmark systems: a Lennard-Jones particle in a Lennard-Jones fluid, as well as the insertion of both water and methane solutes in a water solvent at atomistic resolution using a simple three-body neural-network potential.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ We present a method for computing free-energy differences using thermodynamic in
 
 A method for computing free-energy differences using thermodynamic integration with a neural network potential that interpolates between two target Hamiltonians, and reports accurate results for several benchmark systems.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{M_t__2025, title={Solvation free energies from neural thermodynamic integration}, volume={162}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0251736}, DOI={10.1063/5.0251736}, number={12}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2025}, month=Mar }
-
+@article{M_t__2025, title={Solvation free energies from neural thermodynamic integration}, volume={162}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0251736}, DOI={10.1063/5.0251736}, number={12}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2025}, month=Mar }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ A method for computing free-energy differences using thermodynamic integration w
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

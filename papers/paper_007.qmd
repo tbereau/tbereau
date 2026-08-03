@@ -31,9 +31,7 @@ format:
 
 The description of molecular systems using multipolar electrostatics calls for automated methods to fit the necessary parameters. In this paper, we describe an open-source software package that allows fitting atomic multipoles (MTPs) from the ab initio electrostatic potential by adequate atom typing and judicious assignment of the local axis system. By enabling the simultaneous fit of several molecules and/or conformations, the package addresses issues of parameter transferability and lack of sampling for buried atoms. We illustrate the method by studying a series of small alcohol molecules, as well as various conformations of protonated butylamine.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ The description of molecular systems using multipolar electrostatics calls for a
 
 An open-source software package that allows fitting atomic multipoles (MTPs) from the ab initio electrostatic potential by adequate atom typing and judicious assignment of the local axis system is described.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Kramer_2013, title={Deriving Static Atomic Multipoles from the Electrostatic Potential}, volume={53}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/ci400548w}, DOI={10.1021/ci400548w}, number={12}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Kramer, Christian and Bereau, Tristan and Spinn, Alexander and Liedl, Klaus R. and Gedeck, Peter and Meuwly, Markus}, year={2013}, month=Dec, pages={3410–3417} }
-
+@article{Kramer_2013, title={Deriving Static Atomic Multipoles from the Electrostatic Potential}, volume={53}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/ci400548w}, DOI={10.1021/ci400548w}, number={12}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Kramer, Christian and Bereau, Tristan and Spinn, Alexander and Liedl, Klaus R. and Gedeck, Peter and Meuwly, Markus}, year={2013}, month=Dec, pages={3410–3417} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ An open-source software package that allows fitting atomic multipoles (MTPs) fro
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

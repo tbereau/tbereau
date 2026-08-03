@@ -31,9 +31,7 @@ format:
 
 We estimate polarizabilities of atoms in molecules without electron density, using a Voronoi tesselation approach instead of conventional density partitioning schemes. The resulting atomic dispersion coefficients are calculated, as well as many-body dispersion effects on intermolecular potential energies. We also estimate contributions from multipole electrostatics and compare them to dispersion. We assess the performance of the resulting intermolecular interaction model from dispersion and electrostatics for more than 1300 neutral and charged, small organic molecular dimers. Applications to water clusters, the benzene crystal, the anti-cancer drug ellipticine-intercalated between two Watson-Crick DNA base pairs, as well as six macro-molecular host-guest complexes highlight the potential of this method and help to identify points of future improvement. The mean absolute error made by the combination of static electrostatics with many-body dispersion reduces at larger distances, while it plateaus for two-body dispersion, in conflict with the common assumption that the simple 1/R(6) correction will yield proper dissociative tails. Overall, the method achieves an accuracy well within conventional molecular force fields while exhibiting a simple parametrization protocol.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ We estimate polarizabilities of atoms in molecules without electron density, usi
 
 The Voronoi tesselation approach to polarizabilities of atoms in molecules without electron density achieves an accuracy well within conventional molecular force fields while exhibiting a simple parametrization protocol.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2014, title={Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion}, volume={141}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4885339}, DOI={10.1063/1.4885339}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and von Lilienfeld, O. Anatole}, year={2014}, month=July }
-
+@article{Bereau_2014, title={Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion}, volume={141}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4885339}, DOI={10.1063/1.4885339}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and von Lilienfeld, O. Anatole}, year={2014}, month=July }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ The Voronoi tesselation approach to polarizabilities of atoms in molecules witho
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

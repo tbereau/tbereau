@@ -31,9 +31,7 @@ format:
 
 Nitrated fatty acids (NO2 -FAs) act as anti-inflammatory signal mediators, albeit the molecular mechanisms behind NO2 -FAs' influence on diverse metabolic and signaling pathways in inflamed tissues are essentially elusive. Here, we combine fluorescence measurements with surface-specific sum frequency generation vibrational spectroscopy and coarse-grained computer simulations to demonstrate that NO2 -FAs alter lipid organization by accumulation at the membrane-water interface. As the function of membrane proteins strongly depends on both, protein structure as well as membrane properties, we consecutively follow the structural dynamics of an integral membrane protein in presence of NO2 -FAs. Based on our results, we suggest a molecular mechanism of the NO2 -FA in vivo activity: Driven by the NO2 -FA-induced lipid layer reorganization, the structure and function of membrane-associated (signaling) proteins is indirectly affected.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Nitrated fatty acids (NO2 -FAs) act as anti-inflammatory signal mediators, albei
 
 Fluorescence measurements with surface-specific sum frequency generation vibrational spectroscopy and coarse-grained computer simulations are used to demonstrate that NO2 -FAs alter lipid organization by accumulation at the membrane-water interface and suggest a molecular mechanism of the NO2-FA in vivo activity.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Franz_2017, title={Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins}, volume={23}, ISSN={1521-3765}, url={http://dx.doi.org/10.1002/chem.201702041}, DOI={10.1002/chem.201702041}, number={40}, journal={Chemistry – A European Journal}, publisher={Wiley}, author={Franz, Johannes and Bereau, Tristan and Pannwitt, Stefanie and Anbazhagan, Veerappan and Lehr, Alexander and Nubbemeyer, Udo and Dietz, Ulrich and Bonn, Mischa and Weidner, Tobias and Schneider, Dirk}, year={2017}, month=June, pages={9690–9697} }
-
+@article{Franz_2017, title={Nitrated Fatty Acids Modulate the Physical Properties of Model Membranes and the Structure of Transmembrane Proteins}, volume={23}, ISSN={1521-3765}, url={http://dx.doi.org/10.1002/chem.201702041}, DOI={10.1002/chem.201702041}, number={40}, journal={Chemistry – A European Journal}, publisher={Wiley}, author={Franz, Johannes and Bereau, Tristan and Pannwitt, Stefanie and Anbazhagan, Veerappan and Lehr, Alexander and Nubbemeyer, Udo and Dietz, Ulrich and Bonn, Mischa and Weidner, Tobias and Schneider, Dirk}, year={2017}, month=June, pages={9690–9697} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ Fluorescence measurements with surface-specific sum frequency generation vibrati
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

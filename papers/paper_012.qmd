@@ -29,11 +29,9 @@ format:
 
 ## Abstract
 
-
+The performance of multipole (MTP) and point charge (PC) force fields in classical molecular dynamics (MD) simulations of condensed-phase systems for both equilibrium and dynamical quantities is compared. MTP electrostatics provides an improved description of the anisotropic electrostatic potential, which is especially important to describe key, challenging interactions, such as lone pairs, π-interactions, and hydrogen bonds. These chemical environments are probed by focusing on the hydration properties of two molecules: N-methylacetamide and phenyl bromide. Both, equilibrium and dynamical, quantities are affected by the quality of the electrostatic model. The alteration of the first solvation shell in MTP simulations is validated by comparing with lifetimes and correlation times of solute-solvent interactions from experiment. The improved dynamical behavior found in the MTP simulations—observed for molecules parametrized using very different protocols—suggests that a systematic improvement of both equilibrium and dynamical quantities when using MTP electrostatics is possible.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 The improved dynamical behavior found in the MTP simulations suggests that a systematic improvement of both equilibrium and dynamical quantities when using MTP electrostatics is possible.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Jakobsen_2015, title={Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes}, volume={119}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp508052q}, DOI={10.1021/jp508052q}, number={7}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Jakobsen, Sofie and Bereau, Tristan and Meuwly, Markus}, year={2015}, month=Jan, pages={3034–3045} }
-
+@article{Jakobsen_2015, title={Multipolar Force Fields and Their Effects on Solvent Dynamics around Simple Solutes}, volume={119}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp508052q}, DOI={10.1021/jp508052q}, number={7}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Jakobsen, Sofie and Bereau, Tristan and Meuwly, Markus}, year={2015}, month=Jan, pages={3034–3045} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -64,8 +59,8 @@ The improved dynamical behavior found in the MTP simulations suggests that a sys
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  disabled"
-        href="None" role="button">
+  "
+        href="https://doi.org/10.1021/jp508052q" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -117,8 +112,10 @@ The improved dynamical behavior found in the MTP simulations suggests that a sys
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

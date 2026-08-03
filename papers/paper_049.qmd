@@ -31,9 +31,7 @@ format:
 
 We consider the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules. Our in silico study is based on computer simulations at the atomistic level with implicit solvent. We report on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects: The representation is averaged over several conformers to account for the statistical ensemble. We also include an atomic-decomposition ansatz, which offers significant added transferability compared to molecular learning. Finally, we explore the existence of severe biases from databases of experimental compounds. By performing a combination of dimensionality reduction and cross-learning models, we show that the rate of learning depends significantly on the breadth and variety of the training dataset. Our study highlights the dangers of fitting machine-learning models to databases of a narrow chemical range.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ We consider the prediction of a basic thermodynamic property-hydration free ener
 
 This study considers the prediction of a basic thermodynamic property-hydration free energies-across a large subset of the chemical space of small organic molecules and reports on a kernel-based machine learning approach that is inspired by recent work in learning electronic properties but differs in key aspects.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Rauer_2020, title={Hydration free energies from kernel-based machine learning: Compound-database bias}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0012230}, DOI={10.1063/5.0012230}, number={1}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rauer, Clemens and Bereau, Tristan}, year={2020}, month=July }
-
+@article{Rauer_2020, title={Hydration free energies from kernel-based machine learning: Compound-database bias}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0012230}, DOI={10.1063/5.0012230}, number={1}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rauer, Clemens and Bereau, Tristan}, year={2020}, month=July }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -64,8 +59,8 @@ This study considers the prediction of a basic thermodynamic property-hydration 
   <img src="../static/open_access.png" height="64">
 </div>
 <a class="btn btn-outline-primary
-  "
-        href="https://doi.org/10.1063/5.0012230" role="button">
+  disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +76,8 @@ This study considers the prediction of a basic thermodynamic property-hydration 
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      "
-        href="https://aip.scitation.org/doi/pdf/10.1063/5.0012230" role="button">
+      disabled"
+        href="None" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
@@ -117,8 +112,10 @@ This study considers the prediction of a basic thermodynamic property-hydration 
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

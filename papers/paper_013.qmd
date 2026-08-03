@@ -31,9 +31,7 @@ format:
 
 <jats:p>The solvent dynamics around fluorinated acetonitrile is characterized by 2-dimensional infrared spectroscopy and atomistic simulations. The lineshape of the linear infrared spectrum is better captured by semiempirical (density functional tight binding) mixed quantum mechanical/molecular mechanics simulations, whereas force field simulations with multipolar interactions yield lineshapes that are significantly too narrow. For the solvent dynamics, a relatively slow time scale of 2 ps is found from the experiments and supported by the mixed quantum mechanical/molecular mechanics simulations. With multipolar force fields fitted to the available thermodynamical data, the time scale is considerably faster—on the 0.5 ps time scale. The simulations provide evidence for a well established CF–HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.</jats:p>
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">CrossRef</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 The simulations provide evidence for a well established CF-HOH hydrogen bond (population of 25%) which is found from the radial distribution function g(r) from both, force field and quantum mechanics/molecular mechanics simulations.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Cazade_2015, title={Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study}, volume={142}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4916630}, DOI={10.1063/1.4916630}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Cazade, Pierre-André and Tran, Halina and Bereau, Tristan and Das, Akshaya K. and Kläsi, Felix and Hamm, Peter and Meuwly, Markus}, year={2015}, month=Apr }
-
+@article{Cazade_2015, title={Solvation of fluoro-acetonitrile in water by 2D-IR spectroscopy: A combined experimental-computational study}, volume={142}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4916630}, DOI={10.1063/1.4916630}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Cazade, Pierre-André and Tran, Halina and Bereau, Tristan and Das, Akshaya K. and Kläsi, Felix and Hamm, Peter and Meuwly, Markus}, year={2015}, month=Apr }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ The simulations provide evidence for a well established CF-HOH hydrogen bond (po
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

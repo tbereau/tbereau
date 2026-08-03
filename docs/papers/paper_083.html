@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-12-20">
-<meta name="description" content="J. Chem. Theory Comput. 22 (2025)">
+<meta name="dcterms.date" content="2025-10-30">
+<meta name="description" content="J. Phys. Chem. B 129 (2025)">
 
-<title>Fast Parametrization of Martini3 Models for Fragments and Small Molecules – Tristan Bereau</title>
+<title>Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions – Tristan Bereau</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,8 +71,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta name="twitter:title" content="Fast Parametrization of Martini3 Models for Fragments and Small Molecules – Tristan Bereau">
-<meta name="twitter:description" content="J. Chem. Theory Comput. 22 (2025)">
+<meta name="twitter:title" content="Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions – Tristan Bereau">
+<meta name="twitter:description" content="J. Phys. Chem. B 129 (2025)">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -188,12 +188,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Fast Parametrization of Martini3 Models for Fragments and Small Molecules</h1>
+<h1 class="title">Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions</h1>
 </div>
 
 <div>
   <div class="description">
-    <em>J. Chem. Theory Comput.</em> <strong>22</strong> (2025)
+    <em>J. Phys. Chem. B</em> <strong>129</strong> (2025)
   </div>
 </div>
 
@@ -203,14 +203,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Szczuka, Pereira, Walter, Gueroult, Poulain, Bereau, Souza, Chavent </p>
+             <p>Nagel, Bereau </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">2025-12-20</p>
+      <p class="date">2025-10-30</p>
     </div>
   </div>
   
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title-meta-heading">Doi</div>
     <div class="quarto-title-meta-contents">
       <p class="doi">
-        <a href="https://doi.org/10.1021/acs.jctc.5c01178">10.1021/acs.jctc.5c01178</a>
+        <a href="https://doi.org/10.1021/acs.jpcb.5c04579">10.1021/acs.jpcb.5c04579</a>
       </p>
     </div>
   </div>
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="float-end">
-    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1021/acs.jctc.5c01178"></div>
+    <div data-badge-type="donut" class="altmetric-embed" data-badge-popover="left" data-doi="10.1021/acs.jpcb.5c04579"></div>
 </div>
 <script type="text/javascript" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
 <br><br><br>
@@ -239,23 +239,18 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Abstract</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">TL;DR</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">BibTeX</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Open Access</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Coarse-grained molecular dynamics simulations, such as those performed with the recently parametrized Martini 3 force field, simplify molecular models and enable the study of larger systems over longer time scales. With this new implementation, Martini 3 allows more bead types and sizes, becoming more amenable to studying dynamical phenomena involving small molecules such as protein-ligand interactions and membrane permeation. However, while solutions existed to automatically model small molecules using the previous iteration of the Martini force field, there is no simple way to generate such molecules for Martini 3 yet. Here, we introduce Auto-MartiniM3, an advanced and updated version of the Auto-Martini program designed to automate the coarse-graining of small molecules to be used with the Martini 3 force field. We validated our approach by modeling 81 simple molecules from the Martini Database and comparing their structural and thermodynamic properties with those obtained from models designed by Martini experts. Additionally, we assessed the behavior of Auto-MartiniM3-generated models by calculating solute translocation and free energy across lipid bilayers. We also evaluated more complex molecules such as caffeine by testing its binding to the adenosine A2A receptor. Finally, our results from deploying Auto-MartiniM3 on a large data set of molecular fragments demonstrate that this program can become a tool of choice for fast, high-throughput creation of coarse-grained models of small molecules, offering a good balance between automation and accuracy. Auto-MartiniM3 source code is freely available at https://github.com/Martini-Force-Field-Initiative/Automartini_M3.</p>
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &amp;
-<cite title="Source title">CrossRef</cite>
+<p>Accurate free-energy estimation is essential in molecular simulation, yet the periodic boundary conditions (PBC) commonly used in computer simulations have rarely been explicitly exploited. Equilibrium methods such as umbrella sampling, metadynamics, and adaptive biasing force require extensive sampling, while nonequilibrium pulling with Jarzynski’s equality suffers from poor convergence due to exponential averaging. Here, we introduce a physics-informed, score-based diffusion framework: by mapping PBC simulations onto a Brownian particle in a periodic potential, we derive the Fokker-Planck steady-state score that directly encodes free-energy gradients. A neural network is trained on nonequilibrium trajectories to learn this score, providing a principled scheme to efficiently reconstruct the potential of mean force. On benchmark periodic potentials and small-molecule membrane permeation, our method is up to 1 order of magnitude more efficient than umbrella sampling.</p>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>The results from deploying Auto-MartiniM3 on a large data set of molecular fragments demonstrate that this program can become a tool of choice for fast, high-throughput creation of coarse-grained models of small molecules, offering a good balance between automation and accuracy.</p>
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<p>A physics-informed, score-based diffusion framework is introduced: by mapping PBC simulations onto a Brownian particle in a periodic potential, the Fokker-Planck steady-state score is derived that directly encodes free-energy gradients and is used to efficiently reconstruct the potential of mean force.</p>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<pre class="{bibtex}"><code> @article{Szczuka_2025, title={Fast Parametrization of Martini3 Models for Fragments and Small Molecules}, volume={22}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5c01178}, DOI={10.1021/acs.jctc.5c01178}, number={1}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Szczuka, Magdalena and Pereira, Gilberto P. and Walter, Luis J. and Gueroult, Marc and Poulain, Pierre and Bereau, Tristan and Souza, Paulo C. T. and Chavent, Matthieu}, year={2025}, month=dec, pages={610–623} }
-</code></pre>
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<pre class="{bibtex}"><code>@article{Nagel_2025, title={Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions}, volume={129}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.5c04579}, DOI={10.1021/acs.jpcb.5c04579}, number={45}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Nagel, Daniel and Bereau, Tristan}, year={2025}, month=Oct, pages={11780–11790} }</code></pre>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
@@ -309,8 +304,8 @@ ul.task-list li input[type="checkbox"] {
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 </div>
 </div>
 </div>

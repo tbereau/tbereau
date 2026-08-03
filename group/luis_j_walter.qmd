@@ -6,12 +6,16 @@ format:
     echo: false
     keep-hidden: true
 
-image: ../static/cgmol.jpg
+image: ../static/luis_w.png
 about:
   id: hero-heading
   template: solana
-  image: ../static/cgmol.jpg
+  image: ../static/luis_w.png
+  links:
 
+    - icon: orcid
+      text: ORCID
+      href: https://orcid.org/0009-0000-0113-6215
 ---
 
 

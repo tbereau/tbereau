@@ -31,9 +31,7 @@ format:
 
 Structure-based coarse graining of molecular systems offers a systematic route to reproduce the many-body potential of mean force. Unfortunately, common strategies are inherently limited by the molecular mechanics force field employed. Here, we extend the concept of multisurface dynamics, initially developed to describe electronic transitions in chemical reactions, to accurately sample the conformational ensemble of a classical system in equilibrium. In analogy to describing different electronic configurations, a surface-hopping scheme couples distinct conformational basins beyond the additivity of the Hamiltonian. The incorporation of more surfaces leads systematically toward improved cross-correlations. The resulting models naturally achieve consistent long-time dynamics for systems governed by barrier-crossing events.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Structure-based coarse graining of molecular systems offers a systematic route t
 
 The concept of multisurface dynamics is extended to accurately sample the conformational ensemble of a classical system in equilibrium, and a surface-hopping scheme is proposed that couples distinct conformational basins beyond the additivity of the Hamiltonian.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2018, title={Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics}, volume={121}, ISSN={1079-7114}, url={http://dx.doi.org/10.1103/physrevlett.121.256002}, DOI={10.1103/physrevlett.121.256002}, number={25}, journal={Physical Review Letters}, publisher={American Physical Society (APS)}, author={Bereau, Tristan and Rudzinski, Joseph F.}, year={2018}, month=Dec }
-
+@article{Bereau_2018, title={Accurate Structure-Based Coarse Graining Leads to Consistent Barrier-Crossing Dynamics}, volume={121}, ISSN={1079-7114}, url={http://dx.doi.org/10.1103/physrevlett.121.256002}, DOI={10.1103/physrevlett.121.256002}, number={25}, journal={Physical Review Letters}, publisher={American Physical Society (APS)}, author={Bereau, Tristan and Rudzinski, Joseph F.}, year={2018}, month=Dec }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -65,7 +60,7 @@ The concept of multisurface dynamics is extended to accurately sample the confor
 </div>
 <a class="btn btn-outline-primary
   "
-        href="http://arxiv.org/abs/1808.05644" role="button">
+        href="https://doi.org/10.1103/physrevlett.121.256002" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -117,8 +112,10 @@ The concept of multisurface dynamics is extended to accurately sample the confor
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

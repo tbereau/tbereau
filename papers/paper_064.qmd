@@ -31,9 +31,7 @@ format:
 
 Subtle variations in the lipid composition of mitochondrial membranes can have a profound impact on mitochondrial function. The inner mitochondrial membrane contains the phospholipid cardiolipin, which has been demonstrated to act as a biomarker for a number of diverse pathologies. Small molecule dyes capable of selectively partitioning into cardiolipin membranes enable visualization and quantification of the cardiolipin content. Here we present a data-driven approach that combines a deep learning-enabled active learning workflow with coarse-grained molecular dynamics simulations and alchemical free energy calculations to discover small organic compounds able to selectively permeate cardiolipin-containing membranes. By employing transferable coarse-grained models we efficiently navigate the all-atom design space corresponding to small organic molecules with molecular weight less than ≈500 Da. After direct simulation of only 0.42% of our coarse-grained search space we identify molecules with considerably increased levels of cardiolipin selectivity compared to a widely used cardiolipin probe 10-N-nonyl acridine orange. Our accumulated simulation data enables us to derive interpretable design rules linking coarse-grained structure to cardiolipin selectivity. The findings are corroborated by fluorescence anisotropy measurements of two compounds conforming to our defined design rules. Our findings highlight the potential of coarse-grained representations and multiscale modelling for materials discovery and design.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Subtle variations in the lipid composition of mitochondrial membranes can have a
 
 A data-driven approach is presented that combines a deep learning-enabled active learning workflow with coarse-grained molecular dynamics simulations and alchemical free energy calculations to discover small organic compounds able to selectively permeate cardiolipin-containing membranes.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Mohr_2022, title={Data-driven discovery of cardiolipin-selective small molecules by computational active learning}, volume={13}, ISSN={2041-6539}, url={http://dx.doi.org/10.1039/D2SC00116K}, DOI={10.1039/d2sc00116k}, number={16}, journal={Chemical Science}, publisher={Royal Society of Chemistry (RSC)}, author={Mohr, Bernadette and Shmilovich, Kirill and Kleinwächter, Isabel S. and Schneider, Dirk and Ferguson, Andrew L. and Bereau, Tristan}, year={2022}, pages={4498–4511} }
-
+@article{Mohr_2022, title={Data-driven discovery of cardiolipin-selective small molecules by computational active learning}, volume={13}, ISSN={2041-6539}, url={http://dx.doi.org/10.1039/D2SC00116K}, DOI={10.1039/d2sc00116k}, number={16}, journal={Chemical Science}, publisher={Royal Society of Chemistry (RSC)}, author={Mohr, Bernadette and Shmilovich, Kirill and Kleinwächter, Isabel S. and Schneider, Dirk and Ferguson, Andrew L. and Bereau, Tristan}, year={2022}, pages={4498–4511} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ A data-driven approach is presented that combines a deep learning-enabled active
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

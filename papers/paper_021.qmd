@@ -31,9 +31,7 @@ format:
 
 The thermodynamics of insertion of a protein in a membrane depends on the fine interplay between backbone and side-chain contributions interacting with the lipid environment. Using computer simulations, we probe how different descriptions of the backbone glycyl unit affect the thermodynamics of insertion of individual residues, dipeptides, and entire transmembrane helices. Due to the lack of reference data, we first introduce an efficient methodology to estimate atomistic potential of mean force (PMF) curves from a series of representative and uncorrelated coarse-grained (CG) snapshots. We find strong discrepancies between two CG models, Martini and PLUM, against reference atomistic PMFs and experiments. Atomistic simulations suggest a weak free energy of insertion between water and a POPC membrane for the glycyl unit, in overall agreement with experimental results despite severe assumptions in our calculations. We show that refining the backbone contribution in PLUM significantly improves the PMF of insertion of the WALP16 transmembrane peptide. An improper balance between the glycyl backbone and the attached side chain will lead to energetic artifacts, rationalizing Martini’s overstabilization of WALP’s adsorbed interfacial state. It illustrates difficulties associated with free-energy-based parametrizations of single-residue models, as the relevant free energy of partitioning used for force-field parametrization does not arise from the entire residue but rather the solvent-accessible chemical groups.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ The thermodynamics of insertion of a protein in a membrane depends on the fine i
 
 It is shown that refining the backbone contribution in PLUM significantly improves the PMF of insertion of the WALP16 transmembrane peptide, and illustrates difficulties associated with free-energy-based parametrizations of single-residue models, as the relevant free energy of partitioning used for force-field paramETrization does not arise from the entire residue but rather the solvent-accessible chemical groups.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2016, title={Protein-Backbone Thermodynamics across the Membrane Interface}, volume={120}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.6b03682}, DOI={10.1021/acs.jpcb.6b03682}, number={26}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kremer, Kurt}, year={2016}, month=May, pages={6391–6400} }
-
+@article{Bereau_2016, title={Protein-Backbone Thermodynamics across the Membrane Interface}, volume={120}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.6b03682}, DOI={10.1021/acs.jpcb.6b03682}, number={26}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kremer, Kurt}, year={2016}, month=May, pages={6391–6400} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ It is shown that refining the backbone contribution in PLUM significantly improv
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

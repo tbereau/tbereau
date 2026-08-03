@@ -31,30 +31,22 @@ format:
 
 Cell membranes mainly consist of lipid bilayers with an actively regulated composition. The underlying processes are still poorly understood, in particular, how the hundreds of components are controlled. Cholesterol has been found to correlate with phospholipid saturation for reasons that remain unclear. To better understand the link between cell membrane regulation and chemical composition, we establish a computational framework based on chemical reaction networks, resulting in multiple semigrand canonical ensembles. By running computer simulations, we show that regulating the chemical potential of lipid species is sufficient to reproduce the experimentally observed increase in acyl tail saturation with added cholesterol. Our model proposes a different picture of lipid regulation in which components can be regulated passively instead of actively. In this picture, phospholipid acyl tail composition naturally adapts to added molecules such as cholesterol or proteins. A comparison between regulated membranes with commonly studied ternary model membranes shows stark differences: for instance, correlation lengths and viscosities observed are independent of lipid chemical affinity.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Girard_2020, title={Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms}, volume={119}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.07.024}, DOI={10.1016/j.bpj.2020.07.024}, number={5}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Girard, Martin and Bereau, Tristan}, year={2020}, month=Sept, pages={892–899} }
-
+@article{Girard_2020, title={Regulating Lipid Composition Rationalizes Acyl Tail Saturation Homeostasis in Ectotherms}, volume={119}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2020.07.024}, DOI={10.1016/j.bpj.2020.07.024}, number={5}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Girard, Martin and Bereau, Tristan}, year={2020}, month=Sept, pages={892–899} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

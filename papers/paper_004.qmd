@@ -29,11 +29,9 @@ format:
 
 ## Abstract
 
-
+A combination of coarse-grained (CG) and atomistic simulations provides a suitable computational framework to study unstructured regions of proteins, for which experimental data are often lacking or limited. In this work, we combine CG and atomistic simulations with clustering algorithms and free energy reweighting methods to explore the conformational equilibrium of certain regions of the salt-stable cowpea chlorotic mottle virus (SS-CCMV). In particular, we focus on the geometry of converging strands (residues 26-49) from contacting subunits at the 3-fold (hexamer) and 5-fold (pentamer) symmetry points of the capsid. We show the following: (i) The simulations reproduce the experimentally observed β-barrel for the hexamer. (ii) The pentamer geometry is unable to stabilize a β-barrel conformation; it assumes various states instead, again in accordance with the experimental results which do not indicate a well-defined structure for the pentameric interface. (iii) Atomistic simulations of the backmapped CG structures remain relatively stable, indicative of plausible CG conformations and slow kinetics on the atomistic level.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 This work combines CG and atomistic simulations with clustering algorithms and free energy reweighting methods to explore the conformational equilibrium of certain regions of the salt-stable cowpea chlorotic mottle virus (SS-CCMV).
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2012, title={Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries}, volume={8}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct200888u}, DOI={10.1021/ct200888u}, number={10}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Globisch, Christoph and Deserno, Markus and Peter, Christine}, year={2012}, month=May, pages={3750–3758} }
-
+@article{Bereau_2012, title={Coarse-Grained and Atomistic Simulations of the Salt-Stable Cowpea Chlorotic Mottle Virus (SS-CCMV) Subunit 26–49: β-Barrel Stability of the Hexamer and Pentamer Geometries}, volume={8}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/ct200888u}, DOI={10.1021/ct200888u}, number={10}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Globisch, Christoph and Deserno, Markus and Peter, Christine}, year={2012}, month=May, pages={3750–3758} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work combines CG and atomistic simulations with clustering algorithms and f
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

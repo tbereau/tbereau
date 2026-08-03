@@ -31,9 +31,7 @@ format:
 
 Switching between different levels of resolution is essential for multiscale modeling, but restoring details at higher resolution remains challenging. In our previous study, we have introduced deepBackmap, a deep neural-network-based approach to reverse-map equilibrated molecular structures for condensed-phase systems. Our method combines data-driven and physics-based aspects, leading to high-quality reconstructed structures. In this work, we expand the scope of our model and examine its chemical transferability. To this end, we train deepBackmap solely on homogeneous molecular liquids of small molecules and apply it to a more challenging polymer melt. We augment the generator’s objective with different force-field-based terms as a prior to regularize the results. The best performing physical prior depends on whether we train for a specific chemistry or transfer our model. Our local environment representation combined with the sequential reconstruction of fine-grained structures helps in reaching transferability of the learned correlations.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Switching between different levels of resolution is essential for multiscale mod
 
 This work expands the scope of deepBackmap, a deep neural-network-based approach to reverse-map equilibrated molecular structures for condensed-phase systems, and examines its chemical transferability.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Stieffenhofer_2021, title={Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability}, volume={9}, ISSN={2166-532X}, url={http://dx.doi.org/10.1063/5.0039102}, DOI={10.1063/5.0039102}, number={3}, journal={APL Materials}, publisher={AIP Publishing}, author={Stieffenhofer, Marc and Bereau, Tristan and Wand, Michael}, year={2021}, month=Mar }
-
+@article{Stieffenhofer_2021, title={Adversarial reverse mapping of condensed-phase molecular structures: Chemical transferability}, volume={9}, ISSN={2166-532X}, url={http://dx.doi.org/10.1063/5.0039102}, DOI={10.1063/5.0039102}, number={3}, journal={APL Materials}, publisher={AIP Publishing}, author={Stieffenhofer, Marc and Bereau, Tristan and Wand, Michael}, year={2021}, month=Mar }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work expands the scope of deepBackmap, a deep neural-network-based approach
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

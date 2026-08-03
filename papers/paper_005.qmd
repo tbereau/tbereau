@@ -29,11 +29,9 @@ format:
 
 ## Abstract
 
-
+Permanent multipoles (MTPs) embody a natural extension to common point-charge (PC) representations in atomistic simulations. In this work, we propose an alternative to the computationally expensive MTP molecular dynamics simulations by running a simple PC simulation and later reevaluate-"score''-all energies using the more detailed MTP force field. The method, which relies on the assumption that the PC and MTP force fields generate closely related phase spaces, is accomplished by enforcing identical sets of monopoles between the two force fields-effectively highlighting the higher MTP terms as a correction to the PC approximation. We first detail our consistent parametrization of the electrostatics and van der Waals interactions for the two force fields. We then validate the method by comparing the accuracy of protein-ligand binding free energies from both PC and MTP-scored representations with experimentally determined binding constants obtained by us. Specifically, we study the binding of several arylsulfonamide ligands to human carbonic anhydrase II. We find that both representations yield an accuracy of 1 kcal/mol with respect to experiment. Finally, we apply the method to rank the energetic contributions of individual atomic MTP coefficients for molecules solvated in water. All in all, MTP scoring is a computationally appealing method that can provide insight into the multipolar electrostatic interactions of condensed-phase systems.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 This work proposes an alternative to the computationally expensive MTP molecular dynamics simulations by running a simple PC simulation and later reevaluate-"score''-all energies using the more detailed MTP force field, and proves the method is a computationally appealing method that can provide insight into the multipolar electrostatic interactions of condensed-phase systems.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2013, title={Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations}, volume={117}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp400593c}, DOI={10.1021/jp400593c}, number={18}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Monnard, Fabien W. and Nogueira, Elisa S. and Ward, Thomas R. and Meuwly, Markus}, year={2013}, month=Apr, pages={5460–5471} }
-
+@article{Bereau_2013, title={Scoring Multipole Electrostatics in Condensed-Phase Atomistic Simulations}, volume={117}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp400593c}, DOI={10.1021/jp400593c}, number={18}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Kramer, Christian and Monnard, Fabien W. and Nogueira, Elisa S. and Ward, Thomas R. and Meuwly, Markus}, year={2013}, month=Apr, pages={5460–5471} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work proposes an alternative to the computationally expensive MTP molecular
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

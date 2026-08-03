@@ -31,9 +31,7 @@ format:
 
 Understanding the interactions between nanoparticles (NPs) and boundaries of cells is crucial both for their toxicity and therapeutic applications. Besides specific receptor-mediated endocytosis of surface-functionalized NPs, passive internalization is prompted by relatively unspecific parameters, such as particle size and charge. Based on theoretical treatments, adhesion to and bending of the cell membrane can induce NP wrapping. Experimentally, powerful tools are needed to selectively probe possible membrane-NP motifs at very dilute conditions and avoid dye labeling. In this work, we employ surface resonance-enhanced dynamic light scattering, surface plasmon resonance, electron microscopy, and simulations for sensing interactions between plasmonic AuNPs and polymersomes. We distinguish three different interaction scenarios at nanomolar concentrations by tuning the surface charge of AuNPs and rationalize these events by balancing vesicle bending and electrostatic/van der Waals AuNP and vesicle adhesion. The clarification of the physical conditions under which nanoparticles passively translocate across membranes can aid in the rational design of drugs that cannot exploit specific modes of cellular uptake and also elucidates physical properties that render nanoparticles in the environment particularly toxic.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Understanding the interactions between nanoparticles (NPs) and boundaries of cel
 
 Three different interaction scenarios at nanomolar concentrations are distinguished by tuning the surface charge of AuNPs and rationalize these events by balancing vesicle bending and electrostatic/van der Waals AuNP and vesicles adhesion.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Koch_2020, title={Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics}, volume={124}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.9b10469}, DOI={10.1021/acs.jpcb.9b10469}, number={5}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Koch, Amelie H.R. and Morsbach, Svenja and Bereau, Tristan and Lévêque, Gaëtan and Butt, Hans-Jürgen and Deserno, Markus and Landfester, Katharina and Fytas, George}, year={2020}, month=Jan, pages={742–750} }
-
+@article{Koch_2020, title={Probing Nanoparticle/Membrane Interactions by Combining Amphiphilic Diblock Copolymer Assembly and Plasmonics}, volume={124}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.9b10469}, DOI={10.1021/acs.jpcb.9b10469}, number={5}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Koch, Amelie H.R. and Morsbach, Svenja and Bereau, Tristan and Lévêque, Gaëtan and Butt, Hans-Jürgen and Deserno, Markus and Landfester, Katharina and Fytas, George}, year={2020}, month=Jan, pages={742–750} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

@@ -29,32 +29,24 @@ format:
 
 ## Abstract
 
+_Not available._
 
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
-</footer>
-```
 
 ## TL;DR
 
 Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gained increasing interest, because they combine two attractive features: their mode of action is very generic and thus evolutionarily conserved; but unlike antimicrobial peptides, they involve much smaller molecular-weight peptides and are thus more in line with both practical and economical considerations of drug development.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2015, title={Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity}, volume={109}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2015.07.012}, DOI={10.1016/j.bpj.2015.07.012}, number={4}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, month=Aug, pages={668–669} }
-
+@article{Bereau_2015, title={Better Together: Lipopeptide Micelle Formation Enhances Antimicrobial Selectivity}, volume={109}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2015.07.012}, DOI={10.1016/j.bpj.2015.07.012}, number={4}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan}, year={2015}, month=Aug, pages={668–669} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ Antimicrobial lipopeptides (AMLPs—part lipid, part peptide) have recently gain
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

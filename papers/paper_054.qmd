@@ -31,9 +31,7 @@ format:
 
 Coarse-grained (CG) conformational surface hopping (SH) adapts the concept of multisurface dynamics, initially developed to describe electronic transitions in chemical reactions, to accurately describe classical molecular dynamics at a reduced level. The SH scheme couples distinct conformational basins (states), each described by its own force field (surface), resulting in a significant improvement of the approximation to the many-body potential of mean force [T. Bereau and J. F. Rudzinski, Phys. Rev. Lett. 121, 256002 (2018)]. The present study first describes CG SH in more detail, through both a toy model and a three-bead model of hexane. We further extend the methodology to non-bonded interactions and report its impact on liquid properties. Finally, we investigate the transferability of the surfaces to distinct systems and thermodynamic state points, through a simple tuning of the state probabilities. In particular, applications to variations in temperature and chemical composition show good agreement with reference atomistic calculations, introducing a promising "weak-transferability regime," where CG force fields can be shared across thermodynamic and chemical neighborhoods.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Coarse-grained (CG) conformational surface hopping (SH) adapts the concept of mu
 
 This study describes CG SH in more detail, introducing a promising "weak-transferability regime," where CG force fields can be shared across thermodynamic and chemical neighborhoods, and investigates the transferability of the surfaces to distinct systems and thermodynamic state points.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2020, title={Coarse-grained conformational surface hopping: Methodology and transferability}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0031249}, DOI={10.1063/5.0031249}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2020}, month=Dec }
-
+@article{Rudzinski_2020, title={Coarse-grained conformational surface hopping: Methodology and transferability}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0031249}, DOI={10.1063/5.0031249}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2020}, month=Dec }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This study describes CG SH in more detail, introducing a promising "weak-transfe
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

@@ -29,11 +29,9 @@ format:
 
 ## Abstract
 
-Abstract Polydispersity and random sequences are ubiquitous features of polymers, and molecular dynamics simulations can help elucidate the impact of disorder in polymer systems. However, currently available packages for building polymer topologies do not enable the user to include randomness in a straightforward fashion. Here, we introduce Hoobas, a molecular builder package that easily handles polydispersity using a prototype-builder design pattern. This enables fast and easy building of systems comprised of thousands of distinct objects. It is written in the Python programming language, which ensures compatibility with a wide range of molecular dynamics packages and tools, as well as easy integration into most workflows.
+Polydispersity and random sequences are ubiquitous features of polymers, and molecular dynamics simulations can help elucidate the impact of disorder in polymer systems. However, currently available packages for building polymer topologies do not enable the user to include randomness in a straightforward fashion. Here, we introduce Hoobas, a molecular builder package that easily handles polydispersity using a prototype-builder design pattern. This enables fast and easy building of systems comprised of thousands of distinct objects. It is written in the Python programming language, which ensures compatibility with a wide range of molecular dynamics packages and tools, as well as easy integration into most workflows.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">manual entry</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Abstract Polydispersity and random sequences are ubiquitous features of polymers
 
 Hoobas is introduced, a molecular builder package that easily handles polydispersity using a prototype-builder design pattern, which enables fast and easy building of systems comprised of thousands of distinct objects.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Girard_2019, title={Hoobas: A highly object-oriented builder for molecular dynamics}, volume={167}, ISSN={0927-0256}, url={http://dx.doi.org/10.1016/j.commatsci.2019.05.003}, DOI={10.1016/j.commatsci.2019.05.003}, journal={Computational Materials Science}, publisher={Elsevier BV}, author={Girard, Martin and Ehlen, Ali and Shakya, Anisha and Bereau, Tristan and de la Cruz, Monica Olvera}, year={2019}, month=Sept, pages={25–33} }
-
+@article{Girard_2019, title={Hoobas: A highly object-oriented builder for molecular dynamics}, volume={167}, ISSN={0927-0256}, url={http://dx.doi.org/10.1016/j.commatsci.2019.05.003}, DOI={10.1016/j.commatsci.2019.05.003}, journal={Computational Materials Science}, publisher={Elsevier BV}, author={Girard, Martin and Ehlen, Ali and Shakya, Anisha and Bereau, Tristan and de la Cruz, Monica Olvera}, year={2019}, month=Sept, pages={25–33} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -65,7 +60,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 </div>
 <a class="btn btn-outline-primary
   "
-        href="https://www.osti.gov/biblio/1510779" role="button">
+        href="https://doi.org/10.1016/j.commatsci.2019.05.003" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -81,8 +76,8 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://www.osti.gov/biblio/1510779" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path
@@ -117,8 +112,10 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

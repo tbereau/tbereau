@@ -31,9 +31,7 @@ format:
 
 ABSTRACT Assessing the permeation rate of drug-like molecules across a lipid membrane is of paramount importance for pharmaceutical applications. While the Meyer-Overton rule relates the permeability coefficient to a few thermodynamic properties, its accuracy is limited by the homogeneity assumption. In this work, we extract an analogous relation for the permeation of a small solute through a lipid bilayer. This is obtained by systematically screening a subset of chemical space by means of high-throughput coarse-grained simulations, and relying on the accurate inhomogeneous solubility-diffusion model (ISDM). We connect the permeability coefficient of a compound to two molecular descriptors: partitioning free-energy and acid dissociation constant. In the ISDM the permeability is a functional of the potential of mean force. We discuss how – and when – combining together these profiles for a large variety of compounds can result in a smooth dependence of the permeability on the molecular descriptors. We focus on acidic molecules: for weak acids, the permeability largely depends on the main free-energy differences of the problem, which directly link to our molecular descriptors. For strong acids, the multivalued nature of the permeability requires to introduce a third variable, characterising the amphiphilicity of the small molecule. Abbreviations: CG: coarse-grained; HTCG: high-throughput coarse-grained; PMF: potential of mean force; ISDM: inhomogeneous solubility-diffusion model; DOPC: 1; 2-Dioleoyl-sn-glycero-3-phosphocholine GRAPHICAL ABSTRACT
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ ABSTRACT Assessing the permeation rate of drug-like molecules across a lipid mem
 
 This work extracts an analogous relation for the permeation of a small solute through a lipid bilayer by systematically screening a subset of chemical space by means of high-throughput coarse-grained simulations, and relying on the accurate inhomogeneous solubility-diffusion model (ISDM).
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Menichetti_2019, title={Revisiting the Meyer-Overton rule for drug-membrane permeabilities}, volume={117}, ISSN={1362-3028}, url={http://dx.doi.org/10.1080/00268976.2019.1601787}, DOI={10.1080/00268976.2019.1601787}, number={20}, journal={Molecular Physics}, publisher={Informa UK Limited}, author={Menichetti, Roberto and Bereau, Tristan}, year={2019}, month=Apr, pages={2900–2909} }
-
+@article{Menichetti_2019, title={Revisiting the Meyer-Overton rule for drug-membrane permeabilities}, volume={117}, ISSN={1362-3028}, url={http://dx.doi.org/10.1080/00268976.2019.1601787}, DOI={10.1080/00268976.2019.1601787}, number={20}, journal={Molecular Physics}, publisher={Informa UK Limited}, author={Menichetti, Roberto and Bereau, Tristan}, year={2019}, month=Apr, pages={2900–2909} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work extracts an analogous relation for the permeation of a small solute th
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

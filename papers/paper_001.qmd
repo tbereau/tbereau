@@ -31,9 +31,7 @@ format:
 
 <jats:p>A generic coarse-grained (CG) protein model is presented. The intermediate level of resolution (four beads per amino acid, implicit solvent) allows for accurate sampling of local conformations. It relies on simple interactions that emphasize structure, such as hydrogen bonds and hydrophobicity. Realistic α/β content is achieved by including an effective nearest-neighbor dipolar interaction. Parameters are tuned to reproduce both local conformations and tertiary structures. The thermodynamics and kinetics of a three-helix bundle are studied. We check that the CG model is able to fold proteins with tertiary structures and amino acid sequences different from the one used for parameter tuning. By studying both helical and extended conformations we make sure the force field is not biased toward any particular secondary structure. The accuracy involved in folding not only the test protein but also other ones show strong evidence for amino acid cooperativity embedded in the model. Without any further adjustments or bias a realistic oligopeptide aggregation scenario is observed.</jats:p>
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">CrossRef</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ format:
 
 The accuracy involved in folding not only the test protein but also other ones show strong evidence for amino acid cooperativity embedded in the model, and the force field is made sure not to be biased toward any particular secondary structure.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2009, title={Generic coarse-grained model for protein folding and aggregation}, volume={130}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.3152842}, DOI={10.1063/1.3152842}, number={23}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Deserno, Markus}, year={2009}, month=June }
-
+@article{Bereau_2009, title={Generic coarse-grained model for protein folding and aggregation}, volume={130}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.3152842}, DOI={10.1063/1.3152842}, number={23}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Deserno, Markus}, year={2009}, month=June }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ The accuracy involved in folding not only the test protein but also other ones s
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

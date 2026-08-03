@@ -31,30 +31,22 @@ format:
 
 We accelerate a key step in crystal structure prediction (CSP) workflows using machine learning and report its robustness on a wide array of pharmaceutical molecules. The speedup achieved by our...
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## TL;DR
 
-None
-```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
-</footer>
-```
+_Not available._
+
 
 ## BibTeX
 
 ```{bibtex}
- @article{Anelli_2024, title={Robust and efficient reranking in crystal structure prediction: a data driven method for real-life molecules}, volume={26}, ISSN={1466-8033}, url={http://dx.doi.org/10.1039/D4CE00752B}, DOI={10.1039/d4ce00752b}, number={41}, journal={CrystEngComm}, publisher={Royal Society of Chemistry (RSC)}, author={Anelli, Andrea and Dietrich, Hanno and Ectors, Philipp and Stowasser, Frank and Bereau, Tristan and Neumann, Marcus and van den Ende, Joost}, year={2024}, pages={5845–5849} }
-
+@article{Anelli_2024, title={Robust and efficient reranking in crystal structure prediction: a data driven method for real-life molecules}, volume={26}, ISSN={1466-8033}, url={http://dx.doi.org/10.1039/D4CE00752B}, DOI={10.1039/d4ce00752b}, number={41}, journal={CrystEngComm}, publisher={Royal Society of Chemistry (RSC)}, author={Anelli, Andrea and Dietrich, Hanno and Ectors, Philipp and Stowasser, Frank and Bereau, Tristan and Neumann, Marcus and van den Ende, Joost}, year={2024}, pages={5845–5849} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +109,10 @@ None
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

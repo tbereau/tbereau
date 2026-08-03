@@ -31,9 +31,7 @@ format:
 
 Gene therapy via retroviral vectors holds great promise for treating a variety of serious diseases. It requires the use of additives to boost infectivity. Amyloid-like peptide nanofibers (PNFs) were shown to efficiently enhance retroviral gene transfer. However, the underlying mode of action of these peptides remains largely unknown. Data-mining is an efficient method to systematically study structure–function relationship and unveil patterns in a database. This data-mining study elucidates the multi-scale structure–property–activity relationship of transduction enhancing peptides for retroviral gene transfer. In contrast to previous reports, we find that not the amyloid fibrils themselves, but rather µm-sized β-sheet rich aggregates enhance infectivity. Specifically, microscopic aggregation of β-sheet rich amyloid structures with a hydrophobic surface pattern and positive surface charge are identified as key material properties. We validate the reliability of the amphiphilic sequence pattern and the general applicability of the key properties by rationally creating new active sequences and identifying short amyloidal peptides from various pathogenic and functional origin. Data-mining—even for small datasets—enables the development of new efficient retroviral transduction enhancers and provides important insights into the diverse bioactivity of the functional material class of amyloids.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Gene therapy via retroviral vectors holds great promise for treating a variety o
 
 This data-mining study elucidates the multi-scale structure–property–activity relationship of transduction enhancing peptides for retroviral gene transfer and provides important insights into the diverse bioactivity of the functional material class of amyloids.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Kaygisiz_2023, title={Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides}, volume={14}, ISSN={2041-1723}, url={http://dx.doi.org/10.1038/s41467-023-40663-6}, DOI={10.1038/s41467-023-40663-6}, number={1}, journal={Nature Communications}, publisher={Springer Science and Business Media LLC}, author={Kaygisiz, Kübra and Rauch-Wirth, Lena and Dutta, Arghya and Yu, Xiaoqing and Nagata, Yuki and Bereau, Tristan and Münch, Jan and Synatschke, Christopher V. and Weil, Tanja}, year={2023}, month=Aug }
-
+@article{Kaygisiz_2023, title={Data-mining unveils structure–property–activity correlation of viral infectivity enhancing self-assembling peptides}, volume={14}, ISSN={2041-1723}, url={http://dx.doi.org/10.1038/s41467-023-40663-6}, DOI={10.1038/s41467-023-40663-6}, number={1}, journal={Nature Communications}, publisher={Springer Science and Business Media LLC}, author={Kaygisiz, Kübra and Rauch-Wirth, Lena and Dutta, Arghya and Yu, Xiaoqing and Nagata, Yuki and Bereau, Tristan and Münch, Jan and Synatschke, Christopher V. and Weil, Tanja}, year={2023}, month=Aug }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This data-mining study elucidates the multi-scale structure–property–activit
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

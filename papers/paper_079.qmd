@@ -31,9 +31,7 @@ format:
 
 Despite their wide use and far-reaching implications, molecular dynamics (MD) simulations suffer from a lack of both traceability and reproducibility. We introduce Martignac: computational workflows for the coarse-grained (CG) Martini force field. Martignac describes Martini CG MD simulations as an acyclic directed graph, providing the entire history of a simulation─from system preparation to property calculations. Martignac connects to NOMAD, such that all simulation data generated are automatically normalized and stored according to the FAIR principles. We present several prototypical Martini workflows, including system generation of simple liquids and bilayers, as well as free-energy calculations for solute solvation in homogeneous liquids and drug permeation in lipid bilayers. By connecting to the NOMAD database to automatically pull existing simulations and push any new simulation generated, Martignac contributes to improving the sustainability and reproducibility of molecular simulations.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,20 +39,17 @@ Despite their wide use and far-reaching implications, molecular dynamics (MD) si
 
 This work introduces Martignac: computational workflows for the coarse-grained (CG) Martini force field, and describes Martini CG MD simulations as an acyclic directed graph, providing the entire history of a simulation─from system preparation to property calculations.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2024, title={Martignac: Computational Workflows for Reproducible, Traceable, and Composable Coarse-Grained Martini Simulations}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01754}, DOI={10.1021/acs.jcim.4c01754}, number={24}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Walter, Luis J. and Rudzinski, Joseph F.}, year={2024}, month=Dec, pages={9413–9423} }
-
+@article{Bereau_2024, title={Martignac: Computational Workflows for Reproducible, Traceable, and Composable Coarse-Grained Martini Simulations}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01754}, DOI={10.1021/acs.jcim.4c01754}, number={24}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Walter, Luis J. and Rudzinski, Joseph F.}, year={2024}, month=Dec, pages={9413–9423} }
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -117,8 +112,10 @@ This work introduces Martignac: computational workflows for the coarse-grained (
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::

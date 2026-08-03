@@ -31,9 +31,7 @@ format:
 
 Cardiolipin, the mitochondria marker lipid, is crucially involved in stabilizing the inner mitochondrial membrane and is vital for the activity of mitochondrial proteins and protein complexes. Directly targeting cardiolipin by a chemical-biology approach and thereby altering the cellular concentration of “available” cardiolipin eventually allows to systematically study the dependence of cellular processes on cardiolipin availability. In the present study, physics-based coarse-grained free energy calculations allowed us to identify the physical and chemical properties indicative of cardiolipin selectivity and to apply these to screen a compound database for putative cardiolipin-binders. The membrane binding properties of the 22 most promising molecules identified in the in silico approach were screened in vitro, using model membrane systems finally resulting in the identification of a single molecule, CLiB (CardioLipin-Binder). CLiB clearly affects respiration of cardiolipin-containing intact bacterial cells as well as of isolated mitochondria. Thus, the structure and function of mitochondrial membranes and membrane proteins might be (indirectly) targeted and controlled by CLiB for basic research and, potentially, also for therapeutic purposes.
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Orcid</cite> &
-<cite title="Source title">CrossRef</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
@@ -41,24 +39,21 @@ Cardiolipin, the mitochondria marker lipid, is crucially involved in stabilizing
 
 The membrane binding properties of the 22 most promising molecules identified in the in silico approach were screened in vitro, using model membrane systems finally resulting in the identification of a single molecule, CLiB (CardioLipin-Binder).
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">Semantic Scholar</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">Semantic Scholar</cite>
 </footer>
 ```
 
 ## BibTeX
 
 ```{bibtex}
- @article{Kleinw_chter_2022, title={CLiB – a novel cardiolipin-binder isolated
+@article{Kleinw_chter_2022, title={CLiB – a novel cardiolipin-binder isolated
                     <i>via</i>
                     data-driven and
                     <i>in vitro</i>
                     screening}, volume={3}, ISSN={2633-0679}, url={http://dx.doi.org/10.1039/D2CB00125J}, DOI={10.1039/d2cb00125j}, number={7}, journal={RSC Chemical Biology}, publisher={Royal Society of Chemistry (RSC)}, author={Kleinwächter, Isabel and Mohr, Bernadette and Joppe, Aljoscha and Hellmann, Nadja and Bereau, Tristan and Osiewacz, Heinz D. and Schneider, Dirk}, year={2022}, pages={941–954} }
-
 ```
 ```{=html}
-<footer class="blockquote-footer">from
-<cite title="Source Title">doi2bib</cite>
+<footer class="blockquote-footer">from <cite title="Source Title">doi2bib</cite>
 </footer>
 ```
 
@@ -121,8 +116,10 @@ The membrane binding properties of the 22 most promising molecules identified in
     PDF
     </a>
     <p></p>
-    <footer class="blockquote-footer">from <cite title="Source Title">Unpaywall</cite>
-    </footer>
+```
+```{=html}
+<footer class="blockquote-footer">from <cite title="Source Title">OpenAlex</cite>
+</footer>
 ```
 
 :::
