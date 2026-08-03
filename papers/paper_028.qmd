@@ -49,7 +49,7 @@ None
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2018, title={The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions}, volume={6}, ISSN={2079-3197}, url={http://dx.doi.org/10.3390/computation6010021}, DOI={10.3390/computation6010021}, number={1}, journal={Computation}, publisher={MDPI AG}, author={Rudzinski, Joseph and Bereau, Tristan}, year={2018}, month=feb, pages={21} }
+ @article{Rudzinski_2018, title={The Role of Conformational Entropy in the Determination of Structural-Kinetic Relationships for Helix-Coil Transitions}, volume={6}, ISSN={2079-3197}, url={http://dx.doi.org/10.3390/computation6010021}, DOI={10.3390/computation6010021}, number={1}, journal={Computation}, publisher={MDPI AG}, author={Rudzinski, Joseph and Bereau, Tristan}, year={2018}, month=Feb, pages={21} }
 
 ```
 ```{=html}

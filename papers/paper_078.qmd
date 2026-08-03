@@ -49,7 +49,7 @@ This work parametrize a time-dependent Hamiltonian interpolating between the int
 ## BibTeX
 
 ```{bibtex}
- @article{M_t__2024, title={Neural Thermodynamic Integration: Free Energies from Energy-Based Diffusion Models}, volume={15}, ISSN={1948-7185}, url={http://dx.doi.org/10.1021/acs.jpclett.4c01958}, DOI={10.1021/acs.jpclett.4c01958}, number={45}, journal={The Journal of Physical Chemistry Letters}, publisher={American Chemical Society (ACS)}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2024}, month=nov, pages={11395–11404} }
+ @article{M_t__2024, title={Neural Thermodynamic Integration: Free Energies from Energy-Based Diffusion Models}, volume={15}, ISSN={1948-7185}, url={http://dx.doi.org/10.1021/acs.jpclett.4c01958}, DOI={10.1021/acs.jpclett.4c01958}, number={45}, journal={The Journal of Physical Chemistry Letters}, publisher={American Chemical Society (ACS)}, author={Máté, Bálint and Fleuret, François and Bereau, Tristan}, year={2024}, month=Nov, pages={11395–11404} }
 
 ```
 ```{=html}

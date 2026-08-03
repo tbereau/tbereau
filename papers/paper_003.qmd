@@ -49,7 +49,7 @@ It is shown that whereas short α-helices exhibit two-state cooperativity, the t
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2011, title={Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective}, volume={100}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2011.03.056}, DOI={10.1016/j.bpj.2011.03.056}, number={11}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan and Deserno, Markus and Bachmann, Michael}, year={2011}, month=jun, pages={2764–2772} }
+ @article{Bereau_2011, title={Structural Basis of Folding Cooperativity in Model Proteins: Insights from a Microcanonical Perspective}, volume={100}, ISSN={0006-3495}, url={http://dx.doi.org/10.1016/j.bpj.2011.03.056}, DOI={10.1016/j.bpj.2011.03.056}, number={11}, journal={Biophysical Journal}, publisher={Elsevier BV}, author={Bereau, Tristan and Deserno, Markus and Bachmann, Michael}, year={2011}, month=June, pages={2764–2772} }
 
 ```
 ```{=html}

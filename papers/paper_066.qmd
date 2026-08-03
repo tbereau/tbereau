@@ -2,7 +2,7 @@
 ---
 title: "CLiB – a novel cardiolipin-binder isolated <i>via</i> data-driven and <i>in vitro</i> screening"
 doi: "10.1039/D2CB00125J"
-date: "2022-06-10 11:21:17"
+date: "2022-06-10 07:21:17"
 date-format: iso
 authors: "Kleinwächter, Mohr, Joppe, Hellmann, Bereau, Osiewacz, Schneider"
 description: "_RSC Chem. Biol._ **3** (2022)"
@@ -49,7 +49,11 @@ The membrane binding properties of the 22 most promising molecules identified in
 ## BibTeX
 
 ```{bibtex}
- @article{Kleinw_chter_2022, title={CLiB – a novel cardiolipin-binder isolated via data-driven and in vitro screening}, volume={3}, ISSN={2633-0679}, url={http://dx.doi.org/10.1039/D2CB00125J}, DOI={10.1039/d2cb00125j}, number={7}, journal={RSC Chemical Biology}, publisher={Royal Society of Chemistry (RSC)}, author={Kleinwächter, Isabel and Mohr, Bernadette and Joppe, Aljoscha and Hellmann, Nadja and Bereau, Tristan and Osiewacz, Heinz D. and Schneider, Dirk}, year={2022}, pages={941–954} }
+ @article{Kleinw_chter_2022, title={CLiB – a novel cardiolipin-binder isolated
+                    <i>via</i>
+                    data-driven and
+                    <i>in vitro</i>
+                    screening}, volume={3}, ISSN={2633-0679}, url={http://dx.doi.org/10.1039/D2CB00125J}, DOI={10.1039/d2cb00125j}, number={7}, journal={RSC Chemical Biology}, publisher={Royal Society of Chemistry (RSC)}, author={Kleinwächter, Isabel and Mohr, Bernadette and Joppe, Aljoscha and Hellmann, Nadja and Bereau, Tristan and Osiewacz, Heinz D. and Schneider, Dirk}, year={2022}, pages={941–954} }
 
 ```
 ```{=html}

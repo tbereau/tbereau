@@ -49,7 +49,7 @@ Folding of WALP in the two environments indicates the helix as the most stable s
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2015, title={Folding and insertion thermodynamics of the transmembrane WALP peptide}, volume={143}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4935487}, DOI={10.1063/1.4935487}, number={24}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Bennett, W. F. Drew and Pfaendtner, Jim and Deserno, Markus and Karttunen, Mikko}, year={2015}, month=nov }
+ @article{Bereau_2015, title={Folding and insertion thermodynamics of the transmembrane WALP peptide}, volume={143}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4935487}, DOI={10.1063/1.4935487}, number={24}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and Bennett, W. F. Drew and Pfaendtner, Jim and Deserno, Markus and Karttunen, Mikko}, year={2015}, month=Nov }
 
 ```
 ```{=html}

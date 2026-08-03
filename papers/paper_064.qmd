@@ -2,7 +2,7 @@
 ---
 title: "Data-driven discovery of cardiolipin-selective small molecules by computational active learning"
 doi: "10.1039/D2SC00116K"
-date: "2022-03-02 21:01:32"
+date: "2022-03-02 16:01:32"
 date-format: iso
 authors: "Mohr, Shmilovich, Kleinwächter, Schneider, Ferguson, Bereau"
 description: "_Chem. Sci._ **13** (2022)"

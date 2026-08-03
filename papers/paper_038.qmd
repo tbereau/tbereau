@@ -49,7 +49,7 @@ Hoobas is introduced, a molecular builder package that easily handles polydisper
 ## BibTeX
 
 ```{bibtex}
- @article{Girard_2019, title={Hoobas: A highly object-oriented builder for molecular dynamics}, volume={167}, ISSN={0927-0256}, url={http://dx.doi.org/10.1016/j.commatsci.2019.05.003}, DOI={10.1016/j.commatsci.2019.05.003}, journal={Computational Materials Science}, publisher={Elsevier BV}, author={Girard, Martin and Ehlen, Ali and Shakya, Anisha and Bereau, Tristan and de la Cruz, Monica Olvera}, year={2019}, month=sep, pages={25–33} }
+ @article{Girard_2019, title={Hoobas: A highly object-oriented builder for molecular dynamics}, volume={167}, ISSN={0927-0256}, url={http://dx.doi.org/10.1016/j.commatsci.2019.05.003}, DOI={10.1016/j.commatsci.2019.05.003}, journal={Computational Materials Science}, publisher={Elsevier BV}, author={Girard, Martin and Ehlen, Ali and Shakya, Anisha and Bereau, Tristan and de la Cruz, Monica Olvera}, year={2019}, month=Sept, pages={25–33} }
 
 ```
 ```{=html}

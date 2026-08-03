@@ -49,7 +49,7 @@ A machine learning model for multipole coefficients of atom types H, C, O, N, S,
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2015, title={Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules}, volume={11}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5b00301}, DOI={10.1021/acs.jctc.5b00301}, number={7}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Andrienko, Denis and von Lilienfeld, O. Anatole}, year={2015}, month=jun, pages={3225–3233} }
+ @article{Bereau_2015, title={Transferable Atomic Multipole Machine Learning Models for Small Organic Molecules}, volume={11}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5b00301}, DOI={10.1021/acs.jctc.5b00301}, number={7}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Andrienko, Denis and von Lilienfeld, O. Anatole}, year={2015}, month=June, pages={3225–3233} }
 
 ```
 ```{=html}

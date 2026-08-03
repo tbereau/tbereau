@@ -49,7 +49,7 @@ PC-based models perform well compared to those based on MTPs for NMAD in D2O and
 ## BibTeX
 
 ```{bibtex}
- @article{Cazade_2014, title={Computational Two-Dimensional Infrared Spectroscopy without Maps:N-Methylacetamide in Water}, volume={118}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp5011692}, DOI={10.1021/jp5011692}, number={28}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Cazade, Pierre-André and Bereau, Tristan and Meuwly, Markus}, year={2014}, month=apr, pages={8135–8147} }
+ @article{Cazade_2014, title={Computational Two-Dimensional Infrared Spectroscopy without Maps:<i>N</i>-Methylacetamide in Water}, volume={118}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/jp5011692}, DOI={10.1021/jp5011692}, number={28}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Cazade, Pierre-André and Bereau, Tristan and Meuwly, Markus}, year={2014}, month=Apr, pages={8135–8147} }
 
 ```
 ```{=html}

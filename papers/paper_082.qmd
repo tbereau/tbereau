@@ -49,7 +49,7 @@ A physics-informed, score-based diffusion framework is introduced: by mapping PB
 ## BibTeX
 
 ```{bibtex}
- @article{Nagel_2025, title={Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions}, volume={129}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.5c04579}, DOI={10.1021/acs.jpcb.5c04579}, number={45}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Nagel, Daniel and Bereau, Tristan}, year={2025}, month=oct, pages={11780–11790} }
+ @article{Nagel_2025, title={Fokker–Planck Score Learning: Efficient Free-Energy Estimation under Periodic Boundary Conditions}, volume={129}, ISSN={1520-5207}, url={http://dx.doi.org/10.1021/acs.jpcb.5c04579}, DOI={10.1021/acs.jpcb.5c04579}, number={45}, journal={The Journal of Physical Chemistry B}, publisher={American Chemical Society (ACS)}, author={Nagel, Daniel and Bereau, Tristan}, year={2025}, month=Oct, pages={11780–11790} }
 
 ```
 ```{=html}

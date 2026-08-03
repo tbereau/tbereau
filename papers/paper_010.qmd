@@ -49,7 +49,7 @@ The Voronoi tesselation approach to polarizabilities of atoms in molecules witho
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2014, title={Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion}, volume={141}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4885339}, DOI={10.1063/1.4885339}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and von Lilienfeld, O. Anatole}, year={2014}, month=jul }
+ @article{Bereau_2014, title={Toward transferable interatomic van der Waals interactions without electrons: The role of multipole electrostatics and many-body dispersion}, volume={141}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.4885339}, DOI={10.1063/1.4885339}, number={3}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Bereau, Tristan and von Lilienfeld, O. Anatole}, year={2014}, month=July }
 
 ```
 ```{=html}

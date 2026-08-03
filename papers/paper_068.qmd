@@ -49,7 +49,7 @@ The reintroduced details enable force computations based on the all-atom force f
 ## BibTeX
 
 ```{bibtex}
- @article{Stieffenhofer_2022, title={Benchmarking coarse-grained models of organic semiconductors via deep backmapping}, volume={10}, ISSN={2296-2646}, url={http://dx.doi.org/10.3389/fchem.2022.982757}, DOI={10.3389/fchem.2022.982757}, journal={Frontiers in Chemistry}, publisher={Frontiers Media SA}, author={Stieffenhofer, Marc and Scherer, Christoph and May, Falk and Bereau, Tristan and Andrienko, Denis}, year={2022}, month=sep }
+ @article{Stieffenhofer_2022, title={Benchmarking coarse-grained models of organic semiconductors via deep backmapping}, volume={10}, ISSN={2296-2646}, url={http://dx.doi.org/10.3389/fchem.2022.982757}, DOI={10.3389/fchem.2022.982757}, journal={Frontiers in Chemistry}, publisher={Frontiers Media SA}, author={Stieffenhofer, Marc and Scherer, Christoph and May, Falk and Bereau, Tristan and Andrienko, Denis}, year={2022}, month=Sept }
 
 ```
 ```{=html}

@@ -49,7 +49,7 @@ This work incorporates physical intuition into the prior by employing a Gaussian
 ## BibTeX
 
 ```{bibtex}
- @article{Bozkurt_Varolg_ne__2020, title={Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/ab80b7}, DOI={10.1088/2632-2153/ab80b7}, number={1}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Bozkurt Varolgüneş, Yasemin and Bereau, Tristan and Rudzinski, Joseph F}, year={2020}, month=mar, pages={015012} }
+ @article{Bozkurt_Varolg_ne__2020, title={Interpretable embeddings from molecular simulations using Gaussian mixture variational autoencoders}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/ab80b7}, DOI={10.1088/2632-2153/ab80b7}, number={1}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Bozkurt Varolgüneş, Yasemin and Bereau, Tristan and Rudzinski, Joseph F}, year={2020}, month=Mar, pages={015012} }
 
 ```
 ```{=html}

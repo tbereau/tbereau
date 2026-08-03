@@ -49,7 +49,7 @@ An open-source software package that allows fitting atomic multipoles (MTPs) fro
 ## BibTeX
 
 ```{bibtex}
- @article{Kramer_2013, title={Deriving Static Atomic Multipoles from the Electrostatic Potential}, volume={53}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/ci400548w}, DOI={10.1021/ci400548w}, number={12}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Kramer, Christian and Bereau, Tristan and Spinn, Alexander and Liedl, Klaus R. and Gedeck, Peter and Meuwly, Markus}, year={2013}, month=dec, pages={3410–3417} }
+ @article{Kramer_2013, title={Deriving Static Atomic Multipoles from the Electrostatic Potential}, volume={53}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/ci400548w}, DOI={10.1021/ci400548w}, number={12}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Kramer, Christian and Bereau, Tristan and Spinn, Alexander and Liedl, Klaus R. and Gedeck, Peter and Meuwly, Markus}, year={2013}, month=Dec, pages={3410–3417} }
 
 ```
 ```{=html}

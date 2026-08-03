@@ -4,6 +4,7 @@ title: "Teaching"
 
 | Course | Level | Type | Semester |
 |--------|-------|-------|---------:|
+| [From Boltzmann to Diffusion: Statistical Physics of Machine Learning](https://uebungen.physik.uni-heidelberg.de/vorlesung/20262/2234) | Master | course | W26/27 |
 | [Molecular Simulation](https://uebungen.physik.uni-heidelberg.de/vorlesung/20261/2168) | Master | course | S2026 |
 | [Soft Matter Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20261/2176) | Master | seminar | S2026 |
 | [Machine Learning and Physics](https://uebungen.physik.uni-heidelberg.de/vorlesung/20252/2064) | Master | course | W25/26 |

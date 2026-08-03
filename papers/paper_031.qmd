@@ -49,7 +49,7 @@ None
 ## BibTeX
 
 ```{bibtex}
- @article{Liu_2018, title={Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations}, volume={1}, ISSN={2513-0390}, url={http://dx.doi.org/10.1002/adts.201800024}, DOI={10.1002/adts.201800024}, number={7}, journal={Advanced Theory and Simulations}, publisher={Wiley}, author={Liu, Chan and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=may }
+ @article{Liu_2018, title={Polymorphism of Syndiotactic Polystyrene Crystals from Multiscale Simulations}, volume={1}, ISSN={2513-0390}, url={http://dx.doi.org/10.1002/adts.201800024}, DOI={10.1002/adts.201800024}, number={7}, journal={Advanced Theory and Simulations}, publisher={Wiley}, author={Liu, Chan and Kremer, Kurt and Bereau, Tristan}, year={2018}, month=May }
 
 ```
 ```{=html}

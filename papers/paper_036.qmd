@@ -49,7 +49,7 @@ This work extracts an analogous relation for the permeation of a small solute th
 ## BibTeX
 
 ```{bibtex}
- @article{Menichetti_2019, title={Revisiting the Meyer-Overton rule for drug-membrane permeabilities}, volume={117}, ISSN={1362-3028}, url={http://dx.doi.org/10.1080/00268976.2019.1601787}, DOI={10.1080/00268976.2019.1601787}, number={20}, journal={Molecular Physics}, publisher={Informa UK Limited}, author={Menichetti, Roberto and Bereau, Tristan}, year={2019}, month=apr, pages={2900–2909} }
+ @article{Menichetti_2019, title={Revisiting the Meyer-Overton rule for drug-membrane permeabilities}, volume={117}, ISSN={1362-3028}, url={http://dx.doi.org/10.1080/00268976.2019.1601787}, DOI={10.1080/00268976.2019.1601787}, number={20}, journal={Molecular Physics}, publisher={Informa UK Limited}, author={Menichetti, Roberto and Bereau, Tristan}, year={2019}, month=Apr, pages={2900–2909} }
 
 ```
 ```{=html}

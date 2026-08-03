@@ -49,7 +49,7 @@ A findable, accessible, interoperable and reusable (FAIR) data infrastructure is
 ## BibTeX
 
 ```{bibtex}
- @article{Scheffler_2022, title={FAIR data enabling new horizons for materials research}, volume={604}, ISSN={1476-4687}, url={http://dx.doi.org/10.1038/s41586-022-04501-x}, DOI={10.1038/s41586-022-04501-x}, number={7907}, journal={Nature}, publisher={Springer Science and Business Media LLC}, author={Scheffler, Matthias and Aeschlimann, Martin and Albrecht, Martin and Bereau, Tristan and Bungartz, Hans-Joachim and Felser, Claudia and Greiner, Mark and Groß, Axel and Koch, Christoph T. and Kremer, Kurt and Nagel, Wolfgang E. and Scheidgen, Markus and Wöll, Christof and Draxl, Claudia}, year={2022}, month=apr, pages={635–642} }
+ @article{Scheffler_2022, title={FAIR data enabling new horizons for materials research}, volume={604}, ISSN={1476-4687}, url={http://dx.doi.org/10.1038/s41586-022-04501-x}, DOI={10.1038/s41586-022-04501-x}, number={7907}, journal={Nature}, publisher={Springer Science and Business Media LLC}, author={Scheffler, Matthias and Aeschlimann, Martin and Albrecht, Martin and Bereau, Tristan and Bungartz, Hans-Joachim and Felser, Claudia and Greiner, Mark and Groß, Axel and Koch, Christoph T. and Kremer, Kurt and Nagel, Wolfgang E. and Scheidgen, Markus and Wöll, Christof and Draxl, Claudia}, year={2022}, month=Apr, pages={635–642} }
 
 ```
 ```{=html}

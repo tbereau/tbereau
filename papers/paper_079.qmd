@@ -49,7 +49,7 @@ This work introduces Martignac: computational workflows for the coarse-grained (
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2024, title={Martignac: Computational Workflows for Reproducible, Traceable, and Composable Coarse-Grained Martini Simulations}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01754}, DOI={10.1021/acs.jcim.4c01754}, number={24}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Walter, Luis J. and Rudzinski, Joseph F.}, year={2024}, month=dec, pages={9413–9423} }
+ @article{Bereau_2024, title={Martignac: Computational Workflows for Reproducible, Traceable, and Composable Coarse-Grained Martini Simulations}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01754}, DOI={10.1021/acs.jcim.4c01754}, number={24}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Bereau, Tristan and Walter, Luis J. and Rudzinski, Joseph F.}, year={2024}, month=Dec, pages={9413–9423} }
 
 ```
 ```{=html}

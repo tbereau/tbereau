@@ -49,7 +49,7 @@ This study introduces DeepBackmap: A deep neural network based approach to direc
 ## BibTeX
 
 ```{bibtex}
- @article{Stieffenhofer_2020, title={Adversarial reverse mapping of equilibrated condensed-phase molecular structures}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/abb6d4}, DOI={10.1088/2632-2153/abb6d4}, number={4}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Stieffenhofer, Marc and Wand, Michael and Bereau, Tristan}, year={2020}, month=oct, pages={045014} }
+ @article{Stieffenhofer_2020, title={Adversarial reverse mapping of equilibrated condensed-phase molecular structures}, volume={1}, ISSN={2632-2153}, url={http://dx.doi.org/10.1088/2632-2153/abb6d4}, DOI={10.1088/2632-2153/abb6d4}, number={4}, journal={Machine Learning: Science and Technology}, publisher={IOP Publishing}, author={Stieffenhofer, Marc and Wand, Michael and Bereau, Tristan}, year={2020}, month=Oct, pages={045014} }
 
 ```
 ```{=html}

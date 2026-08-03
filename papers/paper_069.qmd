@@ -49,7 +49,7 @@ This work proposes a method that coarse-grains the sequence space to reduce its 
 ## BibTeX
 
 ```{bibtex}
- @article{Dutta_2022, title={Identifying Sequential Residue Patterns in Bitter and Umami Peptides}, volume={2}, ISSN={2692-1944}, url={http://dx.doi.org/10.1021/acsfoodscitech.2c00251}, DOI={10.1021/acsfoodscitech.2c00251}, number={11}, journal={ACS Food Science &amp; Technology}, publisher={American Chemical Society (ACS)}, author={Dutta, Arghya and Bereau, Tristan and Vilgis, Thomas A.}, year={2022}, month=nov, pages={1773–1780} }
+ @article{Dutta_2022, title={Identifying Sequential Residue Patterns in Bitter and Umami Peptides}, volume={2}, ISSN={2692-1944}, url={http://dx.doi.org/10.1021/acsfoodscitech.2c00251}, DOI={10.1021/acsfoodscitech.2c00251}, number={11}, journal={ACS Food Science &amp; Technology}, publisher={American Chemical Society (ACS)}, author={Dutta, Arghya and Bereau, Tristan and Vilgis, Thomas A.}, year={2022}, month=Nov, pages={1773–1780} }
 
 ```
 ```{=html}

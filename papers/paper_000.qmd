@@ -49,7 +49,7 @@ A new algorithm for solving the weighted histogram analysis method (WHAM) equati
 ## BibTeX
 
 ```{bibtex}
- @article{Bereau_2009, title={Optimized convergence for multiple histogram analysis}, volume={228}, ISSN={0021-9991}, url={http://dx.doi.org/10.1016/j.jcp.2009.05.011}, DOI={10.1016/j.jcp.2009.05.011}, number={17}, journal={Journal of Computational Physics}, publisher={Elsevier BV}, author={Bereau, Tristan and Swendsen, Robert H.}, year={2009}, month=sep, pages={6119–6129} }
+ @article{Bereau_2009, title={Optimized convergence for multiple histogram analysis}, volume={228}, ISSN={0021-9991}, url={http://dx.doi.org/10.1016/j.jcp.2009.05.011}, DOI={10.1016/j.jcp.2009.05.011}, number={17}, journal={Journal of Computational Physics}, publisher={Elsevier BV}, author={Bereau, Tristan and Swendsen, Robert H.}, year={2009}, month=Sept, pages={6119–6129} }
 
 ```
 ```{=html}

@@ -2,7 +2,7 @@
 ---
 title: "Free-energy landscape of polymer-crystal polymorphism"
 doi: "10.1039/D0SM01342K"
-date: "2020-09-03 08:43:53"
+date: "2020-09-03 04:43:53"
 date-format: iso
 authors: "Liu, Brandenburg, Valsson, Kremer, Bereau"
 description: "_Soft Matter_ **16** (2020)"

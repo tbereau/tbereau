@@ -49,7 +49,7 @@ None
 ## BibTeX
 
 ```{bibtex}
- @article{Gryn_ova_2024, title={EDITORIAL: Chemical Compound Space Exploration by Multiscale High-Throughput Screening and Machine Learning}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01300}, DOI={10.1021/acs.jcim.4c01300}, number={15}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Gryn’ova, Ganna and Bereau, Tristan and Müller, Carolin and Friederich, Pascal and Wade, Rebecca C. and Nunes-Alves, Ariane and Soares, Thereza A. and Merz, Kenneth}, year={2024}, month=aug, pages={5737–5738} }
+ @article{Gryn_ova_2024, title={EDITORIAL: Chemical Compound Space Exploration by Multiscale High-Throughput Screening and Machine Learning}, volume={64}, ISSN={1549-960X}, url={http://dx.doi.org/10.1021/acs.jcim.4c01300}, DOI={10.1021/acs.jcim.4c01300}, number={15}, journal={Journal of Chemical Information and Modeling}, publisher={American Chemical Society (ACS)}, author={Gryn’ova, Ganna and Bereau, Tristan and Müller, Carolin and Friederich, Pascal and Wade, Rebecca C. and Nunes-Alves, Ariane and Soares, Thereza A. and Merz, Kenneth}, year={2024}, month=Aug, pages={5737–5738} }
 
 ```
 ```{=html}

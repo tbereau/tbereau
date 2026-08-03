@@ -2,7 +2,7 @@
 ---
 title: "Robust and efficient reranking in crystal structure prediction: a data driven method for real-life molecules"
 doi: "10.1039/D4CE00752B"
-date: "2024-10-04 12:21:07"
+date: "2024-10-04 08:21:07"
 date-format: iso
 authors: "Anelli, Dietrich, Ectors, Stowasser, Bereau, Neumann, Van Den Ende"
 description: "_CrystEngComm_ **26** (2024)"

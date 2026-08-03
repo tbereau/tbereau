@@ -49,7 +49,7 @@ This work avoids the combinatorial explosion of microtrajectories by systematica
 ## BibTeX
 
 ```{bibtex}
- @article{Bause_2019, title={Microscopic reweighting for nonequilibrium steady-state dynamics}, volume={100}, ISSN={2470-0053}, url={http://dx.doi.org/10.1103/PhysRevE.100.060103}, DOI={10.1103/physreve.100.060103}, number={6}, journal={Physical Review E}, publisher={American Physical Society (APS)}, author={Bause, Marius and Wittenstein, Timon and Kremer, Kurt and Bereau, Tristan}, year={2019}, month=dec }
+ @article{Bause_2019, title={Microscopic reweighting for nonequilibrium steady-state dynamics}, volume={100}, ISSN={2470-0053}, url={http://dx.doi.org/10.1103/PhysRevE.100.060103}, DOI={10.1103/physreve.100.060103}, number={6}, journal={Physical Review E}, publisher={American Physical Society (APS)}, author={Bause, Marius and Wittenstein, Timon and Kremer, Kurt and Bereau, Tristan}, year={2019}, month=Dec }
 
 ```
 ```{=html}

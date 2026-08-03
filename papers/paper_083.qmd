@@ -49,7 +49,7 @@ The results from deploying Auto-MartiniM3 on a large data set of molecular fragm
 ## BibTeX
 
 ```{bibtex}
- @article{Szczuka_2025, title={Fast Parametrization of Martini3 Models for Fragments and Small Molecules}, volume={22}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5c01178}, DOI={10.1021/acs.jctc.5c01178}, number={1}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Szczuka, Magdalena and Pereira, Gilberto P. and Walter, Luis J. and Gueroult, Marc and Poulain, Pierre and Bereau, Tristan and Souza, Paulo C. T. and Chavent, Matthieu}, year={2025}, month=dec, pages={610–623} }
+ @article{Szczuka_2025, title={Fast Parametrization of Martini3 Models for Fragments and Small Molecules}, volume={22}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.5c01178}, DOI={10.1021/acs.jctc.5c01178}, number={1}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Szczuka, Magdalena and Pereira, Gilberto P. and Walter, Luis J. and Gueroult, Marc and Poulain, Pierre and Bereau, Tristan and Souza, Paulo C. T. and Chavent, Matthieu}, year={2025}, month=Dec, pages={610–623} }
 
 ```
 ```{=html}

@@ -49,7 +49,7 @@ Self‐assembling peptide sequences that form fibrils are identified and the adh
 ## BibTeX
 
 ```{bibtex}
- @article{Schilling_2019, title={Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons}, volume={29}, ISSN={1616-3028}, url={http://dx.doi.org/10.1002/adfm.201809112}, DOI={10.1002/adfm.201809112}, number={24}, journal={Advanced Functional Materials}, publisher={Wiley}, author={Schilling, Corinna and Mack, Thomas and Lickfett, Selene and Sieste, Stefanie and Ruggeri, Francesco S. and Sneideris, Tomas and Dutta, Arghya and Bereau, Tristan and Naraghi, Ramin and Sinske, Daniela and Knowles, Tuomas P. J. and Synatschke, Christopher V. and Weil, Tanja and Knöll, Bernd}, year={2019}, month=apr }
+ @article{Schilling_2019, title={Sequence‐Optimized Peptide Nanofibers as Growth Stimulators for Regeneration of Peripheral Neurons}, volume={29}, ISSN={1616-3028}, url={http://dx.doi.org/10.1002/adfm.201809112}, DOI={10.1002/adfm.201809112}, number={24}, journal={Advanced Functional Materials}, publisher={Wiley}, author={Schilling, Corinna and Mack, Thomas and Lickfett, Selene and Sieste, Stefanie and Ruggeri, Francesco S. and Sneideris, Tomas and Dutta, Arghya and Bereau, Tristan and Naraghi, Ramin and Sinske, Daniela and Knowles, Tuomas P. J. and Synatschke, Christopher V. and Weil, Tanja and Knöll, Bernd}, year={2019}, month=Apr }
 
 ```
 ```{=html}

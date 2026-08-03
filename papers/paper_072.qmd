@@ -49,7 +49,7 @@ None
 ## BibTeX
 
 ```{bibtex}
- @article{Mohr_2023, title={Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics}, volume={19}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.3c00201}, DOI={10.1021/acs.jctc.3c00201}, number={14}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Mohr, Bernadette and van der Mast, Diego and Bereau, Tristan}, year={2023}, month=jul, pages={4770–4779} }
+ @article{Mohr_2023, title={Condensed-Phase Molecular Representation to Link Structure and Thermodynamics in Molecular Dynamics}, volume={19}, ISSN={1549-9626}, url={http://dx.doi.org/10.1021/acs.jctc.3c00201}, DOI={10.1021/acs.jctc.3c00201}, number={14}, journal={Journal of Chemical Theory and Computation}, publisher={American Chemical Society (ACS)}, author={Mohr, Bernadette and van der Mast, Diego and Bereau, Tristan}, year={2023}, month=July, pages={4770–4779} }
 
 ```
 ```{=html}
@@ -81,8 +81,8 @@ None
         Webpage
     </a>
     <a class="btn btn-outline-primary
-      disabled"
-        href="None" role="button">
+      "
+        href="https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.3c00201" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

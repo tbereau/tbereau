@@ -49,7 +49,7 @@ This study describes CG SH in more detail, introducing a promising "weak-transfe
 ## BibTeX
 
 ```{bibtex}
- @article{Rudzinski_2020, title={Coarse-grained conformational surface hopping: Methodology and transferability}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0031249}, DOI={10.1063/5.0031249}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2020}, month=dec }
+ @article{Rudzinski_2020, title={Coarse-grained conformational surface hopping: Methodology and transferability}, volume={153}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/5.0031249}, DOI={10.1063/5.0031249}, number={21}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Rudzinski, Joseph F. and Bereau, Tristan}, year={2020}, month=Dec }
 
 ```
 ```{=html}

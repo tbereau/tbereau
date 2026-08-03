@@ -49,7 +49,7 @@ It is shown that a three-particle trimer can exhibit kinesin-like autonomous wal
 ## BibTeX
 
 ```{bibtex}
- @article{Xiao_2016, title={An in-silico walker}, volume={659}, ISSN={0009-2614}, url={http://dx.doi.org/10.1016/j.cplett.2016.06.019}, DOI={10.1016/j.cplett.2016.06.019}, journal={Chemical Physics Letters}, publisher={Elsevier BV}, author={Xiao, Qiran and Chen, Yanping and Bereau, Tristan and Shi, Yunfeng}, year={2016}, month=aug, pages={6–9} }
+ @article{Xiao_2016, title={An in-silico walker}, volume={659}, ISSN={0009-2614}, url={http://dx.doi.org/10.1016/j.cplett.2016.06.019}, DOI={10.1016/j.cplett.2016.06.019}, journal={Chemical Physics Letters}, publisher={Elsevier BV}, author={Xiao, Qiran and Chen, Yanping and Bereau, Tristan and Shi, Yunfeng}, year={2016}, month=Aug, pages={6–9} }
 
 ```
 ```{=html}

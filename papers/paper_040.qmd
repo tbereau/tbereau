@@ -49,7 +49,7 @@ New criteria for the design of coarse-grained models allowing for the optimizati
 ## BibTeX
 
 ```{bibtex}
- @article{Kanekal_2019, title={Resolution limit of data-driven coarse-grained models spanning chemical space}, volume={151}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5119101}, DOI={10.1063/1.5119101}, number={16}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Kanekal, Kiran H. and Bereau, Tristan}, year={2019}, month=oct }
+ @article{Kanekal_2019, title={Resolution limit of data-driven coarse-grained models spanning chemical space}, volume={151}, ISSN={1089-7690}, url={http://dx.doi.org/10.1063/1.5119101}, DOI={10.1063/1.5119101}, number={16}, journal={The Journal of Chemical Physics}, publisher={AIP Publishing}, author={Kanekal, Kiran H. and Bereau, Tristan}, year={2019}, month=Oct }
 
 ```
 ```{=html}
