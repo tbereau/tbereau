@@ -47,13 +47,22 @@ Please send a CV, a short statement of interest, and the names of two referees t
 Relevant group publications around generative machine learning for molecular systems include:
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
-import {map} from "@martien/ramda"
-
+// Transposed in plain JavaScript, and with no Observable notebook imports.
+// This cell used to open with `import {Plot} from "@mkfreeman/plot-tooltip"`
+// and `import {map} from "@martien/ramda"`; each drags its whole transitive
+// notebook graph over the network, and if any of it stalls the reactive cells
+// below resolve to nothing at all, silently -- so the table on the page
+// advertising this position could come up empty with no error. Plot was
+// imported but never used here; `map` is replaced below. Same fix as
+// research_topics.qmd.
 papers_r = FileAttachment("../data/all_papers.json").json()
 n_columns = Object.entries(papers_r["doi"]).length
 index_array = Array.from({length: n_columns}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
+papers = index_array.map(
+    i => Object.fromEntries(
+        Object.entries(papers_r).map(([column, values]) => [column, values[i]])
+    )
+)
 
 function displayTable(papers_) {
     return Inputs.table(papers_, {
@@ -81,13 +90,16 @@ function displayTable(papers_) {
     })
 }
 
+// Selected by topic rather than by the three coauthors this used to name:
+// a coauthor filter puts whatever those people publish next in front of
+// candidates, whether or not it has anything to do with the project. These
+// two topics are exactly the generative-ML work the position builds on --
+// free energies from generative models, and measure transport between
+// resolutions. See data/topics.yml.
 displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Bálint Máté")
-            || p.authors.map(a => a.full_name).includes("Daniel Nagel")
-            || p.authors.map(a => a.full_name).includes("Sander Hummerich")
-        )
-    })
+    papers.filter(
+        p => p.topics.includes("gen-free-energy")
+          || p.topics.includes("resolution-transport")
+    )
 )
 ```

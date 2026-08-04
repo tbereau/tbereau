@@ -302,49 +302,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Please send a CV, a short statement of interest, and the names of two referees to Prof.&nbsp;Tristan Bereau at <span id="email-placeholder"></span>.</p>
 <p>Relevant group publications around generative machine learning for molecular systems include:</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="50" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 49;"><span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {map} <span class="im">from</span> <span class="st">"@martien/ramda"</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> <span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="fu">map</span>(x <span class="kw">=&gt;</span> x[i]<span class="op">,</span> papers_r)<span class="op">,</span> index_array)</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayTable</span>(papers_) {</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">table</span>(papers_<span class="op">,</span> {</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>        <span class="st">"doi"</span><span class="op">,</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">,</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">,</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">,</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>        <span class="st">"year"</span><span class="op">,</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>      <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>      <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>        <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>        <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="58" data-source-offset="-550"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 57;"><span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> index_array<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    i <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">fromEntries</span>(</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r)<span class="op">.</span><span class="fu">map</span>(([column<span class="op">,</span> values]) <span class="kw">=&gt;</span> [column<span class="op">,</span> values[i]])</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayTable</span>(papers_) {</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">table</span>(papers_<span class="op">,</span> {</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>        <span class="st">"doi"</span><span class="op">,</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">,</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">,</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">,</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>        <span class="st">"year"</span><span class="op">,</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>      <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
 <span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>      <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a><span class="fu">displayTable</span>(</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>    papers<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(p) {</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>            p<span class="op">.</span><span class="at">authors</span><span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Bálint Máté"</span>)</span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>            <span class="op">||</span> p<span class="op">.</span><span class="at">authors</span><span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Daniel Nagel"</span>)</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>            <span class="op">||</span> p<span class="op">.</span><span class="at">authors</span><span class="op">.</span><span class="fu">map</span>(a <span class="kw">=&gt;</span> a<span class="op">.</span><span class="at">full_name</span>)<span class="op">.</span><span class="fu">includes</span>(<span class="st">"Sander Hummerich"</span>)</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>      <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>        <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>        <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>      <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="co">// Selected by topic rather than by the three coauthors this used to name:</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="co">// a coauthor filter puts whatever those people publish next in front of</span></span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="co">// candidates, whether or not it has anything to do with the project. These</span></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="co">// two topics are exactly the generative-ML work the position builds on --</span></span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="co">// free energies from generative models, and measure transport between</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="co">// resolutions. See data/topics.yml.</span></span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a><span class="fu">displayTable</span>(</span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>    papers<span class="op">.</span><span class="fu">filter</span>(</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>        p <span class="kw">=&gt;</span> p<span class="op">.</span><span class="at">topics</span><span class="op">.</span><span class="fu">includes</span>(<span class="st">"gen-free-energy"</span>)</span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>          <span class="op">||</span> p<span class="op">.</span><span class="at">topics</span><span class="op">.</span><span class="fu">includes</span>(<span class="st">"resolution-transport"</span>)</span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -382,21 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="cell-output cell-output-display">
 <div>
-<div id="ojs-cell-1-6" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-7" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-1-8" data-nodetype="expression">
+<div id="ojs-cell-1-6" data-nodetype="expression">
 
 </div>
 </div>
@@ -409,7 +399,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbmltcG9ydCB7bWFwfSBmcm9tIFwiQG1hcnRpZW4vcmFtZGFcIlxuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBtYXAoaSA9PiBtYXAoeCA9PiB4W2ldLCBwYXBlcnNfciksIGluZGV4X2FycmF5KVxuXG5mdW5jdGlvbiBkaXNwbGF5VGFibGUocGFwZXJzXykge1xuICAgIHJldHVybiBJbnB1dHMudGFibGUocGFwZXJzXywge1xuICAgICAgICBjb2x1bW5zOiBbXG4gICAgICAgIFwiZG9pXCIsXG4gICAgICAgIFwidGl0bGVcIixcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIixcbiAgICAgICAgXCJqb3VybmFsLnZvbHVtZVwiLFxuICAgICAgICBcInllYXJcIixcbiAgICAgIF0sXG4gICAgICBoZWFkZXI6IHtcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIjogXCJqb3VybmFsXCIsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogXCJ2b2x1bWVcIixcbiAgICAgIH0sXG4gICAgICBmb3JtYXQ6IHtcbiAgICAgICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgICAgIHRpdGxlOiB0aXRsZSA9PiBodGwuaHRtbGAke3RpdGxlfWAsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogdm9sdW1lID0+IGh0bC5odG1sYDxiPiR7dm9sdW1lfTwvYj5gLFxuICAgICAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICAgICAgfSxcbiAgICAgIHdpZHRoOiB7XG4gICAgICAgIFwidGl0bGVcIjogMTBcbiAgICAgIH0sXG4gICAgICBsYXlvdXQ6IFwiYXV0b1wiLFxuICAgIH0pXG59XG5cbmRpc3BsYXlUYWJsZShcbiAgICBwYXBlcnMuZmlsdGVyKGZ1bmN0aW9uKHApIHtcbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgIHAuYXV0aG9ycy5tYXAoYSA9PiBhLmZ1bGxfbmFtZSkuaW5jbHVkZXMoXCJCw6FsaW50IE3DoXTDqVwiKVxuICAgICAgICAgICAgfHwgcC5hdXRob3JzLm1hcChhID0+IGEuZnVsbF9uYW1lKS5pbmNsdWRlcyhcIkRhbmllbCBOYWdlbFwiKVxuICAgICAgICAgICAgfHwgcC5hdXRob3JzLm1hcChhID0+IGEuZnVsbF9uYW1lKS5pbmNsdWRlcyhcIlNhbmRlciBIdW1tZXJpY2hcIilcbiAgICAgICAgKVxuICAgIH0pXG4pXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFRyYW5zcG9zZWQgaW4gcGxhaW4gSmF2YVNjcmlwdCwgYW5kIHdpdGggbm8gT2JzZXJ2YWJsZSBub3RlYm9vayBpbXBvcnRzLlxuLy8gVGhpcyBjZWxsIHVzZWQgdG8gb3BlbiB3aXRoIGBpbXBvcnQge1Bsb3R9IGZyb20gXCJAbWtmcmVlbWFuL3Bsb3QtdG9vbHRpcFwiYFxuLy8gYW5kIGBpbXBvcnQge21hcH0gZnJvbSBcIkBtYXJ0aWVuL3JhbWRhXCJgOyBlYWNoIGRyYWdzIGl0cyB3aG9sZSB0cmFuc2l0aXZlXG4vLyBub3RlYm9vayBncmFwaCBvdmVyIHRoZSBuZXR3b3JrLCBhbmQgaWYgYW55IG9mIGl0IHN0YWxscyB0aGUgcmVhY3RpdmUgY2VsbHNcbi8vIGJlbG93IHJlc29sdmUgdG8gbm90aGluZyBhdCBhbGwsIHNpbGVudGx5IC0tIHNvIHRoZSB0YWJsZSBvbiB0aGUgcGFnZVxuLy8gYWR2ZXJ0aXNpbmcgdGhpcyBwb3NpdGlvbiBjb3VsZCBjb21lIHVwIGVtcHR5IHdpdGggbm8gZXJyb3IuIFBsb3Qgd2FzXG4vLyBpbXBvcnRlZCBidXQgbmV2ZXIgdXNlZCBoZXJlOyBgbWFwYCBpcyByZXBsYWNlZCBiZWxvdy4gU2FtZSBmaXggYXNcbi8vIHJlc2VhcmNoX3RvcGljcy5xbWQuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBpbmRleF9hcnJheS5tYXAoXG4gICAgaSA9PiBPYmplY3QuZnJvbUVudHJpZXMoXG4gICAgICAgIE9iamVjdC5lbnRyaWVzKHBhcGVyc19yKS5tYXAoKFtjb2x1bW4sIHZhbHVlc10pID0+IFtjb2x1bW4sIHZhbHVlc1tpXV0pXG4gICAgKVxuKVxuXG5mdW5jdGlvbiBkaXNwbGF5VGFibGUocGFwZXJzXykge1xuICAgIHJldHVybiBJbnB1dHMudGFibGUocGFwZXJzXywge1xuICAgICAgICBjb2x1bW5zOiBbXG4gICAgICAgIFwiZG9pXCIsXG4gICAgICAgIFwidGl0bGVcIixcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIixcbiAgICAgICAgXCJqb3VybmFsLnZvbHVtZVwiLFxuICAgICAgICBcInllYXJcIixcbiAgICAgIF0sXG4gICAgICBoZWFkZXI6IHtcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIjogXCJqb3VybmFsXCIsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogXCJ2b2x1bWVcIixcbiAgICAgIH0sXG4gICAgICBmb3JtYXQ6IHtcbiAgICAgICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgICAgIHRpdGxlOiB0aXRsZSA9PiBodGwuaHRtbGAke3RpdGxlfWAsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogdm9sdW1lID0+IGh0bC5odG1sYDxiPiR7dm9sdW1lfTwvYj5gLFxuICAgICAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICAgICAgfSxcbiAgICAgIHdpZHRoOiB7XG4gICAgICAgIFwidGl0bGVcIjogMTBcbiAgICAgIH0sXG4gICAgICBsYXlvdXQ6IFwiYXV0b1wiLFxuICAgIH0pXG59XG5cbi8vIFNlbGVjdGVkIGJ5IHRvcGljIHJhdGhlciB0aGFuIGJ5IHRoZSB0aHJlZSBjb2F1dGhvcnMgdGhpcyB1c2VkIHRvIG5hbWU6XG4vLyBhIGNvYXV0aG9yIGZpbHRlciBwdXRzIHdoYXRldmVyIHRob3NlIHBlb3BsZSBwdWJsaXNoIG5leHQgaW4gZnJvbnQgb2Zcbi8vIGNhbmRpZGF0ZXMsIHdoZXRoZXIgb3Igbm90IGl0IGhhcyBhbnl0aGluZyB0byBkbyB3aXRoIHRoZSBwcm9qZWN0LiBUaGVzZVxuLy8gdHdvIHRvcGljcyBhcmUgZXhhY3RseSB0aGUgZ2VuZXJhdGl2ZS1NTCB3b3JrIHRoZSBwb3NpdGlvbiBidWlsZHMgb24gLS1cbi8vIGZyZWUgZW5lcmdpZXMgZnJvbSBnZW5lcmF0aXZlIG1vZGVscywgYW5kIG1lYXN1cmUgdHJhbnNwb3J0IGJldHdlZW5cbi8vIHJlc29sdXRpb25zLiBTZWUgZGF0YS90b3BpY3MueW1sLlxuZGlzcGxheVRhYmxlKFxuICAgIHBhcGVycy5maWx0ZXIoXG4gICAgICAgIHAgPT4gcC50b3BpY3MuaW5jbHVkZXMoXCJnZW4tZnJlZS1lbmVyZ3lcIilcbiAgICAgICAgICB8fCBwLnRvcGljcy5pbmNsdWRlcyhcInJlc29sdXRpb24tdHJhbnNwb3J0XCIpXG4gICAgKVxuKVxuIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
