@@ -12,10 +12,8 @@ def save_quarto_author_page_to_file(author: Author, filename: str) -> None:
         stream.write(generate_quarto_author_page(author))
 
 
-GROUP_AFFILIATION = (
-    "Tristan Bereau's group at the Institute for Theoretical Physics, "
-    "Heidelberg University"
-)
+INSTITUTE = "the Institute for Theoretical Physics, Heidelberg University"
+GROUP_AFFILIATION = f"Tristan Bereau's group at {INSTITUTE}"
 
 # The status axis; whatever else a member carries is their role.
 STATUS_CATEGORIES = {"current", "alumnus"}
@@ -33,17 +31,19 @@ def get_author_description(author: Author, author_info: dict) -> str:
 
     Without one a member page unfurls as a bare title, and Google invents a
     snippet from whatever text it finds first -- here, a publications table.
-    A configured summary is the author's own wording, so prefer it.
 
-    Quarto also renders this under the title, so it deliberately omits the
-    name: the page title carries that already, and repeating it directly
-    beneath the heading reads like filler.
+    This is built from the role rather than from a configured `summary`,
+    because Quarto renders it under the title and the summary is already in
+    the body: using it here printed it on the page twice. For the same
+    reason it omits the person's name, which the page title carries.
     """
-    if summary := author_info.get("summary"):
-        return summary.replace('"', "'")
     categories = author_info.get("categories") or []
     roles = [c for c in categories if c not in STATUS_CATEGORIES]
     role = roles[0] if roles else "member"
+    # "Group leader in Tristan Bereau's group" is a peculiar thing to say
+    # about Tristan Bereau.
+    if role == "group leader":
+        return f"Leads the group at {INSTITUTE}."
     role = ROLE_NAMES.get(role, role)
     if "alumnus" in categories:
         role = f"former {role}"
@@ -218,7 +218,8 @@ Inputs.table(
 
 def get_icon_links_for_author(author_info: dict) -> str:
     field_map = {
-        "twitter": {"icon": "twitter", "text": "X"},
+        # The config field is still named `twitter`; only the glyph moved on.
+        "twitter": {"icon": "twitter-x", "text": "X"},
         "cv": {"icon": "file-earmark-person", "text": "CV"},
         "github": {"icon": "github", "text": "Github"},
         "website": {"icon": "house", "text": "Website"},

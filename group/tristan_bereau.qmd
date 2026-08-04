@@ -1,7 +1,7 @@
 
 ---
 title: "Tristan Bereau"
-description: "Tristan heads the group. Besides from science and data, he enjoys spending time outside and playing jazz piano."
+description: "Leads the group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
@@ -16,7 +16,7 @@ about:
   image: ../static/tristan.jpg
   links:
 
-    - icon: twitter
+    - icon: twitter-x
       text: X
       href: https://twitter.com/tristanbereau
     - icon: file-earmark-person

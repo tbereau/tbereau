@@ -52,7 +52,7 @@ website:
             - about.qmd
             - contact.qmd
         right:
-            -   icon: twitter
+            -   icon: twitter-x
                 href: https://twitter.com/tristanbereau
             -   icon: google
                 href: https://scholar.google.com/citations?user=9cYdrBUAAAAJ
