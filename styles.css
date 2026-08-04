@@ -319,3 +319,54 @@
       font-size: 1.1em;
       font-weight: 500;
     }
+
+
+/* Publications listing on narrow screens.
+   Four columns of titles and author lists cannot fit a phone: the table ran
+   to 454px inside a 375px viewport, so the whole page scrolled sideways and
+   the journal reference sat off-screen. Below the md breakpoint each row is
+   stacked into a citation instead -- title, authors, journal -- which is how
+   a publication list wants to read on a phone anyway.
+
+   The date column is dropped rather than stacked: the description already
+   ends in the year, and the "Order By" control above the table still offers
+   Date - Newest / Date - Oldest, so nothing becomes unreachable. */
+@media (max-width: 767.98px) {
+  .quarto-listing-table thead {
+    display: none;
+  }
+
+  .quarto-listing-table,
+  .quarto-listing-table tbody,
+  .quarto-listing-table tr,
+  .quarto-listing-table td {
+    display: block;
+    width: auto;
+  }
+
+  .quarto-listing-table tr {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--bs-border-color, #dee2e6);
+  }
+
+  .quarto-listing-table td {
+    border: 0;
+    padding: 0.1rem 0;
+  }
+
+  /* title */
+  .quarto-listing-table td:nth-child(1) {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  /* authors */
+  .quarto-listing-table td:nth-child(2) {
+    color: var(--bs-secondary-color, #6a737b);
+  }
+
+  /* date */
+  .quarto-listing-table td:nth-child(4) {
+    display: none;
+  }
+}
