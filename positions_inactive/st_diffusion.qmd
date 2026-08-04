@@ -1,5 +1,6 @@
 ---
 title: "Generative learning and non-equilibrium statistical mechanics"
+description: "Filled: position on generative learning and non-equilibrium statistical mechanics in Tristan Bereau's group at Heidelberg University."
 format:
   html:
     echo: false

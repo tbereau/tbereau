@@ -1,5 +1,6 @@
 ---
 title: "Generative machine learning for molecular thin films"
+description: "Fully funded PhD position on generative machine learning for amorphous molecular thin films, in Tristan Bereau's group at Heidelberg University."
 format:
   html:
     echo: false

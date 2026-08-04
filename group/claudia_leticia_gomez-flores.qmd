@@ -1,6 +1,7 @@
 
 ---
 title: "Claudia Leticia Gómez-Flores"
+description: "Former postdoc in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false

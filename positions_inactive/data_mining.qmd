@@ -1,5 +1,6 @@
 ---
 title: "Postdoctoral position - Data Mining / Machine Learning"
+description: "Filled: postdoctoral position in data mining and machine learning in Tristan Bereau's group at Heidelberg University."
 format:
   html:
     echo: false

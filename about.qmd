@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto."
 ---
 
 ::: {.content-block}

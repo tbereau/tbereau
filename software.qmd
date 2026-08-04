@@ -1,5 +1,6 @@
 ---
 title: "Software"
+description: "Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB."
 format:
   html:
     toc: true

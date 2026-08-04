@@ -1,5 +1,6 @@
 ---
 pageTitle: "Tristan Bereau's research group"
+description: "Research group of Tristan Bereau at the Institute for Theoretical Physics, Heidelberg University: multiscale modeling and machine learning for molecular systems."
 css: index.css
 section-divs: false
 page-layout: custom

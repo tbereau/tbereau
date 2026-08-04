@@ -1,5 +1,6 @@
 ---
 title: "Group members"
+description: "Current members and alumni of Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 listing:
   contents: group
   categories: unnumbered

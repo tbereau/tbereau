@@ -1,5 +1,6 @@
 ---
 title: "Multiscale and high-throughput exploration of protein-ligand binding"
+description: "Filled: position on multiscale and high-throughput exploration of protein-ligand binding in Tristan Bereau's group at Heidelberg University."
 format:
   html:
     echo: false

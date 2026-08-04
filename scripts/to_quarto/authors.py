@@ -12,14 +12,54 @@ def save_quarto_author_page_to_file(author: Author, filename: str) -> None:
         stream.write(generate_quarto_author_page(author))
 
 
+GROUP_AFFILIATION = (
+    "Tristan Bereau's group at the Institute for Theoretical Physics, "
+    "Heidelberg University"
+)
+
+# The status axis; whatever else a member carries is their role.
+STATUS_CATEGORIES = {"current", "alumnus"}
+
+
+# The config spells roles in lowercase; these read badly title-cased blindly.
+ROLE_NAMES = {
+    "phd student": "PhD student",
+    "visiting phd student": "visiting PhD student",
+}
+
+
+def get_author_description(author: Author, author_info: dict) -> str:
+    """The one-line summary search engines quote and link previews show.
+
+    Without one a member page unfurls as a bare title, and Google invents a
+    snippet from whatever text it finds first -- here, a publications table.
+    A configured summary is the author's own wording, so prefer it.
+
+    Quarto also renders this under the title, so it deliberately omits the
+    name: the page title carries that already, and repeating it directly
+    beneath the heading reads like filler.
+    """
+    if summary := author_info.get("summary"):
+        return summary.replace('"', "'")
+    categories = author_info.get("categories") or []
+    roles = [c for c in categories if c not in STATUS_CATEGORIES]
+    role = roles[0] if roles else "member"
+    role = ROLE_NAMES.get(role, role)
+    if "alumnus" in categories:
+        role = f"former {role}"
+    return f"{role[0].upper()}{role[1:]} in {GROUP_AFFILIATION}."
+
+
 def generate_quarto_author_page(author: Author) -> str:
     author_info = find_author_in_config(author.given, author.family, author.orcid)
     icon_links = get_icon_links_for_author(author_info)
     image = f"../static/{author_info.get('image') or 'cgmol.jpg'}"
     categories = get_author_categories(author_info)
+    description = get_author_description(author, author_info)
     header = f"""
 ---
 title: "{author.full_name}"
+description: "{description}"
 format:
   html:
     echo: false

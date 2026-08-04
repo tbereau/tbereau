@@ -1,5 +1,6 @@
 ---
 title: "Open positions"
+description: "Open PhD, Master's and Bachelor's positions in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 listing:
   contents: positions
   categories: unnumbered

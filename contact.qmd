@@ -1,5 +1,6 @@
 ---
 title: "Contact"
+description: "Contact details for Tristan Bereau at the Institute for Theoretical Physics, Heidelberg University."
 format:
     html:
         include-in-header:

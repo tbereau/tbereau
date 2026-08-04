@@ -1,5 +1,6 @@
 ---
 title: "Teaching"
+description: "Courses and seminars taught by Tristan Bereau at Heidelberg University, from statistical physics and soft matter to machine learning."
 ---
 
 | Course | Level | Type | Semester |

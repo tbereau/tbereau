@@ -1,5 +1,6 @@
 ---
 title: "Publications"
+description: "Publications from Tristan Bereau's group, each with its abstract, BibTeX entry and open-access links."
 listing:
   contents: papers
   type: table

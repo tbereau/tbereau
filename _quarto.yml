@@ -8,11 +8,18 @@ project:
         - "files/*"
 
 website:
+    # Twitter cards were already emitted, but nothing else was: no
+    # og:* tags at all, so a link shared to LinkedIn, Slack, Mastodon or
+    # Bluesky unfurled as a bare URL. `image` here feeds both card types.
+    open-graph: true
     twitter-card:
         creator: "@tbereau"
-        image: "https://tristanbereau.com/static/membrane.jpg"
+    image: "https://tristanbereau.com/static/membrane.jpg"
     site-url: https://tristanbereau.com
     title: "Tristan Bereau"
+    # Fallback for any page without its own `description`, and what search
+    # engines quote when they would otherwise invent a snippet.
+    description: "Computational physicist at Heidelberg University, working on multiscale modeling and machine learning for soft condensed matter and biomolecules."
     search:
         type: overlay
         location: navbar

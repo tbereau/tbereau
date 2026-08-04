@@ -1,5 +1,6 @@
 ---
 title: "Research topics"
+description: "Research topics of the group: coarse-graining for molecular discovery, machine learning for soft matter, non-equilibrium reweighting, and force-field development."
 format:
   html:
     toc: true

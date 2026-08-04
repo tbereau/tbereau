@@ -1,5 +1,6 @@
 ---
 title: "Research landscape"
+description: "A two-dimensional embedding of the group's publications, clustered into topics with BERTopic and a UMAP dimensionality reduction."
 format:
   html:
     toc: false

@@ -1,6 +1,7 @@
 
 ---
 title: "Tristan Bereau"
+description: "Tristan heads the group. Besides from science and data, he enjoys spending time outside and playing jazz piano."
 format:
   html:
     echo: false
