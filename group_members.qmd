@@ -3,8 +3,18 @@ title: "Group members"
 listing:
   contents: group
   categories: unnumbered
-  type: default
-  fields: [image, title, categories, status]
+  # A grid of uniform cards rather than full-width rows. The photos are
+  # supplied at whatever size and aspect ratio each person sent -- from
+  # 270x358 to 3024x4032 -- and `type: default` rendered them unconstrained,
+  # so a single portrait could stand taller than the viewport and page one
+  # alone ran to eleven screens. `image-height` crops every card to the same
+  # box, which is what makes the rows line up.
+  type: grid
+  grid-columns: 3
+  image-height: 240px
+  # 32 members, so a 25-item default page would split the group in two.
+  page-size: 48
+  fields: [image, title, categories]
   sort:
     - title
 ---

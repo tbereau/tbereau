@@ -370,3 +370,21 @@
     display: none;
   }
 }
+
+
+/* Group listing on small screens.
+   Quarto drops the grid to a single column below 576px, which turns 32
+   members into roughly fourteen screens of scrolling. Two columns with a
+   shorter crop keeps every face plainly recognisable and halves that. */
+@media (max-width: 575.98px) {
+  .quarto-listing-container-grid .list.grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  /* the listing's image-height is emitted as an inline style, so beating it
+     needs !important rather than just a more specific selector */
+  .quarto-listing-container-grid .quarto-grid-item img.thumbnail-image {
+    height: 150px !important;
+  }
+}
