@@ -746,7 +746,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Publication information is fetched using various APIs:\n\nGeneral info: Orcid\nGeneral info: CrossRef\nGeneral info, TL;DR: Semantic Scholar\nAttention metrics: Altmetrics\nOpen-access info: Unpaywall\nBibTeX references: doi2bib\n\nThe backend was written in Python with the my-scientific-profile library. The frontend uses Quarto."
+    "text": "This site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the research landscape are all built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.\n\n\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page\n\n\n\n\n\n\n\nAbstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper.\n\n\n\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\n\n\n\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
   },
   {
     "objectID": "group/aleksander_durumeric.html",
@@ -1524,5 +1524,33 @@
     "title": "Software",
     "section": "peptideB",
     "text": "peptideB\nESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.\n Github  Publication"
+  },
+  {
+    "objectID": "about.html#where-the-metadata-comes-from",
+    "href": "about.html#where-the-metadata-comes-from",
+    "title": "About",
+    "section": "",
+    "text": "ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page"
+  },
+  {
+    "objectID": "about.html#how-the-research-landscape-is-built",
+    "href": "about.html#how-the-research-landscape-is-built",
+    "title": "About",
+    "section": "",
+    "text": "Abstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
+  },
+  {
+    "objectID": "about.html#tooling",
+    "href": "about.html#tooling",
+    "title": "About",
+    "section": "",
+    "text": "The backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page."
+  },
+  {
+    "objectID": "about.html#analytics",
+    "href": "about.html#analytics",
+    "title": "About",
+    "section": "",
+    "text": "Visits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
   }
 ]

@@ -1,19 +1,55 @@
 ---
 title: "About"
-description: "How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto."
+description: "How this site is built: publication metadata gathered from ORCID, CrossRef, OpenAlex, Semantic Scholar and doi2bib, clustered into topics with BERTopic and rendered with Quarto."
 ---
 
 ::: {.content-block}
 
-Publication information is fetched using various APIs:
+This site is generated from my publication record rather than written by hand.
+The publication list, the per-paper pages and the [research
+landscape](research_landscape.html) are all built from metadata fetched through
+public APIs, so they stay current without anyone editing a bibliography.
 
-- General info: [Orcid](https://orcid.org)
-- General info: [CrossRef](https://www.crossref.org)
-- General info, TL;DR: [Semantic Scholar](https://www.semanticscholar.org)
-- Attention metrics: [Altmetrics](https://www.altmetric.com)
-- Open-access info: [Unpaywall](https://unpaywall.org)
-- BibTeX references: [doi2bib](https://www.doi2bib.org)
+## Where the metadata comes from
 
-The backend was written in Python with the [my-scientific-profile](https://github.com/tbereau/my_scientific_profile) library. The frontend uses [Quarto](https://quarto.org).
+ORCID holds the authoritative list of works; everything else enriches it. Where
+two sources disagree, each field records which one it came from.
+
+| Source | What it contributes |
+|---|---|
+| [ORCID](https://orcid.org) | the list of works itself |
+| [CrossRef](https://www.crossref.org) | authors, affiliations, journal, volume and pages |
+| [OpenAlex](https://openalex.org) | open-access status and links, plus authors and abstracts where CrossRef has gaps |
+| [Semantic Scholar](https://www.semanticscholar.org) | abstracts and TL;DR summaries |
+| [doi2bib](https://www.doi2bib.org) | BibTeX entries |
+| [Altmetric](https://www.altmetric.com) | the attention badge on each paper page |
+
+<!-- Unpaywall was listed here for years, but the open-access pipeline moved to
+OpenAlex and every record in `data/all_papers.json` now carries
+`provenance.open_access: openalex`. OpenAlex went uncredited the whole time,
+even though the paper pages cite it by name for abstracts. -->
+
+## How the research landscape is built
+
+Abstracts are lemmatized with [NLTK](https://www.nltk.org), embedded with the
+`all-MiniLM-L6-v2` [sentence-transformers](https://sbert.net) model, projected
+onto two dimensions with [UMAP](https://umap-learn.readthedocs.io) and clustered
+into topics with [BERTopic](https://github.com/MaartenGr/BERTopic). Papers
+without a usable abstract fall back to their title. The result is the scatter
+plot on the [research landscape](research_landscape.html) page, and the topic
+label attached to each paper.
+
+## Tooling
+
+The backend is written in Python with the
+[my-scientific-profile](https://github.com/tbereau/my_scientific_profile)
+library. The frontend uses [Quarto](https://quarto.org); the sortable tables and
+the landscape plot are [Observable JS](https://quarto.org/docs/interactive/ojs/)
+running in your browser, so no data leaves the page.
+
+## Analytics
+
+Visits are counted with [GoatCounter](https://www.goatcounter.com), which sets
+no cookies and does not track visitors across sites.
 
 :::

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto.">
+<meta name="description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, OpenAlex, Semantic Scholar and doi2bib, clustered into topics with BERTopic and rendered with Quarto.">
 
 <title>About – Tristan Bereau</title>
 <style>
@@ -71,11 +71,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="About – Tristan Bereau">
-<meta property="og:description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto.">
+<meta property="og:description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, OpenAlex, Semantic Scholar and doi2bib, clustered into topics with BERTopic and rendered with Quarto.">
 <meta property="og:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta property="og:site_name" content="Tristan Bereau">
 <meta name="twitter:title" content="About – Tristan Bereau">
-<meta name="twitter:description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto.">
+<meta name="twitter:description" content="How this site is built: publication metadata gathered from ORCID, CrossRef, OpenAlex, Semantic Scholar and doi2bib, clustered into topics with BERTopic and rendered with Quarto.">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    How this site is built: publication metadata gathered from ORCID, CrossRef, Semantic Scholar, Unpaywall and doi2bib, rendered with Quarto.
+    How this site is built: publication metadata gathered from ORCID, CrossRef, OpenAlex, Semantic Scholar and doi2bib, clustered into topics with BERTopic and rendered with Quarto.
   </div>
 </div>
 
@@ -216,16 +216,61 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="content-block">
-<p>Publication information is fetched using various APIs:</p>
-<ul>
-<li>General info: <a href="https://orcid.org">Orcid</a></li>
-<li>General info: <a href="https://www.crossref.org">CrossRef</a></li>
-<li>General info, TL;DR: <a href="https://www.semanticscholar.org">Semantic Scholar</a></li>
-<li>Attention metrics: <a href="https://www.altmetric.com">Altmetrics</a></li>
-<li>Open-access info: <a href="https://unpaywall.org">Unpaywall</a></li>
-<li>BibTeX references: <a href="https://www.doi2bib.org">doi2bib</a></li>
-</ul>
-<p>The backend was written in Python with the <a href="https://github.com/tbereau/my_scientific_profile">my-scientific-profile</a> library. The frontend uses <a href="https://quarto.org">Quarto</a>.</p>
+<p>This site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the <a href="research_landscape.html">research landscape</a> are all built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.</p>
+<section id="where-the-metadata-comes-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-metadata-comes-from">Where the metadata comes from</h2>
+<p>ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>What it contributes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://orcid.org">ORCID</a></td>
+<td>the list of works itself</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.crossref.org">CrossRef</a></td>
+<td>authors, affiliations, journal, volume and pages</td>
+</tr>
+<tr class="odd">
+<td><a href="https://openalex.org">OpenAlex</a></td>
+<td>open-access status and links, plus authors and abstracts where CrossRef has gaps</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.semanticscholar.org">Semantic Scholar</a></td>
+<td>abstracts and TL;DR summaries</td>
+</tr>
+<tr class="odd">
+<td><a href="https://www.doi2bib.org">doi2bib</a></td>
+<td>BibTeX entries</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.altmetric.com">Altmetric</a></td>
+<td>the attention badge on each paper page</td>
+</tr>
+</tbody>
+</table>
+<!-- Unpaywall was listed here for years, but the open-access pipeline moved to
+OpenAlex and every record in `data/all_papers.json` now carries
+`provenance.open_access: openalex`. OpenAlex went uncredited the whole time,
+even though the paper pages cite it by name for abstracts. -->
+</section>
+<section id="how-the-research-landscape-is-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-research-landscape-is-built">How the research landscape is built</h2>
+<p>Abstracts are lemmatized with <a href="https://www.nltk.org">NLTK</a>, embedded with the <code>all-MiniLM-L6-v2</code> <a href="https://sbert.net">sentence-transformers</a> model, projected onto two dimensions with <a href="https://umap-learn.readthedocs.io">UMAP</a> and clustered into topics with <a href="https://github.com/MaartenGr/BERTopic">BERTopic</a>. Papers without a usable abstract fall back to their title. The result is the scatter plot on the <a href="research_landscape.html">research landscape</a> page, and the topic label attached to each paper.</p>
+</section>
+<section id="tooling" class="level2">
+<h2 class="anchored" data-anchor-id="tooling">Tooling</h2>
+<p>The backend is written in Python with the <a href="https://github.com/tbereau/my_scientific_profile">my-scientific-profile</a> library. The frontend uses <a href="https://quarto.org">Quarto</a>; the sortable tables and the landscape plot are <a href="https://quarto.org/docs/interactive/ojs/">Observable JS</a> running in your browser, so no data leaves the page.</p>
+</section>
+<section id="analytics" class="level2">
+<h2 class="anchored" data-anchor-id="analytics">Analytics</h2>
+<p>Visits are counted with <a href="https://www.goatcounter.com">GoatCounter</a>, which sets no cookies and does not track visitors across sites.</p>
+</section>
 </div>
 
 
