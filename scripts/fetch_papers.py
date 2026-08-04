@@ -44,3 +44,9 @@ df = convert_papers_to_dataframe(papers)
 from topics import write_exports  # noqa: E402
 
 write_exports(df)
+
+# The homepage's recent-work list is generated rather than read in the browser,
+# so it has to be rebuilt whenever the exports change.
+from recent_work import write_include  # noqa: E402
+
+write_include()

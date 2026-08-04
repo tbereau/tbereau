@@ -113,3 +113,9 @@ df = convert_papers_to_dataframe(papers)
 from topics import write_exports  # noqa: E402
 
 write_exports(df)
+
+# As in fetch_papers.py: the homepage's recent-work list is generated from
+# these exports, so it is rebuilt here too.
+from recent_work import write_include  # noqa: E402
+
+write_include()

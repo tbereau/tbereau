@@ -12,10 +12,6 @@ page-layout: custom
 # presence alone makes Quarto emit an "On this page" contents block above the
 # banner. A landing page with a one-item table of contents.
 toc: false
-# The recent-work cell is the page's first executable block, and without these
-# the homepage opened with its own OJS source printed on it.
-echo: false
-keep-hidden: true
 editor: source
 image: /static/membrane.jpg
 ---
@@ -100,44 +96,14 @@ as a visible <figcaption> under the image, which is clutter in a hero. -->
 
 ## Recent work
 
-```{ojs}
-// Same data file and the same plain-JavaScript transposition as
-// research_topics.qmd -- no Observable notebook imports, which stall
-// silently. The homepage cannot go stale the way the topics page did: this
-// reads whatever `scripts/fetch_papers.py` last wrote.
-papers_r = FileAttachment("data/all_papers.json").json()
-n_papers = Object.entries(papers_r["doi"]).length
-papers = Array.from({length: n_papers}, (_, i) =>
-    Object.fromEntries(
-        Object.entries(papers_r).map(([column, values]) => [column, values[i]])
-    )
-)
+<!-- Baked in at build time by scripts/recent_work.py, rather than read from
+data/all_papers.json by an OJS cell in the browser. The landing page is the one
+page that has to render, and an OJS cell that stalls leaves an empty heading
+behind; this way index.qmd carries no executable code at all. The cost is that
+the include has to be regenerated when the publication data changes, which the
+two export scripts do. -->
 
-// `repository` drops the two Zenodo software records, which are real outputs
-// but read oddly as a headline. `conference` is kept: Split-Flows is at
-// AISTATS. The export is already newest-first.
-function authorList(authors) {
-    const names = authors.map(a => `${a.given ? a.given[0] + ". " : ""}${a.family}`)
-    return names.length > 4
-        ? `${names.slice(0, 3).join(", ")} et al.`
-        : names.join(", ")
-}
-
-htl.html`<ul class="recent-list">${
-    papers
-        .filter(p => p["journal.kind"] !== "repository")
-        .slice(0, 5)
-        .map(p => htl.html`<li>
-            <a href="https://doi.org/${p.doi}" target="_blank">${p.title}</a>
-            <div class="recent-meta">
-                ${authorList(p.authors)}
-                &middot; <em>${p["journal.abbreviation"] || p["journal.name"]}</em>
-                ${p["journal.volume"] ? htl.html` <b>${p["journal.volume"]}</b>` : ""}
-                (${p.year})
-            </div>
-        </li>`)
-}</ul>`
-```
+{{< include _recent_work.md >}}
 
 [All publications](papers.html){.btn-action-primary .btn-action .btn .btn-success role="button"}
 
