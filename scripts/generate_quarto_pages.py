@@ -24,6 +24,23 @@ for file_name in existing_files:
 authors = load_all_paper_authors_from_s3(s3_client=S3_CLIENT, s3_bucket=S3_BUCKET)
 
 author_infos_with_categories = get_authors_with_categories()
+
+# The navbar sends visitors to group_members.qmd#category=current, so anyone
+# carrying neither status is reachable only from the unfiltered listing and
+# effectively disappears from the site. That is invisible in the rendered page,
+# hence the check here rather than a reading of the output.
+STATUS_CATEGORIES = {"current", "alumnus"}
+missing_status = [
+    f"{info.get('given')} {info.get('family')}"
+    for info in author_infos_with_categories
+    if not STATUS_CATEGORIES.intersection(info.get("categories") or [])
+]
+if missing_status:
+    print(
+        "WARNING: no current/alumnus category, so absent from the group "
+        "listing: " + ", ".join(missing_status)
+    )
+
 authors_with_categories = []
 for author_info in author_infos_with_categories:
     authors_with_categories.append(

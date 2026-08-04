@@ -58,9 +58,7 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
 <div class="float-end">
   <img src="../static/open_access.png" height="64">
 </div>
-<a class="btn btn-outline-primary
-  "
-        href="https://doi.org/10.1021/acs.jpcb.9b10469" role="button">
+<a class="btn btn-outline-primary" href="https://doi.org/10.1021/acs.jpcb.9b10469" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-browser-chrome" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
@@ -73,11 +71,9 @@ Three different interaction scenarios at nanomolar concentrations are distinguis
        5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0
        0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
     </svg>
-        Webpage
+    Webpage
     </a>
-    <a class="btn btn-outline-primary
-      "
-        href="https://pubs.acs.org/doi/pdf/10.1021/acs.jpcb.9b10469" role="button">
+<a class="btn btn-outline-primary" href="https://pubs.acs.org/doi/pdf/10.1021/acs.jpcb.9b10469" role="button">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
         class="bi bi-file-pdf" viewBox="0 0 16 16">
     <path

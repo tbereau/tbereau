@@ -279,13 +279,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        <span class="vs">`</span><span class="sc">${</span>d<span class="op">.</span><span class="at">doi</span><span class="sc">}\n</span><span class="vs"> </span><span class="sc">${</span>d<span class="op">.</span><span class="at">title</span><span class="sc">}\n</span><span class="vs"> </span><span class="sc">${</span>d[<span class="st">'journal.abbreviation'</span>]<span class="sc">}${</span>d[<span class="st">'journal.volume'</span>] <span class="op">?</span> <span class="st">' '</span> <span class="op">+</span> d[<span class="st">'journal.volume'</span>] <span class="op">:</span> <span class="st">''</span><span class="sc">}</span><span class="vs"> (</span><span class="sc">${</span>d[<span class="st">'year'</span>]<span class="sc">}</span><span class="vs">)`</span><span class="op">,</span></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>            <span class="dt">fill</span><span class="op">:</span> <span class="st">"embedding.topic_name"</span><span class="op">,</span></span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>            <span class="dt">r</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">tooltip</span><span class="op">:</span> {</span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stroke</span><span class="op">:</span> <span class="st">"blue"</span><span class="op">,</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Plot renders the title channel as a hover tip natively. This</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            <span class="co">// used to come from the @mkfreeman/plot-tooltip notebook, whose</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>            <span class="co">// import pulled a dozen further notebooks over the network and</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>            <span class="co">// left this plot blank whenever any of them stalled.</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>            <span class="dt">tip</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -295,29 +297,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="59" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 58;"><span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered<span class="op">,</span> {</span>
-<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">columns</span><span class="op">:</span> [</span>
-<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>    <span class="st">"doi"</span><span class="op">,</span></span>
-<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">,</span></span>
-<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">,</span></span>
-<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">,</span></span>
-<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span><span class="op">,</span></span>
-<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
-<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
-<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
-<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
-<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
-<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
-<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>  <span class="dt">layout</span><span class="op">:</span> <span class="st">"fixed"</span><span class="op">,</span></span>
-<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="61" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(filtered<span class="op">,</span> {</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">columns</span><span class="op">:</span> [</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>    <span class="st">"doi"</span><span class="op">,</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">,</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">,</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">,</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>    <span class="st">"year"</span><span class="op">,</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>  <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a>  <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>    <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a>    <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a>  <span class="dt">layout</span><span class="op">:</span> <span class="st">"fixed"</span><span class="op">,</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="expression">
 
@@ -328,14 +330,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="89" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 88;"><span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {Plot} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/all_papers.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>topic_names <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(papers<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d[<span class="st">"embedding.topic_name"</span>])))</span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> papers<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(p) {</span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> visible_topics<span class="op">.</span><span class="fu">includes</span>(p[<span class="st">"embedding.topic_name"</span>])<span class="op">;</span></span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="91" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 90;"><span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"data/all_papers.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> })</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>topic_names <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(papers<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> d[<span class="st">"embedding.topic_name"</span>])))</span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> papers<span class="op">.</span><span class="fu">filter</span>(<span class="kw">function</span>(p) {</span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> visible_topics<span class="op">.</span><span class="fu">includes</span>(p[<span class="st">"embedding.topic_name"</span>])<span class="op">;</span></span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-1" data-nodetype="declaration">
@@ -353,13 +354,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-4-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<div>
-<div id="ojs-cell-4-4" data-nodetype="declaration">
 
 </div>
 </div>
@@ -386,7 +380,7 @@ Note
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB2aXNpYmxlX3RvcGljcyA9IElucHV0cy5jaGVja2JveChcbiAgdG9waWNfbmFtZXMsXG4gIHsgdmFsdWU6IHRvcGljX25hbWVzLFxuICAgIGxhYmVsOiBcIlRvcGljczpcIlxuICB9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBncmlkOiB0cnVlLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJzcGVjdHJhbFwiLFxuICAgIGRvbWFpbjogdG9waWNfbmFtZXMsXG4gICAgbGVnZW5kOiB0cnVlXG4gIH0sXG4gIHg6IHtcbiAgICBsYWJlbDogXCJcIlxuICB9LFxuICB5OiB7XG4gICAgbGFiZWw6IFwiXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChcbiAgICAgICAgZmlsdGVyZWQsXG4gICAgICAgIHtcbiAgICAgICAgICAgIHg6IFwiZW1iZWRkaW5nLnhcIixcbiAgICAgICAgICAgIHk6IFwiZW1iZWRkaW5nLnlcIixcbiAgICAgICAgICAgIHRpdGxlOiAoZCkgPT5cbiAgICAgICAgYCR7ZC5kb2l9XFxuICR7ZC50aXRsZX1cXG4gJHtkWydqb3VybmFsLmFiYnJldmlhdGlvbiddfSR7ZFsnam91cm5hbC52b2x1bWUnXSA/ICcgJyArIGRbJ2pvdXJuYWwudm9sdW1lJ10gOiAnJ30gKCR7ZFsneWVhciddfSlgLFxuICAgICAgICAgICAgZmlsbDogXCJlbWJlZGRpbmcudG9waWNfbmFtZVwiLFxuICAgICAgICAgICAgcjogNixcbiAgICAgICAgfVxuICAgIClcbiAgXSxcbiAgdG9vbHRpcDoge1xuICAgIHN0cm9rZTogXCJibHVlXCIsXG4gIH1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUoZmlsdGVyZWQsIHtcbiAgY29sdW1uczogW1xuICAgIFwiZG9pXCIsXG4gICAgXCJ0aXRsZVwiLFxuICAgIFwiam91cm5hbC5uYW1lXCIsXG4gICAgXCJqb3VybmFsLnZvbHVtZVwiLFxuICAgIFwieWVhclwiLFxuICBdLFxuICBoZWFkZXI6IHtcbiAgICBcImpvdXJuYWwubmFtZVwiOiBcImpvdXJuYWxcIixcbiAgICBcImpvdXJuYWwudm9sdW1lXCI6IFwidm9sdW1lXCIsXG4gIH0sXG4gIGZvcm1hdDoge1xuICAgIGRvaTogZG9pID0+IGh0bC5odG1sYDxhIGhyZWY9aHR0cHM6Ly9kb2kub3JnLyR7ZG9pfSB0YXJnZXQ9X2JsYW5rPiR7ZG9pfTwvYT5gLFxuICAgIHRpdGxlOiB0aXRsZSA9PiBodGwuaHRtbGAke3RpdGxlfWAsXG4gICAgXCJqb3VybmFsLnZvbHVtZVwiOiB2b2x1bWUgPT4gaHRsLmh0bWxgPGI+JHt2b2x1bWV9PC9iPmAsXG4gICAgeWVhcjogeWVhciA9PiBodGwuaHRtbGAke3llYXJ9YCxcbiAgfSxcbiAgd2lkdGg6IHtcbiAgICBcInRpdGxlXCI6IDEwXG4gIH0sXG4gIGxheW91dDogXCJmaXhlZFwiLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7UGxvdH0gZnJvbSBcIkBta2ZyZWVtYW4vcGxvdC10b29sdGlwXCJcbnBhcGVycyA9IEZpbGVBdHRhY2htZW50KFwiZGF0YS9hbGxfcGFwZXJzLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9KVxuXG50b3BpY19uYW1lcyA9IEFycmF5LmZyb20obmV3IFNldChwYXBlcnMubWFwKGQgPT4gZFtcImVtYmVkZGluZy50b3BpY19uYW1lXCJdKSkpXG5cbmZpbHRlcmVkID0gcGFwZXJzLmZpbHRlcihmdW5jdGlvbihwKSB7XG4gIHJldHVybiB2aXNpYmxlX3RvcGljcy5pbmNsdWRlcyhwW1wiZW1iZWRkaW5nLnRvcGljX25hbWVcIl0pO1xufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgndmlzaWJsZV90b3BpY3MnKSJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiB2aXNpYmxlX3RvcGljcyA9IElucHV0cy5jaGVja2JveChcbiAgdG9waWNfbmFtZXMsXG4gIHsgdmFsdWU6IHRvcGljX25hbWVzLFxuICAgIGxhYmVsOiBcIlRvcGljczpcIlxuICB9XG4pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJQbG90LnBsb3Qoe1xuICBncmlkOiB0cnVlLFxuICBjb2xvcjoge1xuICAgIHNjaGVtZTogXCJzcGVjdHJhbFwiLFxuICAgIGRvbWFpbjogdG9waWNfbmFtZXMsXG4gICAgbGVnZW5kOiB0cnVlXG4gIH0sXG4gIHg6IHtcbiAgICBsYWJlbDogXCJcIlxuICB9LFxuICB5OiB7XG4gICAgbGFiZWw6IFwiXCJcbiAgfSxcbiAgbWFya3M6IFtcbiAgICBQbG90LmRvdChcbiAgICAgICAgZmlsdGVyZWQsXG4gICAgICAgIHtcbiAgICAgICAgICAgIHg6IFwiZW1iZWRkaW5nLnhcIixcbiAgICAgICAgICAgIHk6IFwiZW1iZWRkaW5nLnlcIixcbiAgICAgICAgICAgIHRpdGxlOiAoZCkgPT5cbiAgICAgICAgYCR7ZC5kb2l9XFxuICR7ZC50aXRsZX1cXG4gJHtkWydqb3VybmFsLmFiYnJldmlhdGlvbiddfSR7ZFsnam91cm5hbC52b2x1bWUnXSA/ICcgJyArIGRbJ2pvdXJuYWwudm9sdW1lJ10gOiAnJ30gKCR7ZFsneWVhciddfSlgLFxuICAgICAgICAgICAgZmlsbDogXCJlbWJlZGRpbmcudG9waWNfbmFtZVwiLFxuICAgICAgICAgICAgcjogNixcbiAgICAgICAgICAgIC8vIFBsb3QgcmVuZGVycyB0aGUgdGl0bGUgY2hhbm5lbCBhcyBhIGhvdmVyIHRpcCBuYXRpdmVseS4gVGhpc1xuICAgICAgICAgICAgLy8gdXNlZCB0byBjb21lIGZyb20gdGhlIEBta2ZyZWVtYW4vcGxvdC10b29sdGlwIG5vdGVib29rLCB3aG9zZVxuICAgICAgICAgICAgLy8gaW1wb3J0IHB1bGxlZCBhIGRvemVuIGZ1cnRoZXIgbm90ZWJvb2tzIG92ZXIgdGhlIG5ldHdvcmsgYW5kXG4gICAgICAgICAgICAvLyBsZWZ0IHRoaXMgcGxvdCBibGFuayB3aGVuZXZlciBhbnkgb2YgdGhlbSBzdGFsbGVkLlxuICAgICAgICAgICAgdGlwOiB0cnVlLFxuICAgICAgICB9XG4gICAgKVxuICBdLFxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IklucHV0cy50YWJsZShmaWx0ZXJlZCwge1xuICBjb2x1bW5zOiBbXG4gICAgXCJkb2lcIixcbiAgICBcInRpdGxlXCIsXG4gICAgXCJqb3VybmFsLm5hbWVcIixcbiAgICBcImpvdXJuYWwudm9sdW1lXCIsXG4gICAgXCJ5ZWFyXCIsXG4gIF0sXG4gIGhlYWRlcjoge1xuICAgIFwiam91cm5hbC5uYW1lXCI6IFwiam91cm5hbFwiLFxuICAgIFwiam91cm5hbC52b2x1bWVcIjogXCJ2b2x1bWVcIixcbiAgfSxcbiAgZm9ybWF0OiB7XG4gICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgdGl0bGU6IHRpdGxlID0+IGh0bC5odG1sYCR7dGl0bGV9YCxcbiAgICBcImpvdXJuYWwudm9sdW1lXCI6IHZvbHVtZSA9PiBodGwuaHRtbGA8Yj4ke3ZvbHVtZX08L2I+YCxcbiAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICB9LFxuICB3aWR0aDoge1xuICAgIFwidGl0bGVcIjogMTBcbiAgfSxcbiAgbGF5b3V0OiBcImZpeGVkXCIsXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoicGFwZXJzID0gRmlsZUF0dGFjaG1lbnQoXCJkYXRhL2FsbF9wYXBlcnMuY3N2XCIpLmNzdih7IHR5cGVkOiB0cnVlIH0pXG5cbnRvcGljX25hbWVzID0gQXJyYXkuZnJvbShuZXcgU2V0KHBhcGVycy5tYXAoZCA9PiBkW1wiZW1iZWRkaW5nLnRvcGljX25hbWVcIl0pKSlcblxuZmlsdGVyZWQgPSBwYXBlcnMuZmlsdGVyKGZ1bmN0aW9uKHApIHtcbiAgcmV0dXJuIHZpc2libGVfdG9waWNzLmluY2x1ZGVzKHBbXCJlbWJlZGRpbmcudG9waWNfbmFtZVwiXSk7XG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCd2aXNpYmxlX3RvcGljcycpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -911,62 +905,63 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="in">        `${d.doi}\n ${d.title}\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,</span></span>
 <span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a><span class="in">            fill: "embedding.topic_name",</span></span>
 <span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a><span class="in">            r: 6,</span></span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
-<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="in">  ],</span></span>
-<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="in">  tooltip: {</span></span>
-<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="in">    stroke: "blue",</span></span>
-<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
-<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="in">            // Plot renders the title channel as a hover tip natively. This</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="in">            // used to come from the @mkfreeman/plot-tooltip notebook, whose</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="in">            // import pulled a dozen further notebooks over the network and</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="in">            // left this plot blank whenever any of them stalled.</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="in">            tip: true,</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a><span class="in">  ],</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(filtered, {</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="in">  columns: [</span></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="in">    "doi",</span></span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="in">    "title",</span></span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.name",</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume",</span></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="in">    "year",</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="in">  ],</span></span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="in">  header: {</span></span>
-<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.name": "journal",</span></span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume": "volume",</span></span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="in">  format: {</span></span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="in">    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,</span></span>
-<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="in">    title: title =&gt; htl.html`${title}`,</span></span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,</span></span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="in">    year: year =&gt; htl.html`${year}`,</span></span>
-<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="in">  width: {</span></span>
-<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="in">    "title": 10</span></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="in">  layout: "fixed",</span></span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="in">Inputs.table(filtered, {</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="in">  columns: [</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="in">    "doi",</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="in">    "title",</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.name",</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume",</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="in">    "year",</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="in">  ],</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="in">  header: {</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.name": "journal",</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume": "volume",</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a><span class="in">  format: {</span></span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="in">    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a><span class="in">    title: title =&gt; htl.html`${title}`,</span></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="in">    "journal.volume": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="in">    year: year =&gt; htl.html`${year}`,</span></span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a><span class="in">  width: {</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="in">    "title": 10</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="in">  },</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="in">  layout: "fixed",</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
-<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="in">import {Plot} from "@mkfreeman/plot-tooltip"</span></span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="in">papers = FileAttachment("data/all_papers.csv").csv({ typed: true })</span></span>
-<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="in">topic_names = Array.from(new Set(papers.map(d =&gt; d["embedding.topic_name"])))</span></span>
-<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = papers.filter(function(p) {</span></span>
-<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a><span class="in">  return visible_topics.includes(p["embedding.topic_name"]);</span></span>
-<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
-<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>This represents a two-dimensional embedding of all the group's publications, clustered in topics. Publication abstracts are lemmatized and clustered using <span class="co">[</span><span class="ot">BERTopic</span><span class="co">](https://github.com/MaartenGr/BERTopic)</span> with a UMAP dimensionality reduction.</span>
-<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>For a more detailed description of our research, see <span class="co">[</span><span class="ot">Topics</span><span class="co">](/research_topics.html)</span>.</span>
-<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="in">papers = FileAttachment("data/all_papers.csv").csv({ typed: true })</span></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="in">topic_names = Array.from(new Set(papers.map(d =&gt; d["embedding.topic_name"])))</span></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a><span class="in">filtered = papers.filter(function(p) {</span></span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="in">  return visible_topics.includes(p["embedding.topic_name"]);</span></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="in">})</span></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a>This represents a two-dimensional embedding of all the group's publications, clustered in topics. Publication abstracts are lemmatized and clustered using <span class="co">[</span><span class="ot">BERTopic</span><span class="co">](https://github.com/MaartenGr/BERTopic)</span> with a UMAP dimensionality reduction.</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>For a more detailed description of our research, see <span class="co">[</span><span class="ot">Topics</span><span class="co">](/research_topics.html)</span>.</span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

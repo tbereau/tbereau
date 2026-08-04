@@ -8,13 +8,19 @@ format:
 ---
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
-import {map} from "@martien/ramda"
-
+// Transposed in plain JavaScript rather than with `map` borrowed from the
+// @martien/ramda notebook: an Observable notebook import drags its whole
+// transitive graph over the network, and if any of it stalls the reactive
+// cells below resolve to nothing at all, silently. Only Inputs.table is used
+// on this page, which the OJS standard library already provides.
 papers_r = FileAttachment("../data/all_papers.json").json()
 n_columns = Object.entries(papers_r["doi"]).length
 index_array = Array.from({length: n_columns}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
+papers = index_array.map(
+    i => Object.fromEntries(
+        Object.entries(papers_r).map(([column, values]) => [column, values[i]])
+    )
+)
 
 function displayTable(papers_) {
     return Inputs.table(papers_, {

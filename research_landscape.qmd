@@ -45,12 +45,14 @@ Plot.plot({
         `${d.doi}\n ${d.title}\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,
             fill: "embedding.topic_name",
             r: 6,
+            // Plot renders the title channel as a hover tip natively. This
+            // used to come from the @mkfreeman/plot-tooltip notebook, whose
+            // import pulled a dozen further notebooks over the network and
+            // left this plot blank whenever any of them stalled.
+            tip: true,
         }
     )
   ],
-  tooltip: {
-    stroke: "blue",
-  }
 })
 ```
 
@@ -86,7 +88,6 @@ Inputs.table(filtered, {
 
 
 ```{ojs}
-import {Plot} from "@mkfreeman/plot-tooltip"
 papers = FileAttachment("data/all_papers.csv").csv({ typed: true })
 
 topic_names = Array.from(new Set(papers.map(d => d["embedding.topic_name"])))

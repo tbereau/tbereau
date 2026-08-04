@@ -16,7 +16,7 @@ def generate_quarto_author_page(author: Author) -> str:
     author_info = find_author_in_config(author.given, author.family, author.orcid)
     icon_links = get_icon_links_for_author(author_info)
     image = f"../static/{author_info.get('image') or 'cgmol.jpg'}"
-    categories = get_author_categories(author)
+    categories = get_author_categories(author_info)
     header = f"""
 ---
 title: "{author.full_name}"
@@ -49,13 +49,19 @@ about:
     body = f"""
 
 ```{{ojs}}
-import {{Plot}} from "@mkfreeman/plot-tooltip"
-import {{map}} from "@martien/ramda"
-
+// The column-oriented JSON is transposed here in plain JavaScript. This used to
+// borrow `map` from the @martien/ramda notebook, which drags a dozen unrelated
+// Observable notebooks over the network on every page load; when any of them
+// stalls the reactive graph never resolves and both tables below stay silently
+// empty, with no error. Nothing on this page needs more than the OJS stdlib.
 papers_r = FileAttachment("../data/all_papers.json").json()
 n_columns = Object.entries(papers_r["doi"]).length
 index_array = Array.from({{length: n_columns}}, (_, i) => i)
-papers = map(i => map(x => x[i], papers_r), index_array)
+papers = index_array.map(
+    i => Object.fromEntries(
+        Object.entries(papers_r).map(([column, values]) => [column, values[i]])
+    )
+)
 
 my_papers = papers.filter(function(p) {{
     return p.authors.map(a => a.full_name).includes("{author.full_name}")
@@ -199,8 +205,15 @@ def get_icon_links_for_author(author_info: dict) -> str:
     return icon_links
 
 
-def get_author_categories(author: Author) -> str:
-    author_info = find_author_in_config(author.given, author.family)
+def get_author_categories(author_info: dict) -> str:
+    """The listing categories, read off the config entry the caller resolved.
+
+    This used to look the entry up a second time from the name alone, which
+    matches only on an exact `given`. A provider reporting "Luis J." against a
+    config saying "Luis" then found nothing and the page silently lost every
+    category, dropping that person out of the filtered group listing. The ORCID
+    match the caller already made is the reliable one, so reuse it.
+    """
     return (
         author_info.get("categories")
         and "categories:\n"  # noqa
