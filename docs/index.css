@@ -29,10 +29,10 @@
     justify-content: left;
   }
 
-  .hero-banner h1 {
-    color: #39729E;
-    font-size: 2.5rem;
-  }
+  /* No `.hero-banner h1 { font-size: 2.5rem }` here: it came from the Quarto
+     template and sat dead while the hero heading was an h3. The heading is
+     now the h1 it should always have been, and an element selector would
+     outrank the .h3 utility that keeps it at its established size. */
 
 
   .hero-banner .hero-image {
@@ -85,6 +85,8 @@
     text-decoration: none;
   }
 
+  /* h1 included since the hero heading became one; the spacing is the same. */
+  .hero-banner h1,
   .hero-banner h3 {
     margin-top: 1.3rem;
     margin-bottom: 1.3rem;

@@ -192,8 +192,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="hero-banner alt-background">
-<section id="homepage-of-tristan-bereau-at-the-institute-for-theoretical-physics-heidelberg-university" class="content-block">
-<h3>Homepage of Tristan Bereau at the <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></h3>
+<div class="content-block">
+<!-- The page's only heading, so it has to be the h1: as an h3 the homepage
+had no heading landmark at all, which screen readers rely on to orient and
+search engines read as the page's subject. Bootstrap's .h3 utility keeps it
+looking exactly as it did -- a full-size h1 would dwarf the paragraph under
+it, and this sentence is too long to carry 2.5rem. -->
+<h1 class="h3" id="homepage-of-tristan-bereau-at-the-institute-for-theoretical-physics-heidelberg-university">Homepage of Tristan Bereau at the <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></h1>
 <p>I’m a computational physicist interested in the understanding and development of multiscale modeling and machine learning methods for soft-condensed matter and biomolecules. Research activities include</p>
 <ul>
 <li>Multiscale modeling for computational discovery and high-throughput screening</li>
@@ -204,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="hero-buttons">
 <p><a href="research_landscape.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Research landscape</a> <a href="research_topics.html" id="btn-guide" class="btn-action btn btn-info btn-lg" role="button">Research topics</a></p>
 </div>
-</section>
+</div>
 <div class="hero-image hero-image-right">
 <p><img src="static/membrane.jpg" class="img-fluid"></p>
 </div>
