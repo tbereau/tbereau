@@ -1,6 +1,12 @@
 project:
     type: website
     output-dir: docs
+    render:
+        # Everything except the filled positions. They are kept in the repo
+        # as a record of what has been advertised, but publishing them put
+        # three expired adverts in the sitemap for Google to serve.
+        - "**/*.qmd"
+        - "!positions_inactive/"
     resources:
         - "css/"
         - "js/"
