@@ -53,7 +53,7 @@ website:
             - contact.qmd
         right:
             -   icon: twitter-x
-                href: https://twitter.com/tristanbereau
+                href: https://x.com/tristanbereau
             -   icon: google
                 href: https://scholar.google.com/citations?user=9cYdrBUAAAAJ
             -   icon: file-earmark-person

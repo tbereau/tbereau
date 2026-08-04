@@ -18,7 +18,7 @@ about:
 
     - icon: twitter-x
       text: X
-      href: https://twitter.com/tristanbereau
+      href: https://x.com/tristanbereau
     - icon: file-earmark-person
       text: CV
       href: /files/bereau_cv.pdf
