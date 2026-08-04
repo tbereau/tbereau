@@ -44,10 +44,12 @@
    now the h1 it should always have been, and an element selector would
    outrank the .h3 utility that keeps it at its established size. */
 
+/* `height: fixed` sat here until it was noticed: `height` takes no such
+   keyword, so the declaration never did anything. It came in with the Quarto
+   template. */
 .hero-banner .hero-image {
   position: absolute;
   display: none;
-  height: fixed;
   opacity: 0.15;
 }
 
@@ -103,6 +105,17 @@
 .hero-banner #btn-guide {
   background-color: #959595 !important;
   border: none;
+}
+
+/* The hiring notice is the only time-sensitive thing on the page, and the only
+   prose that has to be noticed rather than read in order. A rule rather than a
+   button, so that it costs one paragraph of height and cannot wrap the way a
+   third btn-lg did. Remove together with the notice in index.qmd when the
+   position is filled. */
+.hero-banner .hero-notice {
+  border-left: 3px solid #9a5b16;
+  padding-left: 0.9rem;
+  margin-bottom: 1.3rem;
 }
 
 .hero-banner ul {

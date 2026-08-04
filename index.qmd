@@ -20,25 +20,55 @@ image: /static/membrane.jpg
 had no heading landmark at all, which screen readers rely on to orient and
 search engines read as the page's subject. Bootstrap's .h3 utility keeps it
 looking exactly as it did -- a full-size h1 would dwarf the paragraph under
-it, and this sentence is too long to carry 2.5rem. -->
+it, and this sentence is too long to carry 2.5rem.
 
-# Homepage of Tristan Bereau at the [Institute for Theoretical Physics](https://www.thphys.uni-heidelberg.de), [Heidelberg University](https://www.uni-heidelberg.de/en) {.h3}
+The heading used to open "Homepage of Tristan Bereau at the ...", which spent
+the h1's most valuable words on a filler label and rendered its emphasis
+backwards: the institution names are links, so they take font-weight 400 while
+"Homepage of Tristan Bereau at the" was bold. On a phone it also ran to seven
+lines and filled the first screen before a word of content. -->
 
-I'm a computational physicist interested in the understanding and development of
-multiscale modeling and machine learning methods for soft-condensed matter and biomolecules.
-Research activities include
+# Multiscale modeling and machine learning for molecular systems {.h3}
 
-- Multiscale modeling for computational discovery and high-throughput screening
-- Impact of coarse-graining on chemical-space exploration
-- Physics-inspired machine learning for molecular systems
+Tristan Bereau's group at the [Institute for Theoretical
+Physics](https://www.thphys.uni-heidelberg.de), [Heidelberg
+University](https://www.uni-heidelberg.de/en). We develop simulation and
+machine-learning methods for soft-condensed matter and biomolecules, and use
+coarse-graining to make chemical compound space tractable. Current activities
+include
 
-What's presented here is the concerted effort of many fantastic students,
-postdocs, and collaborators I've had the chance to work with.
+- Free energies from physics-informed generative models
+- Coarse-graining to compress chemical space for high-throughput screening
+- Molecular discovery by active learning and Bayesian optimization
+- Reproducible and FAIR workflows for molecular simulation
+
+<!-- The one time-sensitive item on the site, and it was previously reachable
+only through a navbar dropdown labelled "Group", which is not where anyone
+looks for a job. A notice rather than a third button: three btn-lg buttons
+wrapped to a second row inside the 600px hero and the last one landed below
+the fold on a 720px-tall viewport, which is the one thing a hiring call cannot
+afford. It links to the listing rather than to the advert itself, so it does
+not 404 in the window while the advert moves to positions_inactive/. Remove
+this block, and the .hero-notice rule in index.css, once the position is
+filled. -->
+
+::: {.hero-notice}
+A fully funded [**PhD position**](positions.html) on generative machine
+learning for molecular thin films is currently open, reviewed on a rolling
+basis.
+:::
 
 ::: {.hero-buttons}
 [Research landscape](research_landscape.html){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 [Research topics](research_topics.html){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
 :::
+
+<!-- Below the buttons rather than above them: this is a closing credit, and
+with it in the middle the call-to-action row fell below the fold on a 720px
+viewport, which is the one thing the hiring notice cannot afford. -->
+
+What's presented here is the concerted effort of many fantastic students,
+postdocs, and collaborators I've had the chance to work with.
 
 :::
 

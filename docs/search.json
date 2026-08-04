@@ -14,6 +14,111 @@
     "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nfunction displayTable(papers_) {\n    return Inputs.table(papers_, {\n        columns: [\n        \"doi\",\n        \"title\",\n        \"journal.name\",\n        \"journal.volume\",\n        \"year\",\n      ],\n      header: {\n        \"journal.name\": \"journal\",\n        \"journal.volume\": \"volume\",\n      },\n      format: {\n        doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n        title: title =&gt; htl.html`${title}`,\n        \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n        year: year =&gt; htl.html`${year}`,\n      },\n      width: {\n        \"title\": 10\n      },\n      layout: \"auto\",\n    })\n}\n\n// Every section below selects its papers this way. The `topics` field is\n// attached at export time from `data/topics.yml`, which is also where a new\n// paper gets assigned to a section -- see `scripts/topics.py`. Selecting by\n// coauthor instead, as this page used to, silently adopts whatever that person\n// publishes next; selecting by a DOI list written into the page means the page\n// has to be remembered every time a paper comes out, and it was not.\nfunction topic(key) {\n    return displayTable(papers.filter(p =&gt; p.topics.includes(key)))\n}"
   },
   {
+    "objectID": "research_topics.html#free-energies-from-generative-models",
+    "href": "research_topics.html#free-energies-from-generative-models",
+    "title": "Research topics",
+    "section": "Free energies from generative models",
+    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, removing the need to simulate a ladder of intermediate states: on Lennard-Jones excess chemical potentials it reaches an MAE \\(\\approx 0.15\\,k_\\mathrm{B}T\\) in roughly 30 minutes, about an order of magnitude faster than umbrella sampling at comparable accuracy. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.\n\ntopic(\"gen-free-energy\")"
+  },
+  {
+    "objectID": "research_topics.html#measure-transport-across-resolutions",
+    "href": "research_topics.html#measure-transport-across-resolutions",
+    "title": "Research topics",
+    "section": "Measure transport across resolutions",
+    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.\n\ntopic(\"resolution-transport\")"
+  },
+  {
+    "objectID": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
+    "href": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
+    "title": "Research topics",
+    "section": "High-throughput screening of thermodynamic properties",
+    "text": "High-throughput screening of thermodynamic properties\n\n\n\n\n\nFrom a reduced chemical space to a permeability surface across two molecular descriptors\n\n\nRather than arbitrarily selecting compounds, we systematically explore chemical space according to the target property of interest. Coarse-graining is what makes this affordable: a linear relation between bulk partitioning and the potential of mean force turns an expensive insertion free energy into a surrogate that can be evaluated across an entire library. We used it to screen more than 500,000 small molecules for drug–membrane permeability, yielding a permeability map across a sizeable part of organic chemical space, benchmarked against experiment and released as a public dataset of coarse-grained trajectories, insertion PMFs, and permeability coefficients. Symbolic regression over that dataset recovers compact algebraic expressions in a handful of physical descriptors—size, polarity, hydrogen-bonding capacity—and the century-old Meyer–Overton correlation emerges from hydrophobic transfer and bilayer deformation alone, without invoking receptor-specific binding.\n\ntopic(\"high-throughput\")"
+  },
+  {
+    "objectID": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
+    "href": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
+    "title": "Research topics",
+    "section": "Molecular discovery by active learning and Bayesian optimization",
+    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nScreening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective in vitro and one in vivo. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\n\ntopic(\"molecular-discovery\")"
+  },
+  {
+    "objectID": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
+    "href": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
+    "title": "Research topics",
+    "section": "Coarse-graining as a reduction of chemical space",
+    "text": "Coarse-graining as a reduction of chemical space\n\n\n\n\n\nEfficient learning of coarse-grained molecular simulations\n\n\nTransferable coarse-grained models are useful precisely because they are degenerate, and we study the consequences of that degeneracy quantitatively. Varying the number of Martini bead types from 5 to 16 across thousands of molecules establishes the resolution limit of data-driven models spanning chemical space, and marks where transferability begins to cost chemical specificity. Treating exploration as importance sampling over coarse-grained representations improves coverage of the property landscape by factors of 2–10 over uniform sampling, at the scale of some \\(10^6\\) compounds. Adjacent questions concern how condensed-phase structure ought to be represented at all—adapting the SLATM expansion in one-, two-, and three-body local environments to thermodynamic observables of molecular liquids—and how far kernel-based models can be trusted, where an audit of machine-learned hydration free energies exposes the penalty incurred when the training database is chemically narrow.\n\ntopic(\"cg-chemical-space\")"
+  },
+  {
+    "objectID": "research_topics.html#automated-force-field-parametrization",
+    "href": "research_topics.html#automated-force-field-parametrization",
+    "title": "Research topics",
+    "section": "Automated force-field parametrization",
+    "text": "Automated force-field parametrization\n\n\n\n\n\nAutomated Martini parametrization\n\n\nHigh-throughput screening is only possible if parametrization requires no human in the loop. Auto-Martini generates Martini topologies for small organic molecules directly from SMILES, assigning the mapping, bead types, and bonded parameters automatically. The pipeline has been rebuilt for Martini 3, validated against expert-designed models, and exercised on a screen of 100,000 compounds from the Enamine library.\nAuto Martini\n\ntopic(\"auto-parametrization\")"
+  },
+  {
+    "objectID": "research_topics.html#reproducible-and-fair-simulation-workflows",
+    "href": "research_topics.html#reproducible-and-fair-simulation-workflows",
+    "title": "Research topics",
+    "section": "Reproducible and FAIR simulation workflows",
+    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.\n\ntopic(\"fair-workflows\")"
+  },
+  {
+    "objectID": "research_topics.html#membrane-biophysics",
+    "href": "research_topics.html#membrane-biophysics",
+    "title": "Research topics",
+    "section": "Membrane biophysics",
+    "text": "Membrane biophysics\n\n\n\n\n\nCoarse-grained lipid bilayer with a small-molecule permeant\n\n\nLipid membranes are the physical system our methods return to most often, and the question we most often ask of them is which of their features are thermodynamically dictated and which demand active cellular maintenance. Semi-grand canonical simulations, with chemical potentials imposed on individual lipid species, reframe membrane composition as a constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms and saturation asymmetry between leaflets both emerge from thermodynamics alone, narrowing the list of properties a cell must actively regulate. In parallel we study how small molecules partition into membranes and reshape them—phase separation in binary mixtures, nanoparticle contact mediated by copolymer coronas, the bacteriostatic action of 2-phenylethanol derivatives, the reorganization produced by nitrated fatty acids—together with the folding and insertion thermodynamics of transmembrane peptides.\n\ntopic(\"membranes\")"
+  },
+  {
+    "objectID": "research_topics.html#kinetics-of-coarse-grained-models",
+    "href": "research_topics.html#kinetics-of-coarse-grained-models",
+    "title": "Research topics",
+    "section": "Kinetics of coarse-grained models",
+    "text": "Kinetics of coarse-grained models\n\n\n\n\n\nBiased Markov state model\n\n\nCoarse-graining accelerates dynamics, and it does so unevenly: a model parametrized against structure alone will generally misrepresent barrier-crossing kinetics. We parametrize concurrently against static and kinetic information, using Markov state models biased with external information to keep the interpretation of simulation kinetics consistent. Conformational surface hopping couples distinct force fields to distinct conformational basins, in analogy with nonadiabatic transitions between electronic surfaces; incorporating more surfaces improves cross-correlations systematically and recovers barrier-crossing dynamics that a single surface cannot. Related work identifies metastable states without hand-chosen collective variables, through hidden Markov models of solvation substates and Gaussian-mixture variational autoencoders whose mixture components correspond to conformational basins.\n\ntopic(\"cg-kinetics\")"
+  },
+  {
+    "objectID": "research_topics.html#non-equilibrium-dynamical-reweighting",
+    "href": "research_topics.html#non-equilibrium-dynamical-reweighting",
+    "title": "Research topics",
+    "section": "Non-equilibrium dynamical reweighting",
+    "text": "Non-equilibrium dynamical reweighting\n\n\n\n\n\nMaximum caliber for non-equilibrium reweighting\n\n\nWe extend the concept of statistical reweighting to non-equilibrium steady states. Stochastic thermodynamics analytically relates the forward and backward probabilities of any pathway through the external nonconservative force, which supplies the constraint; a maximum-caliber—maximum path entropy—formalism then reweights microtrajectories from one driven steady state onto another. The framework extends to collective variables, so that free-energy landscapes along a reaction coordinate can be recovered from short driven runs.\n\ntopic(\"nonequilibrium\")"
+  },
+  {
+    "objectID": "research_topics.html#polymer-and-organic-materials-morphology",
+    "href": "research_topics.html#polymer-and-organic-materials-morphology",
+    "title": "Research topics",
+    "section": "Polymer and organic-materials morphology",
+    "text": "Polymer and organic-materials morphology\n\n\n\n\n\nFree-energy map of syndiotactic-polystyrene polymorphs\n\n\nMultiscale simulation of polymer morphology, where the observable of interest sits beyond the reach of either resolution on its own. Metadynamics in a phase space of collective variables, referenced against DFT, resolves the free-energy landscape between polymorphs of syndiotactic polystyrene and yields \\(\\alpha/\\beta\\) free-energy differences that rationalize the experimentally observed phase populations.\n\ntopic(\"polymer-materials\")"
+  },
+  {
+    "objectID": "research_topics.html#static-atomic-multipole-electrostatics",
+    "href": "research_topics.html#static-atomic-multipole-electrostatics",
+    "title": "Research topics",
+    "section": "Static atomic multipole electrostatics",
+    "text": "Static atomic multipole electrostatics\n\n\n\n\n\nForce propagation on electrostatic multipoles\n\n\nPoint charges are a crude description of the molecular electrostatic potential. Static atomic multipoles, derived from the electrostatic potential through a spherical-harmonic expansion, provide a systematically better one, and exploiting their symmetries makes force propagation affordable enough for condensed-phase molecular dynamics. Applications include free energies of hydration, two-dimensional infrared spectroscopy of solvation dynamics, and the \\(\\sigma\\)-hole of halogenated compounds, where quadrupolar terms on the adjacent atoms prove necessary.\n\ntopic(\"multipoles\")"
+  },
+  {
+    "objectID": "research_topics.html#machine-learning-of-non-covalent-interactions",
+    "href": "research_topics.html#machine-learning-of-non-covalent-interactions",
+    "title": "Research topics",
+    "section": "Machine learning of non-covalent interactions",
+    "text": "Machine learning of non-covalent interactions\n\n\n\n\n\nVan der Waals interactions\n\n\nPhysics-based potentials with machine-learned coefficients, combining atomic multipoles and many-body dispersion for accurate and transferable non-covalent interactions. The coefficients are learned by kernel ridge regression across both conformations and composition of small organic molecules; a Voronoi-tessellation route to van der Waals coefficients dispenses with explicit electron densities altogether.\nIPML\n\ntopic(\"noncovalent-ml\")"
+  },
+  {
+    "objectID": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
+    "href": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
+    "title": "Research topics",
+    "section": "Peptide coarse-graining and folding cooperativity",
+    "text": "Peptide coarse-graining and folding cooperativity\n\n\n\n\n\nCoarse-grained peptide model\n\n\nA top-down, implicit-solvent coarse-grained peptide model, used to study secondary and tertiary structure formation across environments and scenarios: \\(\\alpha\\)-helix against \\(\\beta\\)-sheet folding, the microcanonical analysis that locates the origin of folding cooperativity in the interplay between the two, the structural alignment of capsid interfaces, and peptide–membrane interactions from a simple cross-parametrization.\nPhD thesis peptideB\n\ntopic(\"peptide-cg\")"
+  },
+  {
+    "objectID": "research_topics.html#early-methodological-work",
+    "href": "research_topics.html#early-methodological-work",
+    "title": "Research topics",
+    "section": "Early methodological work",
+    "text": "Early methodological work\nAssorted early work on estimators and integration schemes: optimized convergence for multiple-histogram analysis, a multi-timestep integrator for the modified Andersen barostat, and a simulated molecular walker.\n\ntopic(\"early-methods\")"
+  },
+  {
     "objectID": "positions/gen_ml_morphologies.html",
     "href": "positions/gen_ml_morphologies.html",
     "title": "Generative machine learning for molecular thin films",
@@ -1636,110 +1741,5 @@
     "title": "Software",
     "section": "peptideB",
     "text": "peptideB\nESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.\n Github  Publication"
-  },
-  {
-    "objectID": "research_topics.html#free-energies-from-generative-models",
-    "href": "research_topics.html#free-energies-from-generative-models",
-    "title": "Research topics",
-    "section": "Free energies from generative models",
-    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, removing the need to simulate a ladder of intermediate states: on Lennard-Jones excess chemical potentials it reaches an MAE \\(\\approx 0.15\\,k_\\mathrm{B}T\\) in roughly 30 minutes, about an order of magnitude faster than umbrella sampling at comparable accuracy. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.\n\ntopic(\"gen-free-energy\")"
-  },
-  {
-    "objectID": "research_topics.html#measure-transport-across-resolutions",
-    "href": "research_topics.html#measure-transport-across-resolutions",
-    "title": "Research topics",
-    "section": "Measure transport across resolutions",
-    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.\n\ntopic(\"resolution-transport\")"
-  },
-  {
-    "objectID": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
-    "href": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
-    "title": "Research topics",
-    "section": "High-throughput screening of thermodynamic properties",
-    "text": "High-throughput screening of thermodynamic properties\n\n\n\n\n\nFrom a reduced chemical space to a permeability surface across two molecular descriptors\n\n\nRather than arbitrarily selecting compounds, we systematically explore chemical space according to the target property of interest. Coarse-graining is what makes this affordable: a linear relation between bulk partitioning and the potential of mean force turns an expensive insertion free energy into a surrogate that can be evaluated across an entire library. We used it to screen more than 500,000 small molecules for drug–membrane permeability, yielding a permeability map across a sizeable part of organic chemical space, benchmarked against experiment and released as a public dataset of coarse-grained trajectories, insertion PMFs, and permeability coefficients. Symbolic regression over that dataset recovers compact algebraic expressions in a handful of physical descriptors—size, polarity, hydrogen-bonding capacity—and the century-old Meyer–Overton correlation emerges from hydrophobic transfer and bilayer deformation alone, without invoking receptor-specific binding.\n\ntopic(\"high-throughput\")"
-  },
-  {
-    "objectID": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
-    "href": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
-    "title": "Research topics",
-    "section": "Molecular discovery by active learning and Bayesian optimization",
-    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nScreening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective in vitro and one in vivo. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\n\ntopic(\"molecular-discovery\")"
-  },
-  {
-    "objectID": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
-    "href": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
-    "title": "Research topics",
-    "section": "Coarse-graining as a reduction of chemical space",
-    "text": "Coarse-graining as a reduction of chemical space\n\n\n\n\n\nEfficient learning of coarse-grained molecular simulations\n\n\nTransferable coarse-grained models are useful precisely because they are degenerate, and we study the consequences of that degeneracy quantitatively. Varying the number of Martini bead types from 5 to 16 across thousands of molecules establishes the resolution limit of data-driven models spanning chemical space, and marks where transferability begins to cost chemical specificity. Treating exploration as importance sampling over coarse-grained representations improves coverage of the property landscape by factors of 2–10 over uniform sampling, at the scale of some \\(10^6\\) compounds. Adjacent questions concern how condensed-phase structure ought to be represented at all—adapting the SLATM expansion in one-, two-, and three-body local environments to thermodynamic observables of molecular liquids—and how far kernel-based models can be trusted, where an audit of machine-learned hydration free energies exposes the penalty incurred when the training database is chemically narrow.\n\ntopic(\"cg-chemical-space\")"
-  },
-  {
-    "objectID": "research_topics.html#automated-force-field-parametrization",
-    "href": "research_topics.html#automated-force-field-parametrization",
-    "title": "Research topics",
-    "section": "Automated force-field parametrization",
-    "text": "Automated force-field parametrization\n\n\n\n\n\nAutomated Martini parametrization\n\n\nHigh-throughput screening is only possible if parametrization requires no human in the loop. Auto-Martini generates Martini topologies for small organic molecules directly from SMILES, assigning the mapping, bead types, and bonded parameters automatically. The pipeline has been rebuilt for Martini 3, validated against expert-designed models, and exercised on a screen of 100,000 compounds from the Enamine library.\nAuto Martini\n\ntopic(\"auto-parametrization\")"
-  },
-  {
-    "objectID": "research_topics.html#reproducible-and-fair-simulation-workflows",
-    "href": "research_topics.html#reproducible-and-fair-simulation-workflows",
-    "title": "Research topics",
-    "section": "Reproducible and FAIR simulation workflows",
-    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.\n\ntopic(\"fair-workflows\")"
-  },
-  {
-    "objectID": "research_topics.html#membrane-biophysics",
-    "href": "research_topics.html#membrane-biophysics",
-    "title": "Research topics",
-    "section": "Membrane biophysics",
-    "text": "Membrane biophysics\n\n\n\n\n\nCoarse-grained lipid bilayer with a small-molecule permeant\n\n\nLipid membranes are the physical system our methods return to most often, and the question we most often ask of them is which of their features are thermodynamically dictated and which demand active cellular maintenance. Semi-grand canonical simulations, with chemical potentials imposed on individual lipid species, reframe membrane composition as a constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms and saturation asymmetry between leaflets both emerge from thermodynamics alone, narrowing the list of properties a cell must actively regulate. In parallel we study how small molecules partition into membranes and reshape them—phase separation in binary mixtures, nanoparticle contact mediated by copolymer coronas, the bacteriostatic action of 2-phenylethanol derivatives, the reorganization produced by nitrated fatty acids—together with the folding and insertion thermodynamics of transmembrane peptides.\n\ntopic(\"membranes\")"
-  },
-  {
-    "objectID": "research_topics.html#kinetics-of-coarse-grained-models",
-    "href": "research_topics.html#kinetics-of-coarse-grained-models",
-    "title": "Research topics",
-    "section": "Kinetics of coarse-grained models",
-    "text": "Kinetics of coarse-grained models\n\n\n\n\n\nBiased Markov state model\n\n\nCoarse-graining accelerates dynamics, and it does so unevenly: a model parametrized against structure alone will generally misrepresent barrier-crossing kinetics. We parametrize concurrently against static and kinetic information, using Markov state models biased with external information to keep the interpretation of simulation kinetics consistent. Conformational surface hopping couples distinct force fields to distinct conformational basins, in analogy with nonadiabatic transitions between electronic surfaces; incorporating more surfaces improves cross-correlations systematically and recovers barrier-crossing dynamics that a single surface cannot. Related work identifies metastable states without hand-chosen collective variables, through hidden Markov models of solvation substates and Gaussian-mixture variational autoencoders whose mixture components correspond to conformational basins.\n\ntopic(\"cg-kinetics\")"
-  },
-  {
-    "objectID": "research_topics.html#non-equilibrium-dynamical-reweighting",
-    "href": "research_topics.html#non-equilibrium-dynamical-reweighting",
-    "title": "Research topics",
-    "section": "Non-equilibrium dynamical reweighting",
-    "text": "Non-equilibrium dynamical reweighting\n\n\n\n\n\nMaximum caliber for non-equilibrium reweighting\n\n\nWe extend the concept of statistical reweighting to non-equilibrium steady states. Stochastic thermodynamics analytically relates the forward and backward probabilities of any pathway through the external nonconservative force, which supplies the constraint; a maximum-caliber—maximum path entropy—formalism then reweights microtrajectories from one driven steady state onto another. The framework extends to collective variables, so that free-energy landscapes along a reaction coordinate can be recovered from short driven runs.\n\ntopic(\"nonequilibrium\")"
-  },
-  {
-    "objectID": "research_topics.html#polymer-and-organic-materials-morphology",
-    "href": "research_topics.html#polymer-and-organic-materials-morphology",
-    "title": "Research topics",
-    "section": "Polymer and organic-materials morphology",
-    "text": "Polymer and organic-materials morphology\n\n\n\n\n\nFree-energy map of syndiotactic-polystyrene polymorphs\n\n\nMultiscale simulation of polymer morphology, where the observable of interest sits beyond the reach of either resolution on its own. Metadynamics in a phase space of collective variables, referenced against DFT, resolves the free-energy landscape between polymorphs of syndiotactic polystyrene and yields \\(\\alpha/\\beta\\) free-energy differences that rationalize the experimentally observed phase populations.\n\ntopic(\"polymer-materials\")"
-  },
-  {
-    "objectID": "research_topics.html#static-atomic-multipole-electrostatics",
-    "href": "research_topics.html#static-atomic-multipole-electrostatics",
-    "title": "Research topics",
-    "section": "Static atomic multipole electrostatics",
-    "text": "Static atomic multipole electrostatics\n\n\n\n\n\nForce propagation on electrostatic multipoles\n\n\nPoint charges are a crude description of the molecular electrostatic potential. Static atomic multipoles, derived from the electrostatic potential through a spherical-harmonic expansion, provide a systematically better one, and exploiting their symmetries makes force propagation affordable enough for condensed-phase molecular dynamics. Applications include free energies of hydration, two-dimensional infrared spectroscopy of solvation dynamics, and the \\(\\sigma\\)-hole of halogenated compounds, where quadrupolar terms on the adjacent atoms prove necessary.\n\ntopic(\"multipoles\")"
-  },
-  {
-    "objectID": "research_topics.html#machine-learning-of-non-covalent-interactions",
-    "href": "research_topics.html#machine-learning-of-non-covalent-interactions",
-    "title": "Research topics",
-    "section": "Machine learning of non-covalent interactions",
-    "text": "Machine learning of non-covalent interactions\n\n\n\n\n\nVan der Waals interactions\n\n\nPhysics-based potentials with machine-learned coefficients, combining atomic multipoles and many-body dispersion for accurate and transferable non-covalent interactions. The coefficients are learned by kernel ridge regression across both conformations and composition of small organic molecules; a Voronoi-tessellation route to van der Waals coefficients dispenses with explicit electron densities altogether.\nIPML\n\ntopic(\"noncovalent-ml\")"
-  },
-  {
-    "objectID": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
-    "href": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
-    "title": "Research topics",
-    "section": "Peptide coarse-graining and folding cooperativity",
-    "text": "Peptide coarse-graining and folding cooperativity\n\n\n\n\n\nCoarse-grained peptide model\n\n\nA top-down, implicit-solvent coarse-grained peptide model, used to study secondary and tertiary structure formation across environments and scenarios: \\(\\alpha\\)-helix against \\(\\beta\\)-sheet folding, the microcanonical analysis that locates the origin of folding cooperativity in the interplay between the two, the structural alignment of capsid interfaces, and peptide–membrane interactions from a simple cross-parametrization.\nPhD thesis peptideB\n\ntopic(\"peptide-cg\")"
-  },
-  {
-    "objectID": "research_topics.html#early-methodological-work",
-    "href": "research_topics.html#early-methodological-work",
-    "title": "Research topics",
-    "section": "Early methodological work",
-    "text": "Early methodological work\nAssorted early work on estimators and integration schemes: optimized convergence for multiple-histogram analysis, a multi-timestep integrator for the modified Andersen barostat, and a simulated molecular walker.\n\ntopic(\"early-methods\")"
   }
 ]

@@ -161,17 +161,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://x.com/tristanbereau"> <i class="bi bi-twitter-x" role="img">
+    <a class="nav-link" href="https://x.com/tristanbereau"> <i class="bi bi-twitter-x" role="img" aria-label="Tristan Bereau on X">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ"> <i class="bi bi-google" role="img">
+    <a class="nav-link" href="https://scholar.google.com/citations?user=9cYdrBUAAAAJ"> <i class="bi bi-google" role="img" aria-label="Google Scholar profile">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./files/bereau_cv.pdf"> <i class="bi bi-file-earmark-person" role="img">
+    <a class="nav-link" href="./files/bereau_cv.pdf"> <i class="bi bi-file-earmark-person" role="img" aria-label="Curriculum vitae (PDF)">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -197,18 +197,40 @@ ul.task-list li input[type="checkbox"] {
 had no heading landmark at all, which screen readers rely on to orient and
 search engines read as the page's subject. Bootstrap's .h3 utility keeps it
 looking exactly as it did -- a full-size h1 would dwarf the paragraph under
-it, and this sentence is too long to carry 2.5rem. -->
-<h1 class="h3" id="homepage-of-tristan-bereau-at-the-institute-for-theoretical-physics-heidelberg-university">Homepage of Tristan Bereau at the <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a></h1>
-<p>I’m a computational physicist interested in the understanding and development of multiscale modeling and machine learning methods for soft-condensed matter and biomolecules. Research activities include</p>
+it, and this sentence is too long to carry 2.5rem.
+
+The heading used to open "Homepage of Tristan Bereau at the ...", which spent
+the h1's most valuable words on a filler label and rendered its emphasis
+backwards: the institution names are links, so they take font-weight 400 while
+"Homepage of Tristan Bereau at the" was bold. On a phone it also ran to seven
+lines and filled the first screen before a word of content. -->
+<h1 class="h3" id="multiscale-modeling-and-machine-learning-for-molecular-systems">Multiscale modeling and machine learning for molecular systems</h1>
+<p>Tristan Bereau’s group at the <a href="https://www.thphys.uni-heidelberg.de">Institute for Theoretical Physics</a>, <a href="https://www.uni-heidelberg.de/en">Heidelberg University</a>. We develop simulation and machine-learning methods for soft-condensed matter and biomolecules, and use coarse-graining to make chemical compound space tractable. Current activities include</p>
 <ul>
-<li>Multiscale modeling for computational discovery and high-throughput screening</li>
-<li>Impact of coarse-graining on chemical-space exploration</li>
-<li>Physics-inspired machine learning for molecular systems</li>
+<li>Free energies from physics-informed generative models</li>
+<li>Coarse-graining to compress chemical space for high-throughput screening</li>
+<li>Molecular discovery by active learning and Bayesian optimization</li>
+<li>Reproducible and FAIR workflows for molecular simulation</li>
 </ul>
-<p>What’s presented here is the concerted effort of many fantastic students, postdocs, and collaborators I’ve had the chance to work with.</p>
+<!-- The one time-sensitive item on the site, and it was previously reachable
+only through a navbar dropdown labelled "Group", which is not where anyone
+looks for a job. A notice rather than a third button: three btn-lg buttons
+wrapped to a second row inside the 600px hero and the last one landed below
+the fold on a 720px-tall viewport, which is the one thing a hiring call cannot
+afford. It links to the listing rather than to the advert itself, so it does
+not 404 in the window while the advert moves to positions_inactive/. Remove
+this block, and the .hero-notice rule in index.css, once the position is
+filled. -->
+<div class="hero-notice">
+<p>A fully funded <a href="positions.html"><strong>PhD position</strong></a> on generative machine learning for molecular thin films is currently open, reviewed on a rolling basis.</p>
+</div>
 <div class="hero-buttons">
 <p><a href="research_landscape.html" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Research landscape</a> <a href="research_topics.html" id="btn-guide" class="btn-action btn btn-info btn-lg" role="button">Research topics</a></p>
 </div>
+<!-- Below the buttons rather than above them: this is a closing credit, and
+with it in the middle the call-to-action row fell below the fold on a 720px
+viewport, which is the one thing the hiring notice cannot afford. -->
+<p>What’s presented here is the concerted effort of many fantastic students, postdocs, and collaborators I’ve had the chance to work with.</p>
 </div>
 <div class="hero-image hero-image-right">
 <p><img src="static/membrane.jpg" class="img-fluid"></p>

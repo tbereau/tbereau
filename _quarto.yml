@@ -58,11 +58,17 @@ website:
             - about.qmd
             - contact.qmd
         right:
+            # Icon-only links carry no text node, so without an aria-label a
+            # screen reader announces three links in a row with no name and
+            # no way to tell them apart.
             -   icon: twitter-x
+                aria-label: "Tristan Bereau on X"
                 href: https://x.com/tristanbereau
             -   icon: google
+                aria-label: "Google Scholar profile"
                 href: https://scholar.google.com/citations?user=9cYdrBUAAAAJ
             -   icon: file-earmark-person
+                aria-label: "Curriculum vitae (PDF)"
                 href: /files/bereau_cv.pdf
     page-footer:
         right: |
