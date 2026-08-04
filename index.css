@@ -32,10 +32,15 @@
 
 /* Hero banner --------------------------------------------------------- */
 
+/* Two columns that collapse to one. `flex-wrap` is what does the collapsing:
+   the image carries a flex-basis, so once the text and the image can no longer
+   both hold their bases the image wraps underneath rather than being hidden. */
 .hero-banner {
   position: relative;
   background-color: rgb(237, 243, 249);
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: left;
 }
 
@@ -44,47 +49,63 @@
    now the h1 it should always have been, and an element selector would
    outrank the .h3 utility that keeps it at its established size. */
 
-/* `height: fixed` sat here until it was noticed: `height` takes no such
-   keyword, so the declaration never did anything. It came in with the Quarto
-   template. */
+/* Was `position: absolute; opacity: 0.15` at up to 1440px wide -- a wash
+   behind the text rather than a picture -- plus a dead `height: fixed` that
+   `height` accepts no keyword for. Now an ordinary flex column. */
+/* Wrapped state: under the text. The cap matters -- a flex item alone on its
+   line grows to fill it, which made this 840px wide at a 900px viewport and
+   left the image dwarfing the text above it. */
 .hero-banner .hero-image {
-  position: absolute;
-  display: none;
-  opacity: 0.15;
+  flex: 1 1 340px;
+  min-width: 0;
+  max-width: 520px;
+  margin: 0 30px 26px;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
+  /* Still wrapped, but `.content-block` widens its side margins to 50px here,
+     so match them or the image sits inboard of the text. */
   .hero-banner .hero-image {
-    display: initial;
-    width: 1270px;
+    margin: 0 50px 26px;
   }
 }
 
-@media (min-width: 1200px) {
+/* 960px is where the two flex bases (460px of text, 340px of image, 160px of
+   margins) stop fitting on one line, so it is where the image stops being a
+   row of its own and becomes the right-hand column: no cap, no bottom margin,
+   and `align-items: center` centres it against the taller text. */
+@media (min-width: 960px) {
   .hero-banner .hero-image {
-    width: 1340px;
+    max-width: none;
+    margin: 0 50px 0 10px;
   }
 }
 
-@media (min-width: 1400px) {
-  .hero-banner .hero-image {
-    width: 1440px;
-  }
+.hero-banner .hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 .hero-banner .hero-image p {
   margin-bottom: 0;
 }
 
-/* Only the right-hand placement is used; the template's -left twin is gone. */
-.hero-banner .hero-image-right {
-  right: 0;
-  bottom: 0;
-}
-
 .hero-banner .content-block {
+  flex: 1 1 460px;
   max-width: 600px;
   z-index: 2;
+}
+
+/* `.content-block` centres itself at >=1200px with auto side margins, which in
+   a flex row absorbs the free space and shoves the text into the middle. That
+   was invisible while the image was absolutely positioned; with two real
+   columns the text has to stay left. */
+@media (min-width: 1200px) {
+  .hero-banner .content-block {
+    margin-left: 50px;
+    margin-right: 0;
+  }
 }
 
 .hero-banner a {
@@ -125,6 +146,72 @@
 
 .hero-banner ul li {
   padding-bottom: 0.4rem;
+}
+
+
+/* Recent work ---------------------------------------------------------- */
+
+/* The homepage previously ended at the hero, so a visitor had no way to tell
+   whether the group was still active without going hunting. This list reads
+   the same export the research pages do, so it cannot fall behind them. */
+
+.recent-work {
+  padding-top: 6px;
+  padding-bottom: 26px;
+}
+
+/* `.content-block` centres itself inside 1100px at this width, which put this
+   section's left edge 120px to the right of the hero text above it. The hero
+   now runs edge to edge -- text left, image right -- so this has to as well. */
+@media (min-width: 1200px) {
+  .recent-work .content-block {
+    max-width: none;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.recent-work h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.recent-work .recent-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.4rem;
+  /* Two columns once there is room for them, so five entries do not turn the
+     homepage into a scroll. */
+  columns: 1;
+  column-gap: 2.5rem;
+}
+
+@media (min-width: 1000px) {
+  .recent-work .recent-list {
+    columns: 2;
+  }
+}
+
+.recent-work .recent-list li {
+  /* Without this a two-column layout will break an entry across the gutter. */
+  break-inside: avoid;
+  margin-bottom: 0.85rem;
+  line-height: 1.35;
+}
+
+.recent-work .recent-list a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.recent-work .recent-list a:hover {
+  text-decoration: underline;
+}
+
+.recent-work .recent-meta {
+  font-size: 0.88rem;
+  color: #5b6770;
+  margin-top: 0.15rem;
 }
 
 
