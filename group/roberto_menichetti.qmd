@@ -8,11 +8,11 @@ format:
 categories:
   - alumnus
   - postdoc
-image: ../static/menichetti.png
+image: ../static/menichetti.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/menichetti.png
+  image: ../static/menichetti.jpg
 
 ---
 

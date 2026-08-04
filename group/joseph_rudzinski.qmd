@@ -8,11 +8,11 @@ format:
 categories:
   - alumnus
   - postdoc
-image: ../static/rudzinski.png
+image: ../static/rudzinski.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/rudzinski.png
+  image: ../static/rudzinski.jpg
   links:
 
     - icon: orcid

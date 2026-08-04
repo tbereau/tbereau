@@ -8,11 +8,11 @@ format:
 categories:
   - postdoc
   - alumnus
-image: ../static/leticia.jpeg
+image: ../static/leticia.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/leticia.jpeg
+  image: ../static/leticia.jpg
   links:
 
     - icon: github

@@ -8,11 +8,11 @@ format:
 categories:
   - master student
   - current
-image: ../static/chaitanya.jpeg
+image: ../static/chaitanya.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/chaitanya.jpeg
+  image: ../static/chaitanya.jpg
 
 ---
 

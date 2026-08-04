@@ -9,11 +9,11 @@ format:
 categories:
   - postdoc
   - active
-image: ../static/pos_st_diffusion.png
+image: ../static/pos_st_diffusion.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/pos_st_diffusion.png
+  image: ../static/pos_st_diffusion.jpg
 ---
 
 

@@ -115,7 +115,7 @@ displayTable(
 # Deep backmapping
 
 ::: {.column-margin}
-![Deep backmapping of coarse-grained configurations](static/deepbackmap.png)
+![Deep backmapping of coarse-grained configurations](static/deepbackmap.jpg)
 :::
 
 We generate condensed molecular structures as a refinement---backmapping---of a coarse-grained structure. We apply generative adversarial networks (GAN) conditional on the coarse-grained configuration to upscale to atomistic structure. Sampled configurations accurately target the atomistic Boltzmann distribution, and do not require pre-equilibration steps. Remarkable transferability is found across temperature for a polymer melt. Applications to chemical transferability are also investigated.

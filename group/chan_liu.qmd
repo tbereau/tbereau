@@ -8,11 +8,11 @@ format:
 categories:
   - alumnus
   - phd student
-image: ../static/liu.png
+image: ../static/liu.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/liu.png
+  image: ../static/liu.jpg
 
 ---
 

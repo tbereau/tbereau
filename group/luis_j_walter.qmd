@@ -8,11 +8,11 @@ format:
 categories:
   - phd student
   - current
-image: ../static/luis_w.png
+image: ../static/luis_w.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/luis_w.png
+  image: ../static/luis_w.jpg
   links:
 
     - icon: orcid

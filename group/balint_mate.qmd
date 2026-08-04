@@ -8,11 +8,11 @@ format:
 categories:
   - visiting phd student
   - alumnus
-image: ../static/balint.jpeg
+image: ../static/balint.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/balint.jpeg
+  image: ../static/balint.jpg
   links:
 
     - icon: house

@@ -8,11 +8,11 @@ format:
 categories:
   - alumnus
   - postdoc
-image: ../static/girard.png
+image: ../static/girard.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/girard.png
+  image: ../static/girard.jpg
   links:
 
     - icon: orcid

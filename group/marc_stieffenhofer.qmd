@@ -8,11 +8,11 @@ format:
 categories:
   - alumnus
   - phd student
-image: ../static/stieffenhofer.jpeg
+image: ../static/stieffenhofer.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/stieffenhofer.jpeg
+  image: ../static/stieffenhofer.jpg
 
 ---
 

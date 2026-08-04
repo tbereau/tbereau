@@ -9,11 +9,11 @@ format:
 categories:
   - phd student
   - active
-image: ../static/pos_ht_protein.png
+image: ../static/pos_ht_protein.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/pos_ht_protein.png
+  image: ../static/pos_ht_protein.jpg
 ---
 
 
