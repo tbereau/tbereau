@@ -4,7 +4,7 @@
     "href": "teaching.html",
     "title": "Teaching",
     "section": "",
-    "text": "Teaching schedule\n\n\nCourse\nLevel\nType\nSemester\n\n\n\n\nFrom Boltzmann to Diffusion: Statistical Physics of Machine Learning\nMaster\ncourse\nW26/27\n\n\nMolecular Simulation\nMaster\ncourse\nS2026\n\n\nSoft Matter Physics\nMaster\nseminar\nS2026\n\n\nMachine Learning and Physics\nMaster\ncourse\nW25/26\n\n\nTheoretical Biophysics\nMaster\ncourse\nS2025\n\n\nSoft Matter Physics\nMaster\nseminar\nS2025\n\n\nTheoretical Statistical Physics\nMaster\ncourse\nW24/25\n\n\nComputational Statistics and Data Analysis (MVComp2)\nMaster\ncourse\nS2024\n\n\nSoft Matter Physics\nMaster\nseminar\nS2024\n\n\nMachine learning for the Biomolecular World\nMaster\nSeminar\nS2024\n\n\nComputational Statistics and Data Analysis (MVComp2)\nMaster\ncourse\nW23/24\n\n\nGenerative Learning for Molecular Systems\nGradDays\ncourse\nW2023\n\n\n\n\nGradDays: Heidelberg Physics Graduate Days"
+    "text": "Teaching schedule\n\n\nCourse\nLevel\nType\nSemester\n\n\n\n\nFrom Boltzmann to Diffusion: Statistical Physics of Machine Learning\nMaster\ncourse\nW26/27\n\n\nMolecular Simulation\nMaster\ncourse\nS2026\n\n\nSoft Matter Physics\nMaster\nseminar\nS2026\n\n\nMachine Learning and Physics\nMaster\ncourse\nW25/26\n\n\nTheoretical Biophysics\nMaster\ncourse\nS2025\n\n\nSoft Matter Physics\nMaster\nseminar\nS2025\n\n\nTheoretical Statistical Physics\nMaster\ncourse\nW24/25\n\n\nComputational Statistics and Data Analysis (MVComp2)\nMaster\ncourse\nS2024\n\n\nSoft Matter Physics\nMaster\nseminar\nS2024\n\n\nMachine learning for the Biomolecular World\nMaster\nSeminar\nS2024\n\n\nComputational Statistics and Data Analysis (MVComp2)\nMaster\ncourse\nW23/24\n\n\nGenerative Learning for Molecular Systems\nGradDays\ncourse\nW2023\n\n\n\n\nGradDays: Heidelberg Physics Graduate Days \nExercise code and data for Molecular Simulation (S2026): BereauLab/Mol_Sim_26s"
   },
   {
     "objectID": "research_topics.html",
@@ -18,14 +18,14 @@
     "href": "research_topics.html#free-energies-from-generative-models",
     "title": "Research topics",
     "section": "Free energies from generative models",
-    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate; it is demonstrated on the excess chemical potential of a Lennard-Jones fluid. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.\n\ntopic(\"gen-free-energy\")"
+    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate; it is demonstrated on the excess chemical potential of a Lennard-Jones fluid. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.\nFokker-Planck score learning Neural TI\n\ntopic(\"gen-free-energy\")"
   },
   {
     "objectID": "research_topics.html#measure-transport-across-resolutions",
     "href": "research_topics.html#measure-transport-across-resolutions",
     "title": "Research topics",
     "section": "Measure transport across resolutions",
-    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.\n\ntopic(\"resolution-transport\")"
+    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.\nSplit-Flows\n\ntopic(\"resolution-transport\")"
   },
   {
     "objectID": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
@@ -39,7 +39,7 @@
     "href": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
     "title": "Research topics",
     "section": "Molecular discovery by active learning and Bayesian optimization",
-    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nScreening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective in vitro and one in vivo. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\n\ntopic(\"molecular-discovery\")"
+    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nScreening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective in vitro and one in vivo. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\nMulti-level BO\n\ntopic(\"molecular-discovery\")"
   },
   {
     "objectID": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
@@ -60,7 +60,7 @@
     "href": "research_topics.html#reproducible-and-fair-simulation-workflows",
     "title": "Research topics",
     "section": "Reproducible and FAIR simulation workflows",
-    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.\n\ntopic(\"fair-workflows\")"
+    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.\nMartignac\n\ntopic(\"fair-workflows\")"
   },
   {
     "objectID": "research_topics.html#membrane-biophysics",
@@ -886,7 +886,21 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "+49-6221-54-9448\n \n Philosophenweg 19; 2nd floor; Room: 206\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany\n\nfrom ipyleaflet import Map, Marker, basemaps, basemap_to_tiles\n\ncenter = (49.415, 8.698)\nm = Map(\n  basemap=basemap_to_tiles(basemaps.OpenStreetMap.Mapnik),\n  center=center,\n  zoom=15\n)\nm.add_layer(Marker(location=center))\nm"
+    "text": "Email is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general enquiry. Applications should include a CV and a short statement of research interests.\n\n\n  Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany\n\n\n\n\nThe institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
+  },
+  {
+    "objectID": "contact.html#details",
+    "href": "contact.html#details",
+    "title": "Contact",
+    "section": "",
+    "text": "Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany"
+  },
+  {
+    "objectID": "contact.html#finding-the-office",
+    "href": "contact.html#finding-the-office",
+    "title": "Contact",
+    "section": "",
+    "text": "The institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
   },
   {
     "objectID": "about.html",
@@ -1712,34 +1726,34 @@
     "href": "software.html",
     "title": "Software",
     "section": "",
-    "text": "Fetch the metadata of your scientific publications.\n Github"
+    "text": "The grouping below is a maintenance signal: what we develop and support, what was released to reproduce a single paper, what is kept for the record, and what builds this site."
   },
   {
-    "objectID": "software.html#my-scientific-profile",
-    "href": "software.html#my-scientific-profile",
+    "objectID": "software.html#actively-developed",
+    "href": "software.html#actively-developed",
     "title": "Software",
-    "section": "",
-    "text": "Fetch the metadata of your scientific publications.\n Github"
+    "section": "Actively developed",
+    "text": "Actively developed\n\nMartignac\nComputational workflows for coarse-grained Martini simulations. A simulation is represented as a directed acyclic graph carrying its entire history, from system preparation to property calculation, and the framework connects to the NOMAD database so that results are stored according to the FAIR principles and an existing calculation is retrieved rather than repeated.\nMIT · Python, installed from source · includes a Streamlit dashboard\n GitHub  Docs  Paper\n\n\nAuto-Martini M3\nAutomatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and exercised on a screen of 100,000 compounds from the Enamine library. Developed and maintained with the Martini Force Field Initiative.\nGPL-2.0 · Python, conda environment supplied · supersedes Auto Martini for Martini 2\n GitHub  Paper  Data\n\n\nFokker-Planck score learning\nFree-energy estimation from biased simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function rather than inferring it from data. Recovers potentials of mean force under periodic boundary conditions, and is most advantageous in the low-data regime.\nMIT · pip install fpsl · documentation includes tutorials\n GitHub  Docs  Paper\n\n\nSplit-Flows\nBackmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies – the information a given coarse-graining discards.\nMIT · Python, installed from source with uv\n GitHub  Paper"
   },
   {
-    "objectID": "software.html#ipml",
-    "href": "software.html#ipml",
+    "objectID": "software.html#reference-implementations",
+    "href": "software.html#reference-implementations",
     "title": "Software",
-    "section": "IPML",
-    "text": "IPML\nIntermolecular potentials from a combination of physics- and machine learning-based models applicable across chemical space\n Gitlab  Publication"
+    "section": "Reference implementations",
+    "text": "Reference implementations\nCode released with a specific paper, to reproduce it and to build on. Maintained only as far as that paper requires.\n\nNeural thermodynamic integration\nFree energies from a neural network potential that interpolates between two target Hamiltonians, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate. Two repositories, both maintained by Bálint Máté (University of Geneva): the original formulation, and the extension to solvation where both end states are non-trivial.\nMIT\n\nOriginal code · J. Phys. Chem. Lett. 2024\nSolvation code · J. Chem. Phys. 2025\n\n\nMulti-level Bayesian optimization\nMolecular discovery organized as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. Includes chespex, a small package implementing the algorithm independently of the application, and a separate tutorial working through the method on two-bead molecules in a water–hexane mixture.\nCode · Tutorial · Chem. Sci. 2025"
   },
   {
-    "objectID": "software.html#auto-martini",
-    "href": "software.html#auto-martini",
+    "objectID": "software.html#earlier-codes",
+    "href": "software.html#earlier-codes",
     "title": "Software",
-    "section": "Auto Martini",
-    "text": "Auto Martini\nA toolkit that enables automatic generation of Martini forcefields for small organic molecules.\n Github  Publication"
+    "section": "Earlier codes",
+    "text": "Earlier codes\nKept available because the papers that used them point here, not because they are maintained.\n\nAuto Martini (Martini 2)\nThe original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by Auto-Martini M3.\nGitHub · J. Chem. Theory Comput. 2015\n\n\nIPML\nIntermolecular potentials from a combination of physics-based and machine-learned components – atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition – transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.\nGitLab · J. Chem. Phys. 2018\n\n\nmbvdw\nClassical, Voronoi-tessellation adaptation of the many-body van der Waals method, which dispenses with explicit electron densities.\nGitHub · J. Chem. Phys. 2014\n\n\npeptideB\nTop-down, implicit-solvent coarse-grained peptide model for secondary- and tertiary-structure formation, implemented for ESPResSo.\nGitHub · J. Chem. Phys. 2009\n\n\nopt-mhm\nMultiple-histogram (WHAM) free-energy analysis with optimized convergence.\nGitHub · J. Comput. Phys. 2009"
   },
   {
-    "objectID": "software.html#peptideb",
-    "href": "software.html#peptideb",
+    "objectID": "software.html#website-tooling",
+    "href": "software.html#website-tooling",
     "title": "Software",
-    "section": "peptideB",
-    "text": "peptideB\nESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.\n Github  Publication"
+    "section": "Website tooling",
+    "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub"
   }
 ]

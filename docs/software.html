@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB.">
+<meta name="description" content="Open-source software from the group: Martignac workflows, Auto-Martini M3, Split-Flows, Fokker-Planck score learning, and earlier codes.">
 
 <title>Software – Tristan Bereau</title>
 <style>
@@ -73,11 +73,11 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Software – Tristan Bereau">
-<meta property="og:description" content="Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB.">
+<meta property="og:description" content="Open-source software from the group: Martignac workflows, Auto-Martini M3, Split-Flows, Fokker-Planck score learning, and earlier codes.">
 <meta property="og:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta property="og:site_name" content="Tristan Bereau">
 <meta name="twitter:title" content="Software – Tristan Bereau">
-<meta name="twitter:description" content="Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB.">
+<meta name="twitter:description" content="Open-source software from the group: Martignac workflows, Auto-Martini M3, Split-Flows, Fokker-Planck score learning, and earlier codes.">
 <meta name="twitter:image" content="https://tristanbereau.com/static/membrane.jpg">
 <meta name="twitter:creator" content="@tbereau">
 <meta name="twitter:card" content="summary_large_image">
@@ -192,10 +192,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#my-scientific-profile" id="toc-my-scientific-profile" class="nav-link active" data-scroll-target="#my-scientific-profile">My Scientific Profile</a></li>
+  <li><a href="#actively-developed" id="toc-actively-developed" class="nav-link active" data-scroll-target="#actively-developed">Actively developed</a>
+  <ul class="collapse">
+  <li><a href="#martignac" id="toc-martignac" class="nav-link" data-scroll-target="#martignac">Martignac</a></li>
+  <li><a href="#auto-martini" id="toc-auto-martini" class="nav-link" data-scroll-target="#auto-martini">Auto-Martini M3</a></li>
+  <li><a href="#fokker-planck-score-learning" id="toc-fokker-planck-score-learning" class="nav-link" data-scroll-target="#fokker-planck-score-learning">Fokker-Planck score learning</a></li>
+  <li><a href="#split-flows" id="toc-split-flows" class="nav-link" data-scroll-target="#split-flows">Split-Flows</a></li>
+  </ul></li>
+  <li><a href="#reference-implementations" id="toc-reference-implementations" class="nav-link" data-scroll-target="#reference-implementations">Reference implementations</a>
+  <ul class="collapse">
+  <li><a href="#neural-thermodynamic-integration" id="toc-neural-thermodynamic-integration" class="nav-link" data-scroll-target="#neural-thermodynamic-integration">Neural thermodynamic integration</a></li>
+  <li><a href="#multi-level-bayesian-optimization" id="toc-multi-level-bayesian-optimization" class="nav-link" data-scroll-target="#multi-level-bayesian-optimization">Multi-level Bayesian optimization</a></li>
+  </ul></li>
+  <li><a href="#earlier-codes" id="toc-earlier-codes" class="nav-link" data-scroll-target="#earlier-codes">Earlier codes</a>
+  <ul class="collapse">
+  <li><a href="#auto-martini-martini-2" id="toc-auto-martini-martini-2" class="nav-link" data-scroll-target="#auto-martini-martini-2">Auto Martini (Martini 2)</a></li>
   <li><a href="#ipml" id="toc-ipml" class="nav-link" data-scroll-target="#ipml">IPML</a></li>
-  <li><a href="#auto-martini" id="toc-auto-martini" class="nav-link" data-scroll-target="#auto-martini">Auto Martini</a></li>
+  <li><a href="#mbvdw" id="toc-mbvdw" class="nav-link" data-scroll-target="#mbvdw">mbvdw</a></li>
   <li><a href="#peptideb" id="toc-peptideb" class="nav-link" data-scroll-target="#peptideb">peptideB</a></li>
+  <li><a href="#opt-mhm" id="toc-opt-mhm" class="nav-link" data-scroll-target="#opt-mhm">opt-mhm</a></li>
+  </ul></li>
+  <li><a href="#website-tooling" id="toc-website-tooling" class="nav-link" data-scroll-target="#website-tooling">Website tooling</a>
+  <ul class="collapse">
+  <li><a href="#my-scientific-profile" id="toc-my-scientific-profile" class="nav-link" data-scroll-target="#my-scientific-profile">my-scientific-profile</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -209,7 +229,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB.
+    Open-source software from the group: Martignac workflows, Auto-Martini M3, Split-Flows, Fokker-Planck score learning, and earlier codes.
   </div>
 </div>
 
@@ -226,27 +246,106 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="my-scientific-profile" class="level2">
-<h2 class="anchored" data-anchor-id="my-scientific-profile">My Scientific Profile</h2>
-<p>Fetch the metadata of your scientific publications.</p>
-<p><a href="https://github.com/tbereau/my_scientific_profile" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a></p>
+<!-- The page used to be a flat list of four entries, each with the same pair of
+large pill buttons: a 2009 peptide code and a package under active development
+were presented identically, so a reader had no way to tell what they could
+actually pick up and use. The grouping below is that missing signal, and the
+buttons now follow it -- pill buttons for the tools we maintain, a single line
+of links for everything else.
+
+Note for future edits: `research_topics.qmd` links into #auto-martini, #ipml and
+#peptideb. The first is set explicitly on the Auto-Martini M3 heading, since
+that is the version the research page describes; the other two are Quarto's
+automatic ids for their headings and break if those headings are renamed. -->
+<!-- Quarto renders the frontmatter `description` as the page subtitle, so an
+opening paragraph that also begins "Open-source software from the group" reads
+as the same sentence twice. This one says what the description cannot: what the
+grouping means. -->
+<p>The grouping below is a maintenance signal: what we develop and support, what was released to reproduce a single paper, what is kept for the record, and what builds this site.</p>
+<section id="actively-developed" class="level2">
+<h2 class="anchored" data-anchor-id="actively-developed">Actively developed</h2>
+<section id="martignac" class="level3">
+<h3 class="anchored" data-anchor-id="martignac">Martignac</h3>
+<p>Computational workflows for coarse-grained Martini simulations. A simulation is represented as a directed acyclic graph carrying its entire history, from system preparation to property calculation, and the framework connects to the NOMAD database so that results are stored according to the FAIR principles and an existing calculation is retrieved rather than repeated.</p>
+<p>MIT · Python, installed from source · includes a Streamlit dashboard</p>
+<p><a href="https://github.com/tbereau/martignac" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://tbereau.github.io/martignac/" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a> <a href="https://doi.org/10.1021/acs.jcim.4c01754" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a></p>
 </section>
-<section id="ipml" class="level2">
-<h2 class="anchored" data-anchor-id="ipml">IPML</h2>
-<p>Intermolecular potentials from a combination of physics- and machine learning-based models applicable across chemical space</p>
-<p><a href="https://gitlab.mpcdf.mpg.de/trisb/ipml" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Gitlab</a> <a href="https://doi.org/10.1063/1.5009502" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Publication</a></p>
+<section id="auto-martini" class="level3">
+<h3 class="anchored" data-anchor-id="auto-martini">Auto-Martini M3</h3>
+<p>Automatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and exercised on a screen of 100,000 compounds from the Enamine library. Developed and maintained with the <a href="https://github.com/Martini-Force-Field-Initiative">Martini Force Field Initiative</a>.</p>
+<p>GPL-2.0 · Python, conda environment supplied · supersedes <a href="#auto-martini-martini-2">Auto Martini for Martini 2</a></p>
+<p><a href="https://github.com/Martini-Force-Field-Initiative/Automartini_M3" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://doi.org/10.1021/acs.jctc.5c01178" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a> <a href="https://doi.org/10.5281/zenodo.15783891" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-database" aria-label="database"></i> Data</a></p>
 </section>
-<section id="auto-martini" class="level2">
-<h2 class="anchored" data-anchor-id="auto-martini">Auto Martini</h2>
-<p>A toolkit that enables automatic generation of Martini forcefields for small organic molecules.</p>
-<p><a href="https://github.com/tbereau/auto_martini" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a> <a href="https://doi.org/10.1021/acs.jctc.5b00056" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Publication</a></p>
+<section id="fokker-planck-score-learning" class="level3">
+<h3 class="anchored" data-anchor-id="fokker-planck-score-learning">Fokker-Planck score learning</h3>
+<p>Free-energy estimation from biased simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function rather than inferring it from data. Recovers potentials of mean force under periodic boundary conditions, and is most advantageous in the low-data regime.</p>
+<p>MIT · <code>pip install fpsl</code> · documentation includes tutorials</p>
+<p><a href="https://github.com/BereauLab/fokker-planck-score-learning" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://bereaulab.github.io/fokker-planck-score-learning/" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a> <a href="https://doi.org/10.1021/acs.jpcb.5c04579" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a></p>
 </section>
-<section id="peptideb" class="level2">
-<h2 class="anchored" data-anchor-id="peptideb">peptideB</h2>
-<p>ESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.</p>
-<p><a href="https://github.com/tbereau/peptideB/tree/master" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> Github</a> <a href="https://doi.org/10.1063/1.3152842" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> Publication</a></p>
+<section id="split-flows" class="level3">
+<h3 class="anchored" data-anchor-id="split-flows">Split-Flows</h3>
+<p>Backmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies – the information a given coarse-graining discards.</p>
+<p>MIT · Python, installed from source with <code>uv</code></p>
+<p><a href="https://github.com/BereauLab/split-flows" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://doi.org/10.48550/arXiv.2511.01464" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a></p>
+</section>
+</section>
+<section id="reference-implementations" class="level2">
+<h2 class="anchored" data-anchor-id="reference-implementations">Reference implementations</h2>
+<p>Code released with a specific paper, to reproduce it and to build on. Maintained only as far as that paper requires.</p>
+<section id="neural-thermodynamic-integration" class="level3">
+<h3 class="anchored" data-anchor-id="neural-thermodynamic-integration">Neural thermodynamic integration</h3>
+<p>Free energies from a neural network potential that interpolates between two target Hamiltonians, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate. Two repositories, both maintained by <a href="https://github.com/balintmate">Bálint Máté</a> (University of Geneva): the original formulation, and the extension to solvation where both end states are non-trivial.</p>
+<p>MIT</p>
+<!-- Two codes and two papers, so one run-on line of four links separated by
+the same bullet leaves it ambiguous which paper belongs to which repository. A
+hard break pairs them. -->
+<p><a href="https://github.com/balintmate/neural-thermodynamic-integration">Original code</a> · <a href="https://doi.org/10.1021/acs.jpclett.4c01958">J. Phys. Chem. Lett. 2024</a><br>
+<a href="https://github.com/balintmate/neuralTI-solvation">Solvation code</a> · <a href="https://doi.org/10.1063/5.0251736">J. Chem. Phys. 2025</a></p>
+</section>
+<section id="multi-level-bayesian-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="multi-level-bayesian-optimization">Multi-level Bayesian optimization</h3>
+<p>Molecular discovery organized as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. Includes <code>chespex</code>, a small package implementing the algorithm independently of the application, and a separate tutorial working through the method on two-bead molecules in a water–hexane mixture.</p>
+<p><a href="https://github.com/BereauLab/Multi-Level-BO-w-Hierarchical-CG">Code</a> · <a href="https://github.com/BereauLab/Molecule-Optimization-w-Hierarchical-CG-Tutorial">Tutorial</a> · <a href="https://doi.org/10.1039/D5SC03855C">Chem. Sci. 2025</a></p>
+</section>
+</section>
+<section id="earlier-codes" class="level2">
+<h2 class="anchored" data-anchor-id="earlier-codes">Earlier codes</h2>
+<p>Kept available because the papers that used them point here, not because they are maintained.</p>
+<section id="auto-martini-martini-2" class="level3">
+<h3 class="anchored" data-anchor-id="auto-martini-martini-2">Auto Martini (Martini 2)</h3>
+<p>The original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by <a href="#auto-martini">Auto-Martini M3</a>.</p>
+<p><a href="https://github.com/tbereau/auto_martini">GitHub</a> · <a href="https://doi.org/10.1021/acs.jctc.5b00056">J. Chem. Theory Comput. 2015</a></p>
+</section>
+<section id="ipml" class="level3">
+<h3 class="anchored" data-anchor-id="ipml">IPML</h3>
+<p>Intermolecular potentials from a combination of physics-based and machine-learned components – atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition – transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.</p>
+<p><a href="https://gitlab.mpcdf.mpg.de/trisb/ipml">GitLab</a> · <a href="https://doi.org/10.1063/1.5009502">J. Chem. Phys. 2018</a></p>
+</section>
+<section id="mbvdw" class="level3">
+<h3 class="anchored" data-anchor-id="mbvdw">mbvdw</h3>
+<p>Classical, Voronoi-tessellation adaptation of the many-body van der Waals method, which dispenses with explicit electron densities.</p>
+<p><a href="https://github.com/tbereau/mbvdw">GitHub</a> · <a href="https://doi.org/10.1063/1.4885339">J. Chem. Phys. 2014</a></p>
+</section>
+<section id="peptideb" class="level3">
+<h3 class="anchored" data-anchor-id="peptideb">peptideB</h3>
+<p>Top-down, implicit-solvent coarse-grained peptide model for secondary- and tertiary-structure formation, implemented for ESPResSo.</p>
+<p><a href="https://github.com/tbereau/peptideB">GitHub</a> · <a href="https://doi.org/10.1063/1.3152842">J. Chem. Phys. 2009</a></p>
+</section>
+<section id="opt-mhm" class="level3">
+<h3 class="anchored" data-anchor-id="opt-mhm">opt-mhm</h3>
+<p>Multiple-histogram (WHAM) free-energy analysis with optimized convergence.</p>
+<p><a href="https://github.com/tbereau/opt-mhm">GitHub</a> · <a href="https://doi.org/10.1016/j.jcp.2009.05.011">J. Comput. Phys. 2009</a></p>
+</section>
+</section>
+<section id="website-tooling" class="level2">
+<h2 class="anchored" data-anchor-id="website-tooling">Website tooling</h2>
+<section id="my-scientific-profile" class="level3">
+<h3 class="anchored" data-anchor-id="my-scientific-profile">my-scientific-profile</h3>
+<p>Retrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the <a href="./papers.html">publication list</a> and the <a href="./research_landscape.html">research landscape</a> here; <a href="./about.html">about</a> sets out the rest of the pipeline. MIT.</p>
+<p><a href="https://github.com/tbereau/my_scientific_profile">GitHub</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

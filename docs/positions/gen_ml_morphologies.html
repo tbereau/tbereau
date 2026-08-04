@@ -103,15 +103,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <script data-goatcounter="https://tristanbereau.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <script>
+    // The address is assembled here rather than written into contact.qmd so it
+    // does not sit in the served HTML as a harvestable mailto:. The `<span>`
+    // ships with a no-JS fallback inside it ("bereau *at* ..."), which this
+    // replaces; without the fallback the @ icon labelled nothing at all
+    // whenever scripting was off or the script failed to load.
     document.addEventListener('DOMContentLoaded', function () {
         var user = 'bereau';
         var domain = 'thphys.uni-heidelberg.de';
         var email = user + '@' + domain;
-        var emailLink = '<a href="mailto:' + email + '">' + email + '</a>';
-
         var emailPlaceholder = document.getElementById('email-placeholder');
+
         if (emailPlaceholder) {
-            emailPlaceholder.innerHTML = emailLink;
+            var link = document.createElement('a');
+            link.href = 'mailto:' + email;
+            link.textContent = email;
+            emailPlaceholder.replaceChildren(link);
         }
     });
 </script>
