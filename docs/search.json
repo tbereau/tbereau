@@ -378,151 +378,172 @@
     "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Yasemin Bozkurt Varolgunes\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/timon_wittenstein.html",
-    "href": "group/timon_wittenstein.html",
-    "title": "Timon Wittenstein",
+    "objectID": "group/tobias_bruns.html",
+    "href": "group/tobias_bruns.html",
+    "title": "Tobias Bruns",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Timon Wittenstein\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Tobias Bruns\")\n})"
   },
   {
-    "objectID": "group/timon_wittenstein.html#group-publications",
-    "href": "group/timon_wittenstein.html#group-publications",
-    "title": "Timon Wittenstein",
+    "objectID": "group/tobias_bruns.html#group-publications",
+    "href": "group/tobias_bruns.html#group-publications",
+    "title": "Tobias Bruns",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/timon_wittenstein.html#group-collaborators",
-    "href": "group/timon_wittenstein.html#group-collaborators",
-    "title": "Timon Wittenstein",
+    "objectID": "group/tobias_bruns.html#group-collaborators",
+    "href": "group/tobias_bruns.html#group-collaborators",
+    "title": "Tobias Bruns",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Timon Wittenstein\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Tobias Bruns\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/selina_pohl.html",
-    "href": "group/selina_pohl.html",
-    "title": "Selina Pohl",
+    "objectID": "group/svenja_worner.html",
+    "href": "group/svenja_worner.html",
+    "title": "Svenja Wörner",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Selina Pohl\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Svenja Wörner\")\n})"
   },
   {
-    "objectID": "group/selina_pohl.html#group-publications",
-    "href": "group/selina_pohl.html#group-publications",
-    "title": "Selina Pohl",
+    "objectID": "group/svenja_worner.html#group-publications",
+    "href": "group/svenja_worner.html#group-publications",
+    "title": "Svenja Wörner",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/selina_pohl.html#group-collaborators",
-    "href": "group/selina_pohl.html#group-collaborators",
-    "title": "Selina Pohl",
+    "objectID": "group/svenja_worner.html#group-collaborators",
+    "href": "group/svenja_worner.html#group-collaborators",
+    "title": "Svenja Wörner",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Selina Pohl\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Svenja Wörner\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/roberto_menichetti.html",
-    "href": "group/roberto_menichetti.html",
-    "title": "Roberto Menichetti",
+    "objectID": "group/sander_hummerich.html",
+    "href": "group/sander_hummerich.html",
+    "title": "Sander Hummerich",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Roberto Menichetti\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Sander Hummerich\")\n})"
   },
   {
-    "objectID": "group/roberto_menichetti.html#group-publications",
-    "href": "group/roberto_menichetti.html#group-publications",
-    "title": "Roberto Menichetti",
+    "objectID": "group/sander_hummerich.html#group-publications",
+    "href": "group/sander_hummerich.html#group-publications",
+    "title": "Sander Hummerich",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/roberto_menichetti.html#group-collaborators",
-    "href": "group/roberto_menichetti.html#group-collaborators",
-    "title": "Roberto Menichetti",
+    "objectID": "group/sander_hummerich.html#group-collaborators",
+    "href": "group/sander_hummerich.html#group-collaborators",
+    "title": "Sander Hummerich",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Roberto Menichetti\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Sander Hummerich\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/rene_scheid.html",
-    "href": "group/rene_scheid.html",
-    "title": "René Scheid",
+    "objectID": "group/robert_ballmaier.html",
+    "href": "group/robert_ballmaier.html",
+    "title": "Robert Ballmaier",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"René Scheid\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Robert Ballmaier\")\n})"
   },
   {
-    "objectID": "group/rene_scheid.html#group-publications",
-    "href": "group/rene_scheid.html#group-publications",
-    "title": "René Scheid",
+    "objectID": "group/robert_ballmaier.html#group-publications",
+    "href": "group/robert_ballmaier.html#group-publications",
+    "title": "Robert Ballmaier",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/rene_scheid.html#group-collaborators",
-    "href": "group/rene_scheid.html#group-collaborators",
-    "title": "René Scheid",
+    "objectID": "group/robert_ballmaier.html#group-collaborators",
+    "href": "group/robert_ballmaier.html#group-collaborators",
+    "title": "Robert Ballmaier",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"René Scheid\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Robert Ballmaier\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/martin_girard.html",
-    "href": "group/martin_girard.html",
-    "title": "Martin Girard",
+    "objectID": "group/osman_ozdemir.html",
+    "href": "group/osman_ozdemir.html",
+    "title": "Osman Özdemir",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Martin Girard\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Osman Özdemir\")\n})"
   },
   {
-    "objectID": "group/martin_girard.html#group-publications",
-    "href": "group/martin_girard.html#group-publications",
-    "title": "Martin Girard",
+    "objectID": "group/osman_ozdemir.html#group-publications",
+    "href": "group/osman_ozdemir.html#group-publications",
+    "title": "Osman Özdemir",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/martin_girard.html#group-collaborators",
-    "href": "group/martin_girard.html#group-collaborators",
-    "title": "Martin Girard",
+    "objectID": "group/osman_ozdemir.html#group-collaborators",
+    "href": "group/osman_ozdemir.html#group-collaborators",
+    "title": "Osman Özdemir",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Martin Girard\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Osman Özdemir\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/marian_seidl.html",
-    "href": "group/marian_seidl.html",
-    "title": "Marian Seidl",
+    "objectID": "group/marius_bause.html",
+    "href": "group/marius_bause.html",
+    "title": "Marius Bause",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marian Seidl\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marius Bause\")\n})"
   },
   {
-    "objectID": "group/marian_seidl.html#group-publications",
-    "href": "group/marian_seidl.html#group-publications",
-    "title": "Marian Seidl",
+    "objectID": "group/marius_bause.html#group-publications",
+    "href": "group/marius_bause.html#group-publications",
+    "title": "Marius Bause",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/marian_seidl.html#group-collaborators",
-    "href": "group/marian_seidl.html#group-collaborators",
-    "title": "Marian Seidl",
+    "objectID": "group/marius_bause.html#group-collaborators",
+    "href": "group/marius_bause.html#group-collaborators",
+    "title": "Marius Bause",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marian Seidl\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marius Bause\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/luis_j_walter.html",
-    "href": "group/luis_j_walter.html",
-    "title": "Luis J. Walter",
+    "objectID": "group/marc_stieffenhofer.html",
+    "href": "group/marc_stieffenhofer.html",
+    "title": "Marc Stieffenhofer",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Luis J. Walter\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marc Stieffenhofer\")\n})"
   },
   {
-    "objectID": "group/luis_j_walter.html#group-publications",
-    "href": "group/luis_j_walter.html#group-publications",
-    "title": "Luis J. Walter",
+    "objectID": "group/marc_stieffenhofer.html#group-publications",
+    "href": "group/marc_stieffenhofer.html#group-publications",
+    "title": "Marc Stieffenhofer",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/luis_j_walter.html#group-collaborators",
-    "href": "group/luis_j_walter.html#group-collaborators",
-    "title": "Luis J. Walter",
+    "objectID": "group/marc_stieffenhofer.html#group-collaborators",
+    "href": "group/marc_stieffenhofer.html#group-collaborators",
+    "title": "Marc Stieffenhofer",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Luis J. Walter\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marc Stieffenhofer\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+  },
+  {
+    "objectID": "group/luis_itza_vazquez-salazar.html",
+    "href": "group/luis_itza_vazquez-salazar.html",
+    "title": "Luis Itza Vazquez-Salazar",
+    "section": "",
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Luis Itza Vazquez-Salazar\")\n})"
+  },
+  {
+    "objectID": "group/luis_itza_vazquez-salazar.html#group-publications",
+    "href": "group/luis_itza_vazquez-salazar.html#group-publications",
+    "title": "Luis Itza Vazquez-Salazar",
+    "section": "Group publications",
+    "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
+  },
+  {
+    "objectID": "group/luis_itza_vazquez-salazar.html#group-collaborators",
+    "href": "group/luis_itza_vazquez-salazar.html#group-collaborators",
+    "title": "Luis Itza Vazquez-Salazar",
+    "section": "Group collaborators",
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Luis Itza Vazquez-Salazar\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
     "objectID": "group/lasse_kohnlein.html",
@@ -546,46 +567,67 @@
     "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Lasse Köhnlein\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/joseph_rudzinski.html",
-    "href": "group/joseph_rudzinski.html",
-    "title": "Joseph Rudzinski",
+    "objectID": "group/julian_winkler.html",
+    "href": "group/julian_winkler.html",
+    "title": "Julian Winkler",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Joseph Rudzinski\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Julian Winkler\")\n})"
   },
   {
-    "objectID": "group/joseph_rudzinski.html#group-publications",
-    "href": "group/joseph_rudzinski.html#group-publications",
-    "title": "Joseph Rudzinski",
+    "objectID": "group/julian_winkler.html#group-publications",
+    "href": "group/julian_winkler.html#group-publications",
+    "title": "Julian Winkler",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/joseph_rudzinski.html#group-collaborators",
-    "href": "group/joseph_rudzinski.html#group-collaborators",
-    "title": "Joseph Rudzinski",
+    "objectID": "group/julian_winkler.html#group-collaborators",
+    "href": "group/julian_winkler.html#group-collaborators",
+    "title": "Julian Winkler",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Joseph Rudzinski\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Julian Winkler\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/gerrit_gerhartz.html",
-    "href": "group/gerrit_gerhartz.html",
-    "title": "Gerrit Gerhartz",
+    "objectID": "group/immanuel_sulzer.html",
+    "href": "group/immanuel_sulzer.html",
+    "title": "Immanuel Sulzer",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Gerrit Gerhartz\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Immanuel Sulzer\")\n})"
   },
   {
-    "objectID": "group/gerrit_gerhartz.html#group-publications",
-    "href": "group/gerrit_gerhartz.html#group-publications",
-    "title": "Gerrit Gerhartz",
+    "objectID": "group/immanuel_sulzer.html#group-publications",
+    "href": "group/immanuel_sulzer.html#group-publications",
+    "title": "Immanuel Sulzer",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/gerrit_gerhartz.html#group-collaborators",
-    "href": "group/gerrit_gerhartz.html#group-collaborators",
-    "title": "Gerrit Gerhartz",
+    "objectID": "group/immanuel_sulzer.html#group-collaborators",
+    "href": "group/immanuel_sulzer.html#group-collaborators",
+    "title": "Immanuel Sulzer",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Gerrit Gerhartz\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Immanuel Sulzer\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+  },
+  {
+    "objectID": "group/gabriel_scherer.html",
+    "href": "group/gabriel_scherer.html",
+    "title": "Gabriel Scherer",
+    "section": "",
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Gabriel Scherer\")\n})"
+  },
+  {
+    "objectID": "group/gabriel_scherer.html#group-publications",
+    "href": "group/gabriel_scherer.html#group-publications",
+    "title": "Gabriel Scherer",
+    "section": "Group publications",
+    "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
+  },
+  {
+    "objectID": "group/gabriel_scherer.html#group-collaborators",
+    "href": "group/gabriel_scherer.html#group-collaborators",
+    "title": "Gabriel Scherer",
+    "section": "Group collaborators",
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Gabriel Scherer\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
     "objectID": "group/dominic_holst.html",
@@ -747,6 +789,34 @@
     "title": "About",
     "section": "",
     "text": "This site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the research landscape are all built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.\n\n\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page\n\n\n\n\n\n\n\nAbstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper.\n\n\n\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\nThe source for this site lives at tbereau/tbereau.\n\n\n\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
+  },
+  {
+    "objectID": "about.html#where-the-metadata-comes-from",
+    "href": "about.html#where-the-metadata-comes-from",
+    "title": "About",
+    "section": "",
+    "text": "ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page"
+  },
+  {
+    "objectID": "about.html#how-the-research-landscape-is-built",
+    "href": "about.html#how-the-research-landscape-is-built",
+    "title": "About",
+    "section": "",
+    "text": "Abstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
+  },
+  {
+    "objectID": "about.html#tooling",
+    "href": "about.html#tooling",
+    "title": "About",
+    "section": "",
+    "text": "The backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\nThe source for this site lives at tbereau/tbereau."
+  },
+  {
+    "objectID": "about.html#analytics",
+    "href": "about.html#analytics",
+    "title": "About",
+    "section": "",
+    "text": "Visits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
   },
   {
     "objectID": "group/aleksander_durumeric.html",
@@ -924,25 +994,46 @@
     "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Ferdinand Hörstel\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/immanuel_sulzer.html",
-    "href": "group/immanuel_sulzer.html",
-    "title": "Immanuel Sulzer",
+    "objectID": "group/gerrit_gerhartz.html",
+    "href": "group/gerrit_gerhartz.html",
+    "title": "Gerrit Gerhartz",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Immanuel Sulzer\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Gerrit Gerhartz\")\n})"
   },
   {
-    "objectID": "group/immanuel_sulzer.html#group-publications",
-    "href": "group/immanuel_sulzer.html#group-publications",
-    "title": "Immanuel Sulzer",
+    "objectID": "group/gerrit_gerhartz.html#group-publications",
+    "href": "group/gerrit_gerhartz.html#group-publications",
+    "title": "Gerrit Gerhartz",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/immanuel_sulzer.html#group-collaborators",
-    "href": "group/immanuel_sulzer.html#group-collaborators",
-    "title": "Immanuel Sulzer",
+    "objectID": "group/gerrit_gerhartz.html#group-collaborators",
+    "href": "group/gerrit_gerhartz.html#group-collaborators",
+    "title": "Gerrit Gerhartz",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Immanuel Sulzer\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Gerrit Gerhartz\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+  },
+  {
+    "objectID": "group/joseph_rudzinski.html",
+    "href": "group/joseph_rudzinski.html",
+    "title": "Joseph Rudzinski",
+    "section": "",
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Joseph Rudzinski\")\n})"
+  },
+  {
+    "objectID": "group/joseph_rudzinski.html#group-publications",
+    "href": "group/joseph_rudzinski.html#group-publications",
+    "title": "Joseph Rudzinski",
+    "section": "Group publications",
+    "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
+  },
+  {
+    "objectID": "group/joseph_rudzinski.html#group-collaborators",
+    "href": "group/joseph_rudzinski.html#group-collaborators",
+    "title": "Joseph Rudzinski",
+    "section": "Group collaborators",
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Joseph Rudzinski\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
     "objectID": "group/kiran_kanekal.html",
@@ -966,151 +1057,172 @@
     "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Kiran Kanekal\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/luis_itza_vazquez-salazar.html",
-    "href": "group/luis_itza_vazquez-salazar.html",
-    "title": "Luis Itza Vazquez-Salazar",
+    "objectID": "group/leopold_rosskopf.html",
+    "href": "group/leopold_rosskopf.html",
+    "title": "Leopold Roßkopf",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Luis Itza Vazquez-Salazar\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Leopold Roßkopf\")\n})"
   },
   {
-    "objectID": "group/luis_itza_vazquez-salazar.html#group-publications",
-    "href": "group/luis_itza_vazquez-salazar.html#group-publications",
-    "title": "Luis Itza Vazquez-Salazar",
+    "objectID": "group/leopold_rosskopf.html#group-publications",
+    "href": "group/leopold_rosskopf.html#group-publications",
+    "title": "Leopold Roßkopf",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/luis_itza_vazquez-salazar.html#group-collaborators",
-    "href": "group/luis_itza_vazquez-salazar.html#group-collaborators",
-    "title": "Luis Itza Vazquez-Salazar",
+    "objectID": "group/leopold_rosskopf.html#group-collaborators",
+    "href": "group/leopold_rosskopf.html#group-collaborators",
+    "title": "Leopold Roßkopf",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Luis Itza Vazquez-Salazar\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Leopold Roßkopf\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/marc_stieffenhofer.html",
-    "href": "group/marc_stieffenhofer.html",
-    "title": "Marc Stieffenhofer",
+    "objectID": "group/luis_j_walter.html",
+    "href": "group/luis_j_walter.html",
+    "title": "Luis J. Walter",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marc Stieffenhofer\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Luis J. Walter\")\n})"
   },
   {
-    "objectID": "group/marc_stieffenhofer.html#group-publications",
-    "href": "group/marc_stieffenhofer.html#group-publications",
-    "title": "Marc Stieffenhofer",
+    "objectID": "group/luis_j_walter.html#group-publications",
+    "href": "group/luis_j_walter.html#group-publications",
+    "title": "Luis J. Walter",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/marc_stieffenhofer.html#group-collaborators",
-    "href": "group/marc_stieffenhofer.html#group-collaborators",
-    "title": "Marc Stieffenhofer",
+    "objectID": "group/luis_j_walter.html#group-collaborators",
+    "href": "group/luis_j_walter.html#group-collaborators",
+    "title": "Luis J. Walter",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marc Stieffenhofer\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Luis J. Walter\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/marius_bause.html",
-    "href": "group/marius_bause.html",
-    "title": "Marius Bause",
+    "objectID": "group/marian_seidl.html",
+    "href": "group/marian_seidl.html",
+    "title": "Marian Seidl",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marius Bause\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Marian Seidl\")\n})"
   },
   {
-    "objectID": "group/marius_bause.html#group-publications",
-    "href": "group/marius_bause.html#group-publications",
-    "title": "Marius Bause",
+    "objectID": "group/marian_seidl.html#group-publications",
+    "href": "group/marian_seidl.html#group-publications",
+    "title": "Marian Seidl",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/marius_bause.html#group-collaborators",
-    "href": "group/marius_bause.html#group-collaborators",
-    "title": "Marius Bause",
+    "objectID": "group/marian_seidl.html#group-collaborators",
+    "href": "group/marian_seidl.html#group-collaborators",
+    "title": "Marian Seidl",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marius Bause\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Marian Seidl\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/osman_ozdemir.html",
-    "href": "group/osman_ozdemir.html",
-    "title": "Osman Özdemir",
+    "objectID": "group/martin_girard.html",
+    "href": "group/martin_girard.html",
+    "title": "Martin Girard",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Osman Özdemir\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Martin Girard\")\n})"
   },
   {
-    "objectID": "group/osman_ozdemir.html#group-publications",
-    "href": "group/osman_ozdemir.html#group-publications",
-    "title": "Osman Özdemir",
+    "objectID": "group/martin_girard.html#group-publications",
+    "href": "group/martin_girard.html#group-publications",
+    "title": "Martin Girard",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/osman_ozdemir.html#group-collaborators",
-    "href": "group/osman_ozdemir.html#group-collaborators",
-    "title": "Osman Özdemir",
+    "objectID": "group/martin_girard.html#group-collaborators",
+    "href": "group/martin_girard.html#group-collaborators",
+    "title": "Martin Girard",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Osman Özdemir\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Martin Girard\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/robert_ballmaier.html",
-    "href": "group/robert_ballmaier.html",
-    "title": "Robert Ballmaier",
+    "objectID": "group/rene_scheid.html",
+    "href": "group/rene_scheid.html",
+    "title": "René Scheid",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Robert Ballmaier\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"René Scheid\")\n})"
   },
   {
-    "objectID": "group/robert_ballmaier.html#group-publications",
-    "href": "group/robert_ballmaier.html#group-publications",
-    "title": "Robert Ballmaier",
+    "objectID": "group/rene_scheid.html#group-publications",
+    "href": "group/rene_scheid.html#group-publications",
+    "title": "René Scheid",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/robert_ballmaier.html#group-collaborators",
-    "href": "group/robert_ballmaier.html#group-collaborators",
-    "title": "Robert Ballmaier",
+    "objectID": "group/rene_scheid.html#group-collaborators",
+    "href": "group/rene_scheid.html#group-collaborators",
+    "title": "René Scheid",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Robert Ballmaier\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"René Scheid\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/sander_hummerich.html",
-    "href": "group/sander_hummerich.html",
-    "title": "Sander Hummerich",
+    "objectID": "group/roberto_menichetti.html",
+    "href": "group/roberto_menichetti.html",
+    "title": "Roberto Menichetti",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Sander Hummerich\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Roberto Menichetti\")\n})"
   },
   {
-    "objectID": "group/sander_hummerich.html#group-publications",
-    "href": "group/sander_hummerich.html#group-publications",
-    "title": "Sander Hummerich",
+    "objectID": "group/roberto_menichetti.html#group-publications",
+    "href": "group/roberto_menichetti.html#group-publications",
+    "title": "Roberto Menichetti",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/sander_hummerich.html#group-collaborators",
-    "href": "group/sander_hummerich.html#group-collaborators",
-    "title": "Sander Hummerich",
+    "objectID": "group/roberto_menichetti.html#group-collaborators",
+    "href": "group/roberto_menichetti.html#group-collaborators",
+    "title": "Roberto Menichetti",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Sander Hummerich\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Roberto Menichetti\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
-    "objectID": "group/svenja_worner.html",
-    "href": "group/svenja_worner.html",
-    "title": "Svenja Wörner",
+    "objectID": "group/selina_pohl.html",
+    "href": "group/selina_pohl.html",
+    "title": "Selina Pohl",
     "section": "",
-    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Svenja Wörner\")\n})"
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Selina Pohl\")\n})"
   },
   {
-    "objectID": "group/svenja_worner.html#group-publications",
-    "href": "group/svenja_worner.html#group-publications",
-    "title": "Svenja Wörner",
+    "objectID": "group/selina_pohl.html#group-publications",
+    "href": "group/selina_pohl.html#group-publications",
+    "title": "Selina Pohl",
     "section": "Group publications",
     "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
   },
   {
-    "objectID": "group/svenja_worner.html#group-collaborators",
-    "href": "group/svenja_worner.html#group-collaborators",
-    "title": "Svenja Wörner",
+    "objectID": "group/selina_pohl.html#group-collaborators",
+    "href": "group/selina_pohl.html#group-collaborators",
+    "title": "Selina Pohl",
     "section": "Group collaborators",
-    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Svenja Wörner\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Selina Pohl\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
+  },
+  {
+    "objectID": "group/timon_wittenstein.html",
+    "href": "group/timon_wittenstein.html",
+    "title": "Timon Wittenstein",
+    "section": "",
+    "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Timon Wittenstein\")\n})"
+  },
+  {
+    "objectID": "group/timon_wittenstein.html#group-publications",
+    "href": "group/timon_wittenstein.html#group-publications",
+    "title": "Timon Wittenstein",
+    "section": "Group publications",
+    "text": "Group publications\n\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
+  },
+  {
+    "objectID": "group/timon_wittenstein.html#group-collaborators",
+    "href": "group/timon_wittenstein.html#group-collaborators",
+    "title": "Timon Wittenstein",
+    "section": "Group collaborators",
+    "text": "Group collaborators\n\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Timon Wittenstein\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)"
   },
   {
     "objectID": "group/tristan_bereau.html",
@@ -1152,7 +1264,7 @@
     "href": "group_members.html",
     "title": "Group members",
     "section": "",
-    "text": "Aleksander Durumeric\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlessia Centi\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArghya Dutta\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtreyee Banerjee\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBernadette Mohr\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBálint Máté\n\n\n\nvisiting phd student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChaitanya Sampara\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChan Liu\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristian Hoffmann\n\n\n\nalumnus\n\n\ndiplom student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClaudia Leticia Gómez-Flores\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClemens Rauer\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Hofmann\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Nagel\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominic Holst\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFerdinand Hörstel\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGerrit Gerhartz\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImmanuel Sulzer\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoseph Rudzinski\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKiran Kanekal\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLasse Köhnlein\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLuis Itza Vazquez-Salazar\n\n\n\npostdoc\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLuis J. Walter\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarc Stieffenhofer\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarian Seidl\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarius Bause\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMartin Girard\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOsman Özdemir\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRené Scheid\n\n\n\nalumnus\n\n\nmaster student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobert Ballmaier\n\n\n\nbachelor student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRoberto Menichetti\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Hummerich\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelina Pohl\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSvenja Wörner\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTimon Wittenstein\n\n\n\nalumnus\n\n\nmaster student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTristan Bereau\n\n\n\ncurrent\n\n\ngroup leader\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYasemin Bozkurt Varolgunes\n\n\n\nalumnus\n\n\nvisiting phd student\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Aleksander Durumeric\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlessia Centi\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArghya Dutta\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAtreyee Banerjee\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBernadette Mohr\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBálint Máté\n\n\n\nvisiting phd student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChaitanya Sampara\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChan Liu\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChristian Hoffmann\n\n\n\nalumnus\n\n\ndiplom student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClaudia Leticia Gómez-Flores\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nClemens Rauer\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Hofmann\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDaniel Nagel\n\n\n\npostdoc\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDominic Holst\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFerdinand Hörstel\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGabriel Scherer\n\n\n\nbachelor student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGerrit Gerhartz\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImmanuel Sulzer\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJoseph Rudzinski\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJulian Winkler\n\n\n\nintern\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKiran Kanekal\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLasse Köhnlein\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLeopold Roßkopf\n\n\n\nbachelor student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLuis Itza Vazquez-Salazar\n\n\n\npostdoc\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLuis J. Walter\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarc Stieffenhofer\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarian Seidl\n\n\n\nmaster student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMarius Bause\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMartin Girard\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOsman Özdemir\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRené Scheid\n\n\n\nalumnus\n\n\nmaster student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRobert Ballmaier\n\n\n\nbachelor student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRoberto Menichetti\n\n\n\nalumnus\n\n\npostdoc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSander Hummerich\n\n\n\nphd student\n\n\ncurrent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSelina Pohl\n\n\n\nmaster student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSvenja Wörner\n\n\n\nalumnus\n\n\nphd student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTimon Wittenstein\n\n\n\nalumnus\n\n\nmaster student\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTobias Bruns\n\n\n\nbachelor student\n\n\nalumnus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTristan Bereau\n\n\n\ncurrent\n\n\ngroup leader\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYasemin Bozkurt Varolgunes\n\n\n\nalumnus\n\n\nvisiting phd student\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "papers.html",
@@ -1524,33 +1636,5 @@
     "title": "Software",
     "section": "peptideB",
     "text": "peptideB\nESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.\n Github  Publication"
-  },
-  {
-    "objectID": "about.html#where-the-metadata-comes-from",
-    "href": "about.html#where-the-metadata-comes-from",
-    "title": "About",
-    "section": "",
-    "text": "ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page"
-  },
-  {
-    "objectID": "about.html#how-the-research-landscape-is-built",
-    "href": "about.html#how-the-research-landscape-is-built",
-    "title": "About",
-    "section": "",
-    "text": "Abstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
-  },
-  {
-    "objectID": "about.html#tooling",
-    "href": "about.html#tooling",
-    "title": "About",
-    "section": "",
-    "text": "The backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\nThe source for this site lives at tbereau/tbereau."
-  },
-  {
-    "objectID": "about.html#analytics",
-    "href": "about.html#analytics",
-    "title": "About",
-    "section": "",
-    "text": "Visits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
   }
 ]

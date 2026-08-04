@@ -16,7 +16,7 @@ listing:
   type: grid
   grid-columns: 3
   image-height: 240px
-  # 36 members, so a 25-item default page would split the group in two.
+  # 40 members, so a 25-item default page would split the group in two.
   page-size: 48
   fields: [image, title, categories]
   sort:
