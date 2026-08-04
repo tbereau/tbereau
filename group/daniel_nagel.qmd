@@ -1,14 +1,14 @@
 
 ---
 title: "Daniel Nagel"
-description: "Postdoc in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "Former postdoc in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
   - postdoc
-  - current
+  - alumnus
 image: ../static/daniel.jpg
 about:
   id: hero-heading

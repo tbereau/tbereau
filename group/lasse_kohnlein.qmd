@@ -1,19 +1,19 @@
 
 ---
-title: "Chaitanya Sampara"
-description: "Former master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+title: "Lasse Köhnlein"
+description: "Master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
   - master student
-  - alumnus
-image: ../static/chaitanya.jpg
+  - current
+image: ../static/cgmol.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/chaitanya.jpg
+  image: ../static/cgmol.jpg
 
 ---
 
@@ -34,7 +34,7 @@ papers = index_array.map(
 )
 
 my_papers = papers.filter(function(p) {
-    return p.authors.map(a => a.full_name).includes("Chaitanya Sampara")
+    return p.authors.map(a => a.full_name).includes("Lasse Köhnlein")
 })
 ```
 
@@ -88,7 +88,7 @@ collaborators = Array.from(
     new Set(
         my_papers.flatMap(p => p.authors)
         .filter(function(a) {
-            return a.full_name != "Chaitanya Sampara"
+            return a.full_name != "Lasse Köhnlein"
             }
         )
     )

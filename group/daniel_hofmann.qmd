@@ -1,14 +1,14 @@
 
 ---
 title: "Daniel Hofmann"
-description: "Master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "Former master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
   - master student
-  - current
+  - alumnus
 image: ../static/daniel_hofmann.jpg
 about:
   id: hero-heading

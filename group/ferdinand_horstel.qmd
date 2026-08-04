@@ -1,13 +1,13 @@
 
 ---
 title: "Ferdinand Hörstel"
-description: "Master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "PhD student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
-  - master student
+  - phd student
   - current
 image: ../static/cgmol.jpg
 about:
