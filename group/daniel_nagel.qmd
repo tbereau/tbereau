@@ -57,7 +57,7 @@ my_papers = papers.filter(function(p) {
 
 ## Experience
 
-Postdoc, Uni. Heidelberg | 2023 - now
+Postdoc, Uni. Heidelberg | 2023 - 2026
 
 PhD [@stocklab](https://www.moldyn.uni-freiburg.de/), ALU Freiburg | 2018 - 2023
 
