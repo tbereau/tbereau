@@ -47,6 +47,9 @@ library. The frontend uses [Quarto](https://quarto.org); the sortable tables and
 the landscape plot are [Observable JS](https://quarto.org/docs/interactive/ojs/)
 running in your browser, so no data leaves the page.
 
+The source for this site lives at
+[tbereau/tbereau](https://github.com/tbereau/tbereau).
+
 ## Analytics
 
 Visits are counted with [GoatCounter](https://www.goatcounter.com), which sets
