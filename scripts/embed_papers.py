@@ -1,7 +1,6 @@
 import nltk
 import numpy as np
 import pandas as pd
-from pathlib import Path
 
 import os
 from decouple import config as environ
@@ -28,7 +27,6 @@ from my_scientific_profile.database.papers import (  # noqa
 )
 from my_scientific_profile.papers.papers import Embedding  # noqa
 from my_scientific_profile.database.aws_s3 import S3_BUCKET, S3_CLIENT  # noqa
-from to_quarto.utils import ROOT_DIR
 
 papers = load_all_papers_from_s3(s3_client=S3_CLIENT, s3_bucket=S3_BUCKET)
 df = convert_papers_to_dataframe(papers)
@@ -110,7 +108,8 @@ save_all_papers_to_s3(S3_CLIENT, S3_BUCKET, papers)
 
 df = convert_papers_to_dataframe(papers)
 
-path = Path(ROOT_DIR)
-team_path = path.joinpath("data")
-df.to_json(team_path.joinpath("all_papers.json"))
-df.to_csv(team_path.joinpath("all_papers.csv"))
+# This script rewrites the same two exports as `fetch_papers.py`, so the topic
+# assignment has to be reattached here too or it is dropped on every re-embed.
+from topics import write_exports  # noqa: E402
+
+write_exports(df)

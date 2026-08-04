@@ -1,0 +1,184 @@
+# Which publications belong to which section of `research_topics.qmd`.
+#
+# The page used to select papers per section either by coauthor
+# (`authors.includes("Roberto Menichetti")`) or by a list of DOIs written into
+# the page itself. Both drift. A coauthor filter silently adopts whatever that
+# person publishes next, whether or not it belongs to the topic, and a DOI list
+# has to be extended by hand every time a paper comes out. Between them, 44 of
+# 89 publications had ended up in no section at all and the page's most recent
+# entry was from 2022.
+#
+# The assignment lives here instead, and `scripts/topics.py` joins it onto
+# `data/all_papers.json` as a `topics` field, warning about any DOI it cannot
+# find and about any paper left unassigned. A paper may carry more than one
+# topic; the order below is also the order the sections appear on the page.
+#
+# After editing, run:  poetry run python scripts/topics.py
+
+topics:
+  # --- Current directions ------------------------------------------------
+  - key: gen-free-energy
+    title: "Free energies from generative models"
+    tier: current
+    dois:
+      - 10.1063/5.0327436  # Data-efficient multidimensional free energy esti… (J. Chem. Phys. 2026)
+      - 10.1021/acs.jpcb.5c04579  # Fokker–Planck Score Learning: Efficient… (J. Phys. Chem. B 2025)
+      - 10.1063/5.0251736  # Solvation free energies from neural thermodynami… (J. Chem. Phys. 2025)
+      - 10.1021/acs.jpclett.4c01958  # Neural Thermodynamic Integration… (J. Phys. Chem. Lett. 2024)
+
+  - key: resolution-transport
+    title: "Measure transport across resolutions"
+    tier: current
+    dois:
+      - 10.48550/arXiv.2511.01464  # Split-Flows: Measure Transport and Information… (AISTATS 2026)
+      - 10.3389/fchem.2022.982757  # Benchmarking coarse-grained models of orga… (Front. Chem. 2022)
+      - 10.1063/5.0039102  # Adversarial reverse mapping of condensed-phase mo… (APL Materials 2021)
+      - 10.1088/2632-2153/abb6d4  # Adversarial reverse mapping… (Mach. Learn.: Sci. Technol. 2020)
+
+  - key: high-throughput
+    title: "High-throughput screening of thermodynamic properties"
+    tier: current
+    dois:
+      - 10.1021/acs.jcim.6c01719  # Mapping the Molecular Universe: Exp… (J. Chem. Inf. Model. 2026)
+      - 10.1021/acs.jcim.4c01300  # EDITORIAL: Chemical Compound Space… (J. Chem. Inf. Model. 2024)
+      - 10.1063/5.0053931  # Data-driven equation for drug–membrane permeabil… (J. Chem. Phys. 2021)
+      - 10.1063/5.0061875  # Publisher’s Note: “Data-driven equation for drug… (J. Chem. Phys. 2021)
+      - 10.1088/1361-651X/abd042  # Computational compound… (Modelling Simul. Mater. Sci. Eng. 2020)
+      - 10.1038/s41597-020-0391-0  # Molecular dynamics trajectories for 630 coarse… (Sci Data 2020)
+      - 10.1016/j.bpj.2020.01.039  # Inserting Small Molecules across Me… (Biophysical Journal 2020)
+      - 10.1080/00268976.2019.1601787  # Revisiting the Meyer-Overton rule… (Molecular Physics 2019)
+      - 10.1021/acscentsci.8b00718  # Drug–Membrane Permeability across Chemi… (ACS Cent. Sci. 2019)
+      - 10.1063/1.4987012  # In silico screening of drug-membrane thermodynam… (J. Chem. Phys. 2017)
+      - 10.1016/j.bbrc.2017.08.095  # Ef… (Biochemical and Biophysical Research Communications 2017)
+      - 10.1063/1.4943287  # Research Update: Computational materials discover… (APL Materials 2016)
+
+  - key: molecular-discovery
+    title: "Molecular discovery by active learning and Bayesian optimization"
+    tier: current
+    dois:
+      - 10.1039/D5SC03855C  # Navigating chemical space: multi-level Bayesian opt… (Chem. Sci. 2025)
+      - 10.1039/D4CE00752B  # Robust and efficient reranking in crystal structu… (CrystEngComm 2024)
+      - 10.1038/s41467-023-40663-6  # Data-mining unveils structure–property–acti… (Nat Commun 2023)
+      - 10.1039/D3BM00412K  # Inverse design of viral infectivity-enhancing p… (Biomater. Sci. 2023)
+      - 10.1039/D2SC00116K  # Data-driven discovery of cardiolipin-selective smal… (Chem. Sci. 2022)
+      - 10.1039/D2CB00125J  # CLiB – a novel cardiolipin-binder isolated via… (RSC Chem. Biol. 2022)
+      - 10.1021/acsfoodscitech.2c00251  # Identifying Sequential Resi… (ACS Food Sci. Technol. 2022)
+      - 10.1126/sciadv.aaz4301  # Designing exceptional gas-separation polymer mem… (Sci. Adv. 2020)
+      - 10.1002/adfm.201809112  # Sequence-Optimized Peptide Nanofibers… (Adv Funct Materials 2019)
+      - 10.1002/anie.201712448  # Engineering Proteins at Interfaces: From… (Angew Chem Int Ed 2018)
+
+  - key: cg-chemical-space
+    title: "Coarse-graining as a reduction of chemical space"
+    tier: current
+    dois:
+      - 10.1021/acs.jctc.3c00201  # Condensed-Phase Molecular Repres… (J. Chem. Theory Comput. 2023)
+      - 10.1063/5.0104914  # Broad chemical transferability in structure-base… (J. Chem. Phys. 2022)
+      - 10.1063/5.0012230  # Hydration free energies from kernel-based machin… (J. Chem. Phys. 2020)
+      - 10.1021/acs.jctc.9b01256  # Kernel-Based Machine Learning fo… (J. Chem. Theory Comput. 2020)
+      - 10.1063/1.5131105  # Direct route to reproducing pair distribution fu… (J. Chem. Phys. 2019)
+      - 10.1063/1.5119101  # Resolution limit of data-driven coarse-grained m… (J. Chem. Phys. 2019)
+      - 10.1103/PhysRevE.100.033302  # Controlled exploration of chemical space… (Phys. Rev. E 2019)
+
+  - key: auto-parametrization
+    title: "Automated force-field parametrization"
+    tier: current
+    dois:
+      - 10.1021/acs.jctc.5c01178  # Fast Parametrization of Martini3… (J. Chem. Theory Comput. 2025)
+      - 10.5281/zenodo.15783891  # Repository of Auto-MartiniM3: Fast parametrization… (Zenodo 2025)
+      - 10.1021/acs.jctc.5b00056  # Automated Parametrization of the… (J. Chem. Theory Comput. 2015)
+
+  - key: fair-workflows
+    title: "Reproducible and FAIR simulation workflows"
+    tier: current
+    dois:
+      - 10.5281/zenodo.14895189  # NOMAD Utility Workflows (Zenodo 2026)
+      - 10.1021/acs.jcim.4c01754  # Martignac: Computational Workflows… (J. Chem. Inf. Model. 2024)
+      - 10.1088/1361-651X/ad4d0d  # Roadmap on data-centri… (Modelling Simul. Mater. Sci. Eng. 2024)
+      - 10.1038/s41597-023-02501-8  # Shared metadata for data-centric materials sc… (Sci Data 2023)
+      - 10.1038/s41586-022-04501-x  # FAIR data enabling new horizons for materials r… (Nature 2022)
+      - 10.1016/j.commatsci.2019.05.003  # Hoobas: A highly… (Computational Materials Science 2019)
+
+  # --- Continuing threads ------------------------------------------------
+  - key: membranes
+    title: "Membrane biophysics"
+    tier: continuing
+    dois:
+      - 10.1016/j.bpj.2022.12.004  # Induced asymmetries in membranes (Biophysical Journal 2022)
+      - 10.1016/j.bpj.2021.03.043  # Finite-size transitions in complex… (Biophysical Journal 2021)
+      - 10.1016/j.bpj.2021.04.025  # Computer simulations of lipid regul… (Biophysical Journal 2021)
+      - 10.3390/membranes11040254  # The Bacteriostatic Activity of 2-Phenylethano… (Membranes 2021)
+      - 10.1016/j.bpj.2020.07.024  # Regulating Lipid Composition Ration… (Biophysical Journal 2020)
+      - 10.1021/acs.jpcb.9b10469  # Probing Nanoparticle/Membrane Interacti… (J. Phys. Chem. B 2020)
+      - 10.1002/chem.201702041  # Nitrated Fatty Acids Modulate the P… (Chemistry A European J 2017)
+      - 10.1021/acs.jpcb.6b03682  # Protein-Backbone Thermodynamics across… (J. Phys. Chem. B 2016)
+      - 10.1016/j.bpj.2015.07.012  # Better Together: Lipopeptide Micell… (Biophysical Journal 2015)
+      - 10.1063/1.4935487  # Folding and insertion thermodynamics of the tran… (J. Chem. Phys. 2015)
+
+  - key: cg-kinetics
+    title: "Kinetics of coarse-grained models"
+    tier: continuing
+    dois:
+      - 10.1088/1361-648X/abe6e1  # Dynamical properties across di… (J. Phys.: Condens. Matter 2021)
+      - 10.1063/5.0031249  # Coarse-grained conformational surface hopping: M… (J. Chem. Phys. 2020)
+      - 10.1088/2632-2153/ab80b7  # Interpretable embeddings fro… (Mach. Learn.: Sci. Technol. 2020)
+      - 10.1063/1.5064808  # Automated detection of many-particle solvation s… (J. Chem. Phys. 2019)
+      - 10.1103/physrevlett.121.256002  # Accurate Structure-Based Coarse G… (Phys. Rev. Lett. 2018)
+      - 10.1063/1.5025125  # Structural-kinetic-thermodynamic relationships i… (J. Chem. Phys. 2018)
+      - 10.3390/computation6010021  # The Role of Conformational Entropy in the… (Computation 2018)
+      - 10.1140/epjst/e2016-60114-5  # Concurrent parametrization a… (Eur. Phys. J. Spec. Top. 2016)
+      - 10.1063/1.4941455  # Communication: Consistent interpretation of mole… (J. Chem. Phys. 2016)
+
+  - key: nonequilibrium
+    title: "Non-equilibrium dynamical reweighting"
+    tier: continuing
+    dois:
+      - 10.1063/5.0042972  # Reweighting non-equilibrium steady-state dynamic… (J. Chem. Phys. 2021)
+      - 10.1103/PhysRevE.100.060103  # Microscopic reweighting for nonequilibri… (Phys. Rev. E 2019)
+
+  - key: polymer-materials
+    title: "Polymer and organic-materials morphology"
+    tier: continuing
+    dois:
+      - 10.1039/D0SM01342K  # Free-energy landscape of polymer-crystal polymorph… (Soft Matter 2020)
+      - 10.1002/adts.201800024  # Polymorphism of Syndiotactic Polysty… (Advcd Theory and Sims 2018)
+
+  # --- Foundations -------------------------------------------------------
+  - key: multipoles
+    title: "Static atomic multipole electrostatics"
+    tier: foundations
+    dois:
+      - 10.1021/acs.jpcb.1c05423  # Multipolar Force Fields for Amide-I Spe… (J. Phys. Chem. B 2021)
+      - 10.1021/acs.jctc.6b00202  # Impact of Quadrupolar Electrosta… (J. Chem. Theory Comput. 2016)
+      - 10.1063/1.4916630  # Solvation of fluoro-acetonitrile in water by 2D-… (J. Chem. Phys. 2015)
+      - 10.1021/acs.jctc.5b00301  # Transferable Atomic Multipole Ma… (J. Chem. Theory Comput. 2015)
+      - 10.1021/jp508052q  # Multipolar Force Fields and Their Effects on S… (J. Phys. Chem. B 2015)
+      - 10.1021/jp5011692  # Computational Two-Dimensional Infrared Spectro… (J. Phys. Chem. B 2014)
+      - 10.1021/ci400548w  # Deriving Static Atomic Multipoles from the… (J. Chem. Inf. Model. 2013)
+      - 10.1021/ct400803f  # Leveraging Symmetries of Static Atomic… (J. Chem. Theory Comput. 2013)
+      - 10.1021/jp400593c  # Scoring Multipole Electrostatics in Condensed-… (J. Phys. Chem. B 2013)
+
+  - key: noncovalent-ml
+    title: "Machine learning of non-covalent interactions"
+    tier: foundations
+    dois:
+      - 10.1063/1.5009502  # Non-covalent interactions across organic and bio… (J. Chem. Phys. 2018)
+      - 10.1063/1.4885339  # Toward transferable interatomic van der Waals in… (J. Chem. Phys. 2014)
+
+  - key: peptide-cg
+    title: "Peptide coarse-graining and folding cooperativity"
+    tier: foundations
+    dois:
+      - 10.1007/s00232-014-9738-9  # Enhanced Sampling of Coarse-Grained Tra… (J Membrane Biol 2014)
+      - 10.1063/1.4867465  # More than the sum of its parts: Coarse-grained p… (J. Chem. Phys. 2014)
+      - 10.1021/ct200888u  # Coarse-Grained and Atomistic Simulation… (J. Chem. Theory Comput. 2012)
+      - 10.1016/j.bpj.2011.03.056  # Structural Basis of Folding Coopera… (Biophysical Journal 2011)
+      - 10.1021/ja105206w  # Interplay between Secondary and Tertiary Stru… (J. Am. Chem. Soc. 2010)
+      - 10.1063/1.3152842  # Generic coarse-grained model for protein folding… (J. Chem. Phys. 2009)
+
+  - key: early-methods
+    title: "Early methodological work"
+    tier: foundations
+    dois:
+      - 10.1016/j.cplett.2016.06.019  # An in-silico walker (Chemical Physics Letters 2016)
+      - 10.1016/j.phpro.2015.07.101  # Multi-timestep Integrator for the Mo… (Physics Procedia 2015)
+      - 10.1016/j.jcp.2009.05.011  # Optimized convergence for mult… (J. Computational Physics 2009)
