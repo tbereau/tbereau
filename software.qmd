@@ -1,36 +1,189 @@
 ---
 title: "Software"
-description: "Open-source software from the group: my-scientific-profile, IPML, Auto Martini and peptideB."
+description: "Open-source software from the group: Martignac workflows, Auto-Martini M3, Split-Flows, Fokker-Planck score learning, and earlier codes."
 format:
   html:
     toc: true
-    echo: false
-    keep-hidden: true
+    # Entries are level-3 headings under the four status groups, so the default
+    # depth of 2 would list only "Actively developed / Reference
+    # implementations / Earlier codes / Website tooling" -- the group names
+    # alone, and none of the software the page exists to list.
+    toc-depth: 3
 ---
 
-## My Scientific Profile
+<!-- The page used to be a flat list of four entries, each with the same pair of
+large pill buttons: a 2009 peptide code and a package under active development
+were presented identically, so a reader had no way to tell what they could
+actually pick up and use. The grouping below is that missing signal, and the
+buttons now follow it -- pill buttons for the tools we maintain, a single line
+of links for everything else.
 
-Fetch the metadata of your scientific publications.
+Note for future edits: `research_topics.qmd` links into #auto-martini, #ipml and
+#peptideb. The first is set explicitly on the Auto-Martini M3 heading, since
+that is the version the research page describes; the other two are Quarto's
+automatic ids for their headings and break if those headings are renamed. -->
 
-[{{< fa code-branch >}} Github](https://github.com/tbereau/my_scientific_profile){.btn-primary .btn .btn-action .btn-lg role="button"}
+<!-- Quarto renders the frontmatter `description` as the page subtitle, so an
+opening paragraph that also begins "Open-source software from the group" reads
+as the same sentence twice. This one says what the description cannot: what the
+grouping means. -->
 
-## IPML
+The grouping below is a maintenance signal: what we develop and support, what
+was released to reproduce a single paper, what is kept for the record, and what
+builds this site.
 
-Intermolecular potentials from a combination of physics- and machine learning-based models applicable across chemical space
+## Actively developed
 
-[{{< fa code-branch >}} Gitlab](https://gitlab.mpcdf.mpg.de/trisb/ipml){.btn-primary .btn .btn-action .btn-lg role="button"}
-[{{< fa file-pdf >}} Publication](https://doi.org/10.1063/1.5009502){.btn-light .btn .btn-action .btn-lg role="button"}
+### Martignac
 
-## Auto Martini
+Computational workflows for coarse-grained Martini simulations. A simulation is
+represented as a directed acyclic graph carrying its entire history, from system
+preparation to property calculation, and the framework connects to the NOMAD
+database so that results are stored according to the FAIR principles and an
+existing calculation is retrieved rather than repeated.
 
-A toolkit that enables automatic generation of Martini forcefields for small organic molecules.
+MIT · Python, installed from source · includes a Streamlit dashboard
 
-[{{< fa code-branch >}} Github](https://github.com/tbereau/auto_martini){.btn-primary .btn .btn-action .btn-lg role="button"}
-[{{< fa file-pdf >}} Publication](https://doi.org/10.1021/acs.jctc.5b00056){.btn-light .btn .btn-action .btn-lg role="button"}
+[{{< fa code-branch >}} GitHub](https://github.com/tbereau/martignac){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa book >}} Docs](https://tbereau.github.io/martignac/){.btn-light .btn .btn-action .btn-lg role="button"}
+[{{< fa file-lines >}} Paper](https://doi.org/10.1021/acs.jcim.4c01754){.btn-light .btn .btn-action .btn-lg role="button"}
 
-## peptideB
+### Auto-Martini M3 {#auto-martini}
 
-ESPResSo implementation of peptideB. Coarse-grained peptide model for secondary-structure formation.
+Automatic generation of Martini 3 topologies for small organic molecules of up
+to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded
+parameters, with no human in the loop. Validated against expert-designed models
+and exercised on a screen of 100,000 compounds from the Enamine library.
+Developed and maintained with the [Martini Force Field
+Initiative](https://github.com/Martini-Force-Field-Initiative).
 
-[{{< fa code-branch >}} Github](https://github.com/tbereau/peptideB/tree/master){.btn-primary .btn .btn-action .btn-lg role="button"}
-[{{< fa file-pdf >}} Publication](https://doi.org/10.1063/1.3152842){.btn-light .btn .btn-action .btn-lg role="button"}
+GPL-2.0 · Python, conda environment supplied · supersedes [Auto Martini for
+Martini 2](#auto-martini-martini-2)
+
+[{{< fa code-branch >}} GitHub](https://github.com/Martini-Force-Field-Initiative/Automartini_M3){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa file-lines >}} Paper](https://doi.org/10.1021/acs.jctc.5c01178){.btn-light .btn .btn-action .btn-lg role="button"}
+[{{< fa database >}} Data](https://doi.org/10.5281/zenodo.15783891){.btn-light .btn .btn-action .btn-lg role="button"}
+
+### Fokker-Planck score learning
+
+Free-energy estimation from biased simulations, obtained by imposing the
+analytical Fokker--Planck steady-state solution on a learned score function
+rather than inferring it from data. Recovers potentials of mean force under
+periodic boundary conditions, and is most advantageous in the low-data regime.
+
+MIT · `pip install fpsl` · documentation includes tutorials
+
+[{{< fa code-branch >}} GitHub](https://github.com/BereauLab/fokker-planck-score-learning){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa book >}} Docs](https://bereaulab.github.io/fokker-planck-score-learning/){.btn-light .btn .btn-action .btn-lg role="button"}
+[{{< fa file-lines >}} Paper](https://doi.org/10.1021/acs.jpcb.5c04579){.btn-light .btn .btn-action .btn-lg role="button"}
+
+### Split-Flows
+
+Backmapping treated as continuous-time measure transport between molecular
+resolutions. Augmenting a coarse-grained configuration with auxiliary noise
+dimensions makes the map to the fine-grained space one-to-one, which gives both
+conditional sampling of atomistic structures and a tractable route to mapping
+entropies -- the information a given coarse-graining discards.
+
+MIT · Python, installed from source with `uv`
+
+[{{< fa code-branch >}} GitHub](https://github.com/BereauLab/split-flows){.btn-primary .btn .btn-action .btn-lg role="button"}
+[{{< fa file-lines >}} Paper](https://doi.org/10.48550/arXiv.2511.01464){.btn-light .btn .btn-action .btn-lg role="button"}
+
+## Reference implementations
+
+Code released with a specific paper, to reproduce it and to build on. Maintained
+only as far as that paper requires.
+
+### Neural thermodynamic integration
+
+Free energies from a neural network potential that interpolates between two
+target Hamiltonians, so that a single learned model stands in for the ladder of
+intermediate states a conventional calculation has to simulate. Two
+repositories, both maintained by [Bálint Máté](https://github.com/balintmate)
+(University of Geneva): the original formulation, and the extension to solvation
+where both end states are non-trivial.
+
+MIT
+
+<!-- Two codes and two papers, so one run-on line of four links separated by
+the same bullet leaves it ambiguous which paper belongs to which repository. A
+hard break pairs them. -->
+
+[Original code](https://github.com/balintmate/neural-thermodynamic-integration) ·
+[J. Phys. Chem. Lett. 2024](https://doi.org/10.1021/acs.jpclett.4c01958)\
+[Solvation code](https://github.com/balintmate/neuralTI-solvation) ·
+[J. Chem. Phys. 2025](https://doi.org/10.1063/5.0251736)
+
+### Multi-level Bayesian optimization
+
+Molecular discovery organized as a funnel across resolutions, exploring broadly
+where the model is cheap and exploiting where it is accurate. Includes
+`chespex`, a small package implementing the algorithm independently of the
+application, and a separate tutorial working through the method on two-bead
+molecules in a water--hexane mixture.
+
+[Code](https://github.com/BereauLab/Multi-Level-BO-w-Hierarchical-CG) ·
+[Tutorial](https://github.com/BereauLab/Molecule-Optimization-w-Hierarchical-CG-Tutorial) ·
+[Chem. Sci. 2025](https://doi.org/10.1039/D5SC03855C)
+
+## Earlier codes
+
+Kept available because the papers that used them point here, not because they
+are maintained.
+
+### Auto Martini (Martini 2)
+
+The original automatic Martini parametrization of small organic molecules, for
+Martini 2, later extended to variable bead-type resolution. Superseded by
+[Auto-Martini M3](#auto-martini).
+
+[GitHub](https://github.com/tbereau/auto_martini) ·
+[J. Chem. Theory Comput. 2015](https://doi.org/10.1021/acs.jctc.5b00056)
+
+### IPML
+
+Intermolecular potentials from a combination of physics-based and
+machine-learned components -- atomic multipoles and many-body dispersion, with
+coefficients learned across conformations and composition -- transferable across
+chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data
+Facility's GitLab.
+
+[GitLab](https://gitlab.mpcdf.mpg.de/trisb/ipml) ·
+[J. Chem. Phys. 2018](https://doi.org/10.1063/1.5009502)
+
+### mbvdw
+
+Classical, Voronoi-tessellation adaptation of the many-body van der Waals
+method, which dispenses with explicit electron densities.
+
+[GitHub](https://github.com/tbereau/mbvdw) ·
+[J. Chem. Phys. 2014](https://doi.org/10.1063/1.4885339)
+
+### peptideB
+
+Top-down, implicit-solvent coarse-grained peptide model for secondary- and
+tertiary-structure formation, implemented for ESPResSo.
+
+[GitHub](https://github.com/tbereau/peptideB) ·
+[J. Chem. Phys. 2009](https://doi.org/10.1063/1.3152842)
+
+### opt-mhm
+
+Multiple-histogram (WHAM) free-energy analysis with optimized convergence.
+
+[GitHub](https://github.com/tbereau/opt-mhm) ·
+[J. Comput. Phys. 2009](https://doi.org/10.1016/j.jcp.2009.05.011)
+
+## Website tooling
+
+### my-scientific-profile
+
+Retrieves the metadata of a publication record programmatically. ORCID decides
+which works are yours; half a dozen further providers describe them, and their
+answers are merged field by field with a declared trust order, so each field
+records where it came from. It is what builds the [publication
+list](/papers.html) and the [research landscape](/research_landscape.html) here;
+[about](/about.html) sets out the rest of the pipeline. MIT.
+
+[GitHub](https://github.com/tbereau/my_scientific_profile)

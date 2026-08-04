@@ -21,3 +21,9 @@ description: "Courses and seminars taught by Tristan Bereau at Heidelberg Univer
 : Teaching schedule {.hover}
 
 - GradDays: [Heidelberg Physics Graduate Days](https://www.physik.uni-heidelberg.de/graddays/?lang=en)
+<!-- Course material lives on GitHub rather than behind the Übungen login, so
+it is worth a link from here: the repository is public and the exercises are
+useful without being enrolled. Course codes ("26s") follow the semester, so this
+line needs updating rather than accumulating. -->
+- Exercise code and data for Molecular Simulation (S2026):
+  [BereauLab/Mol_Sim_26s](https://github.com/BereauLab/Mol_Sim_26s)

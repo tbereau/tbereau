@@ -123,6 +123,9 @@ steady-state solution for a particle in a periodic potential under constant
 force is imposed on a neural score function, which recovers potentials of mean
 force efficiently and is most advantageous in the low-data regime.
 
+[Fokker-Planck score learning](/software.html#fokker-planck-score-learning){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[Neural TI](/software.html#neural-thermodynamic-integration){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+
 ```{ojs}
 topic("gen-free-energy")
 ```
@@ -145,6 +148,8 @@ dimensions renders the map to the fine-grained space one-to-one, and a flow
 matched between the two resolutions supplies both a generative backmapping and,
 for the first time tractably and for an arbitrary coarse-graining map, the
 mapping entropy that quantifies how much information the reduction discards.
+
+[Split-Flows](/software.html#split-flows){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 
 ```{ojs}
 topic("resolution-transport")
@@ -195,6 +200,8 @@ The approach reaches beyond small molecules---to gas-separation polymers that
 exceed the CO~2~/CH~4~ Robeson upper bound and were subsequently synthesized
 and measured, and to peptide sequences whose learned embeddings support *de
 novo* design.
+
+[Multi-level BO](/software.html#multi-level-bayesian-optimization){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 
 ```{ojs}
 topic("molecular-discovery")
@@ -259,6 +266,8 @@ commitment to FAIR data in materials science---community metadata schemas
 spanning electronic structure, sampling, and workflows, and the case that the
 transition to data-centric materials science requires shared infrastructure and
 stewardship rather than algorithms alone.
+
+[Martignac](/software.html#martignac){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 
 ```{ojs}
 topic("fair-workflows")
