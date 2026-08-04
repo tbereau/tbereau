@@ -1,6 +1,9 @@
 ---
 title: "Group members"
 description: "Current members and alumni of Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+# Without this a listing page inherits its first item's image, so sharing
+# the group page showed one alumnus's headshot as if it stood for the group.
+image: /static/membrane.jpg
 listing:
   contents: group
   categories: unnumbered
