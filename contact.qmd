@@ -1,41 +1,59 @@
 ---
 title: "Contact"
 description: "Contact details for Tristan Bereau at the Institute for Theoretical Physics, Heidelberg University."
+# Quarto promotes the first image on a page to og:image, which would make a
+# shared link to this page unfurl as a street map. Pin it back to the
+# site-wide card set in _quarto.yml.
+image: static/membrane.jpg
 format:
     html:
         include-in-header:
             -   file: header_email.html
-        keep-hidden: true
-        echo: false
-jupyter: python3
+        # Two entries on a page this short do not earn the 300px margin
+        # column, and the page had no headings at all until now, so the
+        # sidebar rendered empty.
+        toc: false
 ---
 
-{{< fa phone >}} +49-6221-54-9448
+::: {.content-block}
 
-{{< fa at >}} <span id="email-placeholder"></span>
+Email is the reliable way to reach me. If you are writing about a **Bachelor's
+or Master's thesis**, or about a **PhD or postdoc position**, please read the
+[open positions](positions.html) page first and say in your message which
+topics interest you — it makes for a much shorter exchange than a general
+enquiry. Applications should include a CV and a short statement of research
+interests.
 
-{{< fa door-open >}} Philosophenweg 19; 2nd floor; Room: 206
+## Details
 
-{{< fa envelope >}}
-```
-Institute for Theoretical Physics
-Heidelberg University
-Philosophenweg 19
-69120 Heidelberg
+{{< fa envelope >}} &nbsp;**Email** &nbsp; <span id="email-placeholder"><noscript>bereau *at* thphys.uni-heidelberg.de</noscript></span>
+
+{{< fa phone >}} &nbsp;**Phone** &nbsp; [+49 6221 54-9448](tel:+496221549448)
+
+{{< fa door-open >}} &nbsp;**Office** &nbsp; Philosophenweg 19, 2nd floor, room 206
+
+{{< fa building-columns >}} &nbsp;**Post**
+
+::: {.contact-address}
+Institute for Theoretical Physics\
+Heidelberg University\
+Philosophenweg 19\
+69120 Heidelberg\
 Germany
-```
+:::
 
-```{python}
-#| column: screen
+## Finding the office
 
-from ipyleaflet import Map, Marker, basemaps, basemap_to_tiles
+The institute is in Neuenheim, on the north bank of the Neckar, a ten-minute
+walk from the Altstadt across the Theodor-Heuss-Brücke.
 
-center = (49.415, 8.698)
-m = Map(
-  basemap=basemap_to_tiles(basemaps.OpenStreetMap.Mapnik),
-  center=center,
-  zoom=15
-)
-m.add_layer(Marker(location=center))
-m
-```
+<!-- Alt text only, no caption: Quarto turns link text in `![...]` into a
+visible figure caption, which just restated the credit line underneath. -->
+[![](static/office_map.png){fig-alt="Street map centred on Philosophenweg 19 in Heidelberg, with the institute marked, the Neckar to the south and the Altstadt across the river"}](https://www.openstreetmap.org/?mlat=49.41505&mlon=8.69844#map=17/49.41505/8.69844)
+
+::: {.map-credit}
+Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
+Click through to pan and zoom.
+:::
+
+:::

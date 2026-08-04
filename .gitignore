@@ -122,3 +122,8 @@ node_modules/
 site_libs/*
 
 /.quarto/
+
+# OpenStreetMap tiles cached by scripts/generate_map.py. The committed
+# artefact is static/office_map.png; these are only here so re-running the
+# script stays off OSM's tile servers.
+data/osm_tiles/

@@ -134,3 +134,44 @@
     height: 150px !important;
   }
 }
+
+
+/* Contact page --------------------------------------------------------
+
+   The office map is a static PNG drawn at 2x by scripts/generate_map.py,
+   linked through to OpenStreetMap. It replaced an ipyleaflet widget that
+   pulled 4.5 MB of CDN JavaScript and then failed to render at all. */
+
+.map-credit {
+  margin-top: 0.4rem;
+  font-size: 0.85em;
+  color: var(--bs-secondary-color, #6a737b);
+}
+
+/* The map is the one image on the site that is a link, so it needs the
+   affordance Quarto gives text links: a border on hover, and a visible
+   focus ring for keyboard users. */
+a:has(> img[src$="office_map.png"]) {
+  display: block;
+  line-height: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+a:has(> img[src$="office_map.png"]):hover {
+  border-color: #39729E;
+}
+
+a:has(> img[src$="office_map.png"]):focus-visible {
+  outline: 2px solid #39729E;
+  outline-offset: 2px;
+}
+
+/* The postal address used to sit in a fenced code block, which rendered it
+   in monospace with a copy button as though it were source. */
+.contact-address {
+  margin: 0 0 1rem 1.6rem;
+  border-left: 2px solid #dee2e6;
+  padding-left: 1rem;
+}
