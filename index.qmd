@@ -1,5 +1,9 @@
 ---
-pageTitle: "Tristan Bereau's research group"
+pagetitle: "Tristan Bereau's research group"
+# Quarto appends the site title to every page title, which on the homepage
+# alone reads "... research group - Tristan Bereau". Only this page needs
+# the suffix suppressed; everywhere else it is what distinguishes the tab.
+title-prefix: ""
 description: "Research group of Tristan Bereau at the Institute for Theoretical Physics, Heidelberg University: multiscale modeling and machine learning for molecular systems."
 css: index.css
 section-divs: false
