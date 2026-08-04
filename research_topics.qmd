@@ -1,11 +1,20 @@
 ---
 title: "Research topics"
-description: "Research topics of the group: coarse-graining for molecular discovery, machine learning for soft matter, non-equilibrium reweighting, and force-field development."
+description: "Research topics of the group: free energies from generative models, measure transport across resolutions, high-throughput screening of thermodynamic properties, molecular discovery by active learning, and coarse-graining across chemical space."
 format:
   html:
     toc: true
+    # The page title counts as a level, so the topic headings under each tier
+    # are level 3 as far as the TOC is concerned. At the default depth of 2 the
+    # sidebar lists only "Current directions / Continuing threads /
+    # Foundations", which is not a table of contents anyone can navigate by.
+    toc-depth: 3
     echo: false
     keep-hidden: true
+    # The margin column is 258px wide, so a figure with four labelled panels
+    # reads as a thumbnail and nothing more. Click-to-zoom makes the detail
+    # available without giving the figures body-width space they do not earn.
+    lightbox: true
 ---
 
 ```{ojs}
@@ -48,185 +57,367 @@ function displayTable(papers_) {
       layout: "auto",
     })
 }
+
+// Every section below selects its papers this way. The `topics` field is
+// attached at export time from `data/topics.yml`, which is also where a new
+// paper gets assigned to a section -- see `scripts/topics.py`. Selecting by
+// coauthor instead, as this page used to, silently adopts whatever that person
+// publishes next; selecting by a DOI list written into the page means the page
+// has to be remembered every time a paper comes out, and it was not.
+function topic(key) {
+    return displayTable(papers.filter(p => p.topics.includes(key)))
+}
 ```
 
 # Overview
 
-Our research focuses on the development and application of multiscale molecular
-simulations methods for soft-condensed-matter materials. We are particularly invested in using multiscale modeling to explore chemical compound space. The group develops methodologies to accelerate compound-space exploration by means of high-throughput molecular dynamics simulations. Transferable coarse-grained models have the capability to reduce the size of chemical space---a property we leverage to more easily navigate the thermodynamic properties of a large subset of chemical compounds. Coarse-graining also eases the identification of structure--property relationships and design rules for molecular discovery. Other activities include method development of coarse-grained models; machine learning for soft matter; non-equilibrium dynamical reweighting; force-field development; polymer, protein, and phospholipid membrane simulations.
+Our research sits at the interface of statistical mechanics, molecular
+simulation, and machine learning. We develop multiscale methods for
+soft-condensed matter and biomolecules, and we apply them to problems in which
+two landscapes compound one another: the *configurational* landscape of a
+single molecular system at fixed composition, and the *compositional* landscape
+of chemical compound space, in which the identity of the molecule is itself the
+variable. Sampling either is expensive. Having to sample both at once is what
+makes molecular discovery hard.
 
-# Coarse-graining for molecular discovery
+Coarse-graining is our main instrument against both. A reduced representation
+smooths the free-energy landscape and accelerates sampling; and because a small
+set of bead types maps many molecules of similar shape and hydrophobicity onto
+the same parametrization, it also contracts chemical space by close to an order
+of magnitude. That many-to-one mapping is what makes high-throughput screening
+of thermodynamic properties tractable, and what turns structure--property
+relationships into design rules. It also costs chemical specificity, and a good
+deal of our methodological work is concerned with measuring that price and with
+recovering what the reduction discards.
 
-::: {.column-margin}
-![Active learning of molecular probes selective to cardiolipin](static/cardiolipin.gif)
-:::
+Machine learning enters as a way of tailoring models to physics rather than
+substituting for it. The recurring move is to take a known analytical
+result---the Boltzmann distribution, a Fokker--Planck steady state,
+thermodynamic integration---and impose it as an inductive bias on a generative
+model, instead of letting the model infer that structure from data alone.
 
-Coarse-grained (CG) molecular simulations are used for molecular discovery of small molecule probes that specifically bind to cardiolipin. We combine rigorous free-energy calculations, selectivity prediction inside a low-dimensional chemical-space embedding, and Bayesian optimization to identify physicochemical design rules. Said design rules are used to further filter a chemical vendor database. Out of 20 compounds tested, we identify three compounds selective in vitro and even one in vivo.
+For an unsupervised view of the same corpus, clustered by abstract rather than
+by hand, see the [research landscape](/research_landscape.html). Much of what
+follows is released as open-source [software](/software.html), and all of it is
+the work of the [group](/group_members.html).
 
-```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Bernadette Mohr")
-        )
-    })
-)
+# Current directions
 
-```
-
-# Machine learning for soft-matter materials
-
-::: {.column-margin}
-![Efficient learning of coarse-grained molecular simulations](static/mlcg.jpg)
-:::
-
-We explore the links between machine learning (ML) and multiscale molecular modeling. Emphasis is placed on tailoring ML models to problem at hand, may that be in the representation of the architecture itself. Kernel-ridge regression, used for small datasets, eases the (sometimes analytical) tailoring of physical properties. Deep neural networks offer more flexibility, expressivity.
-
-```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.doi === "10.1063/5.0012230" ||
-            p.doi === "10.1088/2632-2153/ab80b7" ||
-            p.doi === "10.1126/sciadv.aaz4301" ||
-            p.doi === "10.1021/acs.jctc.9b01256"
-        )
-    })
-)
-```
-
-# Non-equilibrium dynamical reweighting
+## Free energies from generative models
 
 ::: {.column-margin}
-![MaxCal for ron-equilbrium reweighting](static/noneq.jpg)
+![Neural thermodynamic integration between an interacting system and an ideal gas](static/neuralti.jpg)
 :::
 
-We extend the concept of statistical reweighting to non-equilibrium steady states. We use stochastic thermodynamics to compute the entropy production along microtrajectories and reweigh them using a Maximum Caliber approach. Extension to collective variables is presented.
+Free-energy calculations remain among the most expensive routine tasks in
+molecular simulation. We reformulate them as learning problems in which the
+physics supplies the structure of the estimator. Neural thermodynamic
+integration parametrizes the interpolating potential along the alchemical
+pathway with a neural network, removing the need to simulate a ladder of
+intermediate states: on Lennard-Jones excess chemical potentials it reaches an
+MAE $\approx 0.15\,k_\mathrm{B}T$ in roughly 30 minutes, about an order of
+magnitude faster than umbrella sampling at comparable accuracy. The
+construction extends to solvation, where both end states are non-trivial, by
+geodesic interpolation between their samples. Fokker--Planck score learning
+arrives at the same goal from a different constraint: the analytical
+steady-state solution for a particle in a periodic potential under constant
+force is imposed on a neural score function, which recovers potentials of mean
+force efficiently and is most advantageous in the low-data regime.
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Marius Bause")
-        )
-    })
-)
+topic("gen-free-energy")
 ```
 
-# Deep backmapping
+## Measure transport across resolutions
 
 ::: {.column-margin}
 ![Deep backmapping of coarse-grained configurations](static/deepbackmap.jpg)
 :::
 
-We generate condensed molecular structures as a refinement---backmapping---of a coarse-grained structure. We apply generative adversarial networks (GAN) conditional on the coarse-grained configuration to upscale to atomistic structure. Sampled configurations accurately target the atomistic Boltzmann distribution, and do not require pre-equilibration steps. Remarkable transferability is found across temperature for a polymer melt. Applications to chemical transferability are also investigated.
+Going from atomistic to coarse-grained resolution is straightforward; going
+back is not. We treat the inverse---backmapping---as a probabilistic transport
+problem rather than a regression. Conditional generative adversarial networks
+reconstruct equilibrated atomistic structures autoregressively, bond by bond,
+sampling the atomistic Boltzmann distribution without pre-equilibration, with
+remarkable transferability from melt to crystalline phases and, in later work,
+across chemistries. Split-Flows recasts the problem as continuous-time measure
+transport: augmenting a coarse-grained configuration with auxiliary noise
+dimensions renders the map to the fine-grained space one-to-one, and a flow
+matched between the two resolutions supplies both a generative backmapping and,
+for the first time tractably and for an arbitrary coarse-graining map, the
+mapping entropy that quantifies how much information the reduction discards.
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Marc Stieffenhofer")
-        )
-    })
-)
+topic("resolution-transport")
 ```
 
-# Kinetic properties of coarse-grained models
+## High-throughput screening of thermodynamic properties
 
 ::: {.column-margin}
-![Biased Markov state model](static/bmsm.jpg)
+![From a reduced chemical space to a permeability surface across two molecular descriptors](static/htscreen.jpg)
 :::
 
-We analyze and improve the kinetic properties of coarse-grained simulations. Methodologies include Markov state models biased with external information; Conformational surface hopping for improved reconstruction of the potential of mean force.
+Rather than arbitrarily selecting compounds, we systematically explore chemical
+space according to the target property of interest. Coarse-graining is what
+makes this affordable: a linear relation between bulk partitioning and the
+potential of mean force turns an expensive insertion free energy into a
+surrogate that can be evaluated across an entire library. We used it to screen
+more than 500,000 small molecules for drug--membrane permeability, yielding a
+permeability map across a sizeable part of organic chemical space, benchmarked
+against experiment and released as a public dataset of coarse-grained
+trajectories, insertion PMFs, and permeability coefficients. Symbolic
+regression over that dataset recovers compact algebraic expressions in a
+handful of physical descriptors---size, polarity, hydrogen-bonding
+capacity---and the century-old Meyer--Overton correlation emerges from
+hydrophobic transfer and bilayer deformation alone, without invoking
+receptor-specific binding.
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.doi === "10.1063/5.0031249" ||
-            p.doi === "10.1063/1.5064808" ||
-            p.doi === "10.1063/1.5025125" ||
-            p.doi === "10.3390/computation6010021" ||
-            p.doi === "10.1103/physrevlett.121.256002" ||
-            p.doi === "10.1140/epjst/e2016-60114-5" ||
-            p.doi === "10.1063/1.4941455"
-        )
-    })
-)
+topic("high-throughput")
 ```
 
+## Molecular discovery by active learning and Bayesian optimization
 
-# High-throughput screening of thermodynamic properties
+::: {.column-margin}
+![Active learning of molecular probes selective to cardiolipin](static/cardiolipin.gif)
+:::
+
+Screening is only half of discovery; the other half is deciding what to compute
+next. We close that loop with active learning and Bayesian optimization on top
+of rigorous coarse-grained free-energy calculations. Applied to cardiolipin,
+iterative cycles inside a low-dimensional chemical-space embedding identified
+small molecules predicted to bind the mitochondrial lipid selectively over
+structurally similar phospholipids, and the resulting physicochemical design
+rules were then used to filter a chemical-vendor database: of twenty compounds
+tested, three proved selective *in vitro* and one *in vivo*. Multilevel
+Bayesian optimization organizes the same idea as a funnel across resolutions,
+exploring broadly where the model is cheap and exploiting where it is accurate.
+The approach reaches beyond small molecules---to gas-separation polymers that
+exceed the CO~2~/CH~4~ Robeson upper bound and were subsequently synthesized
+and measured, and to peptide sequences whose learned embeddings support *de
+novo* design.
+
+```{ojs}
+topic("molecular-discovery")
+```
+
+## Coarse-graining as a reduction of chemical space
+
+::: {.column-margin}
+![Efficient learning of coarse-grained molecular simulations](static/mlcg.jpg)
+:::
+
+Transferable coarse-grained models are useful precisely because they are
+degenerate, and we study the consequences of that degeneracy quantitatively.
+Varying the number of Martini bead types from 5 to 16 across thousands of
+molecules establishes the resolution limit of data-driven models spanning
+chemical space, and marks where transferability begins to cost chemical
+specificity. Treating exploration as importance sampling over coarse-grained
+representations improves coverage of the property landscape by factors of 2--10
+over uniform sampling, at the scale of some $10^6$ compounds. Adjacent
+questions concern how condensed-phase structure ought to be represented at
+all---adapting the SLATM expansion in one-, two-, and three-body local
+environments to thermodynamic observables of molecular liquids---and how far
+kernel-based models can be trusted, where an audit of machine-learned hydration
+free energies exposes the penalty incurred when the training database is
+chemically narrow.
+
+```{ojs}
+topic("cg-chemical-space")
+```
+
+## Automated force-field parametrization
 
 ::: {.column-margin}
 ![Automated Martini parametrization](static/automartini.jpg)
 :::
 
-We use coarse-graining (CG) to emulate a high-throughput screening experiment for free-energy calculations. We start from the CG Martini model, and tailor the bead parametrization to explore the chemical space of small molecules. Applications tailored to phopholipid membranes.
+High-throughput screening is only possible if parametrization requires no human
+in the loop. Auto-Martini generates Martini topologies for small organic
+molecules directly from SMILES, assigning the mapping, bead types, and bonded
+parameters automatically. The pipeline has been rebuilt for Martini 3,
+validated against expert-designed models, and exercised on a screen of 100,000
+compounds from the Enamine library.
+
+[Auto Martini](/software.html#auto-martini){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Roberto Menichetti")
-        )
-    })
-)
+topic("auto-parametrization")
 ```
 
-# Machine learning of non-covalent interactions
+## Reproducible and FAIR simulation workflows
 
 ::: {.column-margin}
-![Van der Waals interactions](static/mbd.jpg)
+![Martignac workflows exchanged with the NOMAD database](static/martignac.jpg)
 :::
 
-We combine physics-based potentials and machine learning for accurate and transferable non-covalent interactions. Physics-based models include atomic multipoles and many-body dispersion. The coefficients are learned by kernel-ridge regression across conformations and composition of small organic molecules.
+Screening campaigns generate large numbers of simulations whose provenance is
+easy to lose and whose results are easy to recompute by accident. Martignac
+represents Martini simulations as directed acyclic graphs with full provenance
+tracking, connected to the NOMAD database, so that a prior calculation is
+retrieved rather than repeated. The framework is the practical end of a longer
+commitment to FAIR data in materials science---community metadata schemas
+spanning electronic structure, sampling, and workflows, and the case that the
+transition to data-centric materials science requires shared infrastructure and
+stewardship rather than algorithms alone.
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Anatole Von Lilienfeld")
-        )
-    })
-)
+topic("fair-workflows")
 ```
 
-# Static atomic multipole electrostatics in condensed-phase simulations
+# Continuing threads
+
+## Membrane biophysics
+
+::: {.column-margin}
+![Coarse-grained lipid bilayer with a small-molecule permeant](static/bilayer.jpg)
+:::
+
+Lipid membranes are the physical system our methods return to most often, and
+the question we most often ask of them is which of their features are
+thermodynamically dictated and which demand active cellular maintenance.
+Semi-grand canonical simulations, with chemical potentials imposed on
+individual lipid species, reframe membrane composition as a
+constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms
+and saturation asymmetry between leaflets both emerge from thermodynamics
+alone, narrowing the list of properties a cell must actively regulate. In
+parallel we study how small molecules partition into membranes and reshape
+them---phase separation in binary mixtures, nanoparticle contact mediated by
+copolymer coronas, the bacteriostatic action of 2-phenylethanol derivatives,
+the reorganization produced by nitrated fatty acids---together with the folding
+and insertion thermodynamics of transmembrane peptides.
+
+```{ojs}
+topic("membranes")
+```
+
+## Kinetics of coarse-grained models
+
+::: {.column-margin}
+![Biased Markov state model](static/bmsm.jpg)
+:::
+
+Coarse-graining accelerates dynamics, and it does so unevenly: a model
+parametrized against structure alone will generally misrepresent
+barrier-crossing kinetics. We parametrize concurrently against static and
+kinetic information, using Markov state models biased with external information
+to keep the interpretation of simulation kinetics consistent. Conformational
+surface hopping couples distinct force fields to distinct conformational
+basins, in analogy with nonadiabatic transitions between electronic surfaces;
+incorporating more surfaces improves cross-correlations systematically and
+recovers barrier-crossing dynamics that a single surface cannot. Related work
+identifies metastable states without hand-chosen collective variables, through
+hidden Markov models of solvation substates and Gaussian-mixture variational
+autoencoders whose mixture components correspond to conformational basins.
+
+```{ojs}
+topic("cg-kinetics")
+```
+
+## Non-equilibrium dynamical reweighting
+
+::: {.column-margin}
+![Maximum caliber for non-equilibrium reweighting](static/noneq.jpg)
+:::
+
+We extend the concept of statistical reweighting to non-equilibrium steady
+states. Stochastic thermodynamics analytically relates the forward and backward
+probabilities of any pathway through the external nonconservative force, which
+supplies the constraint; a maximum-caliber---maximum path entropy---formalism
+then reweights microtrajectories from one driven steady state onto another. The
+framework extends to collective variables, so that free-energy landscapes along
+a reaction coordinate can be recovered from short driven runs.
+
+```{ojs}
+topic("nonequilibrium")
+```
+
+## Polymer and organic-materials morphology
+
+::: {.column-margin}
+![Free-energy map of syndiotactic-polystyrene polymorphs](static/polymorph.jpg)
+:::
+
+Multiscale simulation of polymer morphology, where the observable of interest
+sits beyond the reach of either resolution on its own. Metadynamics in a
+phase space of collective variables, referenced against DFT, resolves the
+free-energy landscape between polymorphs of syndiotactic polystyrene and yields
+$\alpha/\beta$ free-energy differences that rationalize the experimentally
+observed phase populations.
+
+```{ojs}
+topic("polymer-materials")
+```
+
+# Foundations
+
+Earlier lines of work, largely concluded, that the current programme grew out
+of.
+
+## Static atomic multipole electrostatics
 
 ::: {.column-margin}
 ![Force propagation on electrostatic multipoles](static/mtpforce.gif)
 :::
 
-Static atomic multipoles provide an improved description of the electrostatic potential of the system. Molecular dynamics simulations of condensed-phase systems demonstrate enhanced equilibrium and dynamical quantities: e.g., free energy of hydration and 2D infra-red spectroscopy.
+Point charges are a crude description of the molecular electrostatic potential.
+Static atomic multipoles, derived from the electrostatic potential through a
+spherical-harmonic expansion, provide a systematically better one, and
+exploiting their symmetries makes force propagation affordable enough for
+condensed-phase molecular dynamics. Applications include free energies of
+hydration, two-dimensional infrared spectroscopy of solvation dynamics, and the
+$\sigma$-hole of halogenated compounds, where quadrupolar terms on the adjacent
+atoms prove necessary.
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Markus Meuwly")
-        )
-    })
-)
+topic("multipoles")
 ```
 
+## Machine learning of non-covalent interactions
 
-# Structure formation in peptide coarse-graining
+::: {.column-margin}
+![Van der Waals interactions](static/mbd.jpg)
+:::
+
+Physics-based potentials with machine-learned coefficients, combining atomic
+multipoles and many-body dispersion for accurate and transferable non-covalent
+interactions. The coefficients are learned by kernel ridge regression across
+both conformations and composition of small organic molecules; a
+Voronoi-tessellation route to van der Waals coefficients dispenses with
+explicit electron densities altogether.
+
+[IPML](/software.html#ipml){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+
+```{ojs}
+topic("noncovalent-ml")
+```
+
+## Peptide coarse-graining and folding cooperativity
 
 ::: {.column-margin}
 ![Coarse-grained peptide model](static/thesis.jpg)
 :::
 
-Using a top-down coarse-grained peptide model, we study secondary and tertiary structure formation in different environments and scenarios: alpha-helix vs. beta-sheet folding, microcanonical analysis of folding, structural alignment of capsid interfaces, and peptide-membrane interactions.
+A top-down, implicit-solvent coarse-grained peptide model, used to study
+secondary and tertiary structure formation across environments and scenarios:
+$\alpha$-helix against $\beta$-sheet folding, the microcanonical analysis that
+locates the origin of folding cooperativity in the interplay between the two,
+the structural alignment of capsid interfaces, and peptide--membrane
+interactions from a simple cross-parametrization.
 
 [PhD thesis](files/thesis.pdf){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
+[peptideB](/software.html#peptideb){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 
 ```{ojs}
-displayTable(
-    papers.filter(function(p) {
-        return (
-            p.authors.map(a => a.full_name).includes("Markus Deserno")
-        )
-    })
-)
+topic("peptide-cg")
+```
+
+## Early methodological work
+
+Assorted early work on estimators and integration schemes: optimized
+convergence for multiple-histogram analysis, a multi-timestep integrator for
+the modified Andersen barostat, and a simulated molecular walker.
+
+```{ojs}
+topic("early-methods")
 ```
