@@ -931,11 +931,11 @@
     "text": "Tooling\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto. The publication list is one of Quarto’s own filterable listings; the landscape plot, and the tables on the landscape and topics pages, are Observable JS reading a CSV from this site and running in your browser, so none of that data goes anywhere else.\nThe source for this site lives at tbereau/tbereau."
   },
   {
-    "objectID": "about.html#analytics",
-    "href": "about.html#analytics",
+    "objectID": "about.html#analytics-and-third-parties",
+    "href": "about.html#analytics-and-third-parties",
     "title": "About",
-    "section": "",
-    "text": "Visits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
+    "section": "Analytics and third parties",
+    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nSome requests do leave your browser, though, and a page that promises otherwise should say which. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here."
   },
   {
     "objectID": "group/aleksander_durumeric.html",
@@ -1755,12 +1755,5 @@
     "title": "Software",
     "section": "Website tooling",
     "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub"
-  },
-  {
-    "objectID": "about.html#analytics-and-third-parties",
-    "href": "about.html#analytics-and-third-parties",
-    "title": "About",
-    "section": "Analytics and third parties",
-    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nSome requests do leave your browser, though, and a page that promises otherwise should say which. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here."
   }
 ]

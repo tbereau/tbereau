@@ -20,13 +20,16 @@ xmltodict = "^0.13.0"
 pymongo = "^4.4.0"
 plotly = "^5.15.0"
 bokeh = "^3.2.0"
-flask = "^2.3.2"
 lunr = "^0.6.2"
 boto3 = "^1.26.165"
-flask-s3 = "^0.3.3"
 llvmlite = "^0.40.1"
 numba = "^0.57.1"
 bertopic = "^0.15.0"
+# Transitive via sentence-transformers, but constrained here: transformers
+# 4.56+ needs a newer torch than the 2.1.x that my_scientific_profile's
+# typing-extensions pin allows, and declares torch optional so the resolver
+# cannot see the conflict.
+transformers = ">=4.55,<4.56"
 scikit-learn = "1.2.2"
 numpy = "1.24.0"
 setuptools = "^68.0.0"
