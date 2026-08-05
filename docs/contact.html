@@ -235,7 +235,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="content-block">
+<!-- No `.content-block` wrapper: it is defined only in index.css, which only
+index.qmd loads, so it styled nothing here. -->
 <p>Email is the reliable way to reach me. If you are writing about a <strong>Bachelor’s or Master’s thesis</strong>, or about a <strong>PhD or postdoc position</strong>, please read the <a href="positions.html">open positions</a> page first and say in your message which topics interest you — it makes for a much shorter exchange than a general enquiry. Applications should include a CV and a short statement of research interests.</p>
 <section id="details" class="level2">
 <h2 class="anchored" data-anchor-id="details">Details</h2>
@@ -260,10 +261,9 @@ visible figure caption, which just restated the credit line underneath. -->
 <div class="map-credit">
 <p>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Click through to pan and zoom.</p>
 </div>
+
+
 </section>
-</div>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

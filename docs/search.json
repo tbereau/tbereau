@@ -886,49 +886,49 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Email is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general enquiry. Applications should include a CV and a short statement of research interests.\n\n\n  Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany\n\n\n\n\nThe institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
+    "text": "Email is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general enquiry. Applications should include a CV and a short statement of research interests."
   },
   {
     "objectID": "contact.html#details",
     "href": "contact.html#details",
     "title": "Contact",
-    "section": "",
-    "text": "Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany"
+    "section": "Details",
+    "text": "Details\n  Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany"
   },
   {
     "objectID": "contact.html#finding-the-office",
     "href": "contact.html#finding-the-office",
     "title": "Contact",
-    "section": "",
-    "text": "The institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
+    "section": "Finding the office",
+    "text": "Finding the office\nThe institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the research landscape are all built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.\n\n\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page\n\n\n\n\n\n\n\nAbstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper.\n\n\n\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\nThe source for this site lives at tbereau/tbereau.\n\n\n\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites."
+    "text": "Most of this site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the research landscape are built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography."
   },
   {
     "objectID": "about.html#where-the-metadata-comes-from",
     "href": "about.html#where-the-metadata-comes-from",
     "title": "About",
-    "section": "",
-    "text": "ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page"
+    "section": "Where the metadata comes from",
+    "text": "Where the metadata comes from\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page, fetched in your browser rather than at build time\n\n\n\nNot every field comes from an API. Where no source has a usable abstract I write one myself, and a BibTeX entry is occasionally rendered from the metadata when doi2bib has none. The footer of each paper page names the origin of every field it shows, crediting manual entry or this site where that applies, so the provenance is visible per paper rather than asserted in the summary above."
   },
   {
     "objectID": "about.html#how-the-research-landscape-is-built",
     "href": "about.html#how-the-research-landscape-is-built",
     "title": "About",
-    "section": "",
-    "text": "Abstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
+    "section": "How the research landscape is built",
+    "text": "How the research landscape is built\nAbstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
   },
   {
     "objectID": "about.html#tooling",
     "href": "about.html#tooling",
     "title": "About",
-    "section": "",
-    "text": "The backend is written in Python with the my-scientific-profile library. The frontend uses Quarto; the sortable tables and the landscape plot are Observable JS running in your browser, so no data leaves the page.\nThe source for this site lives at tbereau/tbereau."
+    "section": "Tooling",
+    "text": "Tooling\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto. The publication list is one of Quarto’s own filterable listings; the landscape plot, and the tables on the landscape and topics pages, are Observable JS reading a CSV from this site and running in your browser, so none of that data goes anywhere else.\nThe source for this site lives at tbereau/tbereau."
   },
   {
     "objectID": "about.html#analytics",
@@ -1755,5 +1755,12 @@
     "title": "Software",
     "section": "Website tooling",
     "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub"
+  },
+  {
+    "objectID": "about.html#analytics-and-third-parties",
+    "href": "about.html#analytics-and-third-parties",
+    "title": "About",
+    "section": "Analytics and third parties",
+    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nSome requests do leave your browser, though, and a page that promises otherwise should say which. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here."
   }
 ]

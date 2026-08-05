@@ -15,7 +15,8 @@ format:
         toc: false
 ---
 
-::: {.content-block}
+<!-- No `.content-block` wrapper: it is defined only in index.css, which only
+index.qmd loads, so it styled nothing here. -->
 
 Email is the reliable way to reach me. If you are writing about a **Bachelor's
 or Master's thesis**, or about a **PhD or postdoc position**, please read the
@@ -54,6 +55,4 @@ visible figure caption, which just restated the credit line underneath. -->
 ::: {.map-credit}
 Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.
 Click through to pan and zoom.
-:::
-
 :::

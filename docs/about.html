@@ -185,8 +185,17 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#where-the-metadata-comes-from" id="toc-where-the-metadata-comes-from" class="nav-link active" data-scroll-target="#where-the-metadata-comes-from">Where the metadata comes from</a></li>
+  <li><a href="#how-the-research-landscape-is-built" id="toc-how-the-research-landscape-is-built" class="nav-link" data-scroll-target="#how-the-research-landscape-is-built">How the research landscape is built</a></li>
+  <li><a href="#tooling" id="toc-tooling" class="nav-link" data-scroll-target="#tooling">Tooling</a></li>
+  <li><a href="#analytics-and-third-parties" id="toc-analytics-and-third-parties" class="nav-link" data-scroll-target="#analytics-and-third-parties">Analytics and third parties</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -215,8 +224,11 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="content-block">
-<p>This site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the <a href="research_landscape.html">research landscape</a> are all built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.</p>
+<!-- No `.content-block` wrapper here. It is defined only in index.css, which
+only index.qmd loads, so on this page it applied no styling at all -- and
+wrapping the body in a div suppresses Quarto's table of contents, leaving four
+headings with an empty 300px margin column beside them. -->
+<p>Most of this site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the <a href="research_landscape.html">research landscape</a> are built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography.</p>
 <section id="where-the-metadata-comes-from" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-metadata-comes-from">Where the metadata comes from</h2>
 <p>ORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.</p>
@@ -250,14 +262,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td><a href="https://www.altmetric.com">Altmetric</a></td>
-<td>the attention badge on each paper page</td>
+<td>the attention badge on each paper page, fetched in your browser rather than at build time</td>
 </tr>
 </tbody>
 </table>
-<!-- Unpaywall was listed here for years, but the open-access pipeline moved to
-OpenAlex and every record in `data/all_papers.json` now carries
-`provenance.open_access: openalex`. OpenAlex went uncredited the whole time,
-even though the paper pages cite it by name for abstracts. -->
+<p>Not every field comes from an API. Where no source has a usable abstract I write one myself, and a BibTeX entry is occasionally rendered from the metadata when doi2bib has none. The footer of each paper page names the origin of every field it shows, crediting <em>manual entry</em> or <em>this site</em> where that applies, so the provenance is visible per paper rather than asserted in the summary above.</p>
 </section>
 <section id="how-the-research-landscape-is-built" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-research-landscape-is-built">How the research landscape is built</h2>
@@ -265,16 +274,16 @@ even though the paper pages cite it by name for abstracts. -->
 </section>
 <section id="tooling" class="level2">
 <h2 class="anchored" data-anchor-id="tooling">Tooling</h2>
-<p>The backend is written in Python with the <a href="https://github.com/tbereau/my_scientific_profile">my-scientific-profile</a> library. The frontend uses <a href="https://quarto.org">Quarto</a>; the sortable tables and the landscape plot are <a href="https://quarto.org/docs/interactive/ojs/">Observable JS</a> running in your browser, so no data leaves the page.</p>
+<p>The backend is written in Python with the <a href="https://github.com/tbereau/my_scientific_profile">my-scientific-profile</a> library. The frontend uses <a href="https://quarto.org">Quarto</a>. The publication list is one of Quarto’s own filterable listings; the landscape plot, and the tables on the <a href="research_landscape.html">landscape</a> and <a href="research_topics.html">topics</a> pages, are <a href="https://quarto.org/docs/interactive/ojs/">Observable JS</a> reading a CSV from this site and running in your browser, so none of that data goes anywhere else.</p>
 <p>The source for this site lives at <a href="https://github.com/tbereau/tbereau">tbereau/tbereau</a>.</p>
 </section>
-<section id="analytics" class="level2">
-<h2 class="anchored" data-anchor-id="analytics">Analytics</h2>
+<section id="analytics-and-third-parties" class="level2">
+<h2 class="anchored" data-anchor-id="analytics-and-third-parties">Analytics and third parties</h2>
 <p>Visits are counted with <a href="https://www.goatcounter.com">GoatCounter</a>, which sets no cookies and does not track visitors across sites.</p>
+<p>Some requests do leave your browser, though, and a page that promises otherwise should say which. Each paper page loads its <a href="https://www.altmetric.com">Altmetric</a> badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull <a href="https://www.mathjax.org">MathJax</a> from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here.</p>
+
+
 </section>
-</div>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
