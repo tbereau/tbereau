@@ -1,14 +1,14 @@
 
 ---
 title: "Marius Bause"
-description: "Former postdoc in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "Former PhD student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
   - alumnus
-  - postdoc
+  - phd student
 image: ../static/bause.jpg
 about:
   id: hero-heading

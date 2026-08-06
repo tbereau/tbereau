@@ -1,14 +1,14 @@
 
 ---
 title: "Timon Wittenstein"
-description: "Former master student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "Former bachelor student in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 format:
   html:
     echo: false
     keep-hidden: true
 categories:
   - alumnus
-  - master student
+  - bachelor student
 image: ../static/cgmol.jpg
 about:
   id: hero-heading
