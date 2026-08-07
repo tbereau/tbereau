@@ -40,8 +40,7 @@ my_papers = papers.filter(function(p) {
 
 :::{#hero-heading}
 
-
-
+Ferdinand is jointly supervised with [Prof. Stefan Hell](https://nanobiophotonics.mpibpc.mpg.de/).
 
 
 

@@ -47,8 +47,7 @@ my_papers = papers.filter(function(p) {
 
 :::{#hero-heading}
 
-
-
+Sander is jointly supervised with [Prof. Ullrich Köthe](https://vislearn-web-html-6d947f.bwpages.de/people/ullrich-koethe/).
 
 
 
