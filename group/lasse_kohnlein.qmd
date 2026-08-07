@@ -9,11 +9,11 @@ format:
 categories:
   - master student
   - current
-image: ../static/cgmol.jpg
+image: ../static/lasse.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/cgmol.jpg
+  image: ../static/lasse.jpg
 
 ---
 
