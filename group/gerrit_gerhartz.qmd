@@ -9,11 +9,11 @@ format:
 categories:
   - phd student
   - current
-image: ../static/cgmol.jpg
+image: ../static/gerrit.jpg
 about:
   id: hero-heading
   template: solana
-  image: ../static/cgmol.jpg
+  image: ../static/gerrit.jpg
 
 ---
 
