@@ -1,0 +1,187 @@
+<!-- Coarse-graining loop: the animation on research_topics.qmd, drawn in SVG
+     at runtime.
+
+     Kept out of the .qmd and pulled in with `include-after-body` so the page
+     carries no executable code of its own, the same reason _recent_work.md is
+     baked in rather than fetched by an OJS cell.
+
+     Contract with the page: it builds into every empty div.cg-loop, sizes
+     itself to that div, and takes its line colour from `currentColor`, so
+     styles.css owns the geometry and the ink. Nothing here needs editing to
+     restyle it. It renders one static frame under prefers-reduced-motion and
+     stops animating while scrolled out of view or on a hidden tab. -->
+
+<script>
+(function(){
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  var P={coral:"#ee8f7a",yellow:"#f0cd7a",teal:"#6cbcb0",olive:"#b4c07e",purple:"#a58ac6"};
+
+  var TPL=[
+    { a:[[-26,-8,0],[-30,4,0],[-18,-16,0],[-14,-2,0],[-2,-18,1],[6,-8,1],[16,-14,2],[26,-4,2],[20,6,2],[4,14,3]],
+      b:[[0,1],[1,3],[3,2],[2,0],[3,4],[4,5],[5,6],[6,7],[7,8],[8,6],[4,9]] },
+    { a:[[-24,-2,0],[-16,-12,0],[-14,4,0],[-2,-14,1],[-4,2,1],[10,-10,2],[18,0,2],[6,12,3],[16,14,3]],
+      b:[[0,1],[0,2],[1,3],[3,4],[3,5],[5,6],[4,7],[7,8]] },
+    { a:[[-22,-10,0],[-28,2,0],[-18,10,0],[-10,-2,0],[2,-14,1],[8,-2,1],[0,8,1],[20,-8,2],[24,4,2],[10,16,3],[20,16,3]],
+      b:[[0,1],[1,2],[2,3],[3,0],[3,4],[4,5],[5,6],[6,4],[5,7],[7,8],[6,9],[9,10]] }
+  ];
+  var SPEC=[
+    {t:0,x:118,y:92, rot:-12,sc:1.35,fl: 1,cols:[P.teal,P.olive]},
+    {t:1,x:300,y:74, rot: 24,sc:1.38,fl:-1,cols:[P.coral,P.yellow]},
+    {t:2,x:168,y:200,rot:-30,sc:1.30,fl: 1,cols:[P.purple,P.teal]},
+    {t:0,x:374,y:180,rot: 40,sc:1.32,fl:-1,cols:[P.yellow,P.olive]}
+  ];
+  var BPAL=[[P.teal,P.olive],[P.coral,P.yellow],[P.purple,P.teal],[P.yellow,P.olive],[P.olive,P.coral]];
+  var LOOP=18000, uid=0;
+
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function lerp(a,b,t){return a+(b-a)*t;}
+  function clamp(t){return t<0?0:t>1?1:t;}
+  function seg(v,a,b){var t=clamp((v-a)/(b-a));return t*t*(3-2*t);}
+  function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function cyc(u){
+    if(u<0.10)return 0;
+    if(u<0.32)return seg(u,0.10,0.32);
+    if(u<0.55)return 1;
+    if(u<0.77)return 1-seg(u,0.55,0.77);
+    return 0;
+  }
+
+  function build(host){
+    if(host.dataset.cgInit)return; host.dataset.cgInit="1";
+    var id="cgBoil"+(++uid);
+    var svg=mk("svg",{viewBox:"0 0 480 270",preserveAspectRatio:"xMidYMid meet",role:"img",
+      "aria-label":"Molecules whose atoms merge into a few larger beads sitting on each molecule's own shape, then resolve back into full atomic detail."});
+    var defs=mk("defs",{}), f=mk("filter",{id:id,x:"-6%",y:"-6%",width:"112%",height:"112%"});
+    f.appendChild(mk("feTurbulence",{type:"fractalNoise",baseFrequency:"0.02",numOctaves:"1",seed:"3",result:"n"}));
+    f.appendChild(mk("feDisplacementMap",{"in":"SourceGraphic",in2:"n",scale:"3",xChannelSelector:"R",yChannelSelector:"G"}));
+    defs.appendChild(f); svg.appendChild(defs);
+    var pivot=mk("g",{}), scene=mk("g",{filter:"url(#"+id+")"});
+    scene.appendChild(pivot); svg.appendChild(scene); host.appendChild(svg);
+
+    // faint background field: the many compounds, some already coarse
+    var brnd=rng(0x5eed), FG=SPEC.map(function(q){return [q.x,q.y];}), BPTS=[], att, x, y, ok, i;
+    for(att=0;att<6000&&BPTS.length<10;att++){
+      x=26+brnd()*428; y=26+brnd()*218; ok=true;
+      for(i=0;i<FG.length;i++){if(Math.hypot(x-FG[i][0],y-FG[i][1])<70){ok=false;break;}}
+      if(ok)for(i=0;i<BPTS.length;i++){if(Math.hypot(x-BPTS[i][0],y-BPTS[i][1])<46){ok=false;break;}}
+      if(ok)BPTS.push([x,y]);
+    }
+    var BG=BPTS.map(function(pt,j){
+      var tpl=TPL[j%3], rr=brnd()*6.283, co=Math.cos(rr), si=Math.sin(rr);
+      var sc=0.54+brnd()*0.12, fl=brnd()<0.5?1:-1, cols=BPAL[j%BPAL.length], coarse=(j%2===0);
+      var g=mk("g",{opacity:0.26}); pivot.appendChild(g);
+      var atoms=tpl.a.map(function(q,k){var lx=q[0]*fl*sc, ly=q[1]*sc;
+        return {fx:lx*co-ly*si,fy:lx*si+ly*co,g:q[2],color:cols[k%2]};});
+      if(coarse){
+        var gs={}; atoms.forEach(function(a){(gs[a.g]=gs[a.g]||[]).push(a);});
+        var bd={}; Object.keys(gs).forEach(function(k){var m=gs[k];
+          bd[k]={cx:m.reduce(function(t,a){return t+a.fx;},0)/m.length,
+                 cy:m.reduce(function(t,a){return t+a.fy;},0)/m.length,color:m[0].color};});
+        var seen={};
+        tpl.b.forEach(function(b){var ga=atoms[b[0]].g, gb=atoms[b[1]].g; if(ga===gb)return;
+          var key=Math.min(ga,gb)+"-"+Math.max(ga,gb); if(seen[key])return; seen[key]=1;
+          g.appendChild(mk("line",{x1:bd[ga].cx.toFixed(2),y1:bd[ga].cy.toFixed(2),
+            x2:bd[gb].cx.toFixed(2),y2:bd[gb].cy.toFixed(2),stroke:"currentColor","stroke-width":2.2,"stroke-linecap":"round"}));});
+        Object.keys(bd).forEach(function(k){g.appendChild(mk("circle",{cx:bd[k].cx.toFixed(2),cy:bd[k].cy.toFixed(2),
+          r:6.5,fill:bd[k].color,stroke:"currentColor","stroke-width":1.9}));});
+      }else{
+        tpl.b.forEach(function(b){g.appendChild(mk("line",{x1:atoms[b[0]].fx.toFixed(2),y1:atoms[b[0]].fy.toFixed(2),
+          x2:atoms[b[1]].fx.toFixed(2),y2:atoms[b[1]].fy.toFixed(2),stroke:"currentColor","stroke-width":1.7,"stroke-linecap":"round"}));});
+        atoms.forEach(function(a){g.appendChild(mk("circle",{cx:a.fx.toFixed(2),cy:a.fy.toFixed(2),
+          r:3,fill:a.color,stroke:"currentColor","stroke-width":1.3}));});
+      }
+      return {g:g,x:pt[0],y:pt[1],ph:brnd()*6.283};
+    });
+
+    // the four working molecules
+    var MOLS=SPEC.map(function(s,j){
+      var tpl=TPL[s.t], rr=s.rot*Math.PI/180, co=Math.cos(rr), si=Math.sin(rr);
+      var g=mk("g",{}); pivot.appendChild(g);
+      var atoms=tpl.a.map(function(q,k){var lx=q[0]*s.fl*s.sc, ly=q[1]*s.sc;
+        return {fx:lx*co-ly*si,fy:lx*si+ly*co,g:q[2],color:s.cols[k%2]};});
+      var rmax=0,rmin=1e9;
+      atoms.forEach(function(a){var r=Math.hypot(a.fx,a.fy); if(r>rmax)rmax=r; if(r<rmin)rmin=r;});
+      var rspan=(rmax-rmin)||1;
+      atoms.forEach(function(a){a.d=(1-(Math.hypot(a.fx,a.fy)-rmin)/rspan)*0.55;});
+      var gs={}; atoms.forEach(function(a){(gs[a.g]=gs[a.g]||[]).push(a);});
+      var beads=Object.keys(gs).map(function(k){
+        var m=gs[k];
+        var cx=m.reduce(function(t,a){return t+a.fx;},0)/m.length;
+        var cy=m.reduce(function(t,a){return t+a.fy;},0)/m.length;
+        var rad=0; m.forEach(function(a){rad=Math.max(rad,Math.hypot(a.fx-cx,a.fy-cy));});
+        return {cx:cx,cy:cy,r:Math.min(11.5,Math.max(7.5,rad*0.55+4)),color:m[0].color,gid:k};
+      });
+      var cenOf={}; beads.forEach(function(b){cenOf[b.gid]=b;});
+      var gpairs=[], seen={};
+      tpl.b.forEach(function(bd){var ga=atoms[bd[0]].g, gb=atoms[bd[1]].g; if(ga===gb)return;
+        var key=Math.min(ga,gb)+"-"+Math.max(ga,gb); if(seen[key])return; seen[key]=1; gpairs.push([ga,gb]);});
+      var cbondEls=gpairs.map(function(){var l=mk("line",{stroke:"currentColor","stroke-width":3,"stroke-linecap":"round",opacity:0});g.appendChild(l);return l;});
+      var bondEls=tpl.b.map(function(){var l=mk("line",{stroke:"currentColor","stroke-width":2.4,"stroke-linecap":"round"});g.appendChild(l);return l;});
+      var atomEls=atoms.map(function(a){var e=mk("circle",{r:5.5,fill:a.color,stroke:"currentColor","stroke-width":1.9});g.appendChild(e);return e;});
+      var beadEls=beads.map(function(b){var e=mk("circle",{r:b.r,fill:b.color,stroke:"currentColor","stroke-width":2.6,opacity:0});g.appendChild(e);return e;});
+      return {s:s,atoms:atoms,bonds:tpl.b,atomEls:atomEls,bondEls:bondEls,beads:beads,beadEls:beadEls,
+              cenOf:cenOf,gpairs:gpairs,cbondEls:cbondEls,ph:j/SPEC.length};
+    });
+
+    function frame(p){
+      BG.forEach(function(b){
+        b.g.setAttribute("transform","translate("+(b.x+1.5*Math.sin(6.283*p+b.ph)).toFixed(2)+" "+
+          (b.y+1.5*Math.cos(6.283*p+b.ph*1.4)).toFixed(2)+")");
+      });
+      MOLS.forEach(function(m){
+        var c=cyc((p+m.ph)%1);
+        var bx=m.s.x+1.6*Math.sin(6.283*p+m.ph*7), by=m.s.y+1.6*Math.cos(6.283*p+m.ph*5);
+        m.atoms.forEach(function(a,i){
+          var ci=seg(c,a.d,a.d+0.45);
+          var af=1-seg(ci,0.45,0.92), ar=lerp(5.5,2.2,ci), b=m.cenOf[a.g];
+          a._x=bx+lerp(a.fx,b.cx,ci); a._y=by+lerp(a.fy,b.cy,ci); a._o=af;
+          var e=m.atomEls[i];
+          e.setAttribute("cx",a._x.toFixed(2)); e.setAttribute("cy",a._y.toFixed(2));
+          e.setAttribute("r",ar.toFixed(2)); e.setAttribute("opacity",af.toFixed(3));
+        });
+        m.bonds.forEach(function(bd,k){
+          var e=m.bondEls[k], A=m.atoms[bd[0]], B=m.atoms[bd[1]];
+          e.setAttribute("x1",A._x.toFixed(2)); e.setAttribute("y1",A._y.toFixed(2));
+          e.setAttribute("x2",B._x.toFixed(2)); e.setAttribute("y2",B._y.toFixed(2));
+          e.setAttribute("opacity",((A._o+B._o)*0.5).toFixed(3));
+        });
+        var bo=seg(c,0.22,0.78);
+        m.gpairs.forEach(function(gp,k){
+          var e=m.cbondEls[k], A=m.cenOf[gp[0]], B=m.cenOf[gp[1]];
+          e.setAttribute("x1",(bx+A.cx).toFixed(2)); e.setAttribute("y1",(by+A.cy).toFixed(2));
+          e.setAttribute("x2",(bx+B.cx).toFixed(2)); e.setAttribute("y2",(by+B.cy).toFixed(2));
+          e.setAttribute("opacity",bo.toFixed(3));
+        });
+        m.beadEls.forEach(function(e,i){
+          var b=m.beads[i];
+          e.setAttribute("cx",(bx+b.cx).toFixed(2)); e.setAttribute("cy",(by+b.cy).toFixed(2));
+          e.setAttribute("r",(b.r*lerp(0.6,1,c)).toFixed(2)); e.setAttribute("opacity",bo.toFixed(3));
+        });
+      });
+    }
+
+    if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      frame(0.20); return;                       // a single still frame, no animation
+    }
+
+    var acc=0, last=0, running=false, raf=0;
+    function tick(now){
+      if(last)acc+=now-last;
+      last=now; frame((acc%LOOP)/LOOP);
+      raf=requestAnimationFrame(tick);
+    }
+    function start(){ if(running)return; running=true; last=0; raf=requestAnimationFrame(tick); }
+    function stop(){ if(!running)return; running=false; cancelAnimationFrame(raf); }
+
+    frame(0);
+    if(window.IntersectionObserver){                // don't burn CPU when off-screen
+      new IntersectionObserver(function(es){ es[0].isIntersecting?start():stop(); },{threshold:0}).observe(host);
+    } else start();
+    document.addEventListener("visibilitychange",function(){ document.hidden?stop():start(); });
+  }
+
+  function init(){ Array.prototype.forEach.call(document.querySelectorAll(".cg-loop"),build); }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init); else init();
+})();
+</script>

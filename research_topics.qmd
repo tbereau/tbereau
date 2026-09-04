@@ -15,6 +15,10 @@ format:
     # reads as a thumbnail and nothing more. Click-to-zoom makes the detail
     # available without giving the figures body-width space they do not earn.
     lightbox: true
+    # Builds the coarse-graining animation in the Overview. After the body so
+    # the markup it fills already exists, and page-level so no other page pays
+    # for it.
+    include-after-body: _cg_loop.html
 ---
 
 ```{ojs}
@@ -89,6 +93,21 @@ of thermodynamic properties tractable, and what turns structure--property
 relationships into design rules. It also costs chemical specificity, and a good
 deal of our methodological work is concerned with measuring that price and with
 recovering what the reduction discards.
+
+<!-- The paragraph above is what this animates: groups of atoms folding into
+single beads that sit on the molecule's own shape, and resolving back. Body
+flow rather than `.column-margin`, which is 258px wide and would reduce it to a
+thumbnail. The div is deliberately empty -- _cg_loop.html fills it, and
+styles.css owns its size and its ink. -->
+
+```{=html}
+<div class="cg-loop"></div>
+```
+
+::: {.cg-caption}
+Resolution as a variable — groups of atoms become single beads, trading
+atomistic detail for reach across chemical space.
+:::
 
 Machine learning enters as a way of tailoring models to physics rather than
 substituting for it. The recurring move is to take a known analytical

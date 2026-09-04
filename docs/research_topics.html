@@ -316,50 +316,50 @@ window.Quarto = {
 
 
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="26" data-source-offset="-368"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 25;"><span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> index_array<span class="op">.</span><span class="fu">map</span>(</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    i <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">fromEntries</span>(</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r)<span class="op">.</span><span class="fu">map</span>(([column<span class="op">,</span> values]) <span class="kw">=&gt;</span> [column<span class="op">,</span> values[i]])</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayTable</span>(papers_) {</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">table</span>(papers_<span class="op">,</span> {</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">"doi"</span><span class="op">,</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">,</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">,</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">,</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">"year"</span><span class="op">,</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>      <span class="dt">header</span><span class="op">:</span> {</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">format</span><span class="op">:</span> {</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>        <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> {</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>    })</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="co">// Every section below selects its papers this way. The `topics` field is</span></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="co">// attached at export time from `data/topics.yml`, which is also where a new</span></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co">// paper gets assigned to a section -- see `scripts/topics.py`. Selecting by</span></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="co">// coauthor instead, as this page used to, silently adopts whatever that person</span></span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">// publishes next; selecting by a DOI list written into the page means the page</span></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">// has to be remembered every time a paper comes out, and it was not.</span></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">topic</span>(key) {</span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">displayTable</span>(papers<span class="op">.</span><span class="fu">filter</span>(p <span class="kw">=&gt;</span> p<span class="op">.</span><span class="at">topics</span><span class="op">.</span><span class="fu">includes</span>(key)))</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="30" data-source-offset="-368"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 29;"><span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>papers_r <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"../data/all_papers.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>n_columns <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r[<span class="st">"doi"</span>])<span class="op">.</span><span class="at">length</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>index_array <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>({<span class="dt">length</span><span class="op">:</span> n_columns}<span class="op">,</span> (_<span class="op">,</span> i) <span class="kw">=&gt;</span> i)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>papers <span class="op">=</span> index_array<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    i <span class="kw">=&gt;</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">fromEntries</span>(</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        <span class="bu">Object</span><span class="op">.</span><span class="fu">entries</span>(papers_r)<span class="op">.</span><span class="fu">map</span>(([column<span class="op">,</span> values]) <span class="kw">=&gt;</span> [column<span class="op">,</span> values[i]])</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">displayTable</span>(papers_) {</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Inputs<span class="op">.</span><span class="fu">table</span>(papers_<span class="op">,</span> {</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        <span class="dt">columns</span><span class="op">:</span> [</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">"doi"</span><span class="op">,</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">,</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">,</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">,</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        <span class="st">"year"</span><span class="op">,</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>      ]<span class="op">,</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>      <span class="dt">header</span><span class="op">:</span> {</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.name"</span><span class="op">:</span> <span class="st">"journal"</span><span class="op">,</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> <span class="st">"volume"</span><span class="op">,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>      <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>        <span class="dt">doi</span><span class="op">:</span> doi <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;a href=https://doi.org/</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs"> target=_blank&gt;</span><span class="sc">${</span>doi<span class="sc">}</span><span class="vs">&lt;/a&gt;`</span><span class="op">,</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> title <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>title<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>        <span class="st">"journal.volume"</span><span class="op">:</span> volume <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;b&gt;</span><span class="sc">${</span>volume<span class="sc">}</span><span class="vs">&lt;/b&gt;`</span><span class="op">,</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>        <span class="dt">year</span><span class="op">:</span> year <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>year<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>      <span class="dt">width</span><span class="op">:</span> {</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>        <span class="st">"title"</span><span class="op">:</span> <span class="dv">10</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>      <span class="dt">layout</span><span class="op">:</span> <span class="st">"auto"</span><span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="co">// Every section below selects its papers this way. The `topics` field is</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co">// attached at export time from `data/topics.yml`, which is also where a new</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">// paper gets assigned to a section -- see `scripts/topics.py`. Selecting by</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="co">// coauthor instead, as this page used to, silently adopts whatever that person</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="co">// publishes next; selecting by a DOI list written into the page means the page</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co">// has to be remembered every time a paper comes out, and it was not.</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">topic</span>(key) {</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">displayTable</span>(papers<span class="op">.</span><span class="fu">filter</span>(p <span class="kw">=&gt;</span> p<span class="op">.</span><span class="at">topics</span><span class="op">.</span><span class="fu">includes</span>(key)))</span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -407,6 +407,15 @@ window.Quarto = {
 <h1>Overview</h1>
 <p>Our research sits at the interface of statistical mechanics, molecular simulation, and machine learning. We develop multiscale methods for soft-condensed matter and biomolecules, and we apply them to problems in which two landscapes compound one another: the <em>configurational</em> landscape of a single molecular system at fixed composition, and the <em>compositional</em> landscape of chemical compound space, in which the identity of the molecule is itself the variable. Sampling either is expensive. Having to sample both at once is what makes molecular discovery hard.</p>
 <p>Coarse-graining is our main instrument against both. A reduced representation smooths the free-energy landscape and accelerates sampling; and because a small set of bead types maps many molecules of similar shape and hydrophobicity onto the same parametrization, it also contracts chemical space by close to an order of magnitude. That many-to-one mapping is what makes high-throughput screening of thermodynamic properties tractable, and what turns structure–property relationships into design rules. It also costs chemical specificity, and a good deal of our methodological work is concerned with measuring that price and with recovering what the reduction discards.</p>
+<!-- The paragraph above is what this animates: groups of atoms folding into
+single beads that sit on the molecule's own shape, and resolving back. Body
+flow rather than `.column-margin`, which is 258px wide and would reduce it to a
+thumbnail. The div is deliberately empty -- _cg_loop.html fills it, and
+styles.css owns its size and its ink. -->
+<div class="cg-loop"></div>
+<div class="cg-caption">
+<p>Resolution as a variable — groups of atoms become single beads, trading atomistic detail for reach across chemical space.</p>
+</div>
 <p>Machine learning enters as a way of tailoring models to physics rather than substituting for it. The recurring move is to take a known analytical result—the Boltzmann distribution, a Fokker–Planck steady state, thermodynamic integration—and impose it as an inductive bias on a generative model, instead of letting the model infer that structure from data alone.</p>
 <p>For an unsupervised view of the same corpus, clustered by abstract rather than by hand, see the <a href="./research_landscape.html">research landscape</a>. Much of what follows is released as open-source <a href="./software.html">software</a>, and all of it is the work of the <a href="./group_members.html">group</a>.</p>
 </section>
@@ -425,7 +434,7 @@ window.Quarto = {
 </div></div><p>Free-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate; it is demonstrated on the excess chemical potential of a Lennard-Jones fluid. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.</p>
 <p><a href="./software.html#fokker-planck-score-learning" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Fokker-Planck score learning</a> <a href="./software.html#neural-thermodynamic-integration" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Neural TI</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="129" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 128;"><span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"gen-free-energy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="148" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 147;"><span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"gen-free-energy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -446,7 +455,7 @@ window.Quarto = {
 </div></div><p>Going from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.</p>
 <p><a href="./software.html#split-flows" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Split-Flows</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="154" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 153;"><span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"resolution-transport"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="173" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 172;"><span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"resolution-transport"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="expression">
 
@@ -466,7 +475,7 @@ window.Quarto = {
 </div>
 </div></div><p>Rather than arbitrarily selecting compounds, we systematically explore chemical space according to the target property of interest. Coarse-graining is what makes this affordable: a linear relation between bulk partitioning and the potential of mean force turns an expensive insertion free energy into a surrogate that can be evaluated across an entire library. We used it to screen more than 500,000 small molecules for drug–membrane permeability, yielding a permeability map across a sizeable part of organic chemical space, benchmarked against experiment and released as a public dataset of coarse-grained trajectories, insertion PMFs, and permeability coefficients. Symbolic regression over that dataset recovers compact algebraic expressions in a handful of physical descriptors—size, polarity, hydrogen-bonding capacity—and the century-old Meyer–Overton correlation emerges from hydrophobic transfer and bilayer deformation alone, without invoking receptor-specific binding.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="179" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 178;"><span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"high-throughput"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="198" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 197;"><span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"high-throughput"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="expression">
 
@@ -487,7 +496,7 @@ window.Quarto = {
 </div></div><p>Screening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective <em>in vitro</em> and one <em>in vivo</em>. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO<sub>2</sub>/CH<sub>4</sub> Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support <em>de novo</em> design.</p>
 <p><a href="./software.html#multi-level-bayesian-optimization" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Multi-level BO</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="206" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 205;"><span id="cb5-206"><a href="#cb5-206" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"molecular-discovery"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="225" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 224;"><span id="cb5-225"><a href="#cb5-225" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"molecular-discovery"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="expression">
 
@@ -507,7 +516,7 @@ window.Quarto = {
 </div>
 </div></div><p>Transferable coarse-grained models are useful precisely because they are degenerate, and we study the consequences of that degeneracy quantitatively. Varying the number of Martini bead types from 5 to 16 across thousands of molecules establishes the resolution limit of data-driven models spanning chemical space, and marks where transferability begins to cost chemical specificity. Treating exploration as importance sampling over coarse-grained representations improves coverage of the property landscape by factors of 2–10 over uniform sampling, at the scale of some <span class="math inline">\(10^6\)</span> compounds. Adjacent questions concern how condensed-phase structure ought to be represented at all—adapting the SLATM expansion in one-, two-, and three-body local environments to thermodynamic observables of molecular liquids—and how far kernel-based models can be trusted, where an audit of machine-learned hydration free energies exposes the penalty incurred when the training database is chemically narrow.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="231" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 230;"><span id="cb6-231"><a href="#cb6-231" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"cg-chemical-space"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="250" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 249;"><span id="cb6-250"><a href="#cb6-250" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"cg-chemical-space"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-6" data-nodetype="expression">
 
@@ -528,7 +537,7 @@ window.Quarto = {
 </div></div><p>High-throughput screening is only possible if parametrization requires no human in the loop. Auto-Martini generates Martini topologies for small organic molecules directly from SMILES, assigning the mapping, bead types, and bonded parameters automatically. The pipeline has been rebuilt for Martini 3, validated against expert-designed models, and exercised on a screen of 100,000 compounds from the Enamine library.</p>
 <p><a href="./software.html#auto-martini" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Auto Martini</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="250" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 249;"><span id="cb7-250"><a href="#cb7-250" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"auto-parametrization"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="269" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 268;"><span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"auto-parametrization"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-7" data-nodetype="expression">
 
@@ -549,7 +558,7 @@ window.Quarto = {
 </div></div><p>Screening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.</p>
 <p><a href="./software.html#martignac" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">Martignac</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="272" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 271;"><span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"fair-workflows"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="291" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 290;"><span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"fair-workflows"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-8" data-nodetype="expression">
 
@@ -572,7 +581,7 @@ window.Quarto = {
 </div>
 </div></div><p>Lipid membranes are the physical system our methods return to most often, and the question we most often ask of them is which of their features are thermodynamically dictated and which demand active cellular maintenance. Semi-grand canonical simulations, with chemical potentials imposed on individual lipid species, reframe membrane composition as a constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms and saturation asymmetry between leaflets both emerge from thermodynamics alone, narrowing the list of properties a cell must actively regulate. In parallel we study how small molecules partition into membranes and reshape them—phase separation in binary mixtures, nanoparticle contact mediated by copolymer coronas, the bacteriostatic action of 2-phenylethanol derivatives, the reorganization produced by nitrated fatty acids—together with the folding and insertion thermodynamics of transmembrane peptides.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="298" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 297;"><span id="cb9-298"><a href="#cb9-298" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"membranes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="317" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 316;"><span id="cb9-317"><a href="#cb9-317" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"membranes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-9" data-nodetype="expression">
 
@@ -592,7 +601,7 @@ window.Quarto = {
 </div>
 </div></div><p>Coarse-graining accelerates dynamics, and it does so unevenly: a model parametrized against structure alone will generally misrepresent barrier-crossing kinetics. We parametrize concurrently against static and kinetic information, using Markov state models biased with external information to keep the interpretation of simulation kinetics consistent. Conformational surface hopping couples distinct force fields to distinct conformational basins, in analogy with nonadiabatic transitions between electronic surfaces; incorporating more surfaces improves cross-correlations systematically and recovers barrier-crossing dynamics that a single surface cannot. Related work identifies metastable states without hand-chosen collective variables, through hidden Markov models of solvation substates and Gaussian-mixture variational autoencoders whose mixture components correspond to conformational basins.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="321" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 320;"><span id="cb10-321"><a href="#cb10-321" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"cg-kinetics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="340" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 339;"><span id="cb10-340"><a href="#cb10-340" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"cg-kinetics"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-10" data-nodetype="expression">
 
@@ -612,7 +621,7 @@ window.Quarto = {
 </div>
 </div></div><p>We extend the concept of statistical reweighting to non-equilibrium steady states. Stochastic thermodynamics analytically relates the forward and backward probabilities of any pathway through the external nonconservative force, which supplies the constraint; a maximum-caliber—maximum path entropy—formalism then reweights microtrajectories from one driven steady state onto another. The framework extends to collective variables, so that free-energy landscapes along a reaction coordinate can be recovered from short driven runs.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="339" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 338;"><span id="cb11-339"><a href="#cb11-339" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"nonequilibrium"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="358" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 357;"><span id="cb11-358"><a href="#cb11-358" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"nonequilibrium"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-11" data-nodetype="expression">
 
@@ -632,7 +641,7 @@ window.Quarto = {
 </div>
 </div></div><p>Multiscale simulation of polymer morphology, where the observable of interest sits beyond the reach of either resolution on its own. Metadynamics in a phase space of collective variables, referenced against DFT, resolves the free-energy landscape between polymorphs of syndiotactic polystyrene and yields <span class="math inline">\(\alpha/\beta\)</span> free-energy differences that rationalize the experimentally observed phase populations.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="356" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 355;"><span id="cb12-356"><a href="#cb12-356" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"polymer-materials"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="375" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 374;"><span id="cb12-375"><a href="#cb12-375" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"polymer-materials"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-12" data-nodetype="expression">
 
@@ -656,7 +665,7 @@ window.Quarto = {
 </div>
 </div></div><p>Point charges are a crude description of the molecular electrostatic potential. Static atomic multipoles, derived from the electrostatic potential through a spherical-harmonic expansion, provide a systematically better one, and exploiting their symmetries makes force propagation affordable enough for condensed-phase molecular dynamics. Applications include free energies of hydration, two-dimensional infrared spectroscopy of solvation dynamics, and the <span class="math inline">\(\sigma\)</span>-hole of halogenated compounds, where quadrupolar terms on the adjacent atoms prove necessary.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="380" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 379;"><span id="cb13-380"><a href="#cb13-380" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"multipoles"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb13" data-startfrom="399" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 398;"><span id="cb13-399"><a href="#cb13-399" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"multipoles"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-13" data-nodetype="expression">
 
@@ -677,7 +686,7 @@ window.Quarto = {
 </div></div><p>Physics-based potentials with machine-learned coefficients, combining atomic multipoles and many-body dispersion for accurate and transferable non-covalent interactions. The coefficients are learned by kernel ridge regression across both conformations and composition of small organic molecules; a Voronoi-tessellation route to van der Waals coefficients dispenses with explicit electron densities altogether.</p>
 <p><a href="./software.html#ipml" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">IPML</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="399" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 398;"><span id="cb14-399"><a href="#cb14-399" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"noncovalent-ml"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb14" data-startfrom="418" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 417;"><span id="cb14-418"><a href="#cb14-418" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"noncovalent-ml"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-14" data-nodetype="expression">
 
@@ -698,7 +707,7 @@ window.Quarto = {
 </div></div><p>A top-down, implicit-solvent coarse-grained peptide model, used to study secondary and tertiary structure formation across environments and scenarios: <span class="math inline">\(\alpha\)</span>-helix against <span class="math inline">\(\beta\)</span>-sheet folding, the microcanonical analysis that locates the origin of folding cooperativity in the interplay between the two, the structural alignment of capsid interfaces, and peptide–membrane interactions from a simple cross-parametrization.</p>
 <p><a href="files/thesis.pdf" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">PhD thesis</a> <a href="./software.html#peptideb" class="btn-action-primary btn-action btn btn-success btn-lg" role="button">peptideB</a></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="419" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 418;"><span id="cb15-419"><a href="#cb15-419" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"peptide-cg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb15" data-startfrom="438" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 437;"><span id="cb15-438"><a href="#cb15-438" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"peptide-cg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-15" data-nodetype="expression">
 
@@ -710,7 +719,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="early-methodological-work">Early methodological work</h2>
 <p>Assorted early work on estimators and integration schemes: optimized convergence for multiple-histogram analysis, a multi-timestep integrator for the modified Andersen barostat, and a simulated molecular walker.</p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb16" data-startfrom="429" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 428;"><span id="cb16-429"><a href="#cb16-429" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"early-methods"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb16" data-startfrom="448" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 447;"><span id="cb16-448"><a href="#cb16-448" aria-hidden="true" tabindex="-1"></a><span class="fu">topic</span>(<span class="st">"early-methods"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-16" data-nodetype="expression">
 
@@ -723,6 +732,193 @@ window.Quarto = {
 </section>
 
 </main> <!-- /main -->
+<!-- Coarse-graining loop: the animation on research_topics.qmd, drawn in SVG
+     at runtime.
+
+     Kept out of the .qmd and pulled in with `include-after-body` so the page
+     carries no executable code of its own, the same reason _recent_work.md is
+     baked in rather than fetched by an OJS cell.
+
+     Contract with the page: it builds into every empty div.cg-loop, sizes
+     itself to that div, and takes its line colour from `currentColor`, so
+     styles.css owns the geometry and the ink. Nothing here needs editing to
+     restyle it. It renders one static frame under prefers-reduced-motion and
+     stops animating while scrolled out of view or on a hidden tab. -->
+
+<script>
+(function(){
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  var P={coral:"#ee8f7a",yellow:"#f0cd7a",teal:"#6cbcb0",olive:"#b4c07e",purple:"#a58ac6"};
+
+  var TPL=[
+    { a:[[-26,-8,0],[-30,4,0],[-18,-16,0],[-14,-2,0],[-2,-18,1],[6,-8,1],[16,-14,2],[26,-4,2],[20,6,2],[4,14,3]],
+      b:[[0,1],[1,3],[3,2],[2,0],[3,4],[4,5],[5,6],[6,7],[7,8],[8,6],[4,9]] },
+    { a:[[-24,-2,0],[-16,-12,0],[-14,4,0],[-2,-14,1],[-4,2,1],[10,-10,2],[18,0,2],[6,12,3],[16,14,3]],
+      b:[[0,1],[0,2],[1,3],[3,4],[3,5],[5,6],[4,7],[7,8]] },
+    { a:[[-22,-10,0],[-28,2,0],[-18,10,0],[-10,-2,0],[2,-14,1],[8,-2,1],[0,8,1],[20,-8,2],[24,4,2],[10,16,3],[20,16,3]],
+      b:[[0,1],[1,2],[2,3],[3,0],[3,4],[4,5],[5,6],[6,4],[5,7],[7,8],[6,9],[9,10]] }
+  ];
+  var SPEC=[
+    {t:0,x:118,y:92, rot:-12,sc:1.35,fl: 1,cols:[P.teal,P.olive]},
+    {t:1,x:300,y:74, rot: 24,sc:1.38,fl:-1,cols:[P.coral,P.yellow]},
+    {t:2,x:168,y:200,rot:-30,sc:1.30,fl: 1,cols:[P.purple,P.teal]},
+    {t:0,x:374,y:180,rot: 40,sc:1.32,fl:-1,cols:[P.yellow,P.olive]}
+  ];
+  var BPAL=[[P.teal,P.olive],[P.coral,P.yellow],[P.purple,P.teal],[P.yellow,P.olive],[P.olive,P.coral]];
+  var LOOP=18000, uid=0;
+
+  function mk(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function lerp(a,b,t){return a+(b-a)*t;}
+  function clamp(t){return t<0?0:t>1?1:t;}
+  function seg(v,a,b){var t=clamp((v-a)/(b-a));return t*t*(3-2*t);}
+  function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+  function cyc(u){
+    if(u<0.10)return 0;
+    if(u<0.32)return seg(u,0.10,0.32);
+    if(u<0.55)return 1;
+    if(u<0.77)return 1-seg(u,0.55,0.77);
+    return 0;
+  }
+
+  function build(host){
+    if(host.dataset.cgInit)return; host.dataset.cgInit="1";
+    var id="cgBoil"+(++uid);
+    var svg=mk("svg",{viewBox:"0 0 480 270",preserveAspectRatio:"xMidYMid meet",role:"img",
+      "aria-label":"Molecules whose atoms merge into a few larger beads sitting on each molecule's own shape, then resolve back into full atomic detail."});
+    var defs=mk("defs",{}), f=mk("filter",{id:id,x:"-6%",y:"-6%",width:"112%",height:"112%"});
+    f.appendChild(mk("feTurbulence",{type:"fractalNoise",baseFrequency:"0.02",numOctaves:"1",seed:"3",result:"n"}));
+    f.appendChild(mk("feDisplacementMap",{"in":"SourceGraphic",in2:"n",scale:"3",xChannelSelector:"R",yChannelSelector:"G"}));
+    defs.appendChild(f); svg.appendChild(defs);
+    var pivot=mk("g",{}), scene=mk("g",{filter:"url(#"+id+")"});
+    scene.appendChild(pivot); svg.appendChild(scene); host.appendChild(svg);
+
+    // faint background field: the many compounds, some already coarse
+    var brnd=rng(0x5eed), FG=SPEC.map(function(q){return [q.x,q.y];}), BPTS=[], att, x, y, ok, i;
+    for(att=0;att<6000&&BPTS.length<10;att++){
+      x=26+brnd()*428; y=26+brnd()*218; ok=true;
+      for(i=0;i<FG.length;i++){if(Math.hypot(x-FG[i][0],y-FG[i][1])<70){ok=false;break;}}
+      if(ok)for(i=0;i<BPTS.length;i++){if(Math.hypot(x-BPTS[i][0],y-BPTS[i][1])<46){ok=false;break;}}
+      if(ok)BPTS.push([x,y]);
+    }
+    var BG=BPTS.map(function(pt,j){
+      var tpl=TPL[j%3], rr=brnd()*6.283, co=Math.cos(rr), si=Math.sin(rr);
+      var sc=0.54+brnd()*0.12, fl=brnd()<0.5?1:-1, cols=BPAL[j%BPAL.length], coarse=(j%2===0);
+      var g=mk("g",{opacity:0.26}); pivot.appendChild(g);
+      var atoms=tpl.a.map(function(q,k){var lx=q[0]*fl*sc, ly=q[1]*sc;
+        return {fx:lx*co-ly*si,fy:lx*si+ly*co,g:q[2],color:cols[k%2]};});
+      if(coarse){
+        var gs={}; atoms.forEach(function(a){(gs[a.g]=gs[a.g]||[]).push(a);});
+        var bd={}; Object.keys(gs).forEach(function(k){var m=gs[k];
+          bd[k]={cx:m.reduce(function(t,a){return t+a.fx;},0)/m.length,
+                 cy:m.reduce(function(t,a){return t+a.fy;},0)/m.length,color:m[0].color};});
+        var seen={};
+        tpl.b.forEach(function(b){var ga=atoms[b[0]].g, gb=atoms[b[1]].g; if(ga===gb)return;
+          var key=Math.min(ga,gb)+"-"+Math.max(ga,gb); if(seen[key])return; seen[key]=1;
+          g.appendChild(mk("line",{x1:bd[ga].cx.toFixed(2),y1:bd[ga].cy.toFixed(2),
+            x2:bd[gb].cx.toFixed(2),y2:bd[gb].cy.toFixed(2),stroke:"currentColor","stroke-width":2.2,"stroke-linecap":"round"}));});
+        Object.keys(bd).forEach(function(k){g.appendChild(mk("circle",{cx:bd[k].cx.toFixed(2),cy:bd[k].cy.toFixed(2),
+          r:6.5,fill:bd[k].color,stroke:"currentColor","stroke-width":1.9}));});
+      }else{
+        tpl.b.forEach(function(b){g.appendChild(mk("line",{x1:atoms[b[0]].fx.toFixed(2),y1:atoms[b[0]].fy.toFixed(2),
+          x2:atoms[b[1]].fx.toFixed(2),y2:atoms[b[1]].fy.toFixed(2),stroke:"currentColor","stroke-width":1.7,"stroke-linecap":"round"}));});
+        atoms.forEach(function(a){g.appendChild(mk("circle",{cx:a.fx.toFixed(2),cy:a.fy.toFixed(2),
+          r:3,fill:a.color,stroke:"currentColor","stroke-width":1.3}));});
+      }
+      return {g:g,x:pt[0],y:pt[1],ph:brnd()*6.283};
+    });
+
+    // the four working molecules
+    var MOLS=SPEC.map(function(s,j){
+      var tpl=TPL[s.t], rr=s.rot*Math.PI/180, co=Math.cos(rr), si=Math.sin(rr);
+      var g=mk("g",{}); pivot.appendChild(g);
+      var atoms=tpl.a.map(function(q,k){var lx=q[0]*s.fl*s.sc, ly=q[1]*s.sc;
+        return {fx:lx*co-ly*si,fy:lx*si+ly*co,g:q[2],color:s.cols[k%2]};});
+      var rmax=0,rmin=1e9;
+      atoms.forEach(function(a){var r=Math.hypot(a.fx,a.fy); if(r>rmax)rmax=r; if(r<rmin)rmin=r;});
+      var rspan=(rmax-rmin)||1;
+      atoms.forEach(function(a){a.d=(1-(Math.hypot(a.fx,a.fy)-rmin)/rspan)*0.55;});
+      var gs={}; atoms.forEach(function(a){(gs[a.g]=gs[a.g]||[]).push(a);});
+      var beads=Object.keys(gs).map(function(k){
+        var m=gs[k];
+        var cx=m.reduce(function(t,a){return t+a.fx;},0)/m.length;
+        var cy=m.reduce(function(t,a){return t+a.fy;},0)/m.length;
+        var rad=0; m.forEach(function(a){rad=Math.max(rad,Math.hypot(a.fx-cx,a.fy-cy));});
+        return {cx:cx,cy:cy,r:Math.min(11.5,Math.max(7.5,rad*0.55+4)),color:m[0].color,gid:k};
+      });
+      var cenOf={}; beads.forEach(function(b){cenOf[b.gid]=b;});
+      var gpairs=[], seen={};
+      tpl.b.forEach(function(bd){var ga=atoms[bd[0]].g, gb=atoms[bd[1]].g; if(ga===gb)return;
+        var key=Math.min(ga,gb)+"-"+Math.max(ga,gb); if(seen[key])return; seen[key]=1; gpairs.push([ga,gb]);});
+      var cbondEls=gpairs.map(function(){var l=mk("line",{stroke:"currentColor","stroke-width":3,"stroke-linecap":"round",opacity:0});g.appendChild(l);return l;});
+      var bondEls=tpl.b.map(function(){var l=mk("line",{stroke:"currentColor","stroke-width":2.4,"stroke-linecap":"round"});g.appendChild(l);return l;});
+      var atomEls=atoms.map(function(a){var e=mk("circle",{r:5.5,fill:a.color,stroke:"currentColor","stroke-width":1.9});g.appendChild(e);return e;});
+      var beadEls=beads.map(function(b){var e=mk("circle",{r:b.r,fill:b.color,stroke:"currentColor","stroke-width":2.6,opacity:0});g.appendChild(e);return e;});
+      return {s:s,atoms:atoms,bonds:tpl.b,atomEls:atomEls,bondEls:bondEls,beads:beads,beadEls:beadEls,
+              cenOf:cenOf,gpairs:gpairs,cbondEls:cbondEls,ph:j/SPEC.length};
+    });
+
+    function frame(p){
+      BG.forEach(function(b){
+        b.g.setAttribute("transform","translate("+(b.x+1.5*Math.sin(6.283*p+b.ph)).toFixed(2)+" "+
+          (b.y+1.5*Math.cos(6.283*p+b.ph*1.4)).toFixed(2)+")");
+      });
+      MOLS.forEach(function(m){
+        var c=cyc((p+m.ph)%1);
+        var bx=m.s.x+1.6*Math.sin(6.283*p+m.ph*7), by=m.s.y+1.6*Math.cos(6.283*p+m.ph*5);
+        m.atoms.forEach(function(a,i){
+          var ci=seg(c,a.d,a.d+0.45);
+          var af=1-seg(ci,0.45,0.92), ar=lerp(5.5,2.2,ci), b=m.cenOf[a.g];
+          a._x=bx+lerp(a.fx,b.cx,ci); a._y=by+lerp(a.fy,b.cy,ci); a._o=af;
+          var e=m.atomEls[i];
+          e.setAttribute("cx",a._x.toFixed(2)); e.setAttribute("cy",a._y.toFixed(2));
+          e.setAttribute("r",ar.toFixed(2)); e.setAttribute("opacity",af.toFixed(3));
+        });
+        m.bonds.forEach(function(bd,k){
+          var e=m.bondEls[k], A=m.atoms[bd[0]], B=m.atoms[bd[1]];
+          e.setAttribute("x1",A._x.toFixed(2)); e.setAttribute("y1",A._y.toFixed(2));
+          e.setAttribute("x2",B._x.toFixed(2)); e.setAttribute("y2",B._y.toFixed(2));
+          e.setAttribute("opacity",((A._o+B._o)*0.5).toFixed(3));
+        });
+        var bo=seg(c,0.22,0.78);
+        m.gpairs.forEach(function(gp,k){
+          var e=m.cbondEls[k], A=m.cenOf[gp[0]], B=m.cenOf[gp[1]];
+          e.setAttribute("x1",(bx+A.cx).toFixed(2)); e.setAttribute("y1",(by+A.cy).toFixed(2));
+          e.setAttribute("x2",(bx+B.cx).toFixed(2)); e.setAttribute("y2",(by+B.cy).toFixed(2));
+          e.setAttribute("opacity",bo.toFixed(3));
+        });
+        m.beadEls.forEach(function(e,i){
+          var b=m.beads[i];
+          e.setAttribute("cx",(bx+b.cx).toFixed(2)); e.setAttribute("cy",(by+b.cy).toFixed(2));
+          e.setAttribute("r",(b.r*lerp(0.6,1,c)).toFixed(2)); e.setAttribute("opacity",bo.toFixed(3));
+        });
+      });
+    }
+
+    if(window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      frame(0.20); return;                       // a single still frame, no animation
+    }
+
+    var acc=0, last=0, running=false, raf=0;
+    function tick(now){
+      if(last)acc+=now-last;
+      last=now; frame((acc%LOOP)/LOOP);
+      raf=requestAnimationFrame(tick);
+    }
+    function start(){ if(running)return; running=true; last=0; raf=requestAnimationFrame(tick); }
+    function stop(){ if(!running)return; running=false; cancelAnimationFrame(raf); }
+
+    frame(0);
+    if(window.IntersectionObserver){                // don't burn CPU when off-screen
+      new IntersectionObserver(function(es){ es[0].isIntersecting?start():stop(); },{threshold:0}).observe(host);
+    } else start();
+    document.addEventListener("visibilitychange",function(){ document.hidden?stop():start(); });
+  }
+
+  function init(){ Array.prototype.forEach.call(document.querySelectorAll(".cg-loop"),build); }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init); else init();
+})();
+</script>
 <script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ii8vIFRyYW5zcG9zZWQgaW4gcGxhaW4gSmF2YVNjcmlwdCByYXRoZXIgdGhhbiB3aXRoIGBtYXBgIGJvcnJvd2VkIGZyb20gdGhlXG4vLyBAbWFydGllbi9yYW1kYSBub3RlYm9vazogYW4gT2JzZXJ2YWJsZSBub3RlYm9vayBpbXBvcnQgZHJhZ3MgaXRzIHdob2xlXG4vLyB0cmFuc2l0aXZlIGdyYXBoIG92ZXIgdGhlIG5ldHdvcmssIGFuZCBpZiBhbnkgb2YgaXQgc3RhbGxzIHRoZSByZWFjdGl2ZVxuLy8gY2VsbHMgYmVsb3cgcmVzb2x2ZSB0byBub3RoaW5nIGF0IGFsbCwgc2lsZW50bHkuIE9ubHkgSW5wdXRzLnRhYmxlIGlzIHVzZWRcbi8vIG9uIHRoaXMgcGFnZSwgd2hpY2ggdGhlIE9KUyBzdGFuZGFyZCBsaWJyYXJ5IGFscmVhZHkgcHJvdmlkZXMuXG5wYXBlcnNfciA9IEZpbGVBdHRhY2htZW50KFwiLi4vZGF0YS9hbGxfcGFwZXJzLmpzb25cIikuanNvbigpXG5uX2NvbHVtbnMgPSBPYmplY3QuZW50cmllcyhwYXBlcnNfcltcImRvaVwiXSkubGVuZ3RoXG5pbmRleF9hcnJheSA9IEFycmF5LmZyb20oe2xlbmd0aDogbl9jb2x1bW5zfSwgKF8sIGkpID0+IGkpXG5wYXBlcnMgPSBpbmRleF9hcnJheS5tYXAoXG4gICAgaSA9PiBPYmplY3QuZnJvbUVudHJpZXMoXG4gICAgICAgIE9iamVjdC5lbnRyaWVzKHBhcGVyc19yKS5tYXAoKFtjb2x1bW4sIHZhbHVlc10pID0+IFtjb2x1bW4sIHZhbHVlc1tpXV0pXG4gICAgKVxuKVxuXG5mdW5jdGlvbiBkaXNwbGF5VGFibGUocGFwZXJzXykge1xuICAgIHJldHVybiBJbnB1dHMudGFibGUocGFwZXJzXywge1xuICAgICAgICBjb2x1bW5zOiBbXG4gICAgICAgIFwiZG9pXCIsXG4gICAgICAgIFwidGl0bGVcIixcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIixcbiAgICAgICAgXCJqb3VybmFsLnZvbHVtZVwiLFxuICAgICAgICBcInllYXJcIixcbiAgICAgIF0sXG4gICAgICBoZWFkZXI6IHtcbiAgICAgICAgXCJqb3VybmFsLm5hbWVcIjogXCJqb3VybmFsXCIsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogXCJ2b2x1bWVcIixcbiAgICAgIH0sXG4gICAgICBmb3JtYXQ6IHtcbiAgICAgICAgZG9pOiBkb2kgPT4gaHRsLmh0bWxgPGEgaHJlZj1odHRwczovL2RvaS5vcmcvJHtkb2l9IHRhcmdldD1fYmxhbms+JHtkb2l9PC9hPmAsXG4gICAgICAgIHRpdGxlOiB0aXRsZSA9PiBodGwuaHRtbGAke3RpdGxlfWAsXG4gICAgICAgIFwiam91cm5hbC52b2x1bWVcIjogdm9sdW1lID0+IGh0bC5odG1sYDxiPiR7dm9sdW1lfTwvYj5gLFxuICAgICAgICB5ZWFyOiB5ZWFyID0+IGh0bC5odG1sYCR7eWVhcn1gLFxuICAgICAgfSxcbiAgICAgIHdpZHRoOiB7XG4gICAgICAgIFwidGl0bGVcIjogMTBcbiAgICAgIH0sXG4gICAgICBsYXlvdXQ6IFwiYXV0b1wiLFxuICAgIH0pXG59XG5cbi8vIEV2ZXJ5IHNlY3Rpb24gYmVsb3cgc2VsZWN0cyBpdHMgcGFwZXJzIHRoaXMgd2F5LiBUaGUgYHRvcGljc2AgZmllbGQgaXNcbi8vIGF0dGFjaGVkIGF0IGV4cG9ydCB0aW1lIGZyb20gYGRhdGEvdG9waWNzLnltbGAsIHdoaWNoIGlzIGFsc28gd2hlcmUgYSBuZXdcbi8vIHBhcGVyIGdldHMgYXNzaWduZWQgdG8gYSBzZWN0aW9uIC0tIHNlZSBgc2NyaXB0cy90b3BpY3MucHlgLiBTZWxlY3RpbmcgYnlcbi8vIGNvYXV0aG9yIGluc3RlYWQsIGFzIHRoaXMgcGFnZSB1c2VkIHRvLCBzaWxlbnRseSBhZG9wdHMgd2hhdGV2ZXIgdGhhdCBwZXJzb25cbi8vIHB1Ymxpc2hlcyBuZXh0OyBzZWxlY3RpbmcgYnkgYSBET0kgbGlzdCB3cml0dGVuIGludG8gdGhlIHBhZ2UgbWVhbnMgdGhlIHBhZ2Vcbi8vIGhhcyB0byBiZSByZW1lbWJlcmVkIGV2ZXJ5IHRpbWUgYSBwYXBlciBjb21lcyBvdXQsIGFuZCBpdCB3YXMgbm90LlxuZnVuY3Rpb24gdG9waWMoa2V5KSB7XG4gICAgcmV0dXJuIGRpc3BsYXlUYWJsZShwYXBlcnMuZmlsdGVyKHAgPT4gcC50b3BpY3MuaW5jbHVkZXMoa2V5KSkpXG59XG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BpYyhcImdlbi1mcmVlLWVuZXJneVwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJyZXNvbHV0aW9uLXRyYW5zcG9ydFwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC00IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJoaWdoLXRocm91Z2hwdXRcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRvcGljKFwibW9sZWN1bGFyLWRpc2NvdmVyeVwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC02IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJjZy1jaGVtaWNhbC1zcGFjZVwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJhdXRvLXBhcmFtZXRyaXphdGlvblwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC04IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJmYWlyLXdvcmtmbG93c1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC05IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJtZW1icmFuZXNcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTAiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BpYyhcImNnLWtpbmV0aWNzXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTExIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJub25lcXVpbGlicml1bVwiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0xMiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InRvcGljKFwicG9seW1lci1tYXRlcmlhbHNcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BpYyhcIm11bHRpcG9sZXNcIilcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ0b3BpYyhcIm5vbmNvdmFsZW50LW1sXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE1IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJwZXB0aWRlLWNnXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTE2IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidG9waWMoXCJlYXJseS1tZXRob2RzXCIpXG4ifV19
 </script>

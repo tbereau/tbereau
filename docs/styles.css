@@ -175,3 +175,40 @@ a:has(> img[src$="office_map.png"]):focus-visible {
   border-left: 2px solid #dee2e6;
   padding-left: 1rem;
 }
+
+
+/* Coarse-graining animation ------------------------------------------- */
+
+/* Built at runtime by _cg_loop.html, which fills every empty div.cg-loop and
+   takes its geometry from here. `color` is not text colour: the drawing's
+   strokes are `currentColor`, so the ink lives in this one declaration and the
+   script carries no palette of its own.
+
+   Capped rather than full-bleed. The composition scales uniformly, so letting
+   it run to the full body width enlarges the whitespace inside the frame along
+   with the drawing and it reads thin; capping hands that slack back to the
+   page, where it is margin rather than empty picture. */
+.cg-loop {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  margin: 1.4rem auto 0;
+  color: #242a37;
+}
+
+.cg-loop svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Names the loop for a reader who does not already read it as coarse-graining.
+   Same cap as the drawing, so its measure lines up with the frame above rather
+   than with the body column. */
+.cg-caption {
+  max-width: 560px;
+  margin: 0.55rem auto 1.8rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #5b6770;
+}
