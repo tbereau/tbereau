@@ -46,22 +46,6 @@ include
 - Molecular discovery by active learning and Bayesian optimization
 - Reproducible and FAIR workflows for molecular simulation
 
-<!-- The one time-sensitive item on the site, and it was previously reachable
-only through a navbar dropdown labelled "Group", which is not where anyone
-looks for a job. A notice rather than a third button: three btn-lg buttons
-wrapped to a second row inside the 600px hero and the last one landed below
-the fold on a 720px-tall viewport, which is the one thing a hiring call cannot
-afford. It links to the listing rather than to the advert itself, so it does
-not 404 in the window while the advert moves to positions_inactive/. Remove
-this block, and the .hero-notice rule in index.css, once the position is
-filled. -->
-
-::: {.hero-notice}
-A fully funded [**PhD position**](positions.html) on generative machine
-learning for molecular thin films is currently open, reviewed on a rolling
-basis.
-:::
-
 ::: {.hero-buttons}
 [Research landscape](research_landscape.html){.btn-action-primary .btn-action .btn .btn-success .btn-lg role="button"}
 [Research topics](research_topics.html){#btn-guide .btn-action .btn .btn-info .btn-lg role="button"}
@@ -69,7 +53,7 @@ basis.
 
 <!-- Below the buttons rather than above them: this is a closing credit, and
 with it in the middle the call-to-action row fell below the fold on a 720px
-viewport, which is the one thing the hiring notice cannot afford. -->
+viewport, which is the one thing a call to action cannot afford. -->
 
 What's presented here is the concerted effort of many fantastic students,
 postdocs, and collaborators I've had the chance to work with.
