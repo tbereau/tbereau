@@ -72,12 +72,12 @@ function. Recovers potentials of mean force under periodic boundary conditions
 up to an order of magnitude more efficiently than umbrella sampling, and extends
 to two-dimensional free-energy landscapes.
 
-MIT · `pip install fpsl` · documentation includes tutorials
+MIT · `pip install fpsl` · documentation includes tutorials · [2D extension,
+J. Chem. Phys. 2026](https://doi.org/10.1063/5.0327436)
 
 [{{< fa code-branch >}} GitHub](https://github.com/BereauLab/fokker-planck-score-learning){.btn-primary .btn .btn-action .btn-lg role="button"}
 [{{< fa book >}} Docs](https://bereaulab.github.io/fokker-planck-score-learning/){.btn-light .btn .btn-action .btn-lg role="button"}
 [{{< fa file-lines >}} Paper](https://doi.org/10.1021/acs.jpcb.5c04579){.btn-light .btn .btn-action .btn-lg role="button"}
-[{{< fa file-lines >}} 2D extension](https://doi.org/10.1063/5.0327436){.btn-light .btn .btn-action .btn-lg role="button"}
 
 ### Split-Flows
 
