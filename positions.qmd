@@ -1,9 +1,10 @@
 ---
 title: "Open positions"
-description: "Open PhD, Master's and Bachelor's positions in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
+description: "Thesis projects and open positions in Tristan Bereau's group at the Institute for Theoretical Physics, Heidelberg University."
 listing:
   contents: positions
-  categories: unnumbered
+  # No category sidebar: with no adverts it renders as an empty heading.
+  categories: false
   type: default
   fields: [image, title, categories, status]
   sort:
