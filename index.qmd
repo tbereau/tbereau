@@ -34,7 +34,7 @@ lines and filled the first screen before a word of content. -->
 
 # Multiscale modeling and machine learning for molecular systems {.h3}
 
-Tristan Bereau's group at the [Institute for Theoretical
+This is Tristan Bereau's group at the [Institute for Theoretical
 Physics](https://www.thphys.uni-heidelberg.de), [Heidelberg
 University](https://www.uni-heidelberg.de/en). We develop simulation and
 machine-learning methods for soft-condensed matter and biomolecules, and use

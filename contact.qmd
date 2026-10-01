@@ -22,7 +22,7 @@ Email is the reliable way to reach me. If you are writing about a **Bachelor's
 or Master's thesis**, or about a **PhD or postdoc position**, please read the
 [open positions](positions.html) page first and say in your message which
 topics interest you — it makes for a much shorter exchange than a general
-enquiry. Applications should include a CV and a short statement of research
+inquiry. Applications should include a CV and a short statement of research
 interests.
 
 ## Details
@@ -50,7 +50,7 @@ walk from the Altstadt across the Theodor-Heuss-Brücke.
 
 <!-- Alt text only, no caption: Quarto turns link text in `![...]` into a
 visible figure caption, which just restated the credit line underneath. -->
-[![](static/office_map.png){fig-alt="Street map centred on Philosophenweg 19 in Heidelberg, with the institute marked, the Neckar to the south and the Altstadt across the river"}](https://www.openstreetmap.org/?mlat=49.41505&mlon=8.69844#map=17/49.41505/8.69844)
+[![](static/office_map.png){fig-alt="Street map centered on Philosophenweg 19 in Heidelberg, with the institute marked, the Neckar to the south and the Altstadt across the river"}](https://www.openstreetmap.org/?mlat=49.41505&mlon=8.69844#map=17/49.41505/8.69844)
 
 ::: {.map-credit}
 Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors.

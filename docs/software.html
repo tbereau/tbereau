@@ -272,19 +272,19 @@ grouping means. -->
 </section>
 <section id="auto-martini" class="level3">
 <h3 class="anchored" data-anchor-id="auto-martini">Auto-Martini M3</h3>
-<p>Automatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and exercised on a screen of 100,000 compounds from the Enamine library. Developed and maintained with the <a href="https://github.com/Martini-Force-Field-Initiative">Martini Force Field Initiative</a>.</p>
+<p>Automatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and used to parametrize 100,000 compounds from the Enamine fragment collection. Developed and maintained with the <a href="https://github.com/Martini-Force-Field-Initiative">Martini Force Field Initiative</a>.</p>
 <p>GPL-2.0 · Python, conda environment supplied · supersedes <a href="#auto-martini-martini-2">Auto Martini for Martini 2</a></p>
 <p><a href="https://github.com/Martini-Force-Field-Initiative/Automartini_M3" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://doi.org/10.1021/acs.jctc.5c01178" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a> <a href="https://doi.org/10.5281/zenodo.15783891" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-database" aria-label="database"></i> Data</a></p>
 </section>
 <section id="fokker-planck-score-learning" class="level3">
 <h3 class="anchored" data-anchor-id="fokker-planck-score-learning">Fokker-Planck score learning</h3>
-<p>Free-energy estimation from biased simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function rather than inferring it from data. Recovers potentials of mean force under periodic boundary conditions, and is most advantageous in the low-data regime.</p>
+<p>Free-energy estimation from nonequilibrium pulling simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function. Recovers potentials of mean force under periodic boundary conditions up to an order of magnitude more efficiently than umbrella sampling, and extends to two-dimensional free-energy landscapes.</p>
 <p>MIT · <code>pip install fpsl</code> · documentation includes tutorials</p>
-<p><a href="https://github.com/BereauLab/fokker-planck-score-learning" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://bereaulab.github.io/fokker-planck-score-learning/" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a> <a href="https://doi.org/10.1021/acs.jpcb.5c04579" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a></p>
+<p><a href="https://github.com/BereauLab/fokker-planck-score-learning" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://bereaulab.github.io/fokker-planck-score-learning/" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-book" aria-label="book"></i> Docs</a> <a href="https://doi.org/10.1021/acs.jpcb.5c04579" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a> <a href="https://doi.org/10.1063/5.0327436" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> 2D extension</a></p>
 </section>
 <section id="split-flows" class="level3">
 <h3 class="anchored" data-anchor-id="split-flows">Split-Flows</h3>
-<p>Backmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies – the information a given coarse-graining discards.</p>
+<p>Backmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies, which measure the information a given coarse-graining discards.</p>
 <p>MIT · Python, installed from source with <code>uv</code></p>
 <p><a href="https://github.com/BereauLab/split-flows" class="btn-primary btn btn-action btn-lg" role="button"><i class="fa-solid fa-code-branch" aria-label="code-branch"></i> GitHub</a> <a href="https://doi.org/10.48550/arXiv.2511.01464" class="btn-light btn btn-action btn-lg" role="button"><i class="fa-solid fa-file-lines" aria-label="file-lines"></i> Paper</a></p>
 </section>
@@ -310,7 +310,7 @@ hard break pairs them. -->
 </section>
 <section id="earlier-codes" class="level2">
 <h2 class="anchored" data-anchor-id="earlier-codes">Earlier codes</h2>
-<p>Kept available because the papers that used them point here, not because they are maintained.</p>
+<p>These codes are no longer maintained; they remain available because the papers that used them point here.</p>
 <section id="auto-martini-martini-2" class="level3">
 <h3 class="anchored" data-anchor-id="auto-martini-martini-2">Auto Martini (Martini 2)</h3>
 <p>The original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by <a href="#auto-martini">Auto-Martini M3</a>.</p>
@@ -318,7 +318,7 @@ hard break pairs them. -->
 </section>
 <section id="ipml" class="level3">
 <h3 class="anchored" data-anchor-id="ipml">IPML</h3>
-<p>Intermolecular potentials from a combination of physics-based and machine-learned components – atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition – transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.</p>
+<p>Intermolecular potentials from a combination of physics-based and machine-learned components—atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition—transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.</p>
 <p><a href="https://gitlab.mpcdf.mpg.de/trisb/ipml">GitLab</a> · <a href="https://doi.org/10.1063/1.5009502">J. Chem. Phys. 2018</a></p>
 </section>
 <section id="mbvdw" class="level3">
@@ -341,7 +341,7 @@ hard break pairs them. -->
 <h2 class="anchored" data-anchor-id="website-tooling">Website tooling</h2>
 <section id="my-scientific-profile" class="level3">
 <h3 class="anchored" data-anchor-id="my-scientific-profile">my-scientific-profile</h3>
-<p>Retrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the <a href="./papers.html">publication list</a> and the <a href="./research_landscape.html">research landscape</a> here; <a href="./about.html">about</a> sets out the rest of the pipeline. MIT.</p>
+<p>Retrieves the metadata of a publication record programmatically. ORCID decides which works are yours; seven further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the <a href="./papers.html">publication list</a> and the <a href="./research_landscape.html">research landscape</a> here; <a href="./about.html">about</a> sets out the rest of the pipeline. MIT.</p>
 <p><a href="https://github.com/tbereau/my_scientific_profile">GitHub</a></p>
 
 

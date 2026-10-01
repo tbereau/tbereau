@@ -53,7 +53,7 @@ MIT · Python, installed from source · includes a Streamlit dashboard
 Automatic generation of Martini 3 topologies for small organic molecules of up
 to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded
 parameters, with no human in the loop. Validated against expert-designed models
-and exercised on a screen of 100,000 compounds from the Enamine library.
+and used to parametrize 100,000 compounds from the Enamine fragment collection.
 Developed and maintained with the [Martini Force Field
 Initiative](https://github.com/Martini-Force-Field-Initiative).
 
@@ -66,16 +66,18 @@ Martini 2](#auto-martini-martini-2)
 
 ### Fokker-Planck score learning
 
-Free-energy estimation from biased simulations, obtained by imposing the
-analytical Fokker--Planck steady-state solution on a learned score function
-rather than inferring it from data. Recovers potentials of mean force under
-periodic boundary conditions, and is most advantageous in the low-data regime.
+Free-energy estimation from nonequilibrium pulling simulations, obtained by
+imposing the analytical Fokker--Planck steady-state solution on a learned score
+function. Recovers potentials of mean force under periodic boundary conditions
+up to an order of magnitude more efficiently than umbrella sampling, and extends
+to two-dimensional free-energy landscapes.
 
 MIT · `pip install fpsl` · documentation includes tutorials
 
 [{{< fa code-branch >}} GitHub](https://github.com/BereauLab/fokker-planck-score-learning){.btn-primary .btn .btn-action .btn-lg role="button"}
 [{{< fa book >}} Docs](https://bereaulab.github.io/fokker-planck-score-learning/){.btn-light .btn .btn-action .btn-lg role="button"}
 [{{< fa file-lines >}} Paper](https://doi.org/10.1021/acs.jpcb.5c04579){.btn-light .btn .btn-action .btn-lg role="button"}
+[{{< fa file-lines >}} 2D extension](https://doi.org/10.1063/5.0327436){.btn-light .btn .btn-action .btn-lg role="button"}
 
 ### Split-Flows
 
@@ -83,7 +85,7 @@ Backmapping treated as continuous-time measure transport between molecular
 resolutions. Augmenting a coarse-grained configuration with auxiliary noise
 dimensions makes the map to the fine-grained space one-to-one, which gives both
 conditional sampling of atomistic structures and a tractable route to mapping
-entropies -- the information a given coarse-graining discards.
+entropies, which measure the information a given coarse-graining discards.
 
 MIT · Python, installed from source with `uv`
 
@@ -129,8 +131,8 @@ molecules in a water--hexane mixture.
 
 ## Earlier codes
 
-Kept available because the papers that used them point here, not because they
-are maintained.
+These codes are no longer maintained; they remain available because the papers
+that used them point here.
 
 ### Auto Martini (Martini 2)
 
@@ -144,8 +146,8 @@ Martini 2, later extended to variable bead-type resolution. Superseded by
 ### IPML
 
 Intermolecular potentials from a combination of physics-based and
-machine-learned components -- atomic multipoles and many-body dispersion, with
-coefficients learned across conformations and composition -- transferable across
+machine-learned components---atomic multipoles and many-body dispersion, with
+coefficients learned across conformations and composition---transferable across
 chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data
 Facility's GitLab.
 
@@ -180,7 +182,7 @@ Multiple-histogram (WHAM) free-energy analysis with optimized convergence.
 ### my-scientific-profile
 
 Retrieves the metadata of a publication record programmatically. ORCID decides
-which works are yours; half a dozen further providers describe them, and their
+which works are yours; seven further providers describe them, and their
 answers are merged field by field with a declared trust order, so each field
 records where it came from. It is what builds the [publication
 list](/papers.html) and the [research landscape](/research_landscape.html) here;

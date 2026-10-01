@@ -10,7 +10,13 @@ listing:
     - title
 ---
 
-Current physics students of Heidelberg University are always welcome to reach out to discuss projects for their **Bachelor thesis** or **Master thesis**. Topics include (but are not limited to) multiscale molecular simulations, machine learning, and statistical mechanics. Please contact me directly ([Contact](contact.html)).
+Physics students at Heidelberg University are welcome to contact me at any time about a project for their **Bachelor's** or **Master's thesis**. Topics include multiscale molecular simulation, machine learning, and statistical mechanics, among others. Details are on the [contact](contact.html) page.
 
 ## Announcements
+
+<!-- Quarto prints a bare "No matching items" under an empty listing. While
+positions/ is empty this sentence carries the section; remove it when the
+next advert goes in. -->
+
+No PhD or postdoc positions are advertised at present.
 

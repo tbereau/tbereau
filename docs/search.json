@@ -9,128 +9,128 @@
   {
     "objectID": "research_topics.html",
     "href": "research_topics.html",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "",
     "text": "papers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nfunction displayTable(papers_) {\n    return Inputs.table(papers_, {\n        columns: [\n        \"doi\",\n        \"title\",\n        \"journal.name\",\n        \"journal.volume\",\n        \"year\",\n      ],\n      header: {\n        \"journal.name\": \"journal\",\n        \"journal.volume\": \"volume\",\n      },\n      format: {\n        doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n        title: title =&gt; htl.html`${title}`,\n        \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n        year: year =&gt; htl.html`${year}`,\n      },\n      width: {\n        \"title\": 10\n      },\n      layout: \"auto\",\n    })\n}\n\n// Every section below selects its papers this way. The `topics` field is\n// attached at export time from `data/topics.yml`, which is also where a new\n// paper gets assigned to a section -- see `scripts/topics.py`. Selecting by\n// coauthor instead, as this page used to, silently adopts whatever that person\n// publishes next; selecting by a DOI list written into the page means the page\n// has to be remembered every time a paper comes out, and it was not.\nfunction topic(key) {\n    return displayTable(papers.filter(p =&gt; p.topics.includes(key)))\n}"
   },
   {
     "objectID": "research_topics.html#free-energies-from-generative-models",
     "href": "research_topics.html#free-energies-from-generative-models",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Free energies from generative models",
-    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate; it is demonstrated on the excess chemical potential of a Lennard-Jones fluid. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a particle in a periodic potential under constant force is imposed on a neural score function, which recovers potentials of mean force efficiently and is most advantageous in the low-data regime.\nFokker-Planck score learning Neural TI\n\ntopic(\"gen-free-energy\")"
+    "text": "Free energies from generative models\n\n\n\n\n\nNeural thermodynamic integration between an interacting system and an ideal gas\n\n\nFree-energy calculations remain among the most expensive routine tasks in molecular simulation. We reformulate them as learning problems in which the physics supplies the structure of the estimator. Neural thermodynamic integration parametrizes the interpolating potential along the alchemical pathway with a neural network, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate; it is demonstrated on the excess chemical potential of a Lennard-Jones fluid. The construction extends to solvation, where both end states are non-trivial, by geodesic interpolation between their samples. Fokker–Planck score learning arrives at the same goal from a different constraint: the analytical steady-state solution for a Brownian particle in a driven periodic potential is imposed on a neural score function trained on nonequilibrium pulling trajectories. On small-molecule membrane permeation it recovers potentials of mean force up to an order of magnitude more efficiently than umbrella sampling, and its extension to two-dimensional landscapes resolves orthogonal degrees of freedom at negligible computational overhead.\nFokker-Planck score learning Neural TI\n\ntopic(\"gen-free-energy\")"
   },
   {
     "objectID": "research_topics.html#measure-transport-across-resolutions",
     "href": "research_topics.html#measure-transport-across-resolutions",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Measure transport across resolutions",
-    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem rather than a regression. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time tractably and for an arbitrary coarse-graining map, the mapping entropy that quantifies how much information the reduction discards.\nSplit-Flows\n\ntopic(\"resolution-transport\")"
+    "text": "Measure transport across resolutions\n\n\n\n\n\nDeep backmapping of coarse-grained configurations\n\n\nGoing from atomistic to coarse-grained resolution is straightforward; going back is not. We treat the inverse—backmapping—as a probabilistic transport problem. Conditional generative adversarial networks reconstruct equilibrated atomistic structures autoregressively, bond by bond, sampling the atomistic Boltzmann distribution without pre-equilibration, with remarkable transferability from melt to crystalline phases and, in later work, across chemistries. Split-Flows recasts the problem as continuous-time measure transport: augmenting a coarse-grained configuration with auxiliary noise dimensions renders the map to the fine-grained space one-to-one, and a flow matched between the two resolutions supplies both a generative backmapping and, for the first time, a tractable route to the mapping entropy, which quantifies how much information the reduction discards.\nSplit-Flows\n\ntopic(\"resolution-transport\")"
   },
   {
     "objectID": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
     "href": "research_topics.html#high-throughput-screening-of-thermodynamic-properties",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "High-throughput screening of thermodynamic properties",
-    "text": "High-throughput screening of thermodynamic properties\n\n\n\n\n\nFrom a reduced chemical space to a permeability surface across two molecular descriptors\n\n\nRather than arbitrarily selecting compounds, we systematically explore chemical space according to the target property of interest. Coarse-graining is what makes this affordable: a linear relation between bulk partitioning and the potential of mean force turns an expensive insertion free energy into a surrogate that can be evaluated across an entire library. We used it to screen more than 500,000 small molecules for drug–membrane permeability, yielding a permeability map across a sizeable part of organic chemical space, benchmarked against experiment and released as a public dataset of coarse-grained trajectories, insertion PMFs, and permeability coefficients. Symbolic regression over that dataset recovers compact algebraic expressions in a handful of physical descriptors—size, polarity, hydrogen-bonding capacity—and the century-old Meyer–Overton correlation emerges from hydrophobic transfer and bilayer deformation alone, without invoking receptor-specific binding.\n\ntopic(\"high-throughput\")"
+    "text": "High-throughput screening of thermodynamic properties\n\n\n\n\n\nFrom a reduced chemical space to a permeability surface across two molecular descriptors\n\n\nRather than arbitrarily selecting compounds, we systematically explore chemical space according to the target property of interest. Coarse-graining is what makes this affordable: a linear relation between bulk partitioning and the potential of mean force turns an expensive insertion free energy into a surrogate that can be evaluated across an entire library. We used it to screen more than 500,000 small molecules for drug–membrane permeability, yielding a permeability map across a sizeable part of organic chemical space, benchmarked against experiment and released as a public dataset of coarse-grained trajectories, insertion PMFs, and permeability coefficients. The inhomogeneous solubility–diffusion model, which relaxes the homogeneity assumption of the century-old Meyer–Overton rule, links permeability to two descriptors: partitioning free energy and acidity. Symbolic regression over 0.4 million compounds from the dataset then yields an interpretable equation in these descriptors that extends across lipid-tail chemistry.\n\ntopic(\"high-throughput\")"
   },
   {
     "objectID": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
     "href": "research_topics.html#molecular-discovery-by-active-learning-and-bayesian-optimization",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Molecular discovery by active learning and Bayesian optimization",
-    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nScreening is only half of discovery; the other half is deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, iterative cycles inside a low-dimensional chemical-space embedding identified small molecules predicted to bind the mitochondrial lipid selectively over structurally similar phospholipids, and the resulting physicochemical design rules were then used to filter a chemical-vendor database: of twenty compounds tested, three proved selective in vitro and one in vivo. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\nMulti-level BO\n\ntopic(\"molecular-discovery\")"
+    "text": "Molecular discovery by active learning and Bayesian optimization\n\n\n\n\n\nActive learning of molecular probes selective to cardiolipin\n\n\nDiscovery also requires deciding what to compute next. We close that loop with active learning and Bayesian optimization on top of rigorous coarse-grained free-energy calculations. Applied to cardiolipin, seven rounds of active learning inside a low-dimensional chemical-space embedding, after direct simulation of only 0.42% of the coarse-grained search space, identified small molecules predicted to bind the mitochondrial lipid selectively over a structurally similar phospholipid. In a companion study, coarse-grained design rules were used to filter a purchasable-compound catalogue: of 22 compounds assayed in vitro, six were membrane-active, three bound negatively charged lipids specifically, and one, CLiB, alters respiration in intact bacteria and isolated mitochondria. Multilevel Bayesian optimization organizes the same idea as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. The approach reaches beyond small molecules—to gas-separation polymers that exceed the CO2/CH4 Robeson upper bound and were subsequently synthesized and measured, and to peptide sequences whose learned embeddings support de novo design.\nMulti-level BO\n\ntopic(\"molecular-discovery\")"
   },
   {
     "objectID": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
     "href": "research_topics.html#coarse-graining-as-a-reduction-of-chemical-space",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Coarse-graining as a reduction of chemical space",
-    "text": "Coarse-graining as a reduction of chemical space\n\n\n\n\n\nEfficient learning of coarse-grained molecular simulations\n\n\nTransferable coarse-grained models are useful precisely because they are degenerate, and we study the consequences of that degeneracy quantitatively. Varying the number of Martini bead types from 5 to 16 across thousands of molecules establishes the resolution limit of data-driven models spanning chemical space, and marks where transferability begins to cost chemical specificity. Treating exploration as importance sampling over coarse-grained representations improves coverage of the property landscape by factors of 2–10 over uniform sampling, at the scale of some \\(10^6\\) compounds. Adjacent questions concern how condensed-phase structure ought to be represented at all—adapting the SLATM expansion in one-, two-, and three-body local environments to thermodynamic observables of molecular liquids—and how far kernel-based models can be trusted, where an audit of machine-learned hydration free energies exposes the penalty incurred when the training database is chemically narrow.\n\ntopic(\"cg-chemical-space\")"
+    "text": "Coarse-graining as a reduction of chemical space\n\n\n\n\n\nEfficient learning of coarse-grained molecular simulations\n\n\nTransferable coarse-grained models are useful precisely because they are degenerate, and we study the consequences of that degeneracy quantitatively. Varying the number of bead types in Martini-like models from 5 to 16, across 343,700 small molecules, establishes the resolution limit of data-driven models spanning chemical space, and marks where transferability begins to cost chemical specificity. Treating exploration as importance sampling over coarse-grained representations, followed by machine-learned boosting, enlarges the number of compounds by a factor of 2 to 10 and yields insertion free energies for 1.3 million compounds. Adjacent questions concern how condensed-phase structure ought to be represented at all—adapting the SLATM expansion in one-, two-, and three-body local environments to thermodynamic observables of molecular liquids—and how far kernel-based models can be trusted, where an audit of machine-learned hydration free energies exposes the penalty incurred when the training database is chemically narrow.\n\ntopic(\"cg-chemical-space\")"
   },
   {
     "objectID": "research_topics.html#automated-force-field-parametrization",
     "href": "research_topics.html#automated-force-field-parametrization",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Automated force-field parametrization",
-    "text": "Automated force-field parametrization\n\n\n\n\n\nAutomated Martini parametrization\n\n\nHigh-throughput screening is only possible if parametrization requires no human in the loop. Auto-Martini generates Martini topologies for small organic molecules directly from SMILES, assigning the mapping, bead types, and bonded parameters automatically. The pipeline has been rebuilt for Martini 3, validated against expert-designed models, and exercised on a screen of 100,000 compounds from the Enamine library.\nAuto Martini\n\ntopic(\"auto-parametrization\")"
+    "text": "Automated force-field parametrization\n\n\n\n\n\nAutomated Martini parametrization\n\n\nScreening at this scale requires parametrization with no human in the loop. Auto-Martini generates Martini topologies for small organic molecules directly from SMILES, assigning the mapping, bead types, and bonded parameters automatically. The pipeline has been rebuilt for Martini 3, validated against expert-designed models, and used to parametrize 100,000 compounds from the Enamine fragment collection, of which 23,619 were simulated in water.\nAuto Martini\n\ntopic(\"auto-parametrization\")"
   },
   {
     "objectID": "research_topics.html#reproducible-and-fair-simulation-workflows",
     "href": "research_topics.html#reproducible-and-fair-simulation-workflows",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Reproducible and FAIR simulation workflows",
-    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and stewardship rather than algorithms alone.\nMartignac\n\ntopic(\"fair-workflows\")"
+    "text": "Reproducible and FAIR simulation workflows\n\n\n\n\n\nMartignac workflows exchanged with the NOMAD database\n\n\nScreening campaigns generate large numbers of simulations whose provenance is easy to lose and whose results are easy to recompute by accident. Martignac represents Martini simulations as directed acyclic graphs with full provenance tracking, connected to the NOMAD database, so that a prior calculation is retrieved rather than repeated. The framework is the practical end of a longer commitment to FAIR data in materials science—community metadata schemas spanning electronic structure, sampling, and workflows, and the case that the transition to data-centric materials science requires shared infrastructure and data stewardship in addition to algorithms.\nMartignac\n\ntopic(\"fair-workflows\")"
   },
   {
     "objectID": "research_topics.html#membrane-biophysics",
     "href": "research_topics.html#membrane-biophysics",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Membrane biophysics",
-    "text": "Membrane biophysics\n\n\n\n\n\nCoarse-grained lipid bilayer with a small-molecule permeant\n\n\nLipid membranes are the physical system our methods return to most often, and the question we most often ask of them is which of their features are thermodynamically dictated and which demand active cellular maintenance. Semi-grand canonical simulations, with chemical potentials imposed on individual lipid species, reframe membrane composition as a constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms and saturation asymmetry between leaflets both emerge from thermodynamics alone, narrowing the list of properties a cell must actively regulate. In parallel we study how small molecules partition into membranes and reshape them—phase separation in binary mixtures, nanoparticle contact mediated by copolymer coronas, the bacteriostatic action of 2-phenylethanol derivatives, the reorganization produced by nitrated fatty acids—together with the folding and insertion thermodynamics of transmembrane peptides.\n\ntopic(\"membranes\")"
+    "text": "Membrane biophysics\n\n\n\n\n\nCoarse-grained lipid bilayer with a small-molecule permeant\n\n\nLipid membranes are the physical system our methods return to most often, and the question we most often ask of them is which of their features are thermodynamically dictated and which demand active cellular maintenance. Semi-grand canonical simulations, with chemical potentials imposed on individual lipid species, reframe membrane composition as a constrained-equilibrium problem: acyl-tail saturation homeostasis in ectotherms and saturation asymmetry between leaflets both emerge from thermodynamics alone, narrowing the list of properties a cell must actively regulate. In parallel we study how small molecules partition into membranes and reshape them—their effect on domain phase separation in ternary mixtures, the bacteriostatic action of 2-phenylethanol derivatives, the reorganization produced by nitrated fatty acids—together with the folding and insertion thermodynamics of transmembrane peptides.\n\ntopic(\"membranes\")"
   },
   {
     "objectID": "research_topics.html#kinetics-of-coarse-grained-models",
     "href": "research_topics.html#kinetics-of-coarse-grained-models",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Kinetics of coarse-grained models",
     "text": "Kinetics of coarse-grained models\n\n\n\n\n\nBiased Markov state model\n\n\nCoarse-graining accelerates dynamics, and it does so unevenly: a model parametrized against structure alone will generally misrepresent barrier-crossing kinetics. We parametrize concurrently against static and kinetic information, using Markov state models biased with external information to keep the interpretation of simulation kinetics consistent. Conformational surface hopping couples distinct force fields to distinct conformational basins, in analogy with nonadiabatic transitions between electronic surfaces; incorporating more surfaces improves cross-correlations systematically and recovers barrier-crossing dynamics that a single surface cannot. Related work identifies metastable states without hand-chosen collective variables, through hidden Markov models of solvation substates and Gaussian-mixture variational autoencoders whose mixture components correspond to conformational basins.\n\ntopic(\"cg-kinetics\")"
   },
   {
     "objectID": "research_topics.html#non-equilibrium-dynamical-reweighting",
     "href": "research_topics.html#non-equilibrium-dynamical-reweighting",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Non-equilibrium dynamical reweighting",
     "text": "Non-equilibrium dynamical reweighting\n\n\n\n\n\nMaximum caliber for non-equilibrium reweighting\n\n\nWe extend the concept of statistical reweighting to non-equilibrium steady states. Stochastic thermodynamics analytically relates the forward and backward probabilities of any pathway through the external nonconservative force, which supplies the constraint; a maximum-caliber—maximum path entropy—formalism then reweights microtrajectories from one driven steady state onto another. The framework extends to collective variables, so that free-energy landscapes along a reaction coordinate can be recovered from short driven runs.\n\ntopic(\"nonequilibrium\")"
   },
   {
     "objectID": "research_topics.html#polymer-and-organic-materials-morphology",
     "href": "research_topics.html#polymer-and-organic-materials-morphology",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Polymer and organic-materials morphology",
-    "text": "Polymer and organic-materials morphology\n\n\n\n\n\nFree-energy map of syndiotactic-polystyrene polymorphs\n\n\nMultiscale simulation of polymer morphology, where the observable of interest sits beyond the reach of either resolution on its own. Metadynamics in a phase space of collective variables, referenced against DFT, resolves the free-energy landscape between polymorphs of syndiotactic polystyrene and yields \\(\\alpha/\\beta\\) free-energy differences that rationalize the experimentally observed phase populations.\n\ntopic(\"polymer-materials\")"
+    "text": "Polymer and organic-materials morphology\n\n\n\n\n\nFree-energy map of syndiotactic-polystyrene polymorphs\n\n\nIn polymer morphology the observable of interest often lies beyond the reach of either resolution on its own. Coarse-grained metadynamics, combined with quantum-chemical calculations, resolves the free-energy landscape between polymorphs of syndiotactic polystyrene: both predict \\(\\beta\\) as the more stable polymorph under standard conditions, in line with experiment, and the landscape suggests how the \\(\\alpha\\) polymorph leads to the kinetic traps observed experimentally.\n\ntopic(\"polymer-materials\")"
   },
   {
     "objectID": "research_topics.html#static-atomic-multipole-electrostatics",
     "href": "research_topics.html#static-atomic-multipole-electrostatics",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Static atomic multipole electrostatics",
     "text": "Static atomic multipole electrostatics\n\n\n\n\n\nForce propagation on electrostatic multipoles\n\n\nPoint charges are a crude description of the molecular electrostatic potential. Static atomic multipoles, derived from the electrostatic potential through a spherical-harmonic expansion, provide a systematically better one, and exploiting their symmetries makes force propagation affordable enough for condensed-phase molecular dynamics. Applications include free energies of hydration, two-dimensional infrared spectroscopy of solvation dynamics, and the \\(\\sigma\\)-hole of halogenated compounds, where quadrupolar terms on the adjacent atoms prove necessary.\n\ntopic(\"multipoles\")"
   },
   {
     "objectID": "research_topics.html#machine-learning-of-non-covalent-interactions",
     "href": "research_topics.html#machine-learning-of-non-covalent-interactions",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Machine learning of non-covalent interactions",
-    "text": "Machine learning of non-covalent interactions\n\n\n\n\n\nVan der Waals interactions\n\n\nPhysics-based potentials with machine-learned coefficients, combining atomic multipoles and many-body dispersion for accurate and transferable non-covalent interactions. The coefficients are learned by kernel ridge regression across both conformations and composition of small organic molecules; a Voronoi-tessellation route to van der Waals coefficients dispenses with explicit electron densities altogether.\nIPML\n\ntopic(\"noncovalent-ml\")"
+    "text": "Machine learning of non-covalent interactions\n\n\n\n\n\nVan der Waals interactions\n\n\nWe built physics-based potentials with machine-learned coefficients, combining atomic multipoles and many-body dispersion to describe non-covalent interactions accurately and transferably. The coefficients are learned by kernel ridge regression across both conformations and composition of small organic molecules; a Voronoi-tessellation route to van der Waals coefficients dispenses with explicit electron densities altogether.\nIPML\n\ntopic(\"noncovalent-ml\")"
   },
   {
     "objectID": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
     "href": "research_topics.html#peptide-coarse-graining-and-folding-cooperativity",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Peptide coarse-graining and folding cooperativity",
-    "text": "Peptide coarse-graining and folding cooperativity\n\n\n\n\n\nCoarse-grained peptide model\n\n\nA top-down, implicit-solvent coarse-grained peptide model, used to study secondary and tertiary structure formation across environments and scenarios: \\(\\alpha\\)-helix against \\(\\beta\\)-sheet folding, the microcanonical analysis that locates the origin of folding cooperativity in the interplay between the two, the structural alignment of capsid interfaces, and peptide–membrane interactions from a simple cross-parametrization.\nPhD thesis peptideB\n\ntopic(\"peptide-cg\")"
+    "text": "Peptide coarse-graining and folding cooperativity\n\n\n\n\n\nCoarse-grained peptide model\n\n\nWe developed a top-down, implicit-solvent coarse-grained peptide model and used it to study secondary and tertiary structure formation across environments and scenarios: \\(\\alpha\\)-helix against \\(\\beta\\)-sheet folding, the microcanonical analysis that locates the origin of folding cooperativity in the interplay between the two, the structural alignment of capsid interfaces, and peptide–membrane interactions from a simple cross-parametrization.\nPhD thesis peptideB\n\ntopic(\"peptide-cg\")"
   },
   {
     "objectID": "research_topics.html#early-methodological-work",
     "href": "research_topics.html#early-methodological-work",
-    "title": "Research topics",
+    "title": "Contact",
     "section": "Early methodological work",
-    "text": "Early methodological work\nAssorted early work on estimators and integration schemes: optimized convergence for multiple-histogram analysis, a multi-timestep integrator for the modified Andersen barostat, and a simulated molecular walker.\n\ntopic(\"early-methods\")"
+    "text": "Early methodological work\nEarly work addressed estimators and integration schemes: optimized convergence for multiple-histogram analysis, a multi-timestep integrator for the modified Andersen barostat, and a simulated molecular walker.\n\ntopic(\"early-methods\")\n\n\n\n\n\n\n\n\n\n\nThe grouping below is a maintenance signal: what we develop and support, what was released to reproduce a single paper, what is kept for the record, and what builds this site."
   },
   {
     "objectID": "positions.html",
     "href": "positions.html",
     "title": "Open positions",
     "section": "",
-    "text": "Current physics students of Heidelberg University are always welcome to reach out to discuss projects for their Bachelor thesis or Master thesis. Topics include (but are not limited to) multiscale molecular simulations, machine learning, and statistical mechanics. Please contact me directly (Contact)."
+    "text": "Physics students at Heidelberg University are welcome to contact me at any time about a project for their Bachelor’s or Master’s thesis. Topics include multiscale molecular simulation, machine learning, and statistical mechanics, among others. Details are on the contact page."
   },
   {
     "objectID": "positions.html#announcements",
     "href": "positions.html#announcements",
     "title": "Open positions",
     "section": "Announcements",
-    "text": "Announcements"
+    "text": "Announcements\n\nNo PhD or postdoc positions are advertised at present."
   },
   {
     "objectID": "papers/paper_087.html",
@@ -466,14 +466,14 @@
     "href": "group/tristan_bereau.html#experience",
     "title": "Tristan Bereau",
     "section": "Experience",
-    "text": "Experience\nProfessor @ Uni. Heidelberg | 2023 -\nQuant @ IMC Trading | 2022\nAssistant Professor @ Uni. Amsterdam | 2020 - 2021\nEmmy Noether group leader @ Max Planck Institute for Polymer Research | 2014 - 2019\nPostdoc @ Uni. Basel | 2012 - 2013"
+    "text": "Experience\nProfessor, Heidelberg University | 2023 –\nQuant, IMC Trading | 2022\nAssistant Professor, University of Amsterdam | 2020 – 2021\nEmmy Noether group leader, Max Planck Institute for Polymer Research | 2014 – 2019\nPostdoc, University of Basel | 2012 – 2013"
   },
   {
     "objectID": "group/tristan_bereau.html#education",
     "href": "group/tristan_bereau.html#education",
     "title": "Tristan Bereau",
     "section": "Education",
-    "text": "Education\nPhD, Physics, Carnegie Mellon University | 2006 - 2011\nBSc, Physics, Ecole Polytechnique Fédérale de Lausanne | 2003 - 2006"
+    "text": "Education\nPhD, Physics, Carnegie Mellon University | 2006 – 2011\nBSc, Physics, École Polytechnique Fédérale de Lausanne | 2003 – 2006"
   },
   {
     "objectID": "group/tristan_bereau.html#group-publications",
@@ -907,7 +907,7 @@
     "href": "about.html#where-the-metadata-comes-from",
     "title": "About",
     "section": "Where the metadata comes from",
-    "text": "Where the metadata comes from\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page, fetched in your browser rather than at build time\n\n\n\nNot every field comes from an API. Where no source has a usable abstract I write one myself, and a BibTeX entry is occasionally rendered from the metadata when doi2bib has none. The footer of each paper page names the origin of every field it shows, crediting manual entry or this site where that applies, so the provenance is visible per paper rather than asserted in the summary above."
+    "text": "Where the metadata comes from\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page, fetched in your browser rather than at build time\n\n\n\nNot every field comes from an API. Where no source has a usable abstract I write one myself, and a BibTeX entry is occasionally rendered from the metadata when doi2bib has none. The footer of each paper page names the origin of every field it shows, crediting manual entry or this site where that applies."
   },
   {
     "objectID": "about.html#how-the-research-landscape-is-built",
@@ -928,14 +928,14 @@
     "href": "about.html#analytics-and-third-parties",
     "title": "About",
     "section": "Analytics and third parties",
-    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nSome requests do leave your browser, though, and a page that promises otherwise should say which. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here."
+    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nTwo kinds of request do leave your browser. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here."
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "Email is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general enquiry. Applications should include a CV and a short statement of research interests."
+    "text": "Email is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general inquiry. Applications should include a CV and a short statement of research interests."
   },
   {
     "objectID": "contact.html#details",
@@ -1691,7 +1691,7 @@
     "href": "research_landscape.html",
     "title": "Research landscape",
     "section": "",
-    "text": "viewof visible_topics = Inputs.checkbox(\n  topic_names,\n  { value: topic_names,\n    label: \"Topics:\"\n  }\n)\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.plot({\n  grid: true,\n  color: {\n    scheme: \"spectral\",\n    domain: topic_names,\n    legend: true\n  },\n  x: {\n    label: \"\"\n  },\n  y: {\n    label: \"\"\n  },\n  marks: [\n    Plot.dot(\n        filtered,\n        {\n            x: \"embedding.x\",\n            y: \"embedding.y\",\n            title: (d) =&gt;\n        `${d.doi}\\n ${d.title}\\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,\n            fill: \"embedding.topic_name\",\n            r: 6,\n            // Plot renders the title channel as a hover tip natively. This\n            // used to come from the @mkfreeman/plot-tooltip notebook, whose\n            // import pulled a dozen further notebooks over the network and\n            // left this plot blank whenever any of them stalled.\n            tip: true,\n        }\n    )\n  ],\n})\n\n\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"year\",\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"fixed\",\n})\n\n\n\n\n\n\n\n\n\n\npapers = FileAttachment(\"data/all_papers.csv\").csv({ typed: true })\n\ntopic_names = Array.from(new Set(papers.map(d =&gt; d[\"embedding.topic_name\"])))\n\nfiltered = papers.filter(function(p) {\n  return visible_topics.includes(p[\"embedding.topic_name\"]);\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThis represents a two-dimensional embedding of all the group’s publications, clustered in topics. Publication abstracts are lemmatized and clustered using BERTopic with a UMAP dimensionality reduction.\nFor a more detailed description of our research, see Topics."
+    "text": "viewof visible_topics = Inputs.checkbox(\n  topic_names,\n  { value: topic_names,\n    label: \"Topics:\"\n  }\n)\n\n\n\n\n\n\n\nPlotData\n\n\n\nPlot.plot({\n  grid: true,\n  color: {\n    scheme: \"spectral\",\n    domain: topic_names,\n    legend: true\n  },\n  x: {\n    label: \"\"\n  },\n  y: {\n    label: \"\"\n  },\n  marks: [\n    Plot.dot(\n        filtered,\n        {\n            x: \"embedding.x\",\n            y: \"embedding.y\",\n            title: (d) =&gt;\n        `${d.doi}\\n ${d.title}\\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,\n            fill: \"embedding.topic_name\",\n            r: 6,\n            // Plot renders the title channel as a hover tip natively. This\n            // used to come from the @mkfreeman/plot-tooltip notebook, whose\n            // import pulled a dozen further notebooks over the network and\n            // left this plot blank whenever any of them stalled.\n            tip: true,\n        }\n    )\n  ],\n})\n\n\n\n\n\n\n\n\n\nInputs.table(filtered, {\n  columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"year\",\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"fixed\",\n})\n\n\n\n\n\n\n\n\n\n\npapers = FileAttachment(\"data/all_papers.csv\").csv({ typed: true })\n\ntopic_names = Array.from(new Set(papers.map(d =&gt; d[\"embedding.topic_name\"])))\n\nfiltered = papers.filter(function(p) {\n  return visible_topics.includes(p[\"embedding.topic_name\"]);\n})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nEach point is one of the group’s publications. Abstracts are lemmatized, embedded with a sentence-transformer model, projected onto two dimensions with UMAP, and clustered into topics with BERTopic; the about page gives the details.\nFor a more detailed description of our research, see Topics."
   },
   {
     "objectID": "software.html",
@@ -1705,7 +1705,7 @@
     "href": "software.html#actively-developed",
     "title": "Software",
     "section": "Actively developed",
-    "text": "Actively developed\n\nMartignac\nComputational workflows for coarse-grained Martini simulations. A simulation is represented as a directed acyclic graph carrying its entire history, from system preparation to property calculation, and the framework connects to the NOMAD database so that results are stored according to the FAIR principles and an existing calculation is retrieved rather than repeated.\nMIT · Python, installed from source · includes a Streamlit dashboard\n GitHub  Docs  Paper\n\n\nAuto-Martini M3\nAutomatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and exercised on a screen of 100,000 compounds from the Enamine library. Developed and maintained with the Martini Force Field Initiative.\nGPL-2.0 · Python, conda environment supplied · supersedes Auto Martini for Martini 2\n GitHub  Paper  Data\n\n\nFokker-Planck score learning\nFree-energy estimation from biased simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function rather than inferring it from data. Recovers potentials of mean force under periodic boundary conditions, and is most advantageous in the low-data regime.\nMIT · pip install fpsl · documentation includes tutorials\n GitHub  Docs  Paper\n\n\nSplit-Flows\nBackmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies – the information a given coarse-graining discards.\nMIT · Python, installed from source with uv\n GitHub  Paper"
+    "text": "Actively developed\n\nMartignac\nComputational workflows for coarse-grained Martini simulations. A simulation is represented as a directed acyclic graph carrying its entire history, from system preparation to property calculation, and the framework connects to the NOMAD database so that results are stored according to the FAIR principles and an existing calculation is retrieved rather than repeated.\nMIT · Python, installed from source · includes a Streamlit dashboard\n GitHub  Docs  Paper\n\n\nAuto-Martini M3\nAutomatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and used to parametrize 100,000 compounds from the Enamine fragment collection. Developed and maintained with the Martini Force Field Initiative.\nGPL-2.0 · Python, conda environment supplied · supersedes Auto Martini for Martini 2\n GitHub  Paper  Data\n\n\nFokker-Planck score learning\nFree-energy estimation from nonequilibrium pulling simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function. Recovers potentials of mean force under periodic boundary conditions up to an order of magnitude more efficiently than umbrella sampling, and extends to two-dimensional free-energy landscapes.\nMIT · pip install fpsl · documentation includes tutorials\n GitHub  Docs  Paper  2D extension\n\n\nSplit-Flows\nBackmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies, which measure the information a given coarse-graining discards.\nMIT · Python, installed from source with uv\n GitHub  Paper"
   },
   {
     "objectID": "software.html#reference-implementations",
@@ -1719,13 +1719,125 @@
     "href": "software.html#earlier-codes",
     "title": "Software",
     "section": "Earlier codes",
-    "text": "Earlier codes\nKept available because the papers that used them point here, not because they are maintained.\n\nAuto Martini (Martini 2)\nThe original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by Auto-Martini M3.\nGitHub · J. Chem. Theory Comput. 2015\n\n\nIPML\nIntermolecular potentials from a combination of physics-based and machine-learned components – atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition – transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.\nGitLab · J. Chem. Phys. 2018\n\n\nmbvdw\nClassical, Voronoi-tessellation adaptation of the many-body van der Waals method, which dispenses with explicit electron densities.\nGitHub · J. Chem. Phys. 2014\n\n\npeptideB\nTop-down, implicit-solvent coarse-grained peptide model for secondary- and tertiary-structure formation, implemented for ESPResSo.\nGitHub · J. Chem. Phys. 2009\n\n\nopt-mhm\nMultiple-histogram (WHAM) free-energy analysis with optimized convergence.\nGitHub · J. Comput. Phys. 2009"
+    "text": "Earlier codes\nThese codes are no longer maintained; they remain available because the papers that used them point here.\n\nAuto Martini (Martini 2)\nThe original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by Auto-Martini M3.\nGitHub · J. Chem. Theory Comput. 2015\n\n\nIPML\nIntermolecular potentials from a combination of physics-based and machine-learned components—atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition—transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.\nGitLab · J. Chem. Phys. 2018\n\n\nmbvdw\nClassical, Voronoi-tessellation adaptation of the many-body van der Waals method, which dispenses with explicit electron densities.\nGitHub · J. Chem. Phys. 2014\n\n\npeptideB\nTop-down, implicit-solvent coarse-grained peptide model for secondary- and tertiary-structure formation, implemented for ESPResSo.\nGitHub · J. Chem. Phys. 2009\n\n\nopt-mhm\nMultiple-histogram (WHAM) free-energy analysis with optimized convergence.\nGitHub · J. Comput. Phys. 2009"
   },
   {
     "objectID": "software.html#website-tooling",
     "href": "software.html#website-tooling",
     "title": "Software",
     "section": "Website tooling",
-    "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; half a dozen further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub"
+    "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; seven further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub"
+  },
+  {
+    "objectID": "research_topics.html#actively-developed",
+    "href": "research_topics.html#actively-developed",
+    "title": "Contact",
+    "section": "Actively developed",
+    "text": "Actively developed\n\nMartignac\nComputational workflows for coarse-grained Martini simulations. A simulation is represented as a directed acyclic graph carrying its entire history, from system preparation to property calculation, and the framework connects to the NOMAD database so that results are stored according to the FAIR principles and an existing calculation is retrieved rather than repeated.\nMIT · Python, installed from source · includes a Streamlit dashboard\n GitHub  Docs  Paper\n\n\nAuto-Martini M3\nAutomatic generation of Martini 3 topologies for small organic molecules of up to 25 heavy atoms, directly from SMILES: mapping, bead types, and bonded parameters, with no human in the loop. Validated against expert-designed models and used to parametrize 100,000 compounds from the Enamine fragment collection. Developed and maintained with the Martini Force Field Initiative.\nGPL-2.0 · Python, conda environment supplied · supersedes Auto Martini for Martini 2\n GitHub  Paper  Data\n\n\nFokker-Planck score learning\nFree-energy estimation from nonequilibrium pulling simulations, obtained by imposing the analytical Fokker–Planck steady-state solution on a learned score function. Recovers potentials of mean force under periodic boundary conditions up to an order of magnitude more efficiently than umbrella sampling, and extends to two-dimensional free-energy landscapes.\nMIT · pip install fpsl · documentation includes tutorials\n GitHub  Docs  Paper  2D extension\n\n\nSplit-Flows\nBackmapping treated as continuous-time measure transport between molecular resolutions. Augmenting a coarse-grained configuration with auxiliary noise dimensions makes the map to the fine-grained space one-to-one, which gives both conditional sampling of atomistic structures and a tractable route to mapping entropies, which measure the information a given coarse-graining discards.\nMIT · Python, installed from source with uv\n GitHub  Paper"
+  },
+  {
+    "objectID": "research_topics.html#reference-implementations",
+    "href": "research_topics.html#reference-implementations",
+    "title": "Contact",
+    "section": "Reference implementations",
+    "text": "Reference implementations\nCode released with a specific paper, to reproduce it and to build on. Maintained only as far as that paper requires.\n\nNeural thermodynamic integration\nFree energies from a neural network potential that interpolates between two target Hamiltonians, so that a single learned model stands in for the ladder of intermediate states a conventional calculation has to simulate. Two repositories, both maintained by Bálint Máté (University of Geneva): the original formulation, and the extension to solvation where both end states are non-trivial.\nMIT\n\nOriginal code · J. Phys. Chem. Lett. 2024\nSolvation code · J. Chem. Phys. 2025\n\n\nMulti-level Bayesian optimization\nMolecular discovery organized as a funnel across resolutions, exploring broadly where the model is cheap and exploiting where it is accurate. Includes chespex, a small package implementing the algorithm independently of the application, and a separate tutorial working through the method on two-bead molecules in a water–hexane mixture.\nCode · Tutorial · Chem. Sci. 2025"
+  },
+  {
+    "objectID": "research_topics.html#earlier-codes",
+    "href": "research_topics.html#earlier-codes",
+    "title": "Contact",
+    "section": "Earlier codes",
+    "text": "Earlier codes\nThese codes are no longer maintained; they remain available because the papers that used them point here.\n\nAuto Martini (Martini 2)\nThe original automatic Martini parametrization of small organic molecules, for Martini 2, later extended to variable bead-type resolution. Superseded by Auto-Martini M3.\nGitHub · J. Chem. Theory Comput. 2015\n\n\nIPML\nIntermolecular potentials from a combination of physics-based and machine-learned components—atomic multipoles and many-body dispersion, with coefficients learned across conformations and composition—transferable across chemical space. GPL-2.0-or-later, hosted on the Max Planck Computing and Data Facility’s GitLab.\nGitLab · J. Chem. Phys. 2018\n\n\nmbvdw\nClassical, Voronoi-tessellation adaptation of the many-body van der Waals method, which dispenses with explicit electron densities.\nGitHub · J. Chem. Phys. 2014\n\n\npeptideB\nTop-down, implicit-solvent coarse-grained peptide model for secondary- and tertiary-structure formation, implemented for ESPResSo.\nGitHub · J. Chem. Phys. 2009\n\n\nopt-mhm\nMultiple-histogram (WHAM) free-energy analysis with optimized convergence.\nGitHub · J. Comput. Phys. 2009"
+  },
+  {
+    "objectID": "research_topics.html#website-tooling",
+    "href": "research_topics.html#website-tooling",
+    "title": "Contact",
+    "section": "Website tooling",
+    "text": "Website tooling\n\nmy-scientific-profile\nRetrieves the metadata of a publication record programmatically. ORCID decides which works are yours; seven further providers describe them, and their answers are merged field by field with a declared trust order, so each field records where it came from. It is what builds the publication list and the research landscape here; about sets out the rest of the pipeline. MIT.\nGitHub\n\nMost of this site is generated from my publication record rather than written by hand. The publication list, the per-paper pages and the research landscape are built from metadata fetched through public APIs, so they stay current without anyone editing a bibliography."
+  },
+  {
+    "objectID": "research_topics.html#where-the-metadata-comes-from",
+    "href": "research_topics.html#where-the-metadata-comes-from",
+    "title": "Contact",
+    "section": "Where the metadata comes from",
+    "text": "Where the metadata comes from\nORCID holds the authoritative list of works; everything else enriches it. Where two sources disagree, each field records which one it came from.\n\n\n\nSource\nWhat it contributes\n\n\n\n\nORCID\nthe list of works itself\n\n\nCrossRef\nauthors, affiliations, journal, volume and pages\n\n\nOpenAlex\nopen-access status and links, plus authors and abstracts where CrossRef has gaps\n\n\nSemantic Scholar\nabstracts and TL;DR summaries\n\n\ndoi2bib\nBibTeX entries\n\n\nAltmetric\nthe attention badge on each paper page, fetched in your browser rather than at build time\n\n\n\nNot every field comes from an API. Where no source has a usable abstract I write one myself, and a BibTeX entry is occasionally rendered from the metadata when doi2bib has none. The footer of each paper page names the origin of every field it shows, crediting manual entry or this site where that applies."
+  },
+  {
+    "objectID": "research_topics.html#how-the-research-landscape-is-built",
+    "href": "research_topics.html#how-the-research-landscape-is-built",
+    "title": "Contact",
+    "section": "How the research landscape is built",
+    "text": "How the research landscape is built\nAbstracts are lemmatized with NLTK, embedded with the all-MiniLM-L6-v2 sentence-transformers model, projected onto two dimensions with UMAP and clustered into topics with BERTopic. Papers without a usable abstract fall back to their title. The result is the scatter plot on the research landscape page, and the topic label attached to each paper."
+  },
+  {
+    "objectID": "research_topics.html#tooling",
+    "href": "research_topics.html#tooling",
+    "title": "Contact",
+    "section": "Tooling",
+    "text": "Tooling\nThe backend is written in Python with the my-scientific-profile library. The frontend uses Quarto. The publication list is one of Quarto’s own filterable listings; the landscape plot, and the tables on the landscape and topics pages, are Observable JS reading a CSV from this site and running in your browser, so none of that data goes anywhere else.\nThe source for this site lives at tbereau/tbereau."
+  },
+  {
+    "objectID": "research_topics.html#analytics-and-third-parties",
+    "href": "research_topics.html#analytics-and-third-parties",
+    "title": "Contact",
+    "section": "Analytics and third parties",
+    "text": "Analytics and third parties\nVisits are counted with GoatCounter, which sets no cookies and does not track visitors across sites.\nTwo kinds of request do leave your browser. Each paper page loads its Altmetric badge from Altmetric when you open it, so they see that the page was viewed. A few pages also pull MathJax from a CDN, wherever Quarto judges that something needs mathematical typesetting. Everything else — fonts, styles, the site’s own scripts and the publication data — is served from here.\n\n\n\n\nMultiscale modeling and machine learning for molecular systems\nThis is Tristan Bereau’s group at the Institute for Theoretical Physics, Heidelberg University. We develop simulation and machine-learning methods for soft-condensed matter and biomolecules, and use coarse-graining to make chemical compound space tractable. Current activities include\n\nFree energies from physics-informed generative models\nCoarse-graining to compress chemical space for high-throughput screening\nMolecular discovery by active learning and Bayesian optimization\nReproducible and FAIR workflows for molecular simulation\n\n\nResearch landscape Research topics\n\n\nWhat’s presented here is the concerted effort of many fantastic students, postdocs, and collaborators I’ve had the chance to work with."
+  },
+  {
+    "objectID": "research_topics.html#recent-work",
+    "href": "research_topics.html#recent-work",
+    "title": "Contact",
+    "section": "Recent work",
+    "text": "Recent work\n\n{{&lt; include _recent_work.md &gt;}}\nAll publications"
+  },
+  {
+    "objectID": "research_topics.html#announcements",
+    "href": "research_topics.html#announcements",
+    "title": "Contact",
+    "section": "Announcements",
+    "text": "Announcements\n\nNo PhD or postdoc positions are advertised at present.\n// The column-oriented JSON is transposed here in plain JavaScript. This used to\n// borrow `map` from the @martien/ramda notebook, which drags a dozen unrelated\n// Observable notebooks over the network on every page load; when any of them\n// stalls the reactive graph never resolves and both tables below stay silently\n// empty, with no error. Nothing on this page needs more than the OJS stdlib.\npapers_r = FileAttachment(\"../data/all_papers.json\").json()\nn_columns = Object.entries(papers_r[\"doi\"]).length\nindex_array = Array.from({length: n_columns}, (_, i) =&gt; i)\npapers = index_array.map(\n    i =&gt; Object.fromEntries(\n        Object.entries(papers_r).map(([column, values]) =&gt; [column, values[i]])\n    )\n)\n\nmy_papers = papers.filter(function(p) {\n    return p.authors.map(a =&gt; a.full_name).includes(\"Tristan Bereau\")\n})\n\nTristan heads the group. Besides science and data, he enjoys spending time outside and playing jazz piano.\n\nExperience\nProfessor, Heidelberg University | 2023 –\nQuant, IMC Trading | 2022\nAssistant Professor, University of Amsterdam | 2020 – 2021\nEmmy Noether group leader, Max Planck Institute for Polymer Research | 2014 – 2019\nPostdoc, University of Basel | 2012 – 2013\n\n\nEducation\nPhD, Physics, Carnegie Mellon University | 2006 – 2011\nBSc, Physics, École Polytechnique Fédérale de Lausanne | 2003 – 2006"
+  },
+  {
+    "objectID": "research_topics.html#experience",
+    "href": "research_topics.html#experience",
+    "title": "Contact",
+    "section": "Experience",
+    "text": "Experience\nProfessor, Heidelberg University | 2023 –\nQuant, IMC Trading | 2022\nAssistant Professor, University of Amsterdam | 2020 – 2021\nEmmy Noether group leader, Max Planck Institute for Polymer Research | 2014 – 2019\nPostdoc, University of Basel | 2012 – 2013"
+  },
+  {
+    "objectID": "research_topics.html#education",
+    "href": "research_topics.html#education",
+    "title": "Contact",
+    "section": "Education",
+    "text": "Education\nPhD, Physics, Carnegie Mellon University | 2006 – 2011\nBSc, Physics, École Polytechnique Fédérale de Lausanne | 2003 – 2006"
+  },
+  {
+    "objectID": "research_topics.html#group-publications",
+    "href": "research_topics.html#group-publications",
+    "title": "Contact",
+    "section": "Group publications",
+    "text": "Group publications\nInputs.table(my_papers, {\n    columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"journal.issue\",\n    \"journal.pages\",\n    \"year\",\n    \"embedding.topic_name\"\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n    \"journal.issue\": \"issue\",\n    \"journal.pages\": \"pages\",\n    \"embedding.topic_name\": \"topic\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"auto\",\n})"
+  },
+  {
+    "objectID": "research_topics.html#group-collaborators",
+    "href": "research_topics.html#group-collaborators",
+    "title": "Contact",
+    "section": "Group collaborators",
+    "text": "Group collaborators\ncollaborators = Array.from(\n    new Set(\n        my_papers.flatMap(p =&gt; p.authors)\n        .filter(function(a) {\n            return a.full_name != \"Tristan Bereau\"\n            }\n        )\n    )\n)\n\nlist_of_collaborators = (\n    Array.from(d3.group(collaborators, a =&gt; a.full_name).keys())\n)\ndict_of_collaborators = (\n    collaborators.reduce(\n        (acc, x) =&gt; (\n            {...acc, [x.full_name]:\n                {\n                    \"given\": x.given,\n                    \"family\": x.family,\n                    \"affiliation_city\": x.affiliation.city,\n                    \"affiliation_name\": x.affiliation.name,\n                    \"affiliation_country\": x.affiliation.country,\n                    \"orcid\": x.orcid,\n                }\n            }\n        ),\n        {}\n    )\n)\n\nInputs.table(\n    list_of_collaborators.map(c =&gt; dict_of_collaborators[c]),\n    {\n        columns: [\n            \"given\",\n            \"family\",\n            \"orcid\",\n            \"affiliation_country\",\n            \"affiliation_city\",\n            \"affiliation_name\",\n        ],\n        header: {\n            \"affiliation_country\": \"country\",\n            \"affiliation_city\": \"city\",\n            \"affiliation_name\": \"affiliation\",\n        },\n        multiple: false,\n        sort: \"family\",\n        layout: \"fixed\",\n        format: {\n            orcid: orcid =&gt;\n            htl.html`&lt;a href=https://orcid.org/${orcid} target=_blank&gt;${orcid}&lt;/a&gt;`\n        },\n    }\n)\n//| panel: input\nviewof visible_topics = Inputs.checkbox(\n  topic_names,\n  { value: topic_names,\n    label: \"Topics:\"\n  }\n)\n\nPlotData\n\n\nPlot.plot({\n  grid: true,\n  color: {\n    scheme: \"spectral\",\n    domain: topic_names,\n    legend: true\n  },\n  x: {\n    label: \"\"\n  },\n  y: {\n    label: \"\"\n  },\n  marks: [\n    Plot.dot(\n        filtered,\n        {\n            x: \"embedding.x\",\n            y: \"embedding.y\",\n            title: (d) =&gt;\n        `${d.doi}\\n ${d.title}\\n ${d['journal.abbreviation']}${d['journal.volume'] ? ' ' + d['journal.volume'] : ''} (${d['year']})`,\n            fill: \"embedding.topic_name\",\n            r: 6,\n            // Plot renders the title channel as a hover tip natively. This\n            // used to come from the @mkfreeman/plot-tooltip notebook, whose\n            // import pulled a dozen further notebooks over the network and\n            // left this plot blank whenever any of them stalled.\n            tip: true,\n        }\n    )\n  ],\n})\n\n\nInputs.table(filtered, {\n  columns: [\n    \"doi\",\n    \"title\",\n    \"journal.name\",\n    \"journal.volume\",\n    \"year\",\n  ],\n  header: {\n    \"journal.name\": \"journal\",\n    \"journal.volume\": \"volume\",\n  },\n  format: {\n    doi: doi =&gt; htl.html`&lt;a href=https://doi.org/${doi} target=_blank&gt;${doi}&lt;/a&gt;`,\n    title: title =&gt; htl.html`${title}`,\n    \"journal.volume\": volume =&gt; htl.html`&lt;b&gt;${volume}&lt;/b&gt;`,\n    year: year =&gt; htl.html`${year}`,\n  },\n  width: {\n    \"title\": 10\n  },\n  layout: \"fixed\",\n})\n\n\n\npapers = FileAttachment(\"data/all_papers.csv\").csv({ typed: true })\n\ntopic_names = Array.from(new Set(papers.map(d =&gt; d[\"embedding.topic_name\"])))\n\nfiltered = papers.filter(function(p) {\n  return visible_topics.includes(p[\"embedding.topic_name\"]);\n})\n\n\n\n\n\n\nNote\n\n\n\nEach point is one of the group’s publications. Abstracts are lemmatized, embedded with a sentence-transformer model, projected onto two dimensions with UMAP, and clustered into topics with BERTopic; the about page gives the details.\nFor a more detailed description of our research, see Topics.\n\n\n\nEmail is the reliable way to reach me. If you are writing about a Bachelor’s or Master’s thesis, or about a PhD or postdoc position, please read the open positions page first and say in your message which topics interest you — it makes for a much shorter exchange than a general inquiry. Applications should include a CV and a short statement of research interests."
+  },
+  {
+    "objectID": "research_topics.html#details",
+    "href": "research_topics.html#details",
+    "title": "Contact",
+    "section": "Details",
+    "text": "Details\n  Email   bereau at thphys.uni-heidelberg.de\n  Phone   +49 6221 54-9448\n  Office   Philosophenweg 19, 2nd floor, room 206\n  Post\n\nInstitute for Theoretical Physics\nHeidelberg University\nPhilosophenweg 19\n69120 Heidelberg\nGermany"
+  },
+  {
+    "objectID": "research_topics.html#finding-the-office",
+    "href": "research_topics.html#finding-the-office",
+    "title": "Contact",
+    "section": "Finding the office",
+    "text": "Finding the office\nThe institute is in Neuenheim, on the north bank of the Neckar, a ten-minute walk from the Altstadt across the Theodor-Heuss-Brücke.\n\n\n\nMap data © OpenStreetMap contributors. Click through to pan and zoom."
   }
 ]

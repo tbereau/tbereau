@@ -380,7 +380,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This represents a two-dimensional embedding of all the group’s publications, clustered in topics. Publication abstracts are lemmatized and clustered using <a href="https://github.com/MaartenGr/BERTopic">BERTopic</a> with a UMAP dimensionality reduction.</p>
+<p>Each point is one of the group’s publications. Abstracts are lemmatized, embedded with a sentence-transformer model, projected onto two dimensions with UMAP, and clustered into topics with <a href="https://github.com/MaartenGr/BERTopic">BERTopic</a>; the <a href="./about.html">about</a> page gives the details.</p>
 <p>For a more detailed description of our research, see <a href="./research_topics.html">Topics</a>.</p>
 </div>
 </div>
@@ -970,7 +970,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>This represents a two-dimensional embedding of all the group's publications, clustered in topics. Publication abstracts are lemmatized and clustered using <span class="co">[</span><span class="ot">BERTopic</span><span class="co">](https://github.com/MaartenGr/BERTopic)</span> with a UMAP dimensionality reduction.</span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>Each point is one of the group's publications. Abstracts are lemmatized, embedded with a sentence-transformer model, projected onto two dimensions with UMAP, and clustered into topics with <span class="co">[</span><span class="ot">BERTopic</span><span class="co">](https://github.com/MaartenGr/BERTopic)</span>; the <span class="co">[</span><span class="ot">about</span><span class="co">](/about.html)</span> page gives the details.</span>
 <span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>For a more detailed description of our research, see <span class="co">[</span><span class="ot">Topics</span><span class="co">](/research_topics.html)</span>.</span>
 <span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>:::</span>
