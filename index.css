@@ -215,3 +215,47 @@
 .nav-footer {
   border-top: none !important;
 }
+
+
+/* Announcement --------------------------------------------------------- */
+
+/* One-off news item between the hero and the publication list. The box is
+   the visual cue; the section around it only aligns it with the hero text. */
+
+.announcement {
+  padding-top: 18px;
+}
+
+@media (min-width: 1200px) {
+  .announcement .content-block {
+    max-width: none;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.announcement .announcement-box {
+  max-width: 900px;
+  border-left: 4px solid #39729E;
+  background-color: rgb(237, 243, 249);
+  border-radius: 0 6px 6px 0;
+  padding: 1.1rem 1.4rem 0.4rem;
+}
+
+.announcement .announcement-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #39729E;
+}
+
+.announcement h2 {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.7rem;
+  /* Quarto rules off every h2; inside the box it cuts the title from its text. */
+  border-bottom: none;
+  padding-bottom: 0;
+}
